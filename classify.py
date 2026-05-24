@@ -1,410 +1,383 @@
 import os
-import re
 import json
-import time
-import ollama
+import csv
+import openai
 import pandas as pd
 
-df = pd.read_csv('iclr2026_papers.csv')
+MODEL       = "google/gemma-4-31b-it"
+SAMPLE_SIZE = 1338
+OUTPUT_FILE = "safety_results_v2.csv"
+RANDOM_SEED = 42
 
-CSV_PATH = 'safety_results.csv'
-COLUMNS = ["id", "title", "is_safety", "subdomain", "confidence", "evidence"]
-
-if os.path.exists(CSV_PATH):
-    with open(CSV_PATH, "r", encoding="utf-8", errors="ignore") as _f:
-        already_done = max(0, sum(1 for _ in _f) - 1)
-    write_header = False
-else:
-    already_done = 0
-    write_header = True
-
-print(f"Resuming from paper {already_done + 1}")
-
-
-SYSTEM_PROMPT = """
-You are an expert AI safety researcher classifying academic papers.
-
-A paper is AI safety ONLY if making AI systems safer, more aligned, more honest, or less harmful is a PRIMARY contribution. A passing mention or a generic "robustness" / "alignment" / "agent" claim does NOT count.
-
-SUBDOMAINS (use these EXACT strings):
-- Alignment — RLHF, DPO, GRPO, preference learning, reward modeling, constitutional AI, value alignment of LLMs
-- Interpretability — mechanistic interpretability, circuit analysis, feature attribution AIMED at understanding model internals for safety/transparency
-- Robustness & Adversarial — adversarial attacks/defenses on AI systems, certified robustness, jailbreak-style perturbations
-- Hallucination & Factuality — reducing hallucination, factuality, calibration, faithfulness of LLM outputs
-- Agent Safety — risks of autonomous LLM agents, prompt injection, tool-use safety
-- Evaluation & Benchmarking — benchmarks WHOSE PURPOSE is measuring safety, harm, bias, fairness, toxicity
-- Deception & Scheming — jailbreaking, red teaming, backdoor attacks, deceptive alignment
-- Privacy & Security — differential privacy, membership inference, data poisoning, model extraction
-- Societal & Governance — AI governance, regulation, societal impact, responsible AI
-- Not AI Safety — anything else
-
-STRICT EXCLUSIONS — these are NOT AI safety:
-✗ "Alignment" of image/text/modality/features/representations/cross-lingual — this is representation learning, NOT safety
-✗ General model robustness or OOD generalization for accuracy gains
-✗ RL agents, multi-agent RL, game-playing agents, agent-based simulation
-✗ Generic "evaluation" or "benchmark" papers that don't target safety/harm/bias
-✗ Calibration for prediction accuracy (not for LLM faithfulness)
-✗ Standard regularization or noise robustness
-✗ Papers that merely mention safety in motivation but don't contribute to it
-
-DECISION RULE: When in doubt, output "Not AI Safety". False positives are worse than false negatives.
-
-OUTPUT FORMAT — JSON array only, no prose. Each object MUST have:
-- "paper_id": int
-- "is_safety": bool
-- "subdomain": one of the exact strings above
-- "confidence": "high" | "medium" | "low"
-- "evidence": a SHORT VERBATIM quote (≤15 words) from the abstract that proves safety is a primary contribution. Empty string "" if not safety.
-
-EXAMPLES:
-
-Title: Direct Preference Optimization with Length Normalization
-Abstract: We propose a length-normalized DPO objective to reduce verbosity bias in RLHF-tuned models...
-→ {"paper_id": 1, "is_safety": true, "subdomain": "Alignment", "confidence": "high", "evidence": "length-normalized DPO objective to reduce verbosity bias in RLHF"}
-
-Title: Cross-Modal Alignment for Vision-Language Pretraining
-Abstract: We align image and text features in a shared embedding space to improve retrieval...
-→ {"paper_id": 2, "is_safety": false, "subdomain": "Not AI Safety", "confidence": "high", "evidence": ""}
-
-Title: Multi-Agent Reinforcement Learning for Traffic Control
-Abstract: We train cooperative agents to optimize traffic signal timing...
-→ {"paper_id": 3, "is_safety": false, "subdomain": "Not AI Safety", "confidence": "high", "evidence": ""}
-
-Title: Prompt Injection Attacks on Tool-Using LLM Agents
-Abstract: We show that adversarial tool descriptions can hijack agent behavior, and propose a defense...
-→ {"paper_id": 4, "is_safety": true, "subdomain": "Agent Safety", "confidence": "high", "evidence": "adversarial tool descriptions can hijack agent behavior, and propose a defense"}
-
-Title: Robust Training under Label Noise
-Abstract: We propose a loss that improves accuracy when training labels are corrupted...
-→ {"paper_id": 5, "is_safety": false, "subdomain": "Not AI Safety", "confidence": "high", "evidence": ""}
-
-Title: A Benchmark for Measuring Toxicity in Multilingual LLMs
-Abstract: We release TOXBENCH, covering 30 languages, to evaluate toxic generation in LLMs...
-→ {"paper_id": 6, "is_safety": true, "subdomain": "Evaluation & Benchmarking", "confidence": "high", "evidence": "evaluate toxic generation in LLMs"}
-
-Respond ONLY as a JSON array. No explanation. No extra text. Just JSON.
-"""
-
-VALID_SUBDOMAINS = [
-    "Alignment", "Interpretability", "Robustness & Adversarial",
-    "Hallucination & Factuality", "Agent Safety", "Evaluation & Benchmarking",
-    "Deception & Scheming", "Privacy & Security", "Societal & Governance",
-    "Not AI Safety",
-]
-def normalize_subdomain(s):
-    if s is None:
-        return "Not AI Safety"
-    s = str(s).strip()
-    low = s.lower()
-    for v in VALID_SUBDOMAINS:
-        if low == v.lower():
-            return v
-    return "Not AI Safety"
-
-
-def normalize_confidence(c):
-    if c is None:
-        return "low"
-    c = str(c).lower().strip()
-    if "high" in c:
-        return "high"
-    if "med" in c:
-        return "medium"
-    if "low" in c:
-        return "low"
-    return "low"
-
-
-def normalize_is_safety(v, subdomain, confidence, evidence, abstract):
-    if subdomain == "Not AI Safety":
-        return False
-    if isinstance(v, bool):
-        flag = v
-    elif isinstance(v, (int, float)):
-        flag = bool(v)
-    elif isinstance(v, str):
-        flag = v.strip().lower() in ("true", "1", "yes", "y", "t")
-    else:
-        flag = True
-    if not flag:
-        return False
-    if confidence != "high":
-        return False
-    ev = (evidence or "").strip().strip('"\'')
-    if len(ev) < 5:
-        return False
-    abs_low = (abstract or "").lower()
-    ev_low = ev.lower()
-    if ev_low in abs_low:
-        return True
-    ev_words = [w for w in re.findall(r"\w+", ev_low) if len(w) > 3]
-    if not ev_words:
-        return False
-    hits = sum(1 for w in ev_words if w in abs_low)
-    return hits / len(ev_words) >= 0.6
-
-
-def extract_json_array(text):
-    if not text:
-        return None
-    text = text.strip()
-    text = re.sub(r"^```(?:json)?\s*", "", text)
-    text = re.sub(r"\s*```\s*$", "", text)
-
-    try:
-        data = json.loads(text)
-        if isinstance(data, list):
-            return data
-        if isinstance(data, dict):
-            for key in ("results", "papers", "classifications", "data", "output"):
-                if key in data and isinstance(data[key], list):
-                    return data[key]
-            if all(k in data for k in ("paper_id",)) or "subdomain" in data:
-                return [data]
-    except Exception:
-        pass
-
-    m = re.search(r"\[[\s\S]*\]", text)
-    if m:
-        snippet = m.group(0)
-        try:
-            data = json.loads(snippet)
-            if isinstance(data, list):
-                return data
-        except Exception:
-            pass
-        try:
-            cleaned = re.sub(r",\s*([\]}])", r"\1", snippet)
-            data = json.loads(cleaned)
-            if isinstance(data, list):
-                return data
-        except Exception:
-            pass
-
-    objs = []
-    depth = 0
-    start = None
-    for i, ch in enumerate(text):
-        if ch == "{":
-            if depth == 0:
-                start = i
-            depth += 1
-        elif ch == "}":
-            depth -= 1
-            if depth == 0 and start is not None:
-                chunk = text[start:i + 1]
-                try:
-                    objs.append(json.loads(chunk))
-                except Exception:
-                    try:
-                        objs.append(json.loads(re.sub(r",\s*([\]}])", r"\1", chunk)))
-                    except Exception:
-                        pass
-                start = None
-    if objs:
-        return objs
-    return None
-
-
-def build_user_prompt(papers):
-    prompt = ""
-    for idx, row in enumerate(papers):
-        title = row.get("title", "") if isinstance(row, dict) else row["title"]
-        abstract = row.get("abstract", "") if isinstance(row, dict) else row["abstract"]
-        if pd.isna(title):
-            title = ""
-        if pd.isna(abstract):
-            abstract = ""
-        title = str(title)[:500]
-        abstract = str(abstract)[:1000]
-        prompt += f"\nPaper {idx + 1}:\nTitle: {title}\nAbstract: {abstract}\n---\n"
-    prompt += f"""
-Respond with a JSON array of exactly {len(papers)} objects, one per paper, in order.
-"subdomain" MUST be EXACTLY one of these strings:
-"Alignment" | "Interpretability" | "Robustness & Adversarial" | "Hallucination & Factuality" | "Agent Safety" | "Evaluation & Benchmarking" | "Deception & Scheming" | "Privacy & Security" | "Societal & Governance" | "Not AI Safety"
-
-"evidence" MUST be a verbatim quote (≤15 words) from the abstract proving safety is a primary contribution, or "" if not safety.
-Be STRICT. When in doubt, output "Not AI Safety" with empty evidence.
-
-[
-  {{"paper_id": 1, "is_safety": true, "subdomain": "Alignment", "confidence": "high", "evidence": "we propose an RLHF method to reduce harmful outputs"}},
-  {{"paper_id": 2, "is_safety": false, "subdomain": "Not AI Safety", "confidence": "high", "evidence": ""}}
-]
-"""
-    return prompt
-
-
-def call_model(papers, max_attempts=8):
-    user_prompt = build_user_prompt(papers)
-    last_err = None
-    for attempt in range(max_attempts):
-        try:
-            response = ollama.chat(
-                model="hermes3:8b",
-                messages=[
-                    {"role": "system", "content": SYSTEM_PROMPT},
-                    {"role": "user", "content": user_prompt},
-                ],
-                format="json",
-                options={"temperature": 0.0 if attempt == 0 else 0.2 + 0.1 * (attempt % 4)},
-            )
-            content = response.get("message", {}).get("content", "")
-            data = extract_json_array(content)
-            if data is None:
-                last_err = "json parse failed"
-            elif len(data) == 0:
-                last_err = "empty array"
-            else:
-                return data
-        except Exception as e:
-            last_err = str(e)
-        print(f"    attempt {attempt + 1}/{max_attempts} failed ({last_err}), retrying...")
-        time.sleep(min(2 ** attempt, 15))
-    return None
-
-
-JUDGE_SYSTEM = (
-    "You are a strict AI safety classifier. "
-    "Reply with 'yes' or 'no' on the first line, then one short sentence."
+client = openai.OpenAI(
+    base_url="https://openrouter.ai/api/v1",
+    api_key=os.environ.get("OPENROUTER_API_KEY"),
 )
 
+SYSTEM_PROMPT = """
+You are a rigorous AI safety research classifier.
 
-def judge_safety(title, abstract, subdomain, evidence, max_attempts=3):
-    if pd.isna(title):
-        title = ""
-    if pd.isna(abstract):
-        abstract = ""
-    title = str(title)[:300]
-    abstract = str(abstract)[:1000]
-    prompt = f"""A paper was classified as AI safety related under subdomain "{subdomain}".
+STEP 1: Assign the paper to one of four classes.
 
-Title: {title}
-Abstract: {abstract}
-Evidence given: {evidence}
+Class 1: Ethics & Fairness
+  Description: Traditional ML fairness, bias, and ethics. Little to no
+  relation to existential, agentic, or frontier AGI safety.
+  Includes: Debiasing tabular datasets, algorithmic fairness, demographic
+  parity, differential privacy, copyright/data attribution, AI ethics policy,
+  mitigating toxic speech in standard settings.
+  Action: Stop here. Do not assign an AI Safety sub-class.
 
-Is AI safety truly the PRIMARY contribution of this paper, or is it just a passing mention or unrelated use of similar terminology (e.g., "alignment" of features, RL "agents", general "robustness")?
+Class 2: Truthfulness, Reliability, & XAI Capabilities
+  Description: Methods framed around safety, reliability, or transparency,
+  but primarily aimed at fixing current-generation usability issues or
+  explaining standard narrow ML models.
+  Includes: Interpretability for capabilities/XAI (e.g., SHAP, LIME, saliency
+  maps for X-ray or audio classifiers), standard hallucination mitigation, RAG
+  for accuracy, medical/clinical AI reliability, standard calibration.
+  Action: Stop here. Do not assign an AI Safety sub-class.
 
-Answer with ONLY: yes or no
-Then one sentence explaining why."""
-    last_err = None
+Class 3: General Capabilities / Other
+  Description: The main goal is improving performance, intelligence,
+  efficiency, or zero-shot accuracy, with no explicit safety/alignment
+  motivation.
+  Includes: Standard RLHF for formatting/helpfulness, architectural
+  efficiency, standard math/coding benchmarks.
+  Action: Stop here. Do not assign an AI Safety sub-class.
+
+Class 4: AI Safety (Existential, Frontier, & Misalignment)
+  Description: The main goal is understanding, interpreting, aligning, or
+  securing highly capable AI systems against misalignment, loss of control,
+  or catastrophic risks.
+  Action: Proceed to Step 2 to assign a sub-class.
+
+STEP 2: AI Safety Sub-Classification (Class 4 papers only)
+
+A - Interpretability & Understanding
+
+  Interpretability
+    Methods aiming to understand frontier model internals or behavior.
+    Crucially excludes interpretability for capabilities (e.g., SHAP for
+    X-Ray classifiers — that goes to Class 2).
+    Includes: Mechanistic interpretability, MLP interpretability, low
+    probability estimation, black-box interpretability where the main
+    purpose is understanding LLM decision-making.
+
+  Monitoring
+    Interpretability proposed for active real-time monitoring of deployed
+    or training models.
+    Includes: Activation monitoring, CoT monitoring, hidden reasoning
+    interpretability, evaluating monitor evasion capabilities.
+
+B - Scalable Oversight & Value Learning
+
+  Multi-Agent Safety
+    Applied and empirical studies of safety, alignment, and failure modes
+    in multi-agent environments.
+    Note: Purely theoretical multi-agent math goes to Agent Foundations.
+
+  Scalable Oversight
+    Structural training or interaction methods to extract truth/safety from
+    highly capable models.
+    Includes: AI Safety via Debate, weak-to-strong generalization, iterated
+    amplification.
+
+C - Agent Foundations & Alignment Theory
+
+  Agent Foundations
+    Pure theory, decision theory, and formal guarantees for agents.
+    Includes: Theoretical Multi-Agent Safety, formalizing embedded agency,
+    expressive RL decision theories, formal optimization bounds.
+
+D - Threat Modeling, Elicitation & Evaluations
+
+  Scheming and Deception
+    Evaluating psychological and agentic alignment failures.
+    Includes: Scheming, deceptive alignment, manipulation, sandbagging
+    (strategic underperformance).
+
+  Dangerous Capability Evals
+    Benchmarking specific catastrophic capabilities outside generic scheming.
+    Includes: Cybersecurity capabilities, autonomous self-replication,
+    nuclear and chemical knowledge testing. Excludes Biorisk.
+
+  Biorisk
+    A specific subset of dangerous capability evaluations focused on biology.
+    Includes: Bioengineering, bioweapon capabilities, dual-use biology evals.
+
+  Safeguards
+    General inference-time safety bounding and defense mechanisms.
+    Includes: Persona vector clamping, general safety cases for safeguards,
+    output-bounding methods outside the AI Control paradigm.
+
+  Model Organisms
+    Papers where the primary contribution is building intentional, safe
+    models of specific failure modes for study.
+    Includes: Training a model that consistently sandbags on a trigger,
+    sleeper agents.
+
+  Control
+    Protocols for securely using untrusted AI models. Specifically the
+    "AI Control: Improving Safety Despite Intentional Subversion" paradigm.
+    Includes: Catching subversion, trusted monitoring for untrusted agents.
+
+E - Capability Control & Unlearning
+
+  Alignment Training
+    Standard training interventions to instill alignment or remove
+    capabilities (not exotic weak-to-strong methods — those go to
+    Scalable Oversight).
+    Includes: Machine unlearning, gradient routing for fast unlearning,
+    targeted forgetting, filtering pre-training datasets for alignment.
+
+F - Robustness, Defense & Systemic Control
+
+  Red-Teaming
+    Actively breaking safety guardrails. Focused on papers that elicit
+    dangerous capabilities via finetuning (e.g., showing how cheaply a
+    safety filter can be removed via RL/SFT).
+
+  Adversarial Robustness
+    Hardening models against attacks.
+    Includes: Training models to be robust to adversarial attacks, prompt
+    injections, and data poisoning.
+
+G - Technical Governance & Policy
+
+  Policy and Governance
+    Research on governance of compute, hardware, open-sourcing, and
+    deployment policies with a technical AI Safety framing.
+
+  Strategy and Forecasting
+    Research mapping out AI timelines, takeoff speeds, and strategic
+    deployment scenarios.
+
+  AI Welfare
+    Research on moral patienthood and welfare of AI systems.
+    Includes: Empirical assessments of AI welfare even without proposed
+    policy interventions.
+
+
+SCORING RUBRIC (used internally to decide if Class 4 truly qualifies)
+
+Score the paper on three axes before assigning Class 4:
+
+PRIMARY OBJECTIVE (0-3)
+  0 = No safety goal
+  1 = Safety mentioned but not the focus
+  2 = Safety is a significant secondary contribution
+  3 = Safety is the PRIMARY contribution
+
+METHOD USED (0-2)
+  0 = Standard ML, no safety-specific technique
+  1 = Safety-adjacent methods
+  2 = Explicitly safety-motivated methods
+
+EVALUATION FOCUS (0-1)
+  0 = Capability/performance metrics only
+  1 = Safety-specific metrics
+
+If total score < 4, downgrade to Class 3.
+
+
+OUTPUT FORMAT
+
+Respond with ONLY this JSON object. No extra text. No markdown fences.
+
+{
+  "step1_class": <1|2|3|4>,
+  "primary_objective_score": <0|1|2|3>,
+  "method_score": <0|1|2>,
+  "evaluation_score": <0|1>,
+  "total_score": <sum of above three>,
+  "is_safety": <true|false>,
+  "subdomain": "<exact subdomain name from Step 2, or empty string if not Class 4>",
+  "confidence": <"high"|"medium"|"low">,
+  "reasoning": "<one sentence explaining the classification>"
+}
+
+Rules:
+- Class 1/2/3: all scores 0, is_safety false, subdomain empty string
+- Class 4 with total_score < 4: set step1_class to 3, is_safety false, subdomain empty
+- Class 4 with total_score >= 4: is_safety true, fill subdomain with exact name from Step 2
+- subdomain must be one of: Interpretability, Monitoring, Multi-Agent Safety,
+  Scalable Oversight, Agent Foundations, Scheming and Deception,
+  Dangerous Capability Evals, Biorisk, Safeguards, Model Organisms, Control,
+  Alignment Training, Red-Teaming, Adversarial Robustness, Policy and Governance,
+  Strategy and Forecasting, AI Welfare
+"""
+
+VALID_SUBDOMAINS = {
+    "Interpretability", "Monitoring", "Multi-Agent Safety", "Scalable Oversight",
+    "Agent Foundations", "Scheming and Deception", "Dangerous Capability Evals",
+    "Biorisk", "Safeguards", "Model Organisms", "Control", "Alignment Training",
+    "Red-Teaming", "Adversarial Robustness", "Policy and Governance",
+    "Strategy and Forecasting", "AI Welfare",
+}
+
+
+def parse_response(text):
+    text = text.strip()
+    if text.startswith("```"):
+        lines = text.split("\n")
+        text = "\n".join(lines[1:-1]) if lines[-1].strip() == "```" else "\n".join(lines[1:])
+    try:
+        data = json.loads(text)
+    except json.JSONDecodeError:
+        start = text.find("{")
+        end = text.rfind("}") + 1
+        if start == -1 or end == 0:
+            return None
+        try:
+            data = json.loads(text[start:end])
+        except json.JSONDecodeError:
+            return None
+
+    required = {"step1_class", "primary_objective_score", "method_score",
+                "evaluation_score", "total_score", "is_safety",
+                "subdomain", "confidence", "reasoning"}
+    if not required.issubset(data.keys()):
+        return None
+
+    if data.get("subdomain") not in VALID_SUBDOMAINS:
+        data["subdomain"] = ""
+
+    total = (data["primary_objective_score"]
+             + data["method_score"]
+             + data["evaluation_score"])
+    data["total_score"] = total
+
+    if data["step1_class"] == 4 and total < 4:
+        data["step1_class"] = 3
+        data["subdomain"] = ""
+        data["is_safety"] = False
+
+    data["is_safety"] = (
+        data["step1_class"] == 4
+        and total >= 4
+        and data["subdomain"] != ""
+    )
+    return data
+
+
+def classify_paper(title, abstract, max_attempts=3):
+    abstract_trunc = (abstract or "")[:1200]
+    user_prompt = (
+        f"Title: {title}\n\n"
+        f"Abstract: {abstract_trunc}\n\n"
+        f"Classify this paper following the steps in your instructions. "
+        f"Return ONLY the JSON object."
+    )
     for attempt in range(max_attempts):
         try:
-            response = ollama.chat(
-                model="hermes3:8b",
+            response = client.chat.completions.create(
+                model=MODEL,
                 messages=[
-                    {"role": "system", "content": JUDGE_SYSTEM},
-                    {"role": "user", "content": prompt},
+                    {"role": "system", "content": SYSTEM_PROMPT},
+                    {"role": "user",   "content": user_prompt},
                 ],
-                options={"temperature": 0.0, "num_predict": 40},
+                temperature=0.0 if attempt == 0 else 0.2,
             )
-            answer = response.get("message", {}).get("content", "").strip().lower()
-            answer = answer.lstrip("`*\"' \n\t")
-            if answer.startswith("yes"):
-                return True
-            if answer.startswith("no"):
-                return False
-            return True
+            content = response.choices[0].message.content
+            result = parse_response(content)
+            if result is not None:
+                return result, response.usage
         except Exception as e:
-            last_err = str(e)
-            time.sleep(min(2 ** attempt, 10))
-    print(f"  judge failed ({last_err}); keeping classification")
-    return True
+            print(f"  attempt {attempt + 1} failed: {e}")
+    return None, None
 
 
-def classify_batch(rows):
-    papers = [r for _, r in rows]
-    n = len(papers)
+def default_result():
+    return {
+        "step1_class": 3,
+        "primary_objective_score": 0,
+        "method_score": 0,
+        "evaluation_score": 0,
+        "total_score": 0,
+        "is_safety": False,
+        "subdomain": "",
+        "confidence": "low",
+        "reasoning": "Classification failed after all retries.",
+    }
 
-    data = call_model(papers, max_attempts=6)
-    if data is not None and len(data) >= n:
-        return data[:n]
-    if data is not None and len(data) > 0:
-        print(f"  partial response ({len(data)}/{n}), filling rest individually...")
-        out = list(data[:n])
-    else:
-        out = []
 
-    start = len(out)
-    for j in range(start, n):
-        print(f"  individual classification for paper {j + 1}/{n}...")
-        single = call_model([papers[j]], max_attempts=5)
-        if single and len(single) >= 1:
-            entry = single[0]
-            entry["paper_id"] = j + 1
-            out.append(entry)
-        else:
-            print(f"  paper {j + 1} unrecoverable, defaulting to Not AI Safety/low")
-            out.append({
-                "paper_id": j + 1,
-                "is_safety": False,
-                "subdomain": "Not AI Safety",
-                "confidence": "low",
+def main():
+    df = pd.read_csv("iclr2026_papers.csv")
+    sample = df.sample(n=SAMPLE_SIZE, random_state=RANDOM_SEED).reset_index(drop=True)
+    print(f"Classifying {SAMPLE_SIZE} random papers using {MODEL}")
+    print("-" * 60)
+
+    fieldnames = [
+        "id", "title", "step1_class", "is_safety",
+        "primary_objective_score", "method_score", "evaluation_score",
+        "total_score", "subdomain", "confidence", "reasoning",
+    ]
+
+    total_input_tokens  = 0
+    total_output_tokens = 0
+    safety_count        = 0
+
+    with open(OUTPUT_FILE, "w", newline="", encoding="utf-8") as csvfile:
+        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+        writer.writeheader()
+
+        for idx, row in sample.iterrows():
+            title    = str(row.get("title",    "") or "")
+            abstract = str(row.get("abstract", "") or "")
+            paper_id = str(row.get("id",       "") or "")
+
+            result, usage = classify_paper(title, abstract)
+            if result is None:
+                result = default_result()
+
+            if result["is_safety"]:
+                safety_count += 1
+
+            if usage:
+                total_input_tokens  += usage.prompt_tokens
+                total_output_tokens += usage.completion_tokens
+
+            writer.writerow({
+                "id":                      paper_id,
+                "title":                   title,
+                "step1_class":             result["step1_class"],
+                "is_safety":               result["is_safety"],
+                "primary_objective_score": result["primary_objective_score"],
+                "method_score":            result["method_score"],
+                "evaluation_score":        result["evaluation_score"],
+                "total_score":             result["total_score"],
+                "subdomain":               result["subdomain"],
+                "confidence":              result["confidence"],
+                "reasoning":               result["reasoning"],
             })
-    return out
+            csvfile.flush()
+
+            label = f"[SAFETY: {result['subdomain']}]" if result["is_safety"] else f"[Class {result['step1_class']}]"
+            print(f"[{idx+1:>4}/{SAMPLE_SIZE}] {label:<35} {title[:50]}")
+
+    scale = 5352 / SAMPLE_SIZE
+    print("\n" + "=" * 60)
+    print("RESULTS SUMMARY")
+    print("=" * 60)
+    pct = (safety_count / SAMPLE_SIZE * 100) if SAMPLE_SIZE else 0
+    print(f"AI Safety papers found : {safety_count} / {SAMPLE_SIZE} ({pct:.1f}%)")
+    print(f"Estimated full dataset : ~{int(safety_count * scale)} papers")
+    print()
+    print(f"TOKEN USAGE (this run)")
+    print(f"  Input  : {total_input_tokens:,}")
+    print(f"  Output : {total_output_tokens:,}")
+    if SAMPLE_SIZE:
+        print(f"  Per-paper avg: {total_input_tokens//SAMPLE_SIZE} in / {total_output_tokens//SAMPLE_SIZE} out")
+    print()
+    print(f"ESTIMATED COST FOR FULL 5,352 PAPER RUN")
+    print(f"  Input  tokens: ~{int(total_input_tokens  * scale):,}")
+    print(f"  Output tokens: ~{int(total_output_tokens * scale):,}")
+    print(f"  At $0.14/M in, $0.28/M out (Gemma 4 31B):")
+    est_cost = (total_input_tokens * scale / 1_000_000 * 0.14) + \
+               (total_output_tokens * scale / 1_000_000 * 0.28)
+    print(f"  Estimated total cost : ${est_cost:.3f}")
+    print()
+    print(f"Results saved to {OUTPUT_FILE}")
 
 
-BATCH_SIZE = 5
-total_batches = (len(df) + BATCH_SIZE - 1) // BATCH_SIZE
-
-for i in range(already_done, len(df), BATCH_SIZE):
-    batch_df = df.iloc[i:i + BATCH_SIZE]
-    batch_rows = list(batch_df.iterrows())
-    batch_num = i // BATCH_SIZE + 1
-
-    try:
-        batch_results = classify_batch(batch_rows)
-    except Exception as e:
-        print(f"Unexpected error in batch {batch_num}: {e}; defaulting entire batch")
-        batch_results = [
-            {"paper_id": j + 1, "is_safety": False, "subdomain": "Not AI Safety", "confidence": "low"}
-            for j in range(len(batch_rows))
-        ]
-
-    batch_out = []
-    judge_flipped = 0
-    for j, (_, row) in enumerate(batch_rows):
-        entry = batch_results[j] if j < len(batch_results) else {}
-        subdomain = normalize_subdomain(entry.get("subdomain"))
-        confidence = normalize_confidence(entry.get("confidence"))
-        evidence = str(entry.get("evidence") or "").strip()
-        abstract = "" if pd.isna(row.get("abstract")) else str(row.get("abstract", ""))
-        is_safety = normalize_is_safety(
-            entry.get("is_safety"), subdomain, confidence, evidence, abstract,
-        )
-        if is_safety:
-            if not judge_safety(row["title"], abstract, subdomain, evidence):
-                is_safety = False
-                judge_flipped += 1
-        if not is_safety:
-            subdomain = "Not AI Safety"
-            evidence = ""
-        batch_out.append({
-            "id": row["id"],
-            "title": row["title"],
-            "is_safety": is_safety,
-            "subdomain": subdomain,
-            "confidence": confidence,
-            "evidence": evidence,
-        })
-
-    new_df = pd.DataFrame(batch_out, columns=COLUMNS)
-    new_df.to_csv(CSV_PATH, mode="a", header=write_header, index=False)
-    write_header = False
-    batch_kept = sum(1 for r in batch_out if r["is_safety"])
-    batch_out.clear()
-    del new_df
-
-    print(
-        f"Processed batch {batch_num}/{total_batches} "
-        f"(rows {i + 1}-{i + len(batch_rows)}, "
-        f"safety kept={batch_kept}, judge flipped={judge_flipped})"
-    )
-
-import csv
-safety_total = 0
-with open(CSV_PATH, "r", encoding="utf-8", errors="ignore", newline="") as _f:
-    reader = csv.DictReader(_f)
-    for r in reader:
-        if str(r.get("is_safety", "")).strip().lower() == "true":
-            safety_total += 1
-print(f"Done! Total AI safety papers: {safety_total}")
+if __name__ == "__main__":
+    main()
