@@ -1,0 +1,157 @@
+Paper Title
+ExPO-HM: Learning to Explain-then-Detect for Hateful Meme Detection
+Common Corpus: The Largest Collection of Ethical Data for LLM Pre-Training
+Benchmarking Stochastic Approximation Algorithms for Fairness-Constrained Training of Deep Neural Networks
+Fairness via Independence: A General Regularization Framework for Machine Learning
+"Is Graph Unlearning Ready for Practice? A Benchmark on Efficiency, Utility, and Forgetting"
+Adaptive Methods Are Preferable in High Privacy Settings: An SDE Perspective
+Gradient-Based Diversity Optimization with Differentiable Top-$k$ Objective
+Fair Conformal Classification via Learning Representation-Based Groups
+Multi-Feature Quantized Self-Attention for Fair Large Language Models
+Information-Theoretic Membership Inference for Granular Quantification of Memorization
+SecP-Tuning: Efficient Privacy-Preserving Prompt Tuning for Large Language Models via MPC
+Moving Beyond Medical Exams: A Clinician-Annotated Fairness Dataset of Real-World Tasks and Ambiguity in Mental Healthcare
+Data-Aware and Scalable Sensitivity Analysis for Decision Tree Ensembles
+INO-SGD: Addressing Utility Imbalance under Individualized Differential Privacy
+Membership Privacy Risks of Sharpness Aware Minimization
+Revisiting the Past: Data Unlearning with Model State History
+TVTSyn: Content-Synchronous Time-Varying Timbre for Streaming Voice Conversion and Anonymization
+"RESFL: An Uncertainty-Aware Framework for Responsible Federated Learning by Balancing Privacy, Fairness and Utility"
+Exponential-Wrapped Mechanisms: Differential Privacy on Hadamard Manifolds Made Practical
+Critical Confabulation: Can LLMs Hallucinate for Social Good?
+On Fairness of Task Arithmetic: The Role of Task Vectors
+ULD-Net: Enabling Ultra-Low-Degree Fully Polynomial Networks for Homomorphically Encrypted Inference
+Fair Graph Machine Learning under Adversarial Missingness Processes
+Gaussian certified unlearning in high dimensions: A hypothesis testing approach
+Operationalizing Data Minimization for Privacy-Preserving LLM Prompting
+Multi-turn Evaluation of Anthropomorphic Behaviours in Large Language Models
+WARP: Weight Teleportation for Attack-Resilient Unlearning Protocols
+CIMemories: A Compositional Benchmark For Contextual Integrity In LLMs
+Contextual Multi-Armed Bandits with Minimum Aggregated Revenue Constraints
+Bridging Fairness and Explainability: Can Input-Based Explanations Promote Fairness in Hate Speech Detection?
+Remotely Detectable Robot Policy Watermarking
+Prediction with Expert Advice under Local Differential Privacy
+GRADIEND: Feature Learning within Neural Networks Exemplified through Biases
+Skirting Additive Error Barriers for Private Turnstile Streams
+Is Your Paper Being Reviewed by an LLM? Benchmarking AI Text Detection in Peer Review
+Membership Inference Attacks Against Fine-tuned Diffusion Language Models
+Black-Box Privacy Attacks on Shared Representations in Multitask Learning
+Private Rate-Constrained Optimization with Applications to Fair Learning
+Convergent Differential Privacy Analysis for General Federated Learning
+Rethinking Pareto Frontier: On the Optimal Trade-offs in Fair Classification
+Learning Dynamics of Logits Debiasing for Long-Tailed Semi-Supervised Learning
+LLM Fingerprinting via Semantically Conditioned Watermarks
+WRING Out The Bias: A Rotation-Based Alternative To Projection Debiasing
+Steering the Herd: A Framework for LLM-based Control of Social Learning
+LiteGuard: Efficient Task-Agnostic Model Fingerprinting with Enhanced Generalization
+Fingerprinting Deep Neural Networks for Ownership Protection: An Analytical Approach
+BiasBusters: Uncovering and Mitigating Tool Selection Bias in Large Language Models
+Optimizing Canaries for Privacy Auditing with Metagradient Descent
+CodeGenGuard: A Watermark for Code Generation Models
+Silent Leaks: Implicit Knowledge Extraction Attack on RAG Systems
+A Fair Bayesian Inference through Matched Gibbs Posterior
+Knowledge Distillation as Decontamination? Revisiting the “Data Laundering” Concern in Classification Tasks
+Doubly-Regressing Approach for Subgroup Fairness
+Pisces: Cryptography-based Private Retrieval-Augmented Generation with Dual-Path Retrieval
+Machine Unlearning under Retain–Forget Entanglement
+THE SELF-RE-WATERMARKING TRAP: FROM EXPLOIT TO RESILIENCE
+Safeguarding Multimodal Knowledge Copyright in the RAG-as-a-Service Environment
+Guidance Watermarking for Diffusion Models
+Synthetic History: Evaluating Visual Representations of the Past in Diffusion Models
+AWM: Accurate Weight-Matrix Fingerprint for Large Language Models
+On the trade-off between expressivity and privacy in graph representation learning
+Remaining-data-free Machine Unlearning by Suppressing Sample Contribution
+Dataset Distillation for Memorized Data: Soft Labels can Leak Held-Out Teacher Knowledge
+"A Bayesian Nonparametric Framework for Private, Fair, and Balanced Tabular Data Synthesis"
+GeoDiv: Framework for Measuring Geographical Diversity in Text-to-Image Models
+Synthesising Counterfactual Explanations via Label-Conditional Gaussian Mixture Variational Autoencoders
+Tab-MIA: A Benchmark Dataset for Membership Inference Attacks on Tabular Data in LLMs
+Mitigating Privacy Risk via Forget Set-Free Unlearning
+"Hey, That's My Model! Introducing Chain & Hash, An LLM Fingerprinting Technique"
+Do Vision-Language Models Respect Contextual Integrity in Location Disclosure?
+CompMarkGS: Robust Watermarking for Compressed 3D Gaussian Splatting
+InclusiveVidPose: Bridging the Pose Estimation Gap for Individuals with Limb Deficiencies in Video-Based Motion
+Secure Inference for Diffusion Models via Unconditional Scores
+Towards Privacy-Guaranteed Label Unlearning in Vertical Federated Learning: Few-Shot Forgetting Without Disclosure
+"Spherical Watermark: Encryption-Free, Lossless Watermarking for Diffusion Models"
+Differentially Private Equilibrium Finding in Polymatrix Games
+SMOTE and Mirrors: Exposing Privacy Leakage from Synthetic Minority Oversampling
+Fair Decision Utility in Human-AI Collaboration: Interpretable Confidence Adjustment for Humans with Cognitive Disparities
+ReTrace: Reinforcement Learning-Guided Reconstruction Attacks on Machine Unlearning
+LLMS ON TRIAL: Evaluating Judicial Fairness For Large Language Models
+Differentially Private Two-Stage Gradient Descent for Instrumental Variable Regression
+On The Fragility of Benchmark Contamination Detection in Reasoning Models
+Unlearning Isn't Invisible: Detecting Unlearning Traces in LLMs from Model Outputs
+Hot PATE: Private Aggregation of Distributions  for Diverse Tasks
+Adaptive Logit Adjustment for Debiasing Multimodal Language Models
+Provable Separations between Memorization and Generalization in Diffusion Models
+CTC-DRO: Robust Optimization for Reducing Language Disparities in Speech Recognition
+SEED-SET: Scalable Evolving Experimental Design for System-level Ethical Testing
+Benchmarking Bias Mitigation Toward Fairness Without Harm from Vision to LVLMs
+Federated Learning of Quantile Inference under Local Differential Privacy
+Differentially Private Domain Discovery
+Beyond Membership: Limitations of Add/Remove Adjacency in Differential Privacy
+Traceable Black-Box Watermarks For Federated Learning
+Sharpness-Aware Machine Unlearning
+MUSE: Model-Agnostic Tabular Watermarking via Multi-Sample Selection
+DP-Fusion: Token-Level Differentially Private Inference for Large Language Models
+Protection against Source Inference Attacks in Federated Learning
+Fair Classification by Direct Intervention on Operating Characteristics
+Hubble: a Model Suite to Advance the Study of LLM Memorization
+Back to Square Roots: An Optimal Bound on the Matrix Factorization Error for Multi-Epoch Differentially Private SGD
+On Optimal Hyperparameters for Differentially Private Deep Transfer Learning
+"No Caption, No Problem: Caption-Free Membership Inference via Model-Fitted Embeddings"
+"Distilling the Thought, Watermarking the Answer: A Principle Semantic Guided Watermark for Reasoning Large Language Models"
+"Fair in Mind, Fair in Action? A Synchronous Benchmark for Understanding and Generation in UMLLMs"
+SIGMark: Scalable In-Generation Watermark with Blind Extraction for Video Diffusion
+PateGAIL++: Utility Optimized Private Trajectory Generation with Imitation Learning
+MOLM: Mixture of LoRA Markers
+Decoupling the Class Label and the Target Concept in Machine Unlearning
+Statistical Guarantees in the Search for Less Discriminatory Algorithms
+Concept-Aware Privacy Mechanisms for Defending Embedding Inversion Attacks
+HiddenEcho: Mitigating Noise Amplification in Differentially Private LLMs with Hidden-State Correction
+SeedPrints: Fingerprints Can Even Tell Which Seed Your Large Language Model Was Trained From
+BiasFreeBench: a Benchmark for Mitigating Bias in Large Language Model Responses
+Culture in Action: Evaluating Text-to-Image Models through Social Activities
+In-Context Watermarks for Large Language Models
+DPQuant: Efficient and Private Model Training via Dynamic Quantization Scheduling
+Fairness-Aware Multi-view Evidential Learning with Adaptive Prior
+Unified Privacy Guarantees for Decentralized Learning via Matrix Factorization
+PMark: Towards Robust and Distortion-free Semantic-level Watermarking with Channel Constraints
+Reducing Class-Wise Performance Disparity via Margin Regularization
+Privacy Beyond Pixels: Latent Anonymization for Privacy-Preserving Video Understanding
+"Aligned Agents, Biased Swarm: Measuring Bias Amplification in Multi-Agent Systems"
+CheckMate! Watermarking Graph Diffusion Models in Polynomial Time
+NurValues: Real-World Nursing Values Evaluation for Large Language Models in Clinical Context
+Reducing information dependency does not cause training data privacy. Adversarially non-robust features do.
+MOAI: Module-Optimizing Architecture for Non-Interactive Secure Transformer Inference
+Unbiased Object Detection Beyond Frequency with Visually Prompted Image Synthesis
+Watermark-based Attribution of AI-Generated Content
+The Matthew Effect of AI Programming Assistants: A Hidden Bias in Software Evolution
+Analyzing and Evaluating Unbiased Language Model Watermark
+Bias Similarity Measurement: A Black-Box Audit of Fairness Across LLMs
+An Ensemble Framework for Unbiased Language Model Watermarking
+When Priors Backfire: On the Vulnerability of Unlearnable Examples to Pretraining
+Attack-Resistant Watermarking for AIGC Image Forensics via Diffusion-based Semantic Deflection
+Secret-Protected Evolution for Differentially Private Synthetic Text Generation
+BA-LoRA: Bias-Alleviating Low-Rank Adaptation to Mitigate Catastrophic Inheritance in Large Language Models
+Regulating Internal Alignment Flows for Robust Learning Under Spurious Correlations
+Doxing via the Lens: Revealing Location-related Privacy Leakage on Multi-modal Large Reasoning Models
+Rethinking LoRA for Privacy-Preserving Federated Learning in Large Models
+NoisePrints: Distortion-Free Watermarks for Authorship in Private Diffusion Models
+Detecting and Mitigating Memorization in Diffusion Models through Anisotropy of the Log-Probability
+Fine-Grained Class-Conditional Distribution Balancing for Debiased Learning
+NGS-Marker: Robust Native Watermarking for 3D Gaussian Splatting
+Person-Centric Annotations of LAION-400M: Auditing Bias and Its Transfer to Models
+Bi-directional Bias Attribution: Debiasing Large Language Models without Modifying Prompts
+Curation Leaks: Membership Inference Attacks against Data Curation for Machine Learning
+Watermarking Diffusion Language Models
+PE-SGD: Differentially Private Deep Learning via Evolution of Gradient Subspace for Text
+FARI: Robust One-Step Inversion for Watermarking in Diffusion Models
+SHE-LoRA: Selective Homomorphic Encryption for Federated Tuning with Heterogeneous LoRA
+Why Do Unlearnable Examples Work: A Novel Perspective of Mutual Information
+"SERUM: Simple, Efficient, Robust, and Unifying Marking for Diffusion-based Image Generation"
+Benchmarking Empirical Privacy Protection for Adaptations of Large Language Models
+Data Provenance for Image Auto-Regressive Generation
+Natural Identifiers for Privacy and Data Audits in Large Language Models
+Learnability and Privacy Vulnerability are Entangled in a Few Critical Weights

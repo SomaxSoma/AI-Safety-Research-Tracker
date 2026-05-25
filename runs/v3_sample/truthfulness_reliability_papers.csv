@@ -1,0 +1,121 @@
+Paper Title
+PGRF-Net: A Prototype-Guided Relational Fusion Network for Diagnostic Multivariate Time-Series Anomaly Detection
+SiMO: Single-Modality-Operable Multimodal Collaborative Perception
+Beyond the Known: An Unknown-Aware Large Language Model for Open-Set Text Classification
+GALAX: Graph-Augmented Language Model for Explainable Reinforcement-Guided Subgraph Reasoning in Precision Medicine
+GARLIC: Graph Attention-based Relational Learning of Multivariate Time Series in Intensive Care
+Veritas: Generalizable Deepfake Detection via Pattern-Aware Reasoning
+The Tutor-Pupil Augmentation: Enhancing Learning and Interpretability via Input Corrections
+Thinking as Society: Multi-Social-Agent Self-Distillation for Multimodal Misinformation Detection
+Detecting Data Contamination from Reinforcement Learning Post-training for Large Language Models
+Exploring Interpretability for Visual Prompt Tuning with Cross-layer Concepts
+NatADiff: Adversarial Boundary Guidance for Natural Adversarial Diffusion
+GradPCA: Leveraging NTK Alignment for Reliable Out-of-Distribution Detection
+SASFT: Sparse Autoencoder-guided Supervised Finetuning to Mitigate Unexpected Code-Switching in LLMs
+Cite Pretrain: Retrieval-Free Knowledge Attribution for Large Language Models
+Dual Randomized Smoothing: Beyond Global Noise Variance
+Preference Leakage: A Contamination Problem in LLM-as-a-judge
+SeRI: Gradient-Free Sensitive Region Identification in Decision-Based Black-Box Attacks
+Tackling the XAI Disagreement Problem with Adaptive Feature Grouping
+Transformers with Endogenous In-Context Learning: Bias Characterization and Mitigation
+Once-More: Continuous Self-Correction for Large Language Models via Perplexity-Guided Intervention
+Improving Black-Box Generative Attacks via Generator Semantic Consistency
+Towards Faithful Reasoning in Remote Sensing: A Perceptually-Grounded GeoSpatial Chain-of-Thought for Vision-Language Models
+Understanding Sensitivity of Differential Attention through the Lens of Adversarial Robustness
+Feature compression is the root cause of adversarial fragility in neural networks
+NDAD: Negative-Direction Aware Decoding for Large Language Models via Controllable Hallucination Signal Injection
+GPS: Graph-guided Proactive Information Seeking in Large Language Models
+Are LLMs Really Not Knowledgeable? Mining the Submerged Knowledge in LLMs' Memory
+EditLens: Quantifying the Extent of AI Editing in Text
+Reasoning on Time-Series for Financial Technical Analysis
+Learning Nonlinear Causal Reductions to Explain Reinforcement Learning Policies
+SafeFlowMatcher: Safe and Fast Planning using Flow Matching with Control Barrier Functions
+AFTER: Mitigating the Object Hallucination of LVLM via Adaptive Factual-Guided Activation Editing
+Conformalized Decision Risk Assessment
+"Bounds of Chain-of-Thought Robustness: Reasoning Steps, Embed Norms, and Beyond"
+Counterfactual Explanations on Robust Perceptual Geodesics
+Sequential Information Bottleneck Fusion: Towards Robust and Generalizable Multi-Modal Brain Tumor Segmentation
+Automatic Image-Level Morphological Trait Annotation for Organismal Images
+Exposing and Defending the Achilles' Heel of Video Mixture-of-Experts
+"Robustness in Text-Attributed Graph Learning: Insights, Trade-offs, and New Defenses"
+Clustering by Denoising: Latent plug-and-play diffusion for single-cell embeddings
+AbstRaL: Augmenting LLMs' Reasoning by Reinforcing Abstract Thinking
+Bayesian Neural Networks for Functional ANOVA Model
+VCWorld: A Biological World Model for Virtual Cell Simulation
+Robust Adversarial Quantification via Conflict-Aware Evidential Deep Learning
+Micro-Macro Retrieval: Reducing Long-Form Hallucination in Large Language Models
+Towards a Certificate of Trust: Task-Aware OOD Detection for Scientific AI
+From Conversation to Query Execution: Benchmarking User and Tool Interactions for EHR Database Agents
+KnowGuard: Knowledge-Driven Abstention for Multi-Round Clinical Reasoning
+Seeing What’s Wrong: A Trajectory-Guided Approach to Caption Error Detection
+Accelerated Learning with Linear Temporal Logic using Differentiable Simulation
+Detecting Invariant Manifolds in ReLU-Based RNNs
+When LLMs get significantly worse: A statistical approach to detect model degradations
+LAMDA: A Longitudinal Android Malware Benchmark for Concept Drift Analysis
+Photon: Speedup Volume Understanding with Efficient Multimodal Large Language Models
+Robust Spiking Neural Networks Against Adversarial Attacks
+Constrained Decoding of Diffusion LLMs with Context-Free Grammars
+CaTS: Calibrated Test-Time Scaling for Efficient LLM Reasoning
+Learning Self-Critiquing Mechanisms for Region-Guided Chest X-Ray Report Generation
+Log Probability Tracking of LLM APIs
+ProofOptimizer: Training Language Models to Simplify Proofs without Human Demonstrations
+TriQDef: Disrupting Semantic and Gradient Alignment to Prevent Adversarial Patch Transferability in Quantized Neural Networks
+A Probabilistic Hard Concept Bottleneck for Steerable Generative Models
+Multi-ReduNet: Interpretable Class-Wise Decomposition of ReduNet
+Influence Dynamics and Stagewise Data Attribution
+Dimension-Free Decision Calibration for Nonlinear Loss Functions
+LipNeXt: Scaling up Lipschitz-based Certified Robustness to Billion-parameter Models
+Attribution-Guided Decoding
+Temporal Concept Dynamics in Diffusion Models via Prompt-Conditioned Interventions
+Provably Explaining Neural Additive Models
+VidGuard-R1: AI-Generated Video Detection and Explanation via Reasoning MLLMs and RL
+"A Structured, Tagged, and Localized Visual Question Answering Dataset with Full Sentence Answers and Scene Graphs for Chest X-ray Images"
+StyliTruth : Unlocking Stylized yet Truthful LLM Generation via Disentangled Steering
+Verification of the Implicit World Model in a Generative Model via Adversarial Sequences
+From Predictors to Samplers via the Training Trajectory
+Counterfactual Reasoning for Retrieval-Augmented Generation
+Online Conformal Prediction with Adversarial Semi-bandit Feedback via Regret Minimization
+Semantic Visual Anomaly Detection and Reasoning in AI-Generated Images
+OpenApps: Simulating Environment Variations to Measure UI Agent Reliability
+DeLeaker: Dynamic Inference-Time Reweighting For Semantic Leakage Mitigation in Text-to-Image Models
+Measuring Uncertainty Calibration
+SinkTrack: Attention Sink based Context Anchoring for Large Language Models
+Out of the Shadows: Exploring a Latent Space for Neural Network Verification
+Discrete Diffusion for Reflective Vision-Language-Action Models in Autonomous Driving
+AI-for-Science Low-code Platform with Bayesian Adversarial Multi-Agent Framework
+Enhancing Persona Following at Decoding Time via Dynamic Importance Estimation for Role-Playing Agents
+Robust Adaptive Multi-Step Predictive Shielding
+Designing Affine-Invariant Neural Networks for Photometric Corruption Robustness and Generalization
+Theory-Grounded Evaluation of Human-Like Fallacy Patterns in LLM Reasoning
+Spilled Energy in Large Language Models
+An Information-Theoretic Parameter-Free Bayesian Framework for Probing Labeled Dependency Trees from Attention Score
+Estimating Semantic Alphabet Size for LLM Uncertainty Quantification
+Only Brains Align with Brains: Cross-Region Alignment Patterns Expose Limits of Normative Models
+TrainRef: Curating Data with Label Distribution and Minimal Reference for Accurate Prediction and Reliable Confidence
+Inverse IFEval: Can LLMs Unlearn Stubborn Training Conventions to Follow Real Instructions?
+WATS: Wavelet-Aware Temperature Scaling for Reliable Graph Neural Networks
+Debugging Concept Bottleneck Models through Removal and Retraining
+EvA: Evolutionary Attacks on Graphs
+"On the Shelf Life of Fine-Tuned LLM-Judges: Future-Proofing, Backward-Compatibility, and Question Generalization"
+CounselBench: A Large-Scale Expert Evaluation and Adversarial Benchmarking of Large Language Models in Mental Health Question Answering
+Bayesian Influence Functions for Hessian-Free Data Attribution
+CONSIGN: Conformal Segmentation Informed by Spatial Groupings via Decomposition
+Demystifying Deep Search: A Holistic Evaluation with Hint-free Multi-Hop Questions and Factorised Metrics
+Reasoning Boosts Opinion Alignment in LLMs
+Rethinking Radiology Report Generation: From Narrative Flow to Topic-Guided Findings
+Adaptive Conformal Anomaly Detection with Time Series Foundation Models for Signal Monitoring.
+Visual Self-Refine: A Pixel-Guided Paradigm for Accurate Chart Parsing
+DeepTRACE: Auditing Deep Research AI Systems for Tracking Reliability Across Citations and Evidence
+Detection of unknown unknowns in autonomous systems
+ClarifyVC: Clarifying Ambiguous Commands in Vehicle Control with a Hybrid Data Augmentation Pipeline
+Know When to Abstain: Optimal Selective Classification with Likelihood Ratios
+Visual Multi-Agent System: Mitigating Hallucination Snowballing via Visual Flow
+Enhancing Hallucination Detection through Noise Injection
+Beyond Binary Rewards: Training LMs to Reason About Their Uncertainty
+Cat-PO: Cross-modal Adaptive Token-rewards for Preference Optimization in Truthful Multimodal LLMs
+Why Do Unlearnable Examples Work: A Novel Perspective of Mutual Information
+Semantic Uncertainty Quantification of Hallucinations in LLMs: A Quantum Tensor Network Based Method
+Every Language Model Has a Forgery-Resistant Signature
+Hallucination Begins Where Saliency Drops
+Detecting Temporal Misalignment Attacks in Multimodal Fusion for Autonomous Driving
+Rex-Thinker: Grounded Object Referring via Chain-of-Thought Reasoning

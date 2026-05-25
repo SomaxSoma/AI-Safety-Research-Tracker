@@ -1,0 +1,152 @@
+Paper Title
+Diverse and Sparse Mixture-of-Experts for Causal Subgraph–Based Out-of-Distribution Graph Learning
+NerVE: Nonlinear Eigenspectrum Dynamics in LLM Feed-Forward Networks
+How Transformers Learn Causal Structures In-Context: Explainable Mechanism Meets Theoretical Guarantee
+GALAX: Graph-Augmented Language Model for Explainable Reinforcement-Guided Subgraph Reasoning in Precision Medicine
+Adaptive Conformal Prediction via Mixture-of-Experts Gating Similarity
+PGRF-Net: A Prototype-Guided Relational Fusion Network for Diagnostic Multivariate Time-Series Anomaly Detection
+Towards Faithful Reasoning in Remote Sensing: A Perceptually-Grounded GeoSpatial Chain-of-Thought for Vision-Language Models
+Learning Concept Bottleneck Models from Mechanistic Explanations
+Veritas: Generalizable Deepfake Detection via Pattern-Aware Reasoning
+Beyond the Known: An Unknown-Aware Large Language Model for Open-Set Text Classification
+Practical estimation of the optimal classification error with soft labels and calibration
+GARLIC: Graph Attention-based Relational Learning of Multivariate Time Series in Intensive Care
+On the Lipschitz Continuity of Set Aggregation Functions and Neural Networks for Sets
+Learning Nonlinear Causal Reductions to Explain Reinforcement Learning Policies
+The Tutor-Pupil Augmentation: Enhancing Learning and Interpretability via Input Corrections
+Enhancing Sparse Event Detection in Healthcare Time-Series via Adaptive Gate of Context–Detail Interaction
+THEMIS: Towards Holistic Evaluation of MLLMs for Scientific Paper Fraud Forensics
+To Sink or Not to Sink: Visual Information Pathways in Large Vision-Language Models
+Tackling the XAI Disagreement Problem with Adaptive Feature Grouping
+Thinking as Society: Multi-Social-Agent Self-Distillation for Multimodal Misinformation Detection
+SASFT: Sparse Autoencoder-guided Supervised Finetuning to Mitigate Unexpected Code-Switching in LLMs
+Once-More: Continuous Self-Correction for Large Language Models via Perplexity-Guided Intervention
+Cite Pretrain: Retrieval-Free Knowledge Attribution for Large Language Models
+Detecting Data Contamination from Reinforcement Learning Post-training for Large Language Models
+MLP Memory: A Retriever-Pretrained Memory for Large Language Models
+Preference Leakage: A Contamination Problem in LLM-as-a-judge
+Exploring Interpretability for Visual Prompt Tuning with Cross-layer Concepts
+GradPCA: Leveraging NTK Alignment for Reliable Out-of-Distribution Detection
+Fast and Interpretable Protein Substructure Alignment via Optimal Transport
+ResCP: Reservoir Conformal Prediction for Time Series Forecasting
+Exploratory Causal Inference in SAEnce
+Multiple Token Divergence: Measuring and Steering In-Context Computation Density
+"The CoT Encyclopedia: Analyzing, Predicting, and Controlling how a Reasoning Model will Think"
+Understanding Sensitivity of Differential Attention through the Lens of Adversarial Robustness
+GPS: Graph-guided Proactive Information Seeking in Large Language Models
+NDAD: Negative-Direction Aware Decoding for Large Language Models via Controllable Hallucination Signal Injection
+Mapping Semantic & Syntactic Relationships with Geometric Rotation
+Are LLMs Really Not Knowledgeable? Mining the Submerged Knowledge in LLMs' Memory
+Sparse CLIP: Co-Optimizing Interpretability and Performance in Contrastive Learning
+Variation in Verification: Understanding Verification Dynamics in Large Language Models
+Mechanism of Task-oriented Information Removal in In-context Learning
+SafeFlowMatcher: Safe and Fast Planning using Flow Matching with Control Barrier Functions
+When Foundation Models are One-Liners: Limitations and Future Directions for Time Series Anomaly Detection
+"Bounds of Chain-of-Thought Robustness: Reasoning Steps, Embed Norms, and Beyond"
+AFTER: Mitigating the Object Hallucination of LVLM via Adaptive Factual-Guided Activation Editing
+LLM as an Algorithmist: Enhancing Anomaly Detectors via Programmatic Synthesis
+Sequential Information Bottleneck Fusion: Towards Robust and Generalizable Multi-Modal Brain Tumor Segmentation
+Stretching Beyond the Obvious: A Gradient-Free Framework to Unveil the Hidden Landscape of Visual Invariance
+Conformalized Decision Risk Assessment
+Robust Adversarial Quantification via Conflict-Aware Evidential Deep Learning
+Dual Distillation for Few-Shot Anomaly Detection
+Counterfactual Explanations on Robust Perceptual Geodesics
+Automatic Image-Level Morphological Trait Annotation for Organismal Images
+Robust and Interpretable Adaptation of Equivariant Materials Foundation Models via Sparsity-promoting Fine-tuning
+KnowGuard: Knowledge-Driven Abstention for Multi-Round Clinical Reasoning
+Accelerated Learning with Linear Temporal Logic using Differentiable Simulation
+FAPO: Flawed-Aware Policy Optimization for Efficient and Reliable Reasoning
+Precise and Interpretable Editing of Code Knowledge in Large Language Models
+Micro-Macro Retrieval: Reducing Long-Form Hallucination in Large Language Models
+Bayesian Test-Time Adaptation via Dirichlet feature projection and GMM-Driven Inference for Motor Imagery EEG Decoding
+From Conversation to Query Execution: Benchmarking User and Tool Interactions for EHR Database Agents
+LAMDA: A Longitudinal Android Malware Benchmark for Concept Drift Analysis
+VCWorld: A Biological World Model for Virtual Cell Simulation
+Detecting Invariant Manifolds in ReLU-Based RNNs
+First is Not Really Better Than Last: Evaluating Layer Choice and Aggregation Strategies in Language Model Data Influence Estimation
+Bayesian Neural Networks for Functional ANOVA Model
+Towards a Certificate of Trust: Task-Aware OOD Detection for Scientific AI
+Constrained Decoding of Diffusion LLMs with Context-Free Grammars
+Log Probability Tracking of LLM APIs
+Photon: Speedup Volume Understanding with Efficient Multimodal Large Language Models
+Seeing What’s Wrong: A Trajectory-Guided Approach to Caption Error Detection
+When LLMs get significantly worse: A statistical approach to detect model degradations
+Robust Spiking Neural Networks Against Adversarial Attacks
+Explainable $ K $-means Neural Networks for Multi-view Clustering
+Temporal Concept Dynamics in Diffusion Models via Prompt-Conditioned Interventions
+Learning Self-Critiquing Mechanisms for Region-Guided Chest X-Ray Report Generation
+Are Reasoning LLMs Robust to Interventions on their Chain-of-Thought?
+A Probabilistic Hard Concept Bottleneck for Steerable Generative Models
+"SERUM: Simple, Efficient, Robust, and Unifying Marking for Diffusion-based Image Generation"
+Latent Veracity Inference for Identifying Errors in Stepwise Reasoning
+Multi-ReduNet: Interpretable Class-Wise Decomposition of ReduNet
+EAMET: ROBUST MASSIVE MODEL EDITING VIA EMBEDDING ALIGNMENT OPTIMIZATION
+Dimension-Free Decision Calibration for Nonlinear Loss Functions
+Attribution-Guided Decoding
+Provably Explaining Neural Additive Models
+Do LLMs Forget What They Should? Evaluating In-Context Forgetting in Large Language Models
+OwlEye: Zero-Shot Learner for Cross-Domain Graph Data Anomaly Detection
+VidGuard-R1: AI-Generated Video Detection and Explanation via Reasoning MLLMs and RL
+Counterfactual Reasoning for Retrieval-Augmented Generation
+DeLeaker: Dynamic Inference-Time Reweighting For Semantic Leakage Mitigation in Text-to-Image Models
+StyliTruth : Unlocking Stylized yet Truthful LLM Generation via Disentangled Steering
+Verification of the Implicit World Model in a Generative Model via Adversarial Sequences
+"SpineBench: A Clinically Salient, Level-Aware Benchmark Powered by the SpineMed-450k Corpus"
+Disentangling Knowledge Representations for Large Language Model Editing
+SinkTrack: Attention Sink based Context Anchoring for Large Language Models
+OpenApps: Simulating Environment Variations to Measure UI Agent Reliability
+Online Conformal Prediction with Adversarial Semi-bandit Feedback via Regret Minimization
+Semantic Visual Anomaly Detection and Reasoning in AI-Generated Images
+Trust but Verify: Adaptive Conditioning for Reference-Based Diffusion Super-Resolution via Implicit Reference Correlation Modeling
+Measuring Uncertainty Calibration
+Out of the Shadows: Exploring a Latent Space for Neural Network Verification
+Spilled Energy in Large Language Models
+Detection of unknown unknowns in autonomous systems
+Know When to Abstain: Optimal Selective Classification with Likelihood Ratios
+Robust Adaptive Multi-Step Predictive Shielding
+Discrete Diffusion for Reflective Vision-Language-Action Models in Autonomous Driving
+Theory-Grounded Evaluation of Human-Like Fallacy Patterns in LLM Reasoning
+An Information-Theoretic Parameter-Free Bayesian Framework for Probing Labeled Dependency Trees from Attention Score
+Designing Affine-Invariant Neural Networks for Photometric Corruption Robustness and Generalization
+Query-Aware Flow Diffusion for Graph-Based RAG with Retrieval Guarantees
+Estimating Semantic Alphabet Size for LLM Uncertainty Quantification
+SmartChunk Retrieval: Query-Aware Chunk Compression with Planning for Efficient Document RAG
+Discern Truth from Falsehood: Reducing Over-Refusal via Contrastive Refinement
+Only Brains Align with Brains: Cross-Region Alignment Patterns Expose Limits of Normative Models
+Foundation Visual Encoders Are Secretly Few-Shot Anomaly Detectors
+TrainRef: Curating Data with Label Distribution and Minimal Reference for Accurate Prediction and Reliable Confidence
+EvA: Evolutionary Attacks on Graphs
+CONSIGN: Conformal Segmentation Informed by Spatial Groupings via Decomposition
+Debugging Concept Bottleneck Models through Removal and Retraining
+Demystifying Deep Search: A Holistic Evaluation with Hint-free Multi-Hop Questions and Factorised Metrics
+MoEEdit: Efficient and Routing-Stable Knowledge Editing for Mixture-of-Experts LLMs
+WATS: Wavelet-Aware Temperature Scaling for Reliable Graph Neural Networks
+Bandit Learning in Matching Markets Robust to Adversarial Corruptions
+Bayesian Influence Functions for Hessian-Free Data Attribution
+I2Mole: Interaction-aware Invariant Molecular Learning For Generalizable Property Prediction
+"On the Shelf Life of Fine-Tuned LLM-Judges: Future-Proofing, Backward-Compatibility, and Question Generalization"
+Geometric Graph Neural Diffusion for Stable Molecular Dynamics Simulations
+CounselBench: A Large-Scale Expert Evaluation and Adversarial Benchmarking of Large Language Models in Mental Health Question Answering
+DeepTRACE: Auditing Deep Research AI Systems for Tracking Reliability Across Citations and Evidence
+Beyond Binary Rewards: Training LMs to Reason About Their Uncertainty
+"Task Vectors, Learned Not Extracted: Performance Gains and Mechanistic Insights"
+Visual Multi-Agent System: Mitigating Hallucination Snowballing via Visual Flow
+Adaptive Conformal Anomaly Detection with Time Series Foundation Models for Signal Monitoring.
+Rex-Thinker: Grounded Object Referring via Chain-of-Thought Reasoning
+Every Language Model Has a Forgery-Resistant Signature
+ClarifyVC: Clarifying Ambiguous Commands in Vehicle Control with a Hybrid Data Augmentation Pipeline
+Rethinking Radiology Report Generation: From Narrative Flow to Topic-Guided Findings
+Enhancing Hallucination Detection through Noise Injection
+Visual Self-Refine: A Pixel-Guided Paradigm for Accurate Chart Parsing
+Zero-Overhead Introspection for Adaptive Test-Time Compute
+Gauge Flow Matching: Efficient Constrained Generative Modeling over General Convex Set and Beyond
+Hallucination Begins Where Saliency Drops
+Cat-PO: Cross-modal Adaptive Token-rewards for Preference Optimization in Truthful Multimodal LLMs
+Distributionally Robust Optimization via Generative Ambiguity Modeling
+AttTok: Marrying Attribute Tokens with Generative Pre-trained Vision-Language Models towards Medical Image Understanding
+Latent Thinking Optimization: Your Latent Reasoning Language Model Secretly Encodes Reward Signals in Its Latent Thoughts
+Robustness of Probabilistic Models to Low-Quality Data: A Multi-Perspective Analysis
+Semantic Uncertainty Quantification of Hallucinations in LLMs: A Quantum Tensor Network Based Method
+Detecting Temporal Misalignment Attacks in Multimodal Fusion for Autonomous Driving
+Value Flows
+Contextual Similarity Distillation: Ensemble Uncertainties with a Single Model
