@@ -28,8 +28,7 @@ from openai import AsyncOpenAI
 # ---------------------------------------------------------------------------
 
 MODEL       = "deepseek/deepseek-v4-flash"
-INPUT_FILE  = "iclr2026_papers.csv"
-OUTPUT_FILE = "safety_results_v3.csv"
+DATA_ROOT   = Path(__file__).resolve().parent.parent / "data"
 MAX_RETRIES = 3
 WORKERS     = 50
 ABSTRACT_MAX_CHARS = 2000
@@ -271,14 +270,36 @@ async def run(args: argparse.Namespace):
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Classify ICLR 2026 papers for AI safety relevance")
-    parser.add_argument("--input",   default=INPUT_FILE,  help=f"Input CSV (default: {INPUT_FILE})")
-    parser.add_argument("--output",  default=OUTPUT_FILE, help=f"Output CSV (default: {OUTPUT_FILE})")
+    parser = argparse.ArgumentParser(
+        description="Classify conference papers for AI safety relevance",
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog="Examples:\n"
+               "  python src/classify.py iclr 2026\n"
+               "  python src/classify.py neurips 2024 --workers 30\n"
+               "  python src/classify.py iclr 2026 --sample 100\n"
+               "  python src/classify.py --input custom.csv --output out.csv",
+    )
+    parser.add_argument("conference", nargs="?", help="Conference name (e.g. iclr, icml, neurips)")
+    parser.add_argument("year", nargs="?", type=int, help="Conference year")
+    parser.add_argument("--data-root", default=str(DATA_ROOT), help=f"Data root dir (default: {DATA_ROOT})")
+    parser.add_argument("--input",   help="Override input CSV path")
+    parser.add_argument("--output",  help="Override output CSV path")
     parser.add_argument("--sample",  type=int, default=None, help="Classify a random sample of N papers")
     parser.add_argument("--seed",    type=int, default=42,   help="Random seed for sampling (default: 42)")
     parser.add_argument("--workers", type=int, default=WORKERS, help=f"Concurrent API calls (default: {WORKERS})")
     parser.add_argument("--model",   default=MODEL, help=f"Model ID (default: {MODEL})")
     args = parser.parse_args()
+
+    if args.input and args.output:
+        pass
+    elif args.conference and args.year:
+        conf_dir = Path(args.data_root) / args.conference.lower() / str(args.year)
+        args.input  = args.input  or str(conf_dir / "papers.csv")
+        args.output = args.output or str(conf_dir / "results.csv")
+        Path(args.output).parent.mkdir(parents=True, exist_ok=True)
+    else:
+        parser.error("Provide either positional conference+year, or both --input and --output")
+
     asyncio.run(run(args))
 
 
