@@ -117,15 +117,36 @@ def fetch_openreview_notes(conference: str, year: int, api_ver: str, suffix: str
     return client.get_all_notes(invitation=invitation)
 
 
-def row_from_or_note(note, conference: str, year: int) -> dict | None:
+def is_accepted_openreview(note) -> bool:
+    """Decide whether an OpenReview note represents an accepted paper.
+
+    The most reliable signal is the BibTeX prefix: `@inproceedings`/`@article`
+    indicates an accepted publication, `@misc` indicates the paper was not
+    accepted (rejected, withdrawn, or still under review). For notes without
+    a BibTeX entry we fall back to the venue/venueid fields.
+    """
+    bib = or_get_value(note.content.get("_bibtex", "")) or ""
+    bib = bib.lstrip()
+    if bib.startswith("@misc"):
+        return False
+    if bib.startswith(("@inproceedings", "@article")):
+        return True
+
     venue   = or_get_value(note.content.get("venue", "")) or ""
     venueid = or_get_value(note.content.get("venueid", "")) or ""
-    venue_str = f"{venue} {venueid}"
-    if any(m in venue_str for m in REJECT_MARKERS):
-        return None
-    if not venue and not venueid:
+    if any(m in f"{venue} {venueid}" for m in REJECT_MARKERS):
+        return False
+    if venue.startswith("Submitted to"):
+        return False
+    return bool(venue or venueid)
+
+
+def row_from_or_note(note, conference: str, year: int) -> dict | None:
+    if not is_accepted_openreview(note):
         return None
 
+    venue   = or_get_value(note.content.get("venue", "")) or ""
+    venueid = or_get_value(note.content.get("venueid", "")) or ""
     authors    = or_get_value(note.content.get("authors", []))    or []
     author_ids = or_get_value(note.content.get("authorids", []))  or []
 
