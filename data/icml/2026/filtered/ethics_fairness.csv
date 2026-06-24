@@ -1,0 +1,260 @@
+Paper Title
+EPSVec: Efficient and Private Synthetic Text Generation via Dataset Vectors
+"Accurate, private, secure, federated U-statistics with higher degree"
+Proximal Decoding: Provably Reducing Copyright Risk for Any Language Model
+SlaClip: Gradient Norm Slacks can be Indicator for Adaptive Clipping in DP-SGD
+Enhancing Membership Inference Attacks on Diffusion Models from a Frequency-Domain Perspective
+"Revisiting ML Training under Fully Homomorphic Encryption: Convergence Guarantees, Differential Privacy, and Efficient Algorithms"
+MultiPriv: Benchmarking Individual-Level Privacy Reasoning in Vision-Language Models
+Differentially Private Geodesic Regression
+DP-KFC: Data-Free Preconditioning for Privacy-Preserving Deep Learning
+Differentially Private Submodular Maximization with a Knapsack Constraint
+An Empirical Study on the Resilience of Partial Merging to Model Clone Attacks
+The Hidden Risk: Membership Inference Attacks on Multimodal Federated Learning via Modality Imbalance
+Differentially Private Cross-Silo Recommendation from Implicit Feedback
+VPD-100K: Towards Generalizable and Fine-grained Visual Privacy Protection
+Differentially Private Range Subgraph Counting
+Differentially Private Synthetic Tabular Data via Private Evolution
+Position: When AI Decides Who Gets an Organ: Multi-Agentic AI Systems in Transplant Medicine Risk Amplifying Disparities Without Targeted Explainability and Deployment Strategies
+Position: The Privacy-Auditability Paradox in Federated Learning: Why We Need Controllable Secure Aggregation
+Beyond Sample-Level Forgetting: Improving Reliability in Multimodal Unlearning
+CELL: A Causal Perspective for Fairness-aware Graph Adaptation
+Data Reconstruction: Identifiability and Optimization with Sample Splitting
+Gradient Inversion Attacks Beyond SGD
+The Forgetting-Retention Dilemma: Certified Unlearning Theory in Continual Learning
+Unlearning with Asymmetric Sources: Improved Unlearning-Utility Trade-off with Public Data
+Power-Calibrated LLM Watermarking: A Statistical Framework
+Fine-to-Coarse Fairness-Informed Multi-View Clustering
+SLIM: Secure and Efficient Inference for Large Language Models on Untrusted Devices via TEEs
+HoloFair: Unified T2I Fairness Evaluation and Fair-GRPO Debiasing
+Position: Assistive Agents Need Accessibility Alignment
+Private Learning with Public Feature Conditioning
+Adaptive Code Watermarking Through Reinforcement Learning
+Welfare-Optimal Classification with Accuracy Auctions
+Envy-Free Allocation of Indivisible Goods via Noisy Queries
+FIBER: A Differentially Private Optimizer with Filter-Aware Innovation Bias Correction
+Persuasive Privacy
+RECAST: Model Reconstruction via Counterfactual-Aware Wasserstein Geometry under Limited Data
+Position: Carbon Footprint Reporting Should Be Routine in Machine Learning Research
+How Good is Post-Hoc Watermarking With Language Model Rephrasing?
+AliMark: Enhancing Robustness of Sentence-Level Watermarks Against Text Paraphrasing
+Optimal conversion from Rényi Differential Privacy to $f$-Differential Privacy
+Forget by Uncertainty: Orthogonal Entropy Unlearning for Quantized Neural Networks
+GaussTrace: Provenance Analysis of 3D Gaussian Splatting Models with Evidence-based LLM Reasoning
+Online Fair Division with Additional Information
+PASA: A Principled Embedding-Space Watermarking Approach for LLM-Generated Text under Semantic-Invariant Attacks
+Approximate Proportionality in Online Fair Division
+"Knowing Bias, Doing Better: Mitigating Social Bias in LLMs via Know-Bias Neuron Enhancement"
+Hugging Carbon: Quantifying the Training Carbon Emissions of AI Models at Scale
+An In-Depth Study on Deep Learning Model Cloning
+"Position: If open source is to win, it must go public"
+Continual Learning With Participation Privacy: An Auditable Buffering-Aggregation Recipe
+Position: Stop Using Culturally Biased Human Cognitive Benchmarks to Evaluate LLMs
+Towards Whole-corpus Reconstruction of Heterogeneous RAG Knowledge Bases
+MetaMoE: Diversity-Aware Proxy Selection for Privacy-Preserving Mixture-of-Experts Unification
+Differentiable Optimization Layers for Guaranteed Fairness in Deep Learning
+Position: Scale is a False Promise for Endangered Languages
+Provable Training Data Identification for Large Language Models
+Block-wise Codeword Embedding for Reliable Multi-bit Text Watermarking
+Selective Disclosure Watermarking for Large Language Models
+Toward Culturally Aligned LLMs through Ontology-Guided Multi-Agent Reasoning
+Position: Child Safety Necessitates New Approaches to AI Safety
+Position: Safe Models Do Not Guarantee Safe Societies: The Case for Sociopolitical Risk
+Position: Academic Conferences are Potentially Facing Denominator Gaming Caused by Fully Automated Scientific Agents
+"Hidden in Plain Tokens: Simply Robust, Gradient-Free Watermark for Synthetic Audio"
+How does Bayesian Sampling help Membership Inference Attacks?
+Localizing Memorized Regions in Diffusion Models via Coordinate-Wise Curvature Differences
+RAIGen: Rare Attribute Identification in Text-to-Image Generative Models
+Causal Disentangled Anchor Learning for Scalable Fair Multi-view Clustering
+Multicalibration Yields Better Matchings
+SemBind: Binding Diffusion Watermarks to Semantics Against Black-Box Forgery Attacks
+Position: Towards Responsible Evaluation for Text-to-Speech
+Ideal Attribution and Faithful Watermarks for Language Models
+Data Provenance Auditing of Fine-Tuned Large Language Models with a Text-Preserving Technique
+Revisiting Asymmetries in Black-box Link Stealing against Graph Neural Networks
+Who Evaluates AI's Social Impacts? Mapping Coverage and Gaps in First and Third Party Evaluations
+A General Framework for Fair and Robust Regression
+Position: Stop Preaching and Start Practising Data Frugality for Responsible Development of AI
+Multi-Distribution Robust Conformal Prediction
+Watermarking LLM Agent Trajectories
+Towards Fair Sequential Decision-Making: A Causal Decomposition Approach
+FairGB: A Fair Granular-Ball Generation Method for Data Classification
+"Position: Spatial Fairness: Foundations, Pitfalls, and a Path Forward"
+Position: Stop Automating Peer Review Without Rigorous Evaluation
+Exposing Hidden Biases in Text-to-Image Models via Automated Prompt Search
+LAPRAS : Learning-Augmented PRivate Answering for linear query Streams.
+On the Fragility of Data Attribution When Learning Is Distributed
+ASIR: Steganography for Diffusion Models via Antipodal Sampling and Iterative Recovery
+Large Language Models Develop Novel Social Biases Through Adaptive Exploration
+Position: Irresponsible AI: big tech’s influence on AI research and associated impacts
+PragLocker: Protecting Agent Intellectual Property in Untrusted Deployments via Non-Portable Prompts
+Incentivizing Truthfulness and Collaborative Fairness in Bayesian Learning
+How Hard Can It Be? Hardness-Aware Multi-Objective Unlearning
+You Don’t Need All That Attention: Surgical Memorization Mitigation in Text-to-Image Diffusion Models
+Position: Preregister Experiments with AI Agents
+FUSE: Full‑spectrum Unlearnable Examples via Spectral Equalization
+Obliviate: Efficient Unlearning in Recommender Systems
+The Crowded Embedding Space: A Mean-Field Mechanism for Emergent Marginalization in Retrieval-Augmented Agents
+Revisiting Coding-Based Approaches to Overcome the Curse of Dimensionality in Learning-Based Watermarking
+Position: AI Should Facilitate Democratic Deliberation at Scale
+Generative Modeling with Probabilistic Constraints
+Position: Want Better ML Reviews? Stop Asking Nicely and Start Incentivizing with a Credit System
+Position: Trustworthy AI Suffers from Invariance Conflicts and Causality is The Solution
+Position: Peer Review Should Be Calibrated via LLM Scoring
+DISCO: Mitigating Bias in Deep Learning with Conditional Distance Correlation
+Fingerprinting Pre-trained Encoders under Arbitrary Downstream Fine-Tuning via Adversarial Shifting
+Optimal Domain-Aware Privacy Mechanisms for Synthetic Data Generation
+Measuring Meta-Cultural Competency: A Spectral Framework for LLM Knowledge Structures
+Decoupling Regularization and Privacy in Differentially Private Ridge Regression and ERM
+Where Rectified Flows Leak: Characterizing Membership Signals Along the Interpolation Path
+Mind the Gap: Mixtures of Gaussians in Approximate Differential Privacy
+DataGuard: A Non-intrusive Dataset Auditing Framework via Differential Information Forensics
+Position: Federated Learning is a Lens towards a Democratized Future for the Scaling Law Era
+"Position: Invisible Tokens, Visible Bills: The Urgent Need to Audit Hidden Operations in Opaque LLM Services"
+Exact Unlearning in Reinforcement Learning
+Understanding Private Learning From Feature Perspective
+Position: Evaluation of ML Resource Utilization Requires Model Life Cycle Assessment
+Copyright-Bench: Agentic Evaluation of Copyright Law Compliance
+Near-Optimal Private Linear Regression via Iterative Hessian Mixing
+Cert-LAS: Toward Certified Model Ownership Verification for Text-to-Image Diffusion Models via Layer-Adaptive Smoothing
+Position: Enabling Fair Revenue Sharing for Data Providers in GenAI Systems
+"Position: AI Governance Needs ISO-like Interoperability Protocols, Not Just Laws"
+Uncertainty-Constrained Trustworthiness for Graph Learning
+Solving Positive Linear Programs with Differential Privacy
+Position: Sustainable Open-Source AI Requires Tracking the Cumulative Footprint of Derivatives
+Desirable Effort Fairness and Optimality Trade-offs in Strategic Learning
+Differentially Private Preference Data Synthesis for Large Language Model Alignment
+Position: Fairness Failure in Generative Models is an Evaluation Problem
+FedLog: Personalized Federated Classification with Less Communication and More Flexibility
+The Fairness Hierarchy: A viewpoint from causal inference
+"Position: Beyond Sensitive Attributes, ML Fairness Should Quantify Structural Injustice via Social Determinants"
+Fair Dataset Distillation via Cross-Group Barycenter Alignment
+FairRARI: A Plug and Play Framework for Fairness-Aware PageRank
+COPF: An Online Framework for Deployment-Stable Counterfactual Fairness in Evolving Graphs
+Demystifying the Optimal Fair Classifier in Multi-Class Classification
+Beyond Procedure: Substantive Fairness in Conformal Prediction
+A Game-Theoretic Framework for Measuring and Explaining Metric Compatibility in Fair Machine Learning
+MAFE: Enabling Equitable Algorithm Design in Multi-Agent Multi-Stage Decision-Making Systems
+Extending Fair Null-Space Projections for Continuous Attributes to Kernel Methods
+Differentially Private and Scalable Estimation of the Network Principal Component
+Test-Time Debiasing with Probabilistic Prompts via Wasserstein Distance in Vision-Language Models
+FairSSL: Fair Multimodal Self-Supervised Learning
+WMVLM: Evaluating Diffusion Model Image Watermarking via Vision-Language Models
+Preserving Expert-Level Privacy in Offline Reinforcement Learning
+Accuracy-First Rényi Differential Privacy and Post-Processing Immunity
+Shuffling-Aware Optimization for Private Vector Mean Estimation
+Trajectory-Aware Certified Decentralized Unlearning via SGD Stability
+Barriers to Counterfactual Credit Attribution for Autoregressive Models
+Efficient DP-SGD for LLMs with Randomized Clipping
+Finding Differentially Private Second Order Stationary Points in Stochastic Minimax Optimization
+ACTG-ARL: Differentially Private Conditional Text Generation with RL-Boosted Control
+Efficient Public Verification of Private ML via Regularization
+Adaptive Generation of Bias-Eliciting Questions for LLMs
+Finding DoRI: Discovery of Retained Images in Diffusion Models
+Eliminating Solution Bias in Differentially Private Optimization
+Graph-Preference Learning: Debiasing Network-Sampled Human Feedback for Target Welfare Estimation
+"Position: Verifiable Data Minimization is a Prerequisite for Responsible, Privacy-Preserving Industrial Vision"
+Neural Honeytrace: Plug&Play Watermarking Framework against Model Extraction Attacks
+Position: Universal Aesthetic Alignment Narrows Artistic Expression
+OSNIP: Breaking the Privacy-Utility-Efficiency Trilemma in LLM Inference via Obfuscated Semantic Null Space
+Fairness in Aggregation: Optimal Top-$k$ and Improved Full Ranking
+Optimal Transport under Group Fairness Constraints
+CircuitPrint: Mechanistic Circuit Fingerprints for Large Language Models
+Random Erasing vs. Model Inversion: A Promising Defense or a False Hope?
+Responsible Text-to-Image Diffusion: Interpretable and Linearly Controllable Semantics for Fair and Safe Generation
+SurrogateSHAP: Training-Free Contributor Attribution for Text-to-Image (T2I) Models
+PISA: Privacy-Preserving Split Adaptation with Model IP Protection
+PRISM: Gauge-Invariant Tangent-Space Differentially Private LoRA
+Antidistillation Fingerprinting
+AlienLM: Alienization of Language for API-Boundary Privacy in Black-Box LLMs
+RECOVER:Reliable Detection of Unauthorized Data Usage in Text-to-Image Diffusion Models via Inversion Robustness
+Towards Reliable Marking and Verification of AI-Generated Text via Geometry-aware Sentence-level Watermarking
+Private and Stable Test-time Adaptation with Differential Privacy
+LLM Self-Recognition: Steering and Retrieving Activation Signatures
+LORD-GoF: A Robust Online Detection Approach for LLM Watermarks in Sparse and Mixed Streams
+Fair-FedMOE: Group-Fair One-Shot Federated Learning via Prototype-Guided Experts for Medical Imaging Analysis
+Position: Embodied AI Requires a Privacy-Utility Tradeoff
+Position: Benchmarks for Vision–Language Models in Urban Perception Should Be Reliability-Aware and Negotiated
+Beyond the Trade-off: Unifying Fairness and Performance in Federated Learning
+Censoring with Plausible Deniability: Asymmetric Local Privacy for Multi-Category CDF Estimation
+IPMark: A Sentence-Level Watermark for LLMs with Hierarchical Personalization and Efficient Detection
+Multi-Level Strategic Classification: Incentivizing Improvement through Promotion and Relegation Dynamics
+Fair Transit Stop Placement: A Clustering Perspective and Beyond
+IACW: Intent-Aware Controllable Watermarking for Scalable Authorial Intent Attribution
+Representation Unlearning: Forgetting through Information Compression
+Learning to Watermark in the Latent Space of Generative Models
+Position: AI/ML Deepfake Research is Misaligned with AI Generated Non-Consensual Intimate Imagery (AIG-NCII)
+Z-Erase: Enabling Concept Erasure in Single Stream Diffusion Transformers
+Unlearning Isn’t Forgetting: Revealing Hidden Leakage in Class Unlearning Evaluations
+Position: Prompts for Public-Sector LLMs Should Be Governed as Commons
+Collaborative Threshold Watermarking
+Position: Generative Models Erode Temporal Learning Through Market Selection
+Position: Responsible Practices and Model Performance are Not Competing Goals
+Position: Neglecting the Sustainability of AI is Fuelling a Global AI Arms Race
+Unified Safe In-context Image Generation in Multimodal Diffusion Transformers
+From Prompts to Responses: Dual-Sided Data Leakage and Defense in Split Large Language Models
+Echoes within the Reasoning: Stealth and Effective Watermarking via Chain of Thought
+Position: the Stochastic Parrot in the Coal Mine. Model Collapse is a Threat to Low-Resource Communities
+Position: Machine Learning for Heart Transplant Allocation Policy Optimization Should Account for Incentives
+Forgetting Whenever You Want: A Decentralized Continual Learning Framework with On-Demand Unlearning
+Position: Predicting AI’s Impact on Labor Is a Core Machine Learning Problem
+KFStego: Key-Free Secure Image Distribution via Bipartite Structural Invariants
+Position: Age Estimation Models Do Not Process Biometric Data
+Biased Generalization in Diffusion Models
+Watermarking Graph Neural Networks via Explanations for Ownership Protection
+"Position: AI Must Become Planet-Centered, Not Human-Centered"
+"Position: Model identity in machine learning is a convention, not a property"
+Position: We Need AI Efficiency Incentives for Accessibility and Sustainability
+Tackling Fake Forgetting through Uncertainty Quantification
+COFT: Counterfactual–Conformal Decoding for Fair Chain‑of‑Thought Reasoning in Large Language Models
+Position: Unplugging a Seemingly Sentient Machine Is the Rational Choice — A Metaphysical Perspective
+Asymptotic Optimality of the High-Dimensional Gaussian Mechanism and Improved Low-Dimensional Mechanisms for Differential Privacy
+A Statistical Framework for Analyzing Specification Resistance to Learnware-Inversion Risks
+Optimal Fair Aggregation of Crowdsourced Noisy Labels using Demographic Parity Constraints
+Biases in the Blind Spot: Detecting What LLMs Fail to Mention
+Position: Let’s Build a Trustworthy Model Context Protocol!
+Influence-Disentangled Federated Training: Learning Models That Are Easy to Unlearn
+Fast and Optimal Algorithms for Private Hypothesis Selection
+Position: AI Leaderboards Are Underserving the Global South: A Case Study from India
+Position: No Retroactive Cure for Infringement during Training
+Position: Regulating Algorithms Is Not Enough. A Study of Content Discovery in Online Platforms
+"Position: Privacy Is a Claim, Not a Property of Synthetic Data"
+Differentially Private Continual Release with Relative Error
+Low-Compute Watermark Removal via Dual-Domain Natural Projection
+Efficient privacy loss accounting for subsampling and random allocation
+Keep Everyone Happy: Online Fair Division of Numerous Items with Few Copies
+Position: EU AI Act's Research Exemptions Can Break the Publication Norms of Major AI Conferences
+Exploring Nonlinear Pathway in Parameter Space for Machine Unlearning
+OptiFluence: Principled Design of Privacy Canaries
+Adaptively Robust Resettable Streaming
+MLUBench: A Benchmark for Lifelong Unlearning Evaluation in MLLMs
+Capacitated Fair-Range Clustering: Hardness and Approximation Algorithms
+Improved Algorithms for Nash Welfare in Linear Bandits
+Maximin Relative Improvement: Fair Learning as a Bargaining Problem
+Riemannian Optimization for Fair Spectral Clustering
+IVQA-LD: Inclusive Multimodal Understanding for Population with Limb-Deficiency
+"Variance-Reduced $(\varepsilon, \delta)-$Unlearning using Forget Set Gradients"
+PrivCode++ : Latent-Conditioned Differentially Private Code Generation for Comprehensive Guarantees
+Correcting Overparameterization Effects in Fair Empirical Risk Minimization
+FairMerging: Rethinking Model Merging through the Lens of Fairness
+FHAIM: Fully Homomorphic AIM for Private Synthetic Data Generation
+PrivAct: Internalizing Contextual Privacy Preservation via Multi-Agent Preference Training
+Keeping a Secret Requires a Good Memory: Space Lower-Bounds for Private Algorithms
+Rotation-Invariant Spherical Watermarking via Third-Order SO(3) Representation Coupling
+Three Years of r/ChatGPT: Societal Impact Evaluations from Social Media Data
+Locate then Correct: Debiasing Attention Heads in CLIP
+Class-Conditional Distribution Balancing for Group Robust Classification
+Self-correcting for Debiasing Large Language Models
+Fair Decisions from Calibrated Scores: Achieving Optimal Classification While Satisfying Sufficiency
+Long-term Fairness with Selective Labels
+Privacy Amplification in Differentially Private Zeroth-Order Optimization with Hidden States
+Rethinking Forgery Attacks on Semantic Watermarks in Black-Box Settings: A Geometric Distortion Perspective
+Privately Fine-Tuned LLMs Preserve Temporal Dynamics in Tabular Data
+Equalized Generative Treatment: Matching f-divergences for Fairness in Generative Models
+"Privasis: Synthesizing the Largest ""Public"" Private Dataset from Scratch"
+dgMARK: Decoding-Guided Watermarking for Diffusion Language Models
+Fair Classification with Efficient and Post-hoc Controllable Fairness-Accuracy Trade-off
+Privacy-Aware Video Anomaly Detection: Guided Orthogonal Projection and a Comprehensive Evaluation Framework
+Every Step Counts: Decoding Trajectories as Authorship Fingerprints of dLLMs
+LMCleaner: Efficient and Certified Online Unlearning via Influence Propagation Truncation
+Mitigating Translationese Bias in Multilingual LLM-as-a-Judge via Disentangled Information Bottleneck

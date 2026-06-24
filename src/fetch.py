@@ -37,6 +37,7 @@ USER_AGENT = "Mozilla/5.0 (iclr2026-ai-safety research tracker)"
 # Verified by direct API probe (see memory/openreview-conference-mapping.md).
 # Format: (conference, year) -> (api_version, invitation_suffix)
 OPENREVIEW_SOURCES = {
+    ("iclr", 2019): ("v1", "-/Blind_Submission"),
     ("iclr", 2020): ("v1", "-/Blind_Submission"),
     ("iclr", 2021): ("v1", "-/Blind_Submission"),
     ("iclr", 2022): ("v1", "-/Blind_Submission"),
@@ -55,12 +56,16 @@ OPENREVIEW_SOURCES = {
 }
 
 PMLR_VOLUMES = {
+    ("icml", 2019): "v97",
     ("icml", 2020): "v119",
     ("icml", 2021): "v139",
     ("icml", 2022): "v162",
 }
 
-PAPERS_NIPS_YEARS = {2020}
+PAPERS_NIPS_YEARS = {2019, 2020}
+
+ICML_VIRTUAL_YEARS = {2026}  # icml.cc/virtual/{year}/papers.html — used when papers
+                              # are available before they hit PMLR proceedings
 
 VENUE_ID_NAME = {"iclr": "ICLR", "icml": "ICML", "neurips": "NeurIPS"}
 REJECT_MARKERS = ("Rejected", "Withdrawn", "Desk_Rejected", "Desk-Reject")
@@ -353,6 +358,90 @@ def fetch_nips(year: int, workers: int = 20) -> list[dict]:
 
 
 # ---------------------------------------------------------------------------
+# icml.cc virtual site source (ICML 2026 — papers not yet on OpenReview/PMLR)
+# ---------------------------------------------------------------------------
+
+ICML_VIRT_LINK_RE = re.compile(
+    r'<li>\s*<a href="(?P<href>/virtual/\d{4}/poster/(?P<id>\d+))">(?P<title>[^<]+)</a>\s*</li>'
+)
+ICML_VIRT_TITLE_RE   = re.compile(r'<h1 class="event-title">(?P<t>.*?)</h1>', re.DOTALL)
+ICML_VIRT_AUTHORS_RE = re.compile(r'<div class="event-organizers">(?P<a>.*?)</div>', re.DOTALL)
+ICML_VIRT_ABSTRACT_RE = re.compile(
+    r'<div class="abstract-text-inner">(?P<x>.*?)</div>', re.DOTALL,
+)
+
+
+def parse_icml_virt_index(html: str) -> list[tuple[str, str, str]]:
+    """Return (poster_id, relative_url, title) tuples from the papers index."""
+    out = []
+    for m in ICML_VIRT_LINK_RE.finditer(html):
+        out.append((m.group("id"), m.group("href"), strip_html(m.group("title"))))
+    return out
+
+
+def fetch_icml_virt_paper(rel_url: str, poster_id: str, year: int) -> dict:
+    base = "https://icml.cc"
+    abs_url = base + rel_url
+    page = http_get(abs_url)
+
+    title = ICML_VIRT_TITLE_RE.search(page)
+    authors = ICML_VIRT_AUTHORS_RE.search(page)
+    abstract = ICML_VIRT_ABSTRACT_RE.search(page)
+
+    authors_str = ""
+    if authors:
+        # Authors are separated by " ⋅ " (U+22C5 DOT OPERATOR) on icml.cc
+        raw = strip_html(authors.group("a"))
+        for sep in ["⋅", "·", ","]:
+            if sep in raw:
+                authors_str = "; ".join(a.strip() for a in raw.split(sep) if a.strip())
+                break
+        else:
+            authors_str = raw
+
+    return {
+        "id":           f"icml-virtual-{year}-{poster_id}",
+        "conference":   "icml",
+        "year":         year,
+        "title":        strip_html(title.group("t")) if title else "",
+        "authors":      authors_str,
+        "author_ids":   "",
+        "abstract":     strip_html(abstract.group("x")) if abstract else "",
+        "venue":        f"ICML {year}",
+        "url":          abs_url,
+        "pdf_url":      "",
+        **EMPTY_ROW,
+    }
+
+
+def fetch_icml_virtual(year: int, workers: int = 20) -> list[dict]:
+    index_url = f"https://icml.cc/virtual/{year}/papers.html"
+    print(f"Fetching ICML virtual index {index_url}...")
+    index_html = http_get(index_url)
+    entries = parse_icml_virt_index(index_html)
+    print(f"Found {len(entries)} papers, fetching detail pages ({workers} workers)...")
+
+    papers = [None] * len(entries)
+
+    def fetch_one(i_entry):
+        i, (poster_id, rel_url, _) = i_entry
+        try:
+            return i, fetch_icml_virt_paper(rel_url, poster_id, year)
+        except Exception as e:
+            print(f"  ! fetch failed for {rel_url}: {e}")
+            return i, None
+
+    with ThreadPoolExecutor(max_workers=workers) as pool:
+        for n, (i, paper) in enumerate(pool.map(fetch_one, enumerate(entries)), 1):
+            if paper is not None:
+                papers[i] = paper
+            if n % 200 == 0:
+                print(f"  {n}/{len(entries)} papers fetched")
+
+    return [p for p in papers if p is not None]
+
+
+# ---------------------------------------------------------------------------
 # Dispatcher
 # ---------------------------------------------------------------------------
 
@@ -364,6 +453,8 @@ def fetch(conference: str, year: int, workers: int = 20) -> pd.DataFrame:
         rows = fetch_pmlr(conference, year, workers=workers)
     elif conference == "neurips" and year in PAPERS_NIPS_YEARS:
         rows = fetch_nips(year, workers=workers)
+    elif conference == "icml" and year in ICML_VIRTUAL_YEARS:
+        rows = fetch_icml_virtual(year, workers=workers)
     else:
         raise ValueError(
             f"Unknown conference/year: {conference} {year}. "

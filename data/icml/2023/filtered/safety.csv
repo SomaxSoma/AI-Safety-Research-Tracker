@@ -1,0 +1,21 @@
+Paper Title,Subarea,Detailed Class,Score
+Detecting Adversarial Directions in Deep Reinforcement Learning to Make Robust Decisions,"Robustness, Defense & Systemic Control",Adversarial Robustness,7.0
+Raising the Cost of Malicious AI-Powered Image Editing,"Robustness, Defense & Systemic Control",Adversarial Robustness,7.0
+Transformers Learn In-Context by Gradient Descent,Interpretability & Understanding,Interpretability,3.0
+How Do Transformers Learn Topic Structure: Towards a Mechanistic Understanding,Interpretability & Understanding,Interpretability,3.0
+Rethinking Backdoor Attacks,"Robustness, Defense & Systemic Control",Adversarial Robustness,3.0
+Do the Rewards Justify the Means? Measuring Trade-Offs Between Rewards and Ethical Behavior in the Machiavelli Benchmark,Threat Modeling & Evaluations,Scheming and Deception,6.0
+Pretraining Language Models with Human Preferences,Capability Control & Unlearning,Alignment Training,7.0
+A Game-Theoretic Framework for Managing Risk in Multi-Agent Systems,Scalable Oversight & Value Learning,Multi-Agent Safety,7.0
+Data Poisoning Attacks Against Multimodal Encoders,"Robustness, Defense & Systemic Control",Adversarial Robustness,4.0
+Language Instructed Reinforcement Learning for Human-AI Coordination,Capability Control & Unlearning,Alignment Training,7.0
+Automatically Auditing Large Language Models via Discrete Optimization,"Robustness, Defense & Systemic Control",Red-Teaming,7.0
+Adversarial Policies Beat Superhuman Go AIs,"Robustness, Defense & Systemic Control",Adversarial Robustness,7.0
+A Toy Model of Universality: Reverse Engineering how Networks Learn Group Operations,Interpretability & Understanding,Interpretability,4.0
+Aligning Language Models with Preferences through $f$-divergence Minimization,Capability Control & Unlearning,Alignment Training,3.0
+Settling the Reward Hypothesis,Agent Foundations & Alignment Theory,Agent Foundations,3.0
+Uncovering Adversarial Risks of Test-Time Adaptation,"Robustness, Defense & Systemic Control",Adversarial Robustness,4.0
+Scaling Laws for Reward Model Overoptimization,Scalable Oversight & Value Learning,Scalable Oversight,5.0
+Poisoning Language Models During Instruction Tuning,"Robustness, Defense & Systemic Control",Adversarial Robustness,7.0
+Algorithmic Collective Action in Machine Learning,"Robustness, Defense & Systemic Control",Adversarial Robustness,3.0
+Mechanistic Mode Connectivity,Interpretability & Understanding,Interpretability,3.0

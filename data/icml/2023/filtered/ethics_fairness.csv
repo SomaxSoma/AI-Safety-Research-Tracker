@@ -1,0 +1,130 @@
+Paper Title
+Bayesian Estimation of Differential Privacy
+Robust and private stochastic linear bandits
+The Statistical Scope of Multicalibration
+When do Minimax-fair Learning and Empirical Risk Minimization Coincide?
+Subset-Based Instance Optimality in Private Estimation
+Fast Federated Machine Unlearning with Nonlinear Functional Theory
+Private Federated Learning with Autotuned Compression
+Algorithms for bounding contribution for histogram estimation under user-level privacy
+FARE: Provably Fair Representation Learning with Practical Certificates
+The Test of Tests: A Framework for Differentially Private Hypothesis Testing
+TabLeak: Tabular Data Leakage in Federated Learning
+Simple and Fast Group Robustness by Automatic Feature Reweighting
+Statistical Indistinguishability of Learning Algorithms
+User-level Private Stochastic Convex Optimization with Optimal Rates
+The Price of Differential Privacy under Continual Observation
+Data-OOB: Out-of-bag Estimate as a Simple and Efficient Data Value
+Label differential privacy and private training data release
+Generating Private Synthetic Data with Genetic Algorithms
+Multi-Task Differential Privacy Under Distribution Skew
+From Adaptive Query Release to Machine Unlearning
+"Inflow, Outflow, and Reciprocity in Machine Learning"
+Near-Optimal Algorithms for Private Online Optimization in the Realizable Regime
+Forget Unlearning: Towards True Data-Deletion in Machine Learning
+Individually Fair Learning with One-Sided Feedback
+Learning-augmented private algorithms for multiple quantile release
+Generalized Reductions: Making any Hierarchical Clustering Fair and Balanced with Low Cost
+"Differential Privacy, Linguistic Fairness, and Training Data Influence: Impossibility and Possibility Theorems for Multilingual Language Models"
+Fair Neighbor Embedding
+On Provable Copyright Protection for Generative Models
+Trapdoor Normalization with Irreversible Ownership Verification
+Online Local Differential Private Quantile Inference via Self-normalization
+Fair and Accurate Decision Making through Group-Aware Learning
+Differentially Private Distributed Bayesian Linear Regression with MCMC
+Generalized Disparate Impact for Configurable Fairness Solutions in ML
+Fighting Fire with Fire: Contrastive Debiasing without Bias-free Data via Generative Bias-transformation
+"DP-Fast MH: Private, Fast, and Accurate Metropolis-Hastings for Large-Scale Bayesian Inference"
+Sequential Strategic Screening 
+Differentially Private Sharpness-Aware Training
+On the Within-Group Fairness of Screening Classifiers
+Superhuman Fairness
+GuardHFL: Privacy Guardian for Heterogeneous Federated Learning
+Sketch-Flip-Merge: Mergeable Sketches for Private Distinct Counting
+Streaming Submodular Maximization with Differential Privacy
+Adversarial Example Does Good: Preventing Painting Imitation from Diffusion Models via Adversarial Examples
+Attributing Image Generative Models using Latent Fingerprints
+Covariate balancing using the integral probability metric for causal inference
+NNSplitter: An Active Defense Solution for DNN Model via Automated Weight Obfuscation
+Multi-agent Online Scheduling: MMS Allocations for Indivisible Items
+Multi-Agent Best Arm Identification with Private Communications
+Collaborative Causal Inference with Fair Incentives
+Bag of Tricks for Training Data Extraction from Language Models
+Subset Selection Based On Multiple Rankings in the Presence of Bias: Effectiveness of Fairness Constraints for Multiwinner Voting Score Functions
+Propensity Matters: Measuring and Enhancing Balancing for Recommendation
+Federated Linear Contextual Bandits with User-level Differential Privacy
+Effectively Using Public Data in Privacy Preserving Machine Learning
+GraphCleaner: Detecting Mislabelled Samples in Popular Graph Learning Benchmarks
+Differentially Private Hierarchical Clustering with Provable Approximation Guarantees
+The Saddle-Point Method in Differential Privacy
+Data Feedback Loops: Model-driven Amplification of Dataset Biases
+HETAL: Efficient Privacy-preserving Transfer Learning with Homomorphic Encryption
+Protecting Language Generation Models via Invisible Watermarking
+On the Impact of Algorithmic Recourse on Social Segregation
+SpENCNN: Orchestrating Encoding and Sparsity for Fast Homomorphically Encrypted Neural Network Inference
+Beyond Uniform Lipschitz Condition in Differentially Private Optimization
+From Robustness to Privacy and Back
+Matrix Estimation for Individual Fairness
+Nonparametric Extensions of Randomized Response for Private Confidence Sets
+CodeIPPrompt: Intellectual Property Infringement Assessment of Code Language Models
+FedVS: Straggler-Resilient and Privacy-Preserving Vertical Federated Learning for Split Models
+Whose Opinions Do Language Models Reflect?
+When Personalization Harms Performance: Reconsidering the Use of Group Attributes in Prediction
+Secure Federated Correlation Test and Entropy Estimation
+Tight Data Access Bounds for Private Top-$k$ Selection
+Deep Regression Unlearning
+Approximation Algorithms for Fair Range Clustering
+Data-Copying in Generative Models: A Formal Framework
+Polynomial Time and Private Learning of Unbounded Gaussian Mixture Models
+Improving Fair Training under Correlation Shifts
+How to address monotonicity for model risk management?
+Loss Balancing for Fair Supervised Learning
+Fairness in Matching under Uncertainty
+Model Transferability with Responsive Decision Subjects
+Change is Hard: A Closer Look at Subpopulation Shift
+Why does Throwing Away Data Improve Worst-Group Error?
+On User-Level Private Convex Optimization
+Faster Rates of Convergence to Stationary Points in Differentially Private Optimization
+Privacy-Aware Compression for Federated Learning Through Numerical Mechanism Design
+A Watermark for Large Language Models
+Demystifying Uneven Vulnerability of Link Stealing Attacks against Graph Neural Networks
+Fairness in Streaming Submodular Maximization over a Matroid Constraint
+Private Statistical Estimation of Many Quantiles
+Omnipredictors for Constrained Optimization
+TAN Without a Burn: Scaling Laws of DP-SGD
+Differentially Private Optimization on Large Model at Small Cost
+Fully-Adaptive Composition in Differential Privacy
+Cocktail Party Attack: Breaking Aggregation-Based Privacy in Federated Learning Using Independent Component Analysis
+Concurrent Shuffle Differential Privacy Under Continual Observation
+Why Is Public Pretraining Necessary for Private Model Training?
+DIFF2: Differential Private Optimization via Gradient Differences for Nonconvex Distributed Learning
+Vertical Federated Graph Neural Network for Recommender System
+Are Diffusion Models Vulnerable to Membership Inference Attacks?
+Dimension-independent Certified Neural Network Watermarks via Mollifier Smoothing
+Trustworthy Policy Learning under the Counterfactual No-Harm Criterion
+Fair Densities via Boosting the Sufficient Statistics of Exponential Families
+From Noisy Fixed-Point Iterations to Private ADMM for Centralized and Federated Learning
+Fair yet Asymptotically Equal Collaborative Learning
+On Strengthening and Defending Graph Reconstruction Attack with Markov Chain Approximation
+SRATTA: Sample Re-ATTribution Attack of Secure Aggregation in Federated Learning.
+Analyzing Privacy Leakage in Machine Learning via Multiple Hypothesis Testing: A Lesson From Fano
+Understanding the Impact of Adversarial Robustness on Accuracy Disparity
+Fast Private Kernel Density Estimation via Locality Sensitive Quantization
+Accuracy on the Curve: On the Nonlinear Correlation of ML Performance Between Data Subpopulations
+Constant Matters: Fine-grained Error Bound on Differentially Private Continual Observation
+Differential Privacy has Bounded Impact on Fairness in Classification
+Multi-Epoch Matrix Factorization Mechanisms for Private Machine Learning
+Differentially Private Stochastic Convex Optimization under a Quantile Loss Function
+Learning Functional Distributions with Private Labels
+Sketching for First Order Method: Efficient Algorithm for Low-Bandwidth Channel and Vulnerability
+Learning Antidote Data to Individual Unfairness
+Men Also Do Laundry: Multi-Attribute Bias Amplification
+2D-Shapley: A Framework for Fragmented Data Valuation
+Weak Proxies are Sufficient and Preferable for Fairness with Missing Sensitive Attributes
+Discover and Cure: Concept-aware Mitigation of Spurious Correlation
+Surrogate Model Extension (SME): A Fast and Accurate Weight Update Attack on Federated Learning
+Fair and Optimal Classification via Post-Processing
+Fair and Robust Estimation of Heterogeneous Treatment Effects for Policy Learning
+Margin-based Neural Network Watermarking
+Causal Strategic Classification: A Tale of Two Shifts
+FAIRER: Fairness as Decision Rationale Alignment

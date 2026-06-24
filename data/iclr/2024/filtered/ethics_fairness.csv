@@ -1,0 +1,101 @@
+Paper Title
+On the Learnability of Watermarks for Language Models
+Assessing Uncertainty in Similarity Scoring: Performance & Fairness in Face Recognition
+Deceptive Fairness Attacks on Graphs via Meta Learning
+Debiased Collaborative Filtering with Kernel-Based Causal Balancing
+Be Aware of the Neighborhood Effect: Modeling Selection Bias under Interference
+Fair and Efficient Contribution Valuation for Vertical Federated Learning
+Safe Collaborative Filtering
+Bias Runs Deep: Implicit Reasoning Biases in Persona-Assigned LLMs
+Beyond Memorization: Violating Privacy via Inference with Large Language Models
+Structural Fairness-aware Active Learning for Graph Neural Networks
+Tractable MCMC for Private Learning with Pure and Gaussian Differential Privacy
+f-FERM: A  Scalable Framework for  Robust Fair Empirical Risk Minimization
+Confidential-DPproof: Confidential Proof of Differentially Private Training
+Are Models Biased on Text without Gender-related Language?
+Detecting Pretraining Data from Large Language Models
+Navigating Dataset Documentations in AI: A Large-Scale Analysis of Dataset Cards on HuggingFace
+Achieving Fairness in Multi-Agent MDP Using Reinforcement Learning
+A Differentially Private Clustering Algorithm for Well-Clustered Graphs
+FairSeg: A Large-Scale Medical Image Segmentation Dataset for Fairness Learning Using Segment Anything Model with Fair Error-Bound Scaling
+Differentially Private Synthetic Data via Foundation Model APIs 1: Images
+Kill Two Birds with One Stone: Rethinking Data Augmentation for Deep Long-tailed Learning
+Label-Agnostic Forgetting: A Supervision-Free Unlearning in Deep Models
+The Devil is in the Neurons: Interpreting and Mitigating Social Biases in Language Models
+Correlated Noise Provably Beats Independent Noise for Differentially Private Learning
+On the Fairness ROAD: Robust Optimization for Adversarial Debiasing
+Debiasing Attention Mechanism in Transformer without Demographics
+Safe and Robust Watermark Injection with a Single OoD Image
+One-shot Empirical Privacy Estimation for Federated Learning
+Private Zeroth-Order Nonsmooth Nonconvex Optimization
+Alt-Text with Context: Improving Accessibility for Images on Twitter
+"Does Progress On Object Recognition Benchmarks Improve Generalization on Crowdsourced, Global Data?"
+Privacy Amplification for Matrix Mechanisms
+Improving LoRA in Privacy-preserving Federated Learning
+"""What Data Benefits My Classifier?"" Enhancing Model Performance and Interpretability through Influence-Based Data Selection"
+Like Oil and Water: Group Robustness Methods and Poisoning Defenses May Be at Odds
+Post-hoc bias scoring is optimal for fair classification
+"Tangent Transformers for Composition,Privacy and Removal"
+Understanding Reconstruction Attacks with the Neural Tangent Kernel and Dataset Distillation
+Privately Aligning Language Models with Reinforcement Learning
+Removing Biases from Molecular Representations via Information Maximization
+An improved analysis of per-sample and per-update clipping in federated learning
+Improved Analysis of Sparse Linear Regression in Local Differential Privacy Model
+Prediction without Preclusion: Recourse Verification with Reachable Sets
+DP-SGD Without Clipping: The Lipschitz Neural Network Way
+Towards Eliminating Hard Label Constraints in Gradient Inversion Attacks
+Toward effective protection against diffusion-based mimicry through score distillation
+Training Unbiased Diffusion Models From Biased Dataset
+Unbiased Watermark for Large Language Models
+Intriguing Properties of Data Attribution on Diffusion Models
+FFB: A Fair Fairness Benchmark for In-Processing Group Fairness Methods
+On the Reliability of Watermarks for Large Language Models
+Finetuning Text-to-Image Diffusion Models for Fairness
+Continual Learning in the Presence of Spurious Correlations: Analyses and a Simple Baseline
+Leave-one-out Distinguishability in Machine Learning
+Learning from Aggregate responses: Instance Level versus Bag Level Loss Functions
+An Unforgeable Publicly Verifiable Watermark for Large Language Models
+Enhancing Group Fairness in Online Settings Using Oblique Decision Forests
+An Efficient Membership Inference Attack for the Diffusion Model by Proximal Initialization
+Privacy-Preserving In-Context Learning for Large Language Models
+SILO Language Models: Isolating Legal Risk In a Nonparametric Datastore
+On Differentially Private Federated Linear Contextual Bandits
+Aligning Relational Learning with Lipschitz Fairness
+LabelDP-Pro: Learning with Label Differential Privacy via Projections
+Empirical Likelihood for Fair Classification
+CLIP the Bias: How Useful is Balancing Data in Multimodal Learning?
+FairerCLIP: Debiasing CLIP's Zero-Shot Predictions using Functions in RKHSs
+Oracle Efficient Algorithms for Groupwise Regret
+DP-OPT: Make Large Language Model Your Privacy-Preserving Prompt Engineer
+An Investigation of Representation and Allocation Harms in Contrastive Learning
+Fair Classifiers that Abstain without Harm
+Causal Fairness under Unobserved Confounding: A Neural Sensitivity Framework
+Differentially Private SGD Without Clipping Bias: An Error-Feedback Approach
+Selective Mixup Fine-Tuning for Optimizing Non-Decomposable Objectives
+FairTune: Optimizing Parameter Efficient Fine Tuning for Fairness in Medical Image Analysis
+Privacy-Preserving In-Context Learning with Differentially Private Few-Shot Generation
+Time Fairness in Online Knapsack Problems
+FedInverse: Evaluating Privacy Leakage in Federated Learning
+Fixed-Budget Differentially Private Best Arm Identification
+Chameleon: Increasing Label-Only Membership Leakage with Adaptive Poisoning
+Towards Codable Watermarking for Injecting Multi-Bits Information to LLMs
+Does Writing with Language Models Reduce Content Diversity?
+Adversarial Attacks on Fairness of Graph Neural Networks
+Dropout-Based Rashomon Set Exploration for Efficient Predictive Multiplicity Estimation
+Leveraging Optimization for Adaptive Attacks on Image Watermarks
+Machine Unlearning for Image-to-Image Generative Models
+You Only Query Once: An Efficient Label-Only Membership Inference Attack
+Language Model Inversion
+Demystifying Local & Global Fairness Trade-offs in Federated Learning Using Partial Information Decomposition
+Towards Poisoning Fair Representations
+DIAGNOSIS: Detecting Unauthorized Data Usages in Text-to-image Diffusion Models
+A Semantic Invariant Robust Watermark for Large Language Models
+Interventional Fairness on Partially Known Causal Graphs: A Constrained Optimization Approach
+Balancing Act: Constraining Disparate Impact in Sparse Models
+fairret: a Framework for Differentiable Fairness Regularization Terms
+SalUn: Empowering Machine Unlearning via Gradient-based Weight Saliency in Both Image Classification and Generation
+Debiasing Algorithm through Model Adaptation
+Be Careful What You Smooth For: Label Smoothing Can Be a Privacy Shield but Also a Catalyst for Model Inversion Attacks
+LLMCarbon: Modeling the End-to-End Carbon Footprint of Large Language Models
+Procedural Fairness Through Decoupling Objectionable Data Generating Components
+Unprocessing Seven Years of Algorithmic Fairness

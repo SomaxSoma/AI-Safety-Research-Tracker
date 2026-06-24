@@ -204,6 +204,8 @@ def main():
         parser.error("Provide either positional conference+year, or both --input and --output-dir")
 
     df = pd.read_csv(input_path)
+    # Defensive: ensure class is int. Older CSVs may have stray text labels.
+    df["class"] = pd.to_numeric(df["class"], errors="coerce").fillna(3).astype(int)
     render(df, out_dir / "plots", out_dir / "filtered", label)
 
 

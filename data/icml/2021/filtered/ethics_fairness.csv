@@ -1,0 +1,65 @@
+Paper Title
+Private Stochastic Convex Optimization: Optimal Rates in L1 Geometry
+Label Inference Attacks from Log-loss Scores
+Private Adaptive Gradient Methods for Convex Optimization
+Differentially Private Query Release Through Adaptive Projection
+Fair Classification with Noisy Protected Attributes: A Framework with Provable Guarantees
+Locally Private k-Means in One Round
+Regularized Online Allocation Problems: Fairness and Beyond
+Label-Only Membership Inference Attacks
+Differentially-Private Clustering of Easy Instances
+Private Alternating Least Squares: Practical Private Matrix Completion with Tighter Rates
+Fairness and Bias in Online Selection
+Differentially Private Correlation Clustering
+Quantifying Availability and Discovery in Recommender Systems via Stochastic Reachability
+Environment Inference for Invariant Learning
+Understanding and Mitigating Accuracy Disparity in Regression
+Characterizing Fairness Over the Set of Good Models Under Selective Labels
+Versatile Verification of Tree Ensembles
+On the Problem of Underranking in Group-Fair Ranking
+Lossless Compression of Efficient Private Local Randomizers
+Correcting Exposure Bias for Link Recommendation
+Differentially Private Aggregation in the Shuffle Model: Almost Central Accuracy in Almost a Single Message
+Federated Learning of User Verification Models Without Sharing Embeddings
+Differentially Private Quantiles
+Fairness for Image Generation with Uncertain Sensitive Attributes
+DeepReDuce: ReLU Reduction for Fast Private Inference
+The Distributed Discrete Gaussian Mechanism for Federated Learning with Secure Aggregation
+Practical and Private (Deep) Learning Without Sampling or Shuffling
+When Does Data Augmentation Help With Membership Inference Attacks?
+Differentially Private Bayesian Inference for Generalized Linear Models
+Fair Selective Classification Via Sufficiency
+Gradient Disaggregation: Breaking Privacy in Federated Learning by Reconstructing the User Participant Matrix
+Approximate Group Fairness for Clustering
+Strategic Classification Made Practical
+Privacy-Preserving Feature Selection with Secure Multiparty Computation
+Towards Understanding and Mitigating Social Biases in Language Models
+Information Obfuscation of Graph Neural Networks
+Understanding Instance-Level Label Noise: Disparate Impacts and Treatments
+Ditto: Fair and Robust Federated Learning Through Personalization
+Watermarking Deep Neural Networks with Greedy Residuals
+HEMET: A Homomorphic-Encryption-Friendly Privacy-Preserving Mobile Neural Network Architecture
+Blind Pareto Fairness and Subgroup Robustness
+Differentially Private Densest Subgraph Detection
+Just Train Twice: Improving Group Robustness without Training Group Information
+Leveraging Public Data for Practical Private Query Release
+"Accuracy, Interpretability, and Differential Privacy via Explainable Boosting"
+Privacy-Preserving Video Classification with Convolutional Neural Networks
+Representation Matters: Assessing the Importance of Subgroup Allocations in Training Data
+Oneshot Differentially Private Top-k Selection
+Testing Group Fairness via Optimal Transport Projections
+Collaborative Bayesian Optimization with Fair Regret
+Robust Representation Learning via Perceptual Similarity Metrics
+Multi-group Agnostic PAC Learnability
+A Framework for Private Matrix Analysis in Sliding Window Model
+Differentially Private Sliced Wasserstein Distance
+Directional Bias Amplification
+On Disentangled Representations Learned from Correlated Data
+To be Robust or to be Fair: Towards Fairness in Adversarial Training
+Fairness of Exposure in Stochastic Bandits
+Learner-Private Convex Optimization
+Making Paper Reviewing Robust to Bid Manipulation Attacks
+Large Scale Private Learning via Low-rank Reparametrization
+Matrix Sketching for Secure Collaborative Machine Learning
+Examining and Combating Spurious Features under Distribution Shift
+Learning Fair Policies in Decentralized Cooperative Multi-Agent Reinforcement Learning

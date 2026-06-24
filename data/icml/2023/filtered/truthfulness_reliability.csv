@@ -1,0 +1,166 @@
+Paper Title
+Unsupervised Out-of-Distribution Detection with Diffusion Inpainting
+NeRFool: Uncovering the Vulnerability of Generalizable Neural Radiance Fields against Adversarial Perturbations
+On Data Manifolds Entailed by Structural Causal Models
+Contextual Reliability: When Different Features Matter in Different Contexts
+A Large-Scale Study of Probabilistic Calibration in Neural Network Regression
+Robust Counterfactual Explanations for Neural Networks With Probabilistic Guarantees
+Learning Unforeseen Robustness from Out-of-distribution Data Using Equivariant Domain Translator
+Theoretical Behavior of XAI Methods in the Presence of Suppressor Variables
+Image Shortcut Squeezing: Countering Perturbative Availability Poisons with Compression
+Mitigating Spurious Correlations in Multi-modal Models during Fine-tuning
+JAWS-X: Addressing Efficiency Bottlenecks of Conformal Prediction Under Standard and Feedback Covariate Shift
+"Diagnosis, Feedback, Adaptation: A Human-in-the-Loop Framework for Test-Time Policy Adaptation"
+Identifiability and Generalizability in Constrained Inverse Reinforcement Learning
+In or Out? Fixing ImageNet Out-of-Distribution Detection Evaluation
+Low Complexity Homeomorphic Projection to Ensure Neural-Network Solution Feasibility for Optimization over (Non-)Convex Set
+SMURF-THP: Score Matching-based UnceRtainty quantiFication for Transformer Hawkes Process
+GLOBE-CE: A Translation Based Approach for Global Counterfactual Explanations
+Identifying Interpretable Subspaces in Image Representations
+Towards Bridging the Gaps between the Right to Explanation and the Right to be Forgotten
+Robustly Learning a Single Neuron via Sharpness
+Certifying Ensembles: A General Certification Theory with S-Lipschitzness
+Uncertainty Estimation for Molecules: Desiderata and Methods
+Generative Decoding of Visual Stimuli
+Representer Point Selection for Explaining Regularized High-dimensional Models
+Improving l1-Certified Robustness via Randomized Smoothing by Leveraging Box Constraints
+Explaining Reinforcement Learning with Shapley Values
+A Unifying Framework to the Analysis of Interaction Methods using Synergy Functions
+Beyond the Universal Law of Robustness: Sharper Laws for Random Features and Neural Tangent Kernels
+Distribution Free Prediction Sets for Node Classification
+BNN-DP: Robustness Certification of Bayesian Neural Networks via Dynamic Programming
+Towards Reliable Neural Specifications
+Revisiting Data-Free Knowledge Distillation with Poisoned Teachers
+Uncertainty Estimation by Fisher Information-based Evidential Deep Learning
+"Dividing and Conquering a BlackBox to a Mixture of Interpretable Models: Route, Interpret, Repeat"
+Kernel Logistic Regression Approximation of an Understandable ReLU Neural Network
+"Synthetic Data, Real Errors: How (Not) to Publish and Use Synthetic Data"
+Do Machine Learning Models Learn Statistical Rules Inferred from Data?
+Self-Interpretable Time Series Prediction with Counterfactual Explanations
+On the Relationship Between Explanation and Prediction: A Causal View
+Conformal Prediction Sets for Graph Neural Networks
+Robust Explanation for Free or At the Cost of Faithfulness
+Identification of the Adversary from a Single Adversarial Example
+Towards Stable and Efficient Adversarial Training against $l_1$ Bounded Adversarial Attacks
+Exploring the Limits of Model-Targeted Indiscriminate Data Poisoning Attacks
+Computational Asymmetries in Robust Classification
+Constrained Monotonic Neural Networks
+Efficient Parametric Approximations of Neural Network Function Space Distance
+Certified Robust Neural Networks: Generalization and Corruption Resistance
+Do Perceptually Aligned Gradients Imply Robustness?
+Cross-Entropy Loss Functions: Theoretical Analysis and Applications
+Conformal Prediction for Federated Uncertainty Quantification Under Label Shift
+"Robust Consensus in Ranking Data Analysis: Definitions, Properties and Computational Issues"
+N$\text{A}^\text{2}$Q: Neural Attention Additive Model for Interpretable Multi-Agent Q-Learning
+Adversarial robustness of amortized Bayesian inference
+Improving Adversarial Robustness by Putting More Regularizations on Less Robust Samples
+Probabilistic Attention-to-Influence Neural Models for Event Sequences
+Improving Adversarial Robustness Through the Contrastive-Guided Diffusion Process
+Phase-aware Adversarial Defense for Improving Adversarial Robustness
+A Model-free Closeness-of-influence Test for Features in Supervised Learning
+Learning Perturbations to Explain Time Series Predictions
+LeadFL: Client Self-Defense against Model Poisoning in Federated Learning
+Generated Graph Detection
+Towards Explaining Distribution Shifts
+What do CNNs Learn in the First Layer and Why? A Linear Systems Perspective
+Facial Expression Recognition with Adaptive Frame Rate based on Multiple Testing Correction
+High Fidelity Image Counterfactuals with Probabilistic Causal Models
+Improving Adversarial Robustness of Deep Equilibrium Models with Explicit Regulations Along the Neural Dynamics
+R-U-SURE? Uncertainty-Aware Code Suggestions By Maximizing Utility Across Random User Intents
+GFlowOut: Dropout with Generative Flow Networks
+Online Platt Scaling with Calibeating
+Direct Parameterization of Lipschitz-Bounded Deep Networks
+Large Language Models Can Be Easily Distracted by Irrelevant Context
+"""Why did the Model Fail?"": Attributing Model Performance Changes to Distribution Shifts"
+"Label Distributionally Robust Losses for Multi-class Classification: Consistency, Robustness and Adaptivity"
+Gradient-based Wang--Landau Algorithm: A Novel Sampler for Output Distribution of Neural Networks over the Input Space
+Towards Trustworthy Explanation: On Causal Rationalization
+Poisoning Generative Replay in Continual Learning to Promote Forgetting
+Better Diffusion Models Further Improve Adversarial Training
+Bayesian Neural Networks Avoid Encoding Complex and Perturbation-Sensitive Concepts
+Graph Contrastive Backdoor Attacks
+Towards Robust and Safe Reinforcement Learning with Benign Off-policy Data
+Interpretable Neural-Symbolic Concept Reasoning
+How to Trust Your Diffusion Model: A Convex Optimization Approach to Conformal Risk Control
+ACAT: Adversarial Counterfactual Attention for Classification and Detection in Medical Imaging
+Confidence and Dispersity Speak: Characterizing Prediction Matrix for Unsupervised Accuracy Estimation
+Efficient Bound of Lipschitz Constant for Convolutional Layers by Gram Iteration
+Data-Driven Subgroup Identification for Linear Regression
+Probabilistic Categorical Adversarial Attack and Adversarial Training
+Decoding Layer Saliency in Language Transformers
+A Near-Optimal Algorithm for Safe Reinforcement Learning Under Instantaneous Hard Constraints
+Run-off Election: Improved Provable Defense against Data Poisoning Attacks
+Explainability as statistical inference
+PAC Generalization via Invariant Representations
+DetectGPT: Zero-Shot Machine-Generated Text Detection using Probability Curvature
+How Many Perturbations Break This Model? Evaluating Robustness Beyond Adversarial Accuracy
+Cluster Explanation via Polyhedral Descriptions
+On the Forward Invariance of Neural ODEs
+Scalable Safe Policy Improvement via Monte Carlo Tree Search
+Beyond In-Domain Scenarios: Robust Density-Aware Calibration
+UMD: Unsupervised Model Detection for X2X Backdoor Attacks
+"Reasons for the Superiority of Stochastic Estimators over Deterministic Ones: Robustness, Consistency and Perceptual Quality"
+ILLUME: Rationalizing Vision-Language Models through Human Interactions
+MultiRobustBench: Benchmarking Robustness Against Multiple Attacks
+Feed Two Birds with One Scone: Exploiting Wild Data for Both Out-of-Distribution Generalization and Detection
+Explainable Data-Driven Optimization: From Context to Decision and Back Again
+Data Representations' Study of Latent Image Manifolds
+PAC Prediction Sets for Large Language Models of Code
+Sequential Predictive Conformal Inference for Time Series
+Fascinating Supervisory Signals and Where to Find Them: Deep Anomaly Detection with Scale Learning
+Relevant Walk Search for Explaining Graph Neural Networks
+Reconstructive Neuron Pruning for Backdoor Defense
+Shapley Based Residual Decomposition for Instance Analysis
+Do You Remember? Overcoming Catastrophic Forgetting for Fake Audio Detection
+Calibrating Multimodal Learning
+Detecting Out-of-distribution Data through In-distribution Class Prior
+One-vs-the-Rest Loss to Focus on Important Samples in Adversarial Training
+A Critical Revisit of Adversarial Robustness in 3D Point Cloud Recognition with Diffusion-Driven Purification
+NP-SemiSeg: When Neural Processes meet Semi-Supervised Semantic Segmentation
+Enforcing Hard Constraints with Soft Barriers: Safe Reinforcement Learning in Unknown Stochastic Environments
+Preprocessors Matter! Realistic Decision-Based Attacks on Machine Learning Systems
+On the Robustness of Randomized Ensembles to Adversarial Perturbations
+Hybrid Energy Based Model in the Feature Space for Out-of-Distribution Detection
+Adversarial Parameter Attack on Deep Neural Networks
+A New PHO-rmula for Improved Performance of Semi-Structured Networks
+LipsNet: A Smooth and Robust Neural Network with Adaptive Lipschitz Constant for High Accuracy Optimal Control
+HarsanyiNet: Computing Accurate Shapley Values in a Single Forward Propagation
+A Robust Optimisation Perspective on Counterexample-Guided Repair of Neural Networks
+Invariance in Policy Optimisation and Partial Identifiability in Reward Learning
+Safe Offline Reinforcement Learning with Real-Time Budget Constraints
+PWSHAP: A Path-Wise Explanation Model for Targeted Variables
+Dual Focal Loss for Calibration
+Federated Adversarial Learning: A Framework with Convergence Analysis
+Byzantine-Robust Learning on Heterogeneous Data via Gradient Splitting
+Towards credible visual model interpretation with path attribution
+COLA: Orchestrating Error Coding and Learning for Robust Neural Network Inference Against Hardware Defects
+GAT: Guided Adversarial Training with Pareto-optimal Auxiliary Tasks
+A Closer Look at the Intervention Procedure of Concept Bottleneck Models
+Large Language Models Struggle to Learn Long-Tail Knowledge
+Detecting Adversarial Data by Probing Multiple Perturbations Using Expected Perturbation Score
+Shape-Guided Dual-Memory Learning for 3D Anomaly Detection
+Interpolation for Robust Learning: Data Augmentation on Wasserstein Geodesics
+Conformal Inference is (almost) Free for Neural Networks Trained with Early Stopping
+Concept-based Explanations for Out-of-Distribution Detectors
+Robust One-Class Classification with Signed Distance Function using 1-Lipschitz Neural Networks
+Scaling of Class-wise Training Losses for Post-hoc Calibration
+Stratified Adversarial Robustness with Rejection
+Does a Neural Network Really Encode Symbolic Concepts?
+Probabilistic Concept Bottleneck Models
+Exploring Model Dynamics for Accumulative Poisoning Discovery
+On the Impact of Knowledge Distillation for Model Interpretability
+Unleashing Mask: Explore the Intrinsic Out-of-Distribution Detection Capability
+Robust Weight Signatures: Gaining Robustness as Easy as Patching Weights?
+Understanding and Defending Patched-based Adversarial Attacks for Vision Transformer
+Understanding Backdoor Attacks through the Adaptability Hypothesis
+Transcendental Idealism of Planner: Evaluating Perception from Planning Perspective for Autonomous Driving
+Great Models Think Alike: Improving Model Reliability via Inter-Model Latent Agreement
+ConCerNet: A Contrastive Learning Based Framework for Automated Conservation Law Discovery and Trustworthy Dynamical System Prediction
+Robust Perception through Equivariance
+Causal Proxy Models for Concept-based Model Explanations
+Eliminating Adversarial Noise via Information Discard and Robust Representation Restoration
+Which Invariance Should We Transfer? A Causal Minimax Learning Approach
+Never mind the metrics---what about the uncertainty? Visualising binary confusion matrix metric distributions to put performance in perspective
+Tight Certification of Adversarially Trained Neural Networks via Nonconvex Low-Rank Semidefinite Relaxations
+Rethinking Explaining Graph Neural Networks via Non-parametric Subgraph Matching
+Unveiling The Mask of Position-Information Pattern Through the Mist of Image Features

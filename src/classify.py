@@ -79,6 +79,28 @@ def parse_response(text: str) -> dict | None:
     if not {"class", "is_safety", "subdomain", "confidence", "reasoning"}.issubset(data):
         return None
 
+    # Coerce class to an int 1-4. Reasoning models occasionally return the
+    # text label instead of the number ("General Capabilities" → 3 etc.).
+    label_to_class = {
+        "ethics & fairness": 1, "ethics and fairness": 1,
+        "truthfulness, reliability & xai": 2, "truthfulness & reliability": 2,
+        "truthfulness and reliability": 2,
+        "general capabilities": 3, "general": 3,
+        "ai safety": 4, "safety": 4,
+    }
+    raw = data["class"]
+    if isinstance(raw, str):
+        cleaned = raw.strip().lower()
+        if cleaned in label_to_class:
+            data["class"] = label_to_class[cleaned]
+        else:
+            try:
+                data["class"] = int(cleaned)
+            except ValueError:
+                return None
+    if data["class"] not in (1, 2, 3, 4):
+        return None
+
     if data.get("subdomain") not in VALID_SUBDOMAINS:
         data["subdomain"] = ""
 
@@ -199,6 +221,16 @@ async def run(args: argparse.Namespace):
 
     write_header = not output_path.exists() or done_prior == 0
     csvfile = open(output_path, "a" if not write_header else "w", newline="", encoding="utf-8")
+
+    # Take an exclusive file lock so two concurrent classify jobs targeting the
+    # same output can't interleave writes and corrupt the CSV.
+    import fcntl
+    try:
+        fcntl.flock(csvfile.fileno(), fcntl.LOCK_EX | fcntl.LOCK_NB)
+    except BlockingIOError:
+        csvfile.close()
+        sys.exit(f"Error: another classify process is already writing to {output_path}")
+
     import csv
     writer = csv.DictWriter(csvfile, fieldnames=FIELDNAMES)
     if write_header:

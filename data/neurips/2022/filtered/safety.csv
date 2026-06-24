@@ -1,0 +1,27 @@
+Paper Title,Subarea,Detailed Class,Score
+Counterfactual harm,Capability Control & Unlearning,Alignment Training,7.0
+Efficient Adversarial Training without Attacking: Worst-Case-Aware Robust Reinforcement Learning,"Robustness, Defense & Systemic Control",Adversarial Robustness,7.0
+Defining and Characterizing Reward Gaming,Scalable Oversight & Value Learning,Scalable Oversight,4.0
+Second Thoughts are Best: Learning to Re-Align With Human Values from Text Edits,Capability Control & Unlearning,Alignment Training,7.0
+Exploring the Limits of Domain-Adaptive Training for Detoxifying Large-Scale Language Models,Capability Control & Unlearning,Alignment Training,4.0
+BadPrompt: Backdoor Attacks on Continuous Prompts,"Robustness, Defense & Systemic Control",Adversarial Robustness,6.0
+Sleeper Agent: Scalable Hidden Trigger Backdoors for Neural Networks Trained from Scratch,"Robustness, Defense & Systemic Control",Red-Teaming,6.0
+Capturing Failures of Large Language Models via Human Cognitive Biases,"Robustness, Defense & Systemic Control",Red-Teaming,6.0
+"How to talk so AI will learn: Instructions, descriptions, and autonomy",Scalable Oversight & Value Learning,Scalable Oversight,6.0
+BagFlip: A Certified Defense Against Data Poisoning,"Robustness, Defense & Systemic Control",Adversarial Robustness,7.0
+Training language models to follow instructions with human feedback,Capability Control & Unlearning,Alignment Training,7.0
+Towards Safe Reinforcement Learning with a Safety Editor Policy,Capability Control & Unlearning,Alignment Training,7.0
+Learning to Mitigate AI Collusion on Economic Platforms,Scalable Oversight & Value Learning,Multi-Agent Safety,4.0
+Adversarial training for high-stakes reliability,"Robustness, Defense & Systemic Control",Adversarial Robustness,7.0
+Shield Decentralization for Safe Multi-Agent Reinforcement Learning,Scalable Oversight & Value Learning,Multi-Agent Safety,5.0
+What Can the Neural Tangent Kernel Tell Us About Adversarial Robustness?,"Robustness, Defense & Systemic Control",Adversarial Robustness,4.0
+Parametrically Retargetable Decision-Makers Tend To Seek Power,Agent Foundations & Alignment Theory,Agent Foundations,5.0
+Human-AI Shared Control via Policy Dissection,Interpretability & Understanding,Interpretability,3.0
+Moderate-fitting as a Natural Backdoor Defender for Pre-trained Language Models,"Robustness, Defense & Systemic Control",Adversarial Robustness,4.0
+Effective Backdoor Defense by Exploiting Sensitivity of Poisoned Samples,"Robustness, Defense & Systemic Control",Adversarial Robustness,6.0
+Explicable Policy Search,Capability Control & Unlearning,Alignment Training,4.0
+Invariance-Aware Randomized Smoothing Certificates,"Robustness, Defense & Systemic Control",Adversarial Robustness,5.0
+QUARK: Controllable Text Generation with Reinforced Unlearning,Capability Control & Unlearning,Alignment Training,7.0
+Handcrafted Backdoors in Deep Neural Networks,"Robustness, Defense & Systemic Control",Adversarial Robustness,6.0
+Provable Defense against Backdoor Policies in Reinforcement Learning,"Robustness, Defense & Systemic Control",Adversarial Robustness,7.0
+Locating and Editing Factual Associations in GPT,Interpretability & Understanding,Interpretability,4.0

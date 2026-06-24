@@ -1,0 +1,61 @@
+Paper Title,Subarea,Detailed Class,Score
+Language Models Don't Always Say What They Think: Unfaithful Explanations in Chain-of-Thought Prompting,Interpretability & Understanding,Interpretability,5.0
+ParaFuzz: An Interpretability-Driven Technique for Detecting Poisoned Samples in NLP,"Robustness, Defense & Systemic Control",Adversarial Robustness,4.0
+Towards Automated Circuit Discovery for Mechanistic Interpretability,Interpretability & Understanding,Interpretability,3.0
+Scale Alone Does not Improve Mechanistic Interpretability in Vision Models,Interpretability & Understanding,Interpretability,5.0
+Language Model Alignment with Elastic Reset,Capability Control & Unlearning,Alignment Training,4.0
+On the Exploitability of Instruction Tuning,"Robustness, Defense & Systemic Control",Red-Teaming,7.0
+MoCa: Measuring Human-Language Model Alignment on Causal and Moral Judgment Tasks,Scalable Oversight & Value Learning,Scalable Oversight,3.0
+Are aligned neural networks adversarially aligned?,"Robustness, Defense & Systemic Control",Red-Teaming,5.0
+Labeling Neural Representations with Inverse Recognition,Interpretability & Understanding,Interpretability,5.0
+Does Localization Inform Editing? Surprising Differences in Causality-Based Localization vs. Knowledge Editing in Language Models,Interpretability & Understanding,Interpretability,3.0
+Similarity-based cooperative equilibrium,Agent Foundations & Alignment Theory,Agent Foundations,3.0
+Consistent Aggregation of Objectives with Diverse Time Preferences Requires Non-Markovian Rewards,Scalable Oversight & Value Learning,Scalable Oversight,4.0
+Learning Shared Safety Constraints from Multi-task Demonstrations,Capability Control & Unlearning,Alignment Training,5.0
+Towards Test-Time Refusals via Concept Negation,Threat Modeling & Evaluations,Safeguards,6.0
+Learning Transformer Programs,Interpretability & Understanding,Interpretability,6.0
+Hierarchical Randomized Smoothing,"Robustness, Defense & Systemic Control",Adversarial Robustness,3.0
+Tracr: Compiled Transformers as a Laboratory for Interpretability,Interpretability & Understanding,Interpretability,5.0
+Provably Bounding Neural Network Preimages,"Robustness, Defense & Systemic Control",Adversarial Robustness,4.0
+Multi-scale Diffusion Denoised Smoothing,"Robustness, Defense & Systemic Control",Adversarial Robustness,5.0
+Schema-learning and rebinding as mechanisms of in-context learning and emergence,Interpretability & Understanding,Interpretability,3.0
+Emergent and Predictable Memorization in Large Language Models,Threat Modeling & Evaluations,Dangerous Capability Evals,4.0
+Scan and Snap: Understanding Training Dynamics and Token Composition in 1-layer Transformer,Interpretability & Understanding,Interpretability,3.0
+Concept Algebra for (Score-Based) Text-Controlled Generative Models,Interpretability & Understanding,Interpretability,5.0
+Mass-Producing Failures of Multimodal Systems with Language Models,"Robustness, Defense & Systemic Control",Red-Teaming,4.0
+Autonomous Capability Assessment of Sequential Decision-Making Systems in Stochastic Settings,Threat Modeling & Evaluations,Dangerous Capability Evals,3.0
+Gaussian Process Probes (GPP) for Uncertainty-Aware Probing,Interpretability & Understanding,Interpretability,3.0
+Efficient Adversarial Attacks on Online Multi-agent Reinforcement Learning,"Robustness, Defense & Systemic Control",Adversarial Robustness,5.0
+Dissecting Chain-of-Thought: Compositionality through In-Context Filtering and Learning,Interpretability & Understanding,Interpretability,4.0
+Thought Cloning: Learning to Think while Acting by Imitating Human Thinking,Interpretability & Understanding,Interpretability,5.0
+Evaluating the Moral Beliefs Encoded in LLMs,Interpretability & Understanding,Interpretability,5.0
+TrojLLM: A Black-box Trojan Prompt Attack on Large Language Models,"Robustness, Defense & Systemic Control",Adversarial Robustness,6.0
+Break It Down:  Evidence for Structural Compositionality in Neural Networks,Interpretability & Understanding,Interpretability,3.0
+Honesty Is the Best Policy: Defining and Mitigating AI Deception,Threat Modeling & Evaluations,Scheming and Deception,7.0
+Transformers are uninterpretable with myopic methods: a case study with bounded Dyck grammars,Interpretability & Understanding,Interpretability,3.0
+Robust Contrastive Language-Image Pretraining against Data Poisoning and Backdoor Attacks,"Robustness, Defense & Systemic Control",Adversarial Robustness,7.0
+Principle-Driven Self-Alignment of Language Models from Scratch with Minimal Human Supervision,Capability Control & Unlearning,Alignment Training,4.0
+The Transient Nature of Emergent In-Context Learning in Transformers,Interpretability & Understanding,Interpretability,3.0
+Birth of a Transformer: A Memory Viewpoint,Interpretability & Understanding,Interpretability,3.0
+VLATTACK: Multimodal Adversarial Attacks on Vision-Language Tasks via Pre-trained Models,"Robustness, Defense & Systemic Control",Adversarial Robustness,4.0
+Multi-Agent First Order Constrained Optimization in Policy Space,Scalable Oversight & Value Learning,Multi-Agent Safety,7.0
+The Clock and the Pizza: Two Stories in Mechanistic Explanation of Neural Networks,Interpretability & Understanding,Interpretability,3.0
+On Evaluating Adversarial Robustness of Large Vision-Language Models,"Robustness, Defense & Systemic Control",Adversarial Robustness,5.0
+Towards a fuller understanding of neurons with Clustered Compositional Explanations,Interpretability & Understanding,Interpretability,3.0
+Tools for Verifying Neural Models' Training Data,Technical Governance & Policy,Policy and Governance,6.0
+Selective Amnesia: A Continual Learning Approach to Forgetting in Deep Generative Models,Capability Control & Unlearning,Alignment Training,7.0
+Beyond Geometry: Comparing the Temporal Structure of Computation in Neural Circuits with Dynamical Similarity Analysis,Interpretability & Understanding,Interpretability,4.0
+VillanDiffusion: A Unified Backdoor Attack Framework for Diffusion Models,"Robustness, Defense & Systemic Control",Red-Teaming,6.0
+RRHF: Rank Responses to Align Language Models with Human Feedback,Capability Control & Unlearning,Alignment Training,5.0
+Defending Pre-trained Language Models as Few-shot Learners against Backdoor Attacks,"Robustness, Defense & Systemic Control",Adversarial Robustness,7.0
+How does GPT-2 compute greater-than?: Interpreting mathematical abilities in a pre-trained language model,Interpretability & Understanding,Interpretability,4.0
+Interpretability at Scale: Identifying Causal Mechanisms in Alpaca,Interpretability & Understanding,Interpretability,7.0
+Censored Sampling of Diffusion Models Using 3 Minutes of Human Feedback,Threat Modeling & Evaluations,Safeguards,5.0
+White-Box Transformers via Sparse Rate Reduction,Interpretability & Understanding,Interpretability,4.0
+Neural Polarizer: A Lightweight and Effective Backdoor Defense via Purifying Poisoned Features,"Robustness, Defense & Systemic Control",Adversarial Robustness,5.0
+Scalable Primal-Dual Actor-Critic Method for Safe Multi-Agent RL with General Utilities,Scalable Oversight & Value Learning,Multi-Agent Safety,5.0
+Setting the Trap: Capturing and Defeating Backdoors in Pretrained Language Models through Honeypots,"Robustness, Defense & Systemic Control",Adversarial Robustness,7.0
+DISCOVER: Making Vision Networks Interpretable via Competition and Dissection,Interpretability & Understanding,Interpretability,4.0
+Jailbroken: How Does LLM Safety Training Fail?,"Robustness, Defense & Systemic Control",Red-Teaming,7.0
+Inference-Time Intervention: Eliciting Truthful Answers from a Language Model,Interpretability & Understanding,Interpretability,7.0
+Stable Diffusion is Unstable,"Robustness, Defense & Systemic Control",Red-Teaming,4.0

@@ -1,0 +1,109 @@
+Paper Title
+Frequentist Uncertainty in Recurrent Neural Networks via Blockwise Influence Functions
+Fairwashing explanations with off-manifold detergent
+Black-box Certification and Learning under Adversarial Perturbations
+On Second-Order Group Influence Functions for Black-Box Predictions
+Defense Through Diverse Directions
+NADS: Neural Architecture Distribution Search for Uncertainty Awareness
+Adversarial Robustness for Code
+Adversarial Learning Guarantees for Linear Hypotheses and Neural Networks
+Rank Aggregation from Pairwise Comparisons in the Presence of Adversarial Corruptions
+Discriminative Jackknife: Quantifying Uncertainty in Deep Learning via Higher-Order Influence Functions
+Adversarial Filters of Dataset Biases
+When are Non-Parametric Methods Robust?
+"Calibration, Entropy Rates, and Memory in Language Models"
+Unlabelled Data Improves Bayesian Uncertainty Calibration under Covariate Shift
+Invariant Risk Minimization Games
+Concise Explanations of Neural Networks using Adversarial Training
+Proper Network Interpretability Helps Adversarial Robustness in Classification
+Reliable evaluation of adversarial robustness with an ensemble of diverse parameter-free attacks
+On Breaking Deep Generative Model-based Defenses and Beyond
+Sharp Statistical Guaratees for Adversarially Robust Gaussian Classification
+Adversarial Attacks on Probabilistic Autoregressive Forecasting Models
+Invariant Rationalization
+"Efficient Robustness Certificates for Discrete Data: Sparsity-Aware Randomized Smoothing for Graphs, Images and More"
+Minimally distorted Adversarial Examples with a Fast Adaptive Boundary Attack
+Interpreting Robust Optimization via Adversarial Influence Functions
+Identifying Statistical Bias in Dataset Replication
+Towards Understanding the Dynamics of the First-Order Adversaries
+"Can Autonomous Vehicles Identify, Recover From, and Adapt to Distribution Shifts?"
+Accountable Off-Policy Evaluation With Kernel Bellman Statistics
+More Data Can Expand The Generalization Gap Between Adversarially Robust and Standard Models
+Probing Emergent Semantics in Predictive Agents via Question Answering
+Efficient and Scalable Bayesian Neural Nets with Rank-1 Factors
+Multidimensional Shape Constraints
+Circuit-Based Intrinsic Methods to Detect Overfitting
+Leveraging Frequency Analysis for Deep Fake Image Recognition
+Robust Learning with the Hilbert-Schmidt Independence Criterion
+Parameterized Rate-Distortion Stochastic Encoder
+T-GD: Transferable GAN-generated Images Detection Framework
+SDE-Net: Equipping Deep Neural Networks with Uncertainty Estimates
+Concept Bottleneck Models
+Interpretable Off-Policy Evaluation in Reinforcement Learning by Highlighting Influential Transitions
+"Being Bayesian, Even Just a Bit, Fixes Overconfidence in ReLU Networks"
+Curse of Dimensionality on Randomized Smoothing for Certifiable Robustness
+Implicit Euler Skip Connections: Enhancing Adversarial Robustness via Numerical Stability
+Being Bayesian about Categorical Probability
+Puzzle Mix: Exploiting Saliency and Local Statistics for Optimal Mixup
+Hierarchical Verification for Adversarial Robustness
+Generalized and Scalable Optimal Sparse Decision Trees
+Problems with Shapley-value-based explanations as feature importance measures
+Robust and Stable Black Box Explanations
+Normalized Loss Functions for Deep Learning with Noisy Labels
+Adaptive Droplet Routing in Digital Microfluidic Biochips Using Deep Reinforcement Learning
+Adversarial Neural Pruning with Latent Vulnerability Suppression
+The Effect of Natural Distribution Shift on Question Answering Models
+Efficient Proximal Mapping of the 1-path-norm of Shallow Networks
+Estimation of Bounds on Potential Outcomes For Decision Making
+Explainable k-Means and k-Medians Clustering
+How recurrent networks implement contextual processing in sentiment analysis
+Min-Max Optimization without Gradients: Convergence and Applications to Black-Box Evasion and Poisoning Attacks
+Efficiently Learning Adversarially Robust Halfspaces with Noise
+Adversarial Nonnegative Matrix Factorization
+Confidence-Aware Learning for Deep Neural Networks
+DeepCoDA: personalized interpretability for compositional health data
+Explaining Groups of Points in Low-Dimensional Representations
+Scalable Differential Privacy with Certified Robustness in Adversarial Learning
+Understanding and Mitigating the Tradeoff between Robustness and Accuracy
+Adversarial Robustness Against the Union of Multiple Perturbation Models
+Certified Robustness to Label-Flipping Attacks via Randomized Smoothing
+Adversarial Risk via Optimal Transport and Optimal Couplings
+Detecting Out-of-Distribution Examples with Gram Matrices
+Randomization matters How to defend against strong adversarial attacks
+Informative Dropout for Robust Representation Learning: A Shape-bias Perspective
+Learning for Dose Allocation in Adaptive Clinical Trials with Safety Constraints
+Robustness to Spurious Correlations via Human Annotations
+Adversarial Attacks on Copyright Detection Systems
+Improving Robustness of Deep-Learning-Based Image Reconstruction
+Overfitting in adversarially robust deep learning
+Transparency Promotion with Model-Agnostic Linear Competitors
+Does the Markov Decision Process Fit the Data: Testing for the Markov Property in Sequential Decision Making
+The Shapley Taylor Interaction Index
+FormulaZero: Distributionally Robust Online Adaptation via Offline Population Synthesis
+Clinician-in-the-Loop Decision Making: Reinforcement Learning with Near-Optimal Set-Valued Policies
+Confidence-Calibrated Adversarial Training: Generalizing to Unseen Attacks
+"Interpretable, Multidimensional, Multimodal Anomaly Detection with Negative Sampling for Detection of Device Failure"
+NetGAN without GAN: From Random Walks to Low-Rank Approximations
+Born-Again Tree Ensembles
+Uncertainty Estimation Using a Single Deep Deterministic Neural Network
+When Explanations Lie: Why Many Modified BP Attributions Fail
+Second-Order Provable Defenses against Adversarial Attacks
+Neural Network Control Policy Verification With Persistent Adversarial Perturbation
+Towards Understanding the Regularization of Adversarial Robustness on Neural Networks
+The Many Shapley Values for Model Explanation
+Adversarial Robustness via Runtime Masking and Cleansing
+Zeno++: Robust Fully Asynchronous SGD
+Interpolation between Residual and Non-Residual Networks
+Efficient nonparametric statistical inference on population feature importance using Shapley values
+Online Control of the False Coverage Rate and False Sign Rate
+Randomized Smoothing of All Shapes and Sizes
+Cautious Adaptation For Reinforcement Learning in Safety-Critical Settings
+On Lp-norm Robustness of Ensemble Decision Stumps and Trees
+Fundamental Tradeoffs between Invariance and Sensitivity to Adversarial Perturbations
+Attacks Which Do Not Kill Training Make Adversarial Learning Stronger
+Mix-n-Match : Ensemble and Compositional Methods for Uncertainty Calibration in Deep Learning
+Individual Calibration with Randomized Forecasting
+Stronger and Faster Wasserstein Adversarial Attacks
+Dual-Path Distillation: A Unified Framework to Improve Black-Box Attacks
+Robustness to Programmable String Transformations via Augmented Abstract Training
+Learning Adversarially Robust Representations via Worst-Case Mutual Information Maximization

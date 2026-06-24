@@ -1,0 +1,365 @@
+Paper Title
+Reliable and Diverse Evaluation of LLM Medical Knowledge Mastery
+SCOPE: A Self-supervised Framework for Improving Faithfulness in Conditional Text Generation
+Sensitivity Verification for Additive Decision Tree Ensembles
+Probabilistic Conformal Prediction with Approximate Conditional Validity
+K-HALU: Multiple Answer Korean Hallucination Benchmark for Large Language Models
+Activation Gradient based Poisoned Sample Detection Against Backdoor Attacks
+How new data permeates LLM knowledge and how to dilute it
+SIM: Surface-based fMRI Analysis for Inter-Subject Multimodal Decoding from Movie-Watching Experiments
+Evaluating Large Language Models through Role-Guide and Self-Reflection: A Comparative Study
+Diffusion-Based Planning for Autonomous Driving with Flexible Guidance
+JudgeLM: Fine-tuned Large Language Models are Scalable Judges
+Measuring and Enhancing Trustworthiness of LLMs in RAG through Grounded Attributions and Learning to Refuse
+Black-Box Detection of Language Model Watermarks
+Parameter Expanded Stochastic Gradient Markov Chain Monte Carlo
+Predictive Uncertainty Quantification for Bird's Eye View Segmentation: A Benchmark and Novel Loss Function
+L-WISE: Boosting Human Visual Category Learning Through Model-Based Image Selection and Enhancement
+Logic-Logit: A Logic-Based Approach to Choice Modeling
+Safety-Prioritizing Curricula for Constrained Reinforcement Learning
+OCEAN: Offline Chain-of-thought Evaluation and Alignment in Large Language Models
+MQuAKE-Remastered: Multi-Hop Knowledge Editing Can Only Be Advanced with Reliable Evaluations
+Score-based Self-supervised MRI Denoising
+GSM-Symbolic: Understanding the Limitations of Mathematical Reasoning in Large Language Models
+Scalable Influence and Fact Tracing for Large Language Model Pretraining
+BrainACTIV: Identifying visuo-semantic properties driving cortical selectivity using diffusion-based image manipulation
+Simple is Effective: The Roles of Graphs and Large Language Models in Knowledge-Graph-Based Retrieval-Augmented Generation
+Conformal Language Model Reasoning with Coherent Factuality
+Robustness Reprogramming for Representation Learning
+Discovering Influential Neuron Path in Vision Transformers
+Scale-Aware Contrastive Reverse Distillation for Unsupervised Medical Anomaly Detection
+AdvPaint: Protecting Images from Inpainting Manipulation via Adversarial Attention Disruption
+Provable Uncertainty Decomposition via Higher-Order Calibration
+Forking Paths in Neural Text Generation
+LLM-based Typed Hyperresolution for Commonsense Reasoning with Knowledge Bases
+NutriBench: A Dataset for Evaluating Large Language Models in Nutrition Estimation from Meal Descriptions
+{$\tau$}-bench: A Benchmark for \underline{T}ool-\underline{A}gent-\underline{U}ser Interaction in Real-World Domains
+Latent Safety-Constrained Policy Approach for Safe Offline Reinforcement Learning
+Can Knowledge Editing Really Correct Hallucinations?
+Generative Classifiers Avoid Shortcut Solutions
+Reducing Hallucinations in Large Vision-Language Models via Latent Space Steering
+SafeDiffuser: Safe Planning with Diffusion Probabilistic Models
+GOttack: Universal Adversarial Attacks on Graph Neural Networks via Graph Orbits Learning
+Graph Neural Networks Gone Hogwild
+Walk the Talk? Measuring the Faithfulness of Large Language Model Explanations
+PALMBENCH: A COMPREHENSIVE BENCHMARK OF COMPRESSED LARGE LANGUAGE MODELS ON MOBILE PLATFORMS
+Is Your Video Language Model a Reliable Judge?
+Adversarially Robust Anomaly Detection through Spurious Negative Pair Mitigation
+"Dynamic Modeling of Patients, Modalities and Tasks via Multi-modal Multi-task Mixture of Experts"
+Differentiable Optimization of Similarity Scores Between Models and Brains
+Sparse autoencoders reveal selective remapping of visual concepts during adaptation
+Support is All You Need for Certified VAE Training
+Context-Parametric Inversion: Why Instruction Finetuning May Not Actually Improve Context Reliance
+Robust Transfer of Safety-Constrained Reinforcement Learning Agents
+IterGen: Iterative Semantic-aware Structured LLM Generation with Backtracking
+Constraint-Conditioned Actor-Critic for Offline Safe Reinforcement Learning
+Logically Consistent Language Models via Neuro-Symbolic Integration
+Trained Transformer Classifiers Generalize and Exhibit Benign Overfitting In-Context
+Resolution Attack: Exploiting Image Compression to Deceive Deep Neural Networks
+KGARevion: An AI Agent for Knowledge-Intensive Biomedical QA
+Has the Deep Neural Network learned the Stochastic Process? An Evaluation Viewpoint
+DAMO: Decoding by Accumulating Activations Momentum for Mitigating Hallucinations in Vision-Language Models
+From Models to Microtheories: Distilling a Model's Topical Knowledge for Grounded Question-Answering
+Wicked Oddities: Selectively Poisoning for Effective Clean-Label Backdoor Attacks
+What Do You See in Common? Learning Hierarchical Prototypes over Tree-of-Life to Discover Evolutionary Traits
+GRAIN: Exact Graph Reconstruction from Gradients
+Narrowing Information Bottleneck Theory for Multimodal Image-Text Representations Interpretability
+Protecting against simultaneous data poisoning attacks
+Exact Certification of (Graph) Neural Networks Against Label Poisoning
+LICORICE: Label-Efficient Concept-Based Interpretable Reinforcement Learning
+CONDA: Adaptive Concept Bottleneck for Foundation Models Under Distribution Shifts
+Causal Representation Learning from Multimodal Biomedical Observations
+Robustness Auditing for Linear Regression: To Singularity and Beyond
+Aligning Visual Contrastive learning models via Preference Optimization
+Fictitious Synthetic Data Can Improve LLM Factuality via Prerequisite Learning
+"ILLUSION: Unveiling Truth with a Comprehensive Multi-Modal, Multi-Lingual Deepfake Dataset"
+One Hundred Neural Networks and Brains Watching Videos: Lessons from Alignment
+Interpretable Causal Representation Learning for Biological Data in the Pathway Space
+Going Beyond Static: Understanding Shifts with Time-Series Attribution
+Can Video LLMs Refuse to Answer? Alignment for Answerability in Video Large Language Models
+PaPaGei: Open Foundation Models for Optical Physiological Signals
+Captured by Captions: On Memorization and its Mitigation in CLIP Models
+Approximating Full Conformal Prediction for Neural Network Regression with Gauss-Newton Influence
+A new framework for evaluating model out-of-distribution generalisation for the biochemical domain
+XAIguiFormer: explainable artificial intelligence guided transformer for brain disorder identification
+Exact Computation of Any-Order Shapley Interactions for Graph Neural Networks
+Selective Unlearning via Representation Erasure Using Domain Adversarial Training
+No Equations Needed: Learning System Dynamics Without Relying on Closed-Form ODEs
+In Search of Forgotten Domain Generalization
+Words in Motion: Extracting Interpretable Control Vectors for Motion Transformers
+Provably Safeguarding a Classifier from OOD and Adversarial Samples
+Adaptive Gradient Clipping for Robust Federated Learning
+Rare event modeling with self-regularized normalizing flows: what can we learn from a single failure?
+Improving Uncertainty Estimation through Semantically Diverse Language Generation
+Energy-based Backdoor Defense Against Federated Graph Learning
+ConcreTizer: Model Inversion Attack via Occupancy Classification and Dispersion Control for 3D Point Cloud Restoration
+Tailoring Mixup to Data for Calibration
+Provably Reliable Conformal Prediction Sets in the Presence of Data Poisoning
+Multi-Resolution Decomposable Diffusion Model for Non-Stationary Time Series Anomaly Detection
+Endowing Visual Reprogramming with Adversarial Robustness
+Rethinking Shapley Value for Negative Interactions in Non-convex Games
+Safety Representations for Safer Policy Learning
+HASARD: A Benchmark for Vision-Based Safe Reinforcement Learning in Embodied Agents
+SafeWatch: An Efficient Safety-Policy Following Video Guardrail Model with Transparent Explanations
+QA-Calibration of Language Model Confidence Scores
+RevisEval: Improving LLM-as-a-Judge via Response-Adapted References
+Redefining the task of Bioactivity Prediction
+Start Smart: Leveraging Gradients For Enhancing Mask-based XAI Methods
+Can In-context Learning Really Generalize to Out-of-distribution Tasks?
+On Minimizing Adversarial Counterfactual Error in Adversarial Reinforcement Learning
+Infilling Score: A Pretraining Data Detection Algorithm for Large Language Models
+GeSubNet: Gene Interaction Inference for Disease Subtype Network Generation
+$\sigma$-zero: Gradient-based Optimization of $\ell_0$-norm Adversarial Examples
+Pursuing Feature Separation based on Neural Collapse for Out-of-Distribution Detection
+Large Language Models Often Say One Thing and Do Another
+Representational Similarity via Interpretable Visual Concepts
+Manifold Induced Biases for Zero-shot and Few-shot Detection of Generated Images
+To Tackle Adversarial Transferability: A Novel Ensemble Training Method with Fourier Transformation
+ADBM: Adversarial Diffusion Bridge Model for Reliable Adversarial Purification
+FOSP: Fine-tuning Offline Safe Policy through World Models
+What should a neuron aim for? Designing local objective functions based on information theory
+Refine Knowledge of Large Language Models via Adaptive Contrastive Learning
+Conflict-Averse Gradient Aggregation for Constrained Multi-Objective Reinforcement Learning
+Grounding by Trying: LLMs with Reinforcement Learning-Enhanced Retrieval
+"Recite, Reconstruct, Recollect: Memorization in LMs as a Multifaceted Phenomenon"
+To Trust or Not to Trust? Enhancing Large Language Models' Situated Faithfulness to External Contexts
+An Empirical Analysis of Uncertainty in Large Language Model Evaluations
+Automatic Curriculum Expert Iteration for Reliable LLM Reasoning
+Reflexive Guidance: Improving OoDD in Vision-Language Models via Self-Guided Image-Adaptive Concept Generation
+Controllable Generation via Locally Constrained Resampling
+On the Adversarial Vulnerability of Label-Free Test-Time Adaptation
+Benchmarking Multimodal Retrieval Augmented Generation with Dynamic VQA Dataset and Self-adaptive Planning Agent
+Decision Information Meets Large Language Models: The Future of Explainable Operations Research
+Neural Causal Graph for Interpretable and Intervenable Classification
+Enhancing Uncertainty Estimation and Interpretability with Bayesian Non-negative Decision Layer
+PaLD: Detection of Text Partially Written by Large Language Models
+Shedding Light on Time Series Classification using Interpretability Gated Networks
+MetaMetrics: Calibrating Metrics for Generation Tasks Using Human Preferences
+CREIMBO: Cross-Regional Ensemble Interactions in Multi-view Brain Observations
+Intermediate Layer Classifiers for OOD generalization
+Reconciling Model Multiplicity for Downstream Decision Making
+RankSHAP: Shapley Value Based Feature Attributions for Learning to Rank
+AVHBench: A Cross-Modal Hallucination Benchmark for Audio-Visual Large Language Models
+Looking Inward: Language Models Can Learn About Themselves by Introspection
+MAGE: Model-Level Graph Neural Networks Explanations via Motif-based Graph Generation
+Sufficient Context: A New Lens on Retrieval Augmented Generation Systems
+ACES: Automatic Cohort Extraction System for Event-Stream Datasets
+Protein Language Model Fitness is a Matter of Preference
+Data-centric Prediction Explanation via Kernelized Stein Discrepancy
+On the self-verification limitations of large language models on reasoning and planning tasks
+Can We Talk Models Into Seeing the World Differently?
+MediConfusion: Can you trust your AI radiologist? Probing the reliability of multimodal medical foundation models
+MetaOOD: Automatic Selection of OOD Detection Models
+Forte : Finding Outliers with Representation Typicality Estimation
+Eliminating Position Bias of Language Models: A Mechanistic Approach
+NeurFlow: Interpreting Neural Networks through Neuron Groups and Functional Interactions
+Hierarchical Uncertainty Estimation for Learning-based Registration in Neuroimaging
+Robust Feature Learning for Multi-Index Models in High Dimensions
+NetFormer: An interpretable model for recovering dynamical connectivity in neuronal population dynamics
+TimeInf: Time Series Data Contribution via Influence Functions
+Single-agent Poisoning Attacks Suffice to Ruin Multi-Agent Learning
+Learning and aligning single-neuron invariance manifolds in visual cortex
+Uncertainty Modeling in Graph Neural Networks via Stochastic Differential Equations
+Reassessing How to Compare and Improve the Calibration of Machine Learning Models
+Advancing Out-of-Distribution Detection via Local Neuroplasticity
+BIRD: A Trustworthy Bayesian Inference Framework for Large Language Models
+Rethinking Invariance Regularization in Adversarial Training to Improve Robustness-Accuracy Trade-off
+Model Equality Testing: Which Model is this API Serving?
+CHiP: Cross-modal Hierarchical Direct Preference Optimization for Multimodal LLMs
+"FaithEval: Can Your Language Model Stay Faithful to Context, Even If ""The Moon is Made of Marshmallows"""
+Tackling Data Corruption in Offline Reinforcement Learning via Sequence Modeling
+A Differentiable Rank-Based Objective for Better Feature Learning
+Unlocking the Potential of Model Calibration in Federated Learning
+ASTrA: Adversarial Self-supervised Training with Adaptive-Attacks
+Speech Robust Bench: A Robustness Benchmark For Speech Recognition
+Counterfactual Concept Bottleneck Models
+Generating Likely Counterfactuals Using Sum-Product Networks
+Training Robust Ensembles Requires Rethinking Lipschitz Continuity
+Efficient and Accurate Explanation Estimation with Distribution Compression
+Factor Graph-based Interpretable Neural Networks
+Causal Concept Graph Models: Beyond Causal Opacity in Deep Learning
+When LLMs Play the Telephone Game: Cultural Attractors as Conceptual Tools to Evaluate LLMs in Multi-turn Settings
+Mitigating the Backdoor Effect for Multi-Task Model Merging via Safety-Aware Subspace
+Zero-cost Proxy for Adversarial Robustness Evaluation
+A Transfer Attack to Image Watermarks
+ActSafe: Active Exploration with Safety Constraints for Reinforcement Learning
+Training Large Language Models for Retrieval-Augmented Question Answering through Backtracking Correction
+CofCA: A STEP-WISE Counterfactual Multi-hop QA benchmark
+Local-Prompt: Extensible Local Prompts for Few-Shot Out-of-Distribution Detection
+EvA: Erasing Spurious Correlations with Activations
+Intrinsic User-Centric Interpretability through Global Mixture of Experts
+Verifying Properties of Binary Neural Networks Using Sparse Polynomial Optimization
+Spreading Out-of-Distribution Detection on Graphs
+SePer: Measure Retrieval Utility Through The Lens Of Semantic Perplexity Reduction
+Training-free LLM-generated Text Detection by Mining Token Probability Sequences
+Transformer Encoder Satisfiability: Complexity and Impact on Formal Reasoning
+HiBug2: Efficient and Interpretable Error Slice Discovery for Comprehensive Model Debugging
+UV-Attack: Physical-World Adversarial Attacks on Person Detection via Dynamic-NeRF-based UV Mapping
+MMFakeBench: A Mixed-Source Multimodal Misinformation Detection Benchmark for LVLMs
+Understanding Constraint Inference in Safety-Critical Inverse Reinforcement Learning
+Towards Calibrated Deep Clustering Network
+Conformalized Survival Analysis for General Right-Censored Data
+Cheating Automatic LLM Benchmarks: Null Models Achieve High Win Rates
+Model Risk-sensitive Offline Reinforcement Learning
+Test-Time Adaptation for Combating Missing Modalities in Egocentric Videos
+AI2TALE: An Innovative Information Theory-based Approach for Learning to Localize Phishing Attacks
+Justice or Prejudice? Quantifying Biases in LLM-as-a-Judge
+Is Factuality Enhancement a Free Lunch For LLMs? Better Factuality Can Lead to Worse Context-Faithfulness
+CogCoM: A Visual Language Model with Chain-of-Manipulations Reasoning
+"Reconsidering Faithfulness in Regular, Self-Explainable and Domain Invariant GNNs"
+Population Transformer: Learning Population-level Representations of Neural Activity
+GPromptShield: Elevating Resilience in Graph Prompt Tuning Against Adversarial Attacks
+Examining Alignment of Large Language Models through Representative Heuristics: the case of political stereotypes
+Towards Synergistic Path-based Explanations for Knowledge Graph Completion: Exploration and Evaluation
+SysBench: Can LLMs Follow System Message?
+$\text{I}^2\text{AM}$: Interpreting Image-to-Image Latent Diffusion Models via Bi-Attribution Maps
+Concept Bottleneck Language Models For Protein Design
+Taming Overconfidence in LLMs: Reward Calibration in RLHF
+From GNNs to Trees: Multi-Granular Interpretability for Graph Neural Networks
+Chain-of-Action: Faithful and Multimodal Question Answering through Large Language Models
+Decoupled Graph Energy-based Model for Node Out-of-Distribution Detection on Heterophilic Graphs
+Evidential Learning-based Certainty Estimation for Robust Dense Feature Matching
+Learning Causal Alignment for Reliable Disease Diagnosis
+A Theory for Token-Level Harmonization in Retrieval-Augmented Generation
+GSBA$^K$: $top$-$K$ Geometric Score-based Black-box Attack
+DEEM: Diffusion models serve as the eyes of large language models for image perception
+Large Language Models are Interpretable Learners
+Calibrating Expressions of Certainty
+Towards Generalization Bounds of GCNs for Adversarially Robust Node Classification
+MOS: Model Synergy for Test-Time Adaptation on LiDAR-Based 3D Object Detection
+Dynamic Neural Fortresses: An Adaptive Shield for Model Extraction Defense
+Provably Robust Explainable Graph Neural Networks against Graph Perturbation Attacks
+Boltzmann Semantic Score: A Semantic Metric for Evaluating Large Vision Models Using Large Language Models
+Credal Wrapper of Model Averaging for Uncertainty Estimation in Classification
+Conformal Structured Prediction
+Robustness Inspired Graph Backdoor Defense
+Adaptive Shrinkage Estimation for Personalized Deep Kernel Regression in Modeling Brain Trajectories
+Long-tailed Adversarial Training with Self-Distillation
+How to Probe: Simple Yet Effective Techniques for Improving Post-hoc Explanations
+Certified Robustness Under Bounded Levenshtein Distance
+Indirect Gradient Matching for Adversarial Robust Distillation
+GSE: Group-wise Sparse and Explainable Adversarial Attacks
+Algorithmic Stability Based Generalization Bounds for Adversarial Training
+Visual Description Grounding Reduces Hallucinations and Boosts Reasoning in LVLMs
+F-Fidelity: A Robust Framework for Faithfulness Evaluation of Explainable AI
+Towards Certification of Uncertainty Calibration under Adversarial Attacks
+InstructRAG: Instructing Retrieval-Augmented Generation via Self-Synthesized Rationales
+Auto-GDA: Automatic Domain Adaptation for Efficient Grounding Verification in Retrieval-Augmented Generation
+Feature Averaging: An Implicit Bias of Gradient Descent Leading to Non-Robustness in Neural Networks
+Explanations of GNN on Evolving Graphs via Axiomatic  Layer edges
+Random-Set Neural Networks
+Adversarial Training Can Provably Improve Robustness: Theoretical Analysis of Feature Learning Process Under Structured Data
+Input Space Mode Connectivity in Deep Neural Networks
+Deep Kernel Relative Test for Machine-generated Text Detection
+Can Generative AI Solve Your In-Context Learning Problem?  A Martingale Perspective
+Boosting Ray Search Procedure of Hard-label Attacks with Transfer-based Priors
+Multi-modal brain encoding models for multi-modal stimuli
+Strong Model Collapse
+Provable Robust Overfitting Mitigation in Wasserstein Distributionally Robust Optimization
+Adversarial Attacks on Data Attribution
+Exploring The Forgetting in Adversarial Training: A Novel Method for Enhancing Robustness
+MLLMs Know Where to Look: Training-free Perception of Small Visual Details with Multimodal LLMs
+Visual-O1: Understanding Ambiguous Instructions via Multi-modal Multi-turn Chain-of-thoughts Reasoning
+TTVD: Towards a Geometric Framework for Test-Time Adaptation Based on Voronoi Diagram
+Sample then Identify: A General Framework for Risk Control and Assessment in Multimodal Large Language Models
+REFINE: Inversion-Free Backdoor Defense via Model Reprogramming
+A General Framework for Producing Interpretable Semantic Text Embeddings
+Mask-DPO: Generalizable Fine-grained Factuality Alignment of LLMs
+A Multiscale Frequency Domain Causal Framework for Enhanced Pathological Analysis
+Do LLMs estimate uncertainty well in instruction-following?
+Rethinking Audio-Visual Adversarial Vulnerability from Temporal and Modality Perspectives
+Adversarial Training for Defense Against Label Poisoning Attacks
+CertainlyUncertain: A Benchmark and Metric for Multimodal Epistemic and Aleatoric Awareness
+Towards Understanding the Robustness of Diffusion-Based Purification: A Stochastic Perspective
+Unlearn and Burn: Adversarial Machine Unlearning Requests Destroy Model Accuracy
+AlphaEdit: Null-Space Constrained Knowledge Editing for Language Models
+Beyond Interpretability: The Gains of Feature Monosemanticity on Model Robustness
+On the Byzantine-Resilience of Distillation-Based Federated Learning
+Provably Accurate Shapley Value Estimation via Leverage Score Sampling
+Adversarially Robust Out-of-Distribution Detection Using Lyapunov-Stabilized Embeddings
+QPM: Discrete Optimization for Globally Interpretable Image Classification
+Logical Consistency of Large Language Models in Fact-Checking
+Differentiable Rule Induction from Raw Sequence Inputs
+Improving Generalization and Robustness in SNNs Through Signed Rate Encoding and Sparse Encoding Attacks
+Do LLMs have Consistent Values?
+A Statistical Approach for Controlled Training Data Detection
+Influence Functions for Scalable Data Attribution in Diffusion Models
+NoVo: Norm Voting off Hallucinations with Attention Heads in Large Language Models
+Mind Control through Causal Inference: Predicting Clean Images from Poisoned Data
+Adversaries With Incentives:  A Strategic Alternative to Adversarial Robustness
+Uncertainty modeling for fine-tuned implicit functions
+"Explain Yourself, Briefly! Self-Explaining Neural Networks with Concise Sufficient Reasons"
+Metric-Driven Attributions for Vision Transformers
+Painting with Words: Elevating Detailed Image Captioning with Benchmark and Alignment Learning
+Robust Conformal Prediction with a Single Binary Certificate
+GOLD: Graph Out-of-Distribution Detection via Implicit Adversarial Latent Generation
+Self-Introspective Decoding: Alleviating Hallucinations for Large Vision-Language Models
+MMed-RAG: Versatile Multimodal RAG System for Medical Vision Language Models
+SAMRefiner: Taming Segment Anything Model for Universal Mask Refinement
+Bad-PFL: Exploiting Backdoor Attacks against Personalized Federated Learning
+Glimpse: Enabling White-Box Methods to Use Proprietary Models for Zero-Shot LLM-Generated Text Detection
+Rethinking Visual Counterfactual Explanations Through Region Constraint
+BrainOOD: Out-of-distribution Generalizable Brain Network Analysis
+Can We Ignore Labels in Out of Distribution Detection?
+Formation of Representations in Neural Networks
+Trust or Escalate: LLM Judges with Provable Guarantees for Human Agreement
+Do Vision & Language Decoders use Images and Text equally? How Self-consistent are their Explanations?
+Integrative Decoding: Improving Factuality via Implicit Self-consistency
+Robust Representation Consistency Model via Contrastive Denoising
+Mitigating Modality Prior-Induced Hallucinations in Multimodal Large Language Models via Deciphering Attention Causality
+Estimation of single-cell and tissue perturbation effect in spatial transcriptomics via Spatial Causal Disentanglement
+GETS: Ensemble Temperature Scaling for Calibration in Graph Neural Networks
+Aligned Datasets Improve Detection of Latent Diffusion-Generated Images
+Brain Mapping with Dense Features: Grounding Cortical Semantic Selectivity in Natural Images With Vision Transformers
+Intervening Anchor Token: Decoding Strategy in Alleviating Hallucinations for MLLMs
+Reasoning-Enhanced Healthcare Predictions with Knowledge Graph Community Retrieval
+LucidPPN: Unambiguous Prototypical Parts Network for User-centric Interpretable Computer Vision
+ADIFF: Explaining audio difference using natural language
+Enhancing Cognition and Explainability of Multimodal Foundation Models with Self-Synthesized Data
+Democratic Training Against Universal Adversarial Perturbations
+Rethinking the generalization of drug target affinity prediction algorithms via similarity aware evaluation
+Outlier Synthesis via Hamiltonian Monte Carlo for Out-of-Distribution Detection
+No Free Lunch: Fundamental Limits of Learning Non-Hallucinating Generative Models
+On the Adversarial Risk of Test Time Adaptation: An Investigation into Realistic Test-Time Data Poisoning
+Do You Keep an Eye on What I Ask? Mitigating Multimodal Hallucination via Attention-Guided Ensemble Decoding
+ImpScore: A Learnable Metric For Quantifying The Implicitness Level of Sentences
+PerturboLLaVA: Reducing Multimodal Hallucinations with Perturbative Visual Training
+Salvage: Shapley-distribution Approximation Learning Via Attribution Guided Exploration for Explainable Image Classification
+InstaSHAP: Interpretable Additive Models Explain Shapley Values Instantly
+Unifying Unsupervised Graph-Level Anomaly Detection and Out-of-Distribution Detection: A Benchmark
+Mitigating Information Loss in Tree-Based Reinforcement Learning via Direct Optimization
+Boosting the visual interpretability of CLIP via adversarial fine-tuning
+A Sanity Check for AI-generated Image Detection
+Zero-Shot Natural Language Explanations
+Restyling Unsupervised Concept Based Interpretable Networks with Generative Models
+Navigating Neural Space: Revisiting Concept Activation Vectors to Overcome Directional Divergence
+Calibrating LLMs with Information-Theoretic Evidential Deep Learning
+Severing Spurious Correlations with Data Pruning
+From Risk to Uncertainty: Generating Predictive Uncertainty Measures via Bayesian Estimation
+HaDeMiF: Hallucination Detection and Mitigation in Large Language Models
+Beyond correlation: The impact of human uncertainty in measuring the effectiveness of automatic evaluation and LLM-as-a-judge
+Poison-splat: Computation Cost Attack on 3D Gaussian Splatting
+MLLM can see? Dynamic Correction Decoding for Hallucination Mitigation
+CLIPure: Purification in Latent Space via CLIP for Adversarially Robust Zero-Shot Classification
+Towards Understanding Text Hallucination of Diffusion Models via Local Generation Bias
+Enhancing Pre-trained Representation Classifiability can Boost its Interpretability
+Uncertainty-Aware Decoding with Minimum Bayes Risk
+I Can Hear You: Selective Robust Training for Deepfake Audio Detection
+TASAR: Transfer-based Attack on Skeletal Action Recognition
+COME: Test-time Adaption by Conservatively Minimizing Entropy
+Unlearning-based Neural Interpretations
+Mitigating Object Hallucination in MLLMs via Data-augmented Phrase-level Alignment
+Shapley-Guided Utility Learning for Effective Graph Inference Data Valuation
+Towards Understanding Why Label Smoothing Degrades Selective Classification and How to Fix It
+Interpretable Vision-Language Survival Analysis with Ordinal Inductive Bias for Computational Pathology
+LeFusion: Controllable Pathology Synthesis via Lesion-Focused Diffusion Models
+Century: A Framework and Dataset for Evaluating Historical Contextualisation of Sensitive Images
+FakeShield: Explainable Image Forgery Detection and Localization via Multi-modal Large Language Models
+Regretful Decisions under Label Noise
+Gnothi Seauton: Empowering Faithful Self-Interpretability in Black-Box Transformers
+SONICS: Synthetic Or Not - Identifying Counterfeit Songs
+Self-Correcting Decoding with Generative Feedback for Mitigating Hallucinations in Large Vision-Language Models
+TLDR: Token-Level Detective Reward Model for Large Vision Language Models
+Interpretable Bilingual Multimodal Large Language Model for Diverse Biomedical Tasks
+LOKI: A Comprehensive Synthetic Data Detection Benchmark using Large Multimodal Models
+Understanding and Mitigating Hallucination in Large Vision-Language Models via Modular Attribution and Intervention

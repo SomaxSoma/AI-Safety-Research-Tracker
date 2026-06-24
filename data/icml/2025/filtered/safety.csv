@@ -1,0 +1,208 @@
+Paper Title,Subarea,Detailed Class,Score
+ShieldAgent: Shielding Agents via Verifiable Safety Policy Reasoning,Threat Modeling & Evaluations,Safeguards,7.0
+Emergent Response Planning in LLMs,Interpretability & Understanding,Interpretability,3.0
+Mind the Gap: A Practical Attack on GGUF Quantization,"Robustness, Defense & Systemic Control",Adversarial Robustness,7.0
+SAE-V: Interpreting Multimodal Models for Enhanced Alignment,Interpretability & Understanding,Interpretability,4.0
+UDora: A Unified Red Teaming Framework against LLM Agents by Dynamically Hijacking Their Own Reasoning,"Robustness, Defense & Systemic Control",Red-Teaming,7.0
+Improving LLM Safety Alignment with Dual-Objective Optimization,Capability Control & Unlearning,Alignment Training,7.0
+AdvAgent: Controllable Blackbox Red-teaming on Web Agents,"Robustness, Defense & Systemic Control",Red-Teaming,6.0
+GuardAgent: Safeguard LLM Agents via Knowledge-Enabled Reasoning,Threat Modeling & Evaluations,Safeguards,7.0
+Just Enough Shifts: Mitigating Over-Refusal in Aligned Language Models with Targeted Representation Fine-Tuning,Threat Modeling & Evaluations,Safeguards,6.0
+OR-Bench: An Over-Refusal Benchmark for Large Language Models,Threat Modeling & Evaluations,Safeguards,7.0
+Internal Causal Mechanisms Robustly Predict Language Model Out-of-Distribution Behaviors,Interpretability & Understanding,Interpretability,3.0
+Conformal Tail Risk Control for Large Language Model Alignment,Threat Modeling & Evaluations,Safeguards,4.0
+Vulnerability-Aware Alignment: Mitigating Uneven Forgetting in Harmful Fine-Tuning,Capability Control & Unlearning,Alignment Training,5.0
+The Illusion of Role Separation: Hidden Shortcuts in LLM Role Learning (and How to Fix Them),"Robustness, Defense & Systemic Control",Adversarial Robustness,7.0
+TOPLOC: A Locality Sensitive Hashing Scheme for Trustless Verifiable Inference,Threat Modeling & Evaluations,Control,5.0
+"SafetyAnalyst: Interpretable, Transparent, and Steerable Safety Moderation for AI Behavior",Threat Modeling & Evaluations,Safeguards,7.0
+Emoji Attack: Enhancing Jailbreak Attacks Against Judge LLM Detection,"Robustness, Defense & Systemic Control",Red-Teaming,7.0
+"PANDAS: Improving Many-shot Jailbreaking via Positive Affirmation, Negative Demonstration, and Adaptive Sampling","Robustness, Defense & Systemic Control",Red-Teaming,7.0
+Adversarial Reasoning at Jailbreaking Time,"Robustness, Defense & Systemic Control",Red-Teaming,7.0
+The Logical Implication Steering Method for Conditional Interventions on Transformer Generation,Interpretability & Understanding,Interpretability,4.0
+Observation Interference in Partially Observable Assistance Games,Agent Foundations & Alignment Theory,Agent Foundations,5.0
+When Bad Data Leads to Good Models,Capability Control & Unlearning,Alignment Training,6.0
+Memorization Sinks: Isolating Memorization during LLM Training,Capability Control & Unlearning,Alignment Training,5.0
+What Has a Foundation Model Found? Using Inductive Bias to Probe for World Models,Interpretability & Understanding,Interpretability,6.0
+Emergent Symbolic Mechanisms Support Abstract Reasoning in Large Language Models,Interpretability & Understanding,Interpretability,6.0
+MIB: A Mechanistic Interpretability Benchmark,Interpretability & Understanding,Interpretability,7.0
+Eliciting Language Model Behaviors with Investigator Agents,"Robustness, Defense & Systemic Control",Red-Teaming,7.0
+On the Robustness of Reward Models for Language Model Alignment,Capability Control & Unlearning,Alignment Training,4.0
+In-Context Linear Regression Demystified: Training Dynamics and Mechanistic Interpretability of Multi-Head Softmax Attention,Interpretability & Understanding,Interpretability,3.0
+Diverging Preferences: When do Annotators Disagree and do Models Know?,Scalable Oversight & Value Learning,Scalable Oversight,4.0
+AdvPrompter: Fast Adaptive Adversarial Prompting for LLMs,"Robustness, Defense & Systemic Control",Red-Teaming,7.0
+TruthFlow: Truthful LLM Generation via Representation Flow Correction,Interpretability & Understanding,Interpretability,5.0
+Potemkin Understanding in Large Language Models,Interpretability & Understanding,Interpretability,6.0
+How Do Transformers Learn Variable Binding in Symbolic Programs?,Interpretability & Understanding,Interpretability,3.0
+Aligning Spoken Dialogue Models from User Interactions,Capability Control & Unlearning,Alignment Training,4.0
+(How) Do Language Models Track State?,Interpretability & Understanding,Interpretability,3.0
+"Weak-to-Strong Generalization Even in Random Feature Networks, Provably",Scalable Oversight & Value Learning,Scalable Oversight,3.0
+Looking Beyond the Top-1: Transformers Determine Top Tokens in Order,Interpretability & Understanding,Interpretability,3.0
+Cowpox: Towards the Immunity of VLM-based Multi-Agent Systems,"Robustness, Defense & Systemic Control",Adversarial Robustness,7.0
+AxBench: Steering LLMs? Even Simple Baselines Outperform Sparse Autoencoders,Interpretability & Understanding,Interpretability,6.0
+AlphaPO: Reward Shape Matters for LLM Alignment,Capability Control & Unlearning,Alignment Training,4.0
+Preference Learning for AI Alignment: a Causal Perspective,Scalable Oversight & Value Learning,Scalable Oversight,5.0
+Which Attention Heads Matter for In-Context Learning?,Interpretability & Understanding,Interpretability,3.0
+RE-Bench: Evaluating Frontier AI R&D Capabilities of Language Model Agents against Human Experts,Threat Modeling & Evaluations,Dangerous Capability Evals,3.0
+Self-Play $Q$-Learners Can Provably Collude in the Iterated Prisoner's Dilemma,Scalable Oversight & Value Learning,Multi-Agent Safety,3.0
+The Geometry of Refusal in Large Language Models: Concept Cones and Representational Independence,Interpretability & Understanding,Interpretability,7.0
+AlphaVerus: Bootstrapping Formally Verified Code Generation through Self-Improving Translation and Treefinement,Scalable Oversight & Value Learning,Scalable Oversight,4.0
+The Hidden Life of Tokens: Reducing Hallucination of Large Vision-Language Models Via Visual Information Steering,Interpretability & Understanding,Interpretability,7.0
+MONA: Myopic Optimization with Non-myopic Approval Can Mitigate Multi-step Reward Hacking,Scalable Oversight & Value Learning,Scalable Oversight,7.0
+Bounded Rationality for LLMs: Satisficing Alignment at Inference-Time,Threat Modeling & Evaluations,Safeguards,5.0
+On the Vulnerability of Applying Retrieval-Augmented Generation within Knowledge-Intensive Application Domains,"Robustness, Defense & Systemic Control",Adversarial Robustness,4.0
+ConfPO: Exploiting Policy Model Confidence for Critical Token Selection in Preference Optimization,Capability Control & Unlearning,Alignment Training,3.0
+The Perils of Optimizing Learned Reward Functions: Low Training Error Does Not Guarantee Low Regret,Scalable Oversight & Value Learning,Scalable Oversight,3.0
+Benign Samples Matter! Fine-tuning On Outlier Benign Samples Severely Breaks Safety,"Robustness, Defense & Systemic Control",Red-Teaming,6.0
+ROPO: Robust Preference Optimization for Large Language Models,Capability Control & Unlearning,Alignment Training,5.0
+PoisonBench: Assessing Language Model Vulnerability to Poisoned Preference Data,"Robustness, Defense & Systemic Control",Adversarial Robustness,6.0
+Circumventing Backdoor Space via Weight Symmetry,"Robustness, Defense & Systemic Control",Adversarial Robustness,6.0
+Tool Unlearning for Tool-Augmented LLMs,Capability Control & Unlearning,Alignment Training,7.0
+CROW: Eliminating Backdoors from Large Language Models via Internal Consistency Regularization,"Robustness, Defense & Systemic Control",Adversarial Robustness,7.0
+Beyond Induction Heads: In-Context Meta Learning Induces Multi-Phase Circuit Emergence,Interpretability & Understanding,Interpretability,4.0
+The Devil Is in the Details: Tackling Unimodal Spurious Correlations for Generalizable Multimodal Reward Models,Capability Control & Unlearning,Alignment Training,5.0
+Defending LVLMs Against Vision Attacks Through Partial-Perception Supervision,"Robustness, Defense & Systemic Control",Adversarial Robustness,7.0
+Explaining the role of Intrinsic Dimensionality in Adversarial Training,"Robustness, Defense & Systemic Control",Adversarial Robustness,4.0
+Square$\chi$PO: Differentially Private and Robust $\chi^2$-Preference Optimization in Offline Direct Alignment,Capability Control & Unlearning,Alignment Training,5.0
+Progressively Label Enhancement for Large Language Model Alignment,Capability Control & Unlearning,Alignment Training,5.0
+"Jacobian Sparse Autoencoders: Sparsify Computations, Not Just Activations",Interpretability & Understanding,Interpretability,5.0
+When Can Proxies Improve the Sample Complexity of Preference Learning?,Scalable Oversight & Value Learning,Scalable Oversight,5.0
+Test-Time Multimodal Backdoor Detection by Contrastive Prompting,"Robustness, Defense & Systemic Control",Adversarial Robustness,7.0
+CASE-Bench: Context-Aware SafEty Benchmark for Large Language Models,Threat Modeling & Evaluations,Safeguards,7.0
+Direct Density Ratio Optimization: A Statistically Consistent Approach to Aligning Large Language Models,Capability Control & Unlearning,Alignment Training,7.0
+"Understanding Input Selectivity in Mamba: Impact on Approximation Power, Memorization, and Associative Recall Capacity",Interpretability & Understanding,Interpretability,4.0
+Does Low Rank Adaptation Lead to Lower Robustness against Training-Time Attacks?,"Robustness, Defense & Systemic Control",Adversarial Robustness,5.0
+A Closer Look at Backdoor Attacks on CLIP,"Robustness, Defense & Systemic Control",Adversarial Robustness,4.0
+How Transformers Learn Structured Data: Insights From Hierarchical Filtering,Interpretability & Understanding,Interpretability,4.0
+"REINFORCE Adversarial Attacks on Large Language Models: An Adaptive, Distributional, and Semantic Objective","Robustness, Defense & Systemic Control",Red-Teaming,7.0
+A Physics-Informed Machine Learning Framework for Safe and Optimal Control of Autonomous Systems,Threat Modeling & Evaluations,Safeguards,6.0
+The Elicitation Game: Evaluating Capability Elicitation Techniques,Threat Modeling & Evaluations,Model Organisms,7.0
+Adaptive Median Smoothing: Adversarial Defense for Unlearned Text-to-Image Diffusion Models at Inference Time,"Robustness, Defense & Systemic Control",Adversarial Robustness,6.0
+Relating Misfit to Gain in Weak-to-Strong Generalization Beyond the Squared Loss,Scalable Oversight & Value Learning,Scalable Oversight,3.0
+Energy-Based Preference Model Offers Better Offline Alignment than the Bradley-Terry Preference Model,Capability Control & Unlearning,Alignment Training,4.0
+Mechanistic Unlearning: Robust Knowledge Unlearning and Editing via Mechanistic Localization,Capability Control & Unlearning,Alignment Training,7.0
+Representations Shape Weak-to-Strong Generalization: Theoretical Insights and Empirical Predictions,Scalable Oversight & Value Learning,Scalable Oversight,4.0
+Assessing Safety Risks and Quantization-aware Safety Patching for Quantized Large Language Models,Capability Control & Unlearning,Alignment Training,7.0
+Activation Space Interventions Can Be Transferred Between Large Language Models,Threat Modeling & Evaluations,Safeguards,7.0
+POROver: Improving Safety and Reducing Overrefusal in Large Language Models with Overgeneration and Preference Optimization,Capability Control & Unlearning,Alignment Training,6.0
+From Black Boxes to Transparent Minds: Evaluating and Enhancing the Theory of Mind in Multimodal Large Language Models,Interpretability & Understanding,Interpretability,3.0
+One Image is Worth a Thousand Words: A Usability Preservable Text-Image Collaborative Erasing Framework,Capability Control & Unlearning,Alignment Training,6.0
+SPRI: Aligning Large Language Models with Context-Situated Principles,Scalable Oversight & Value Learning,Scalable Oversight,5.0
+Scaling Trends in Language Model Robustness,"Robustness, Defense & Systemic Control",Adversarial Robustness,6.0
+SAEBench: A Comprehensive Benchmark for Sparse Autoencoders in Language Model Interpretability,Interpretability & Understanding,Interpretability,3.0
+Towards Global-level Mechanistic Interpretability: A Perspective of Modular Circuits of Large Language Models,Interpretability & Understanding,Interpretability,5.0
+Automated Red Teaming with GOAT: the Generative Offensive Agent Tester,"Robustness, Defense & Systemic Control",Red-Teaming,7.0
+Towards LLM Unlearning Resilient to Relearning Attacks: A Sharpness-Aware Minimization Perspective and Beyond,Capability Control & Unlearning,Alignment Training,6.0
+SafeArena: Evaluating the Safety of Autonomous Web Agents,Threat Modeling & Evaluations,Dangerous Capability Evals,6.0
+MELON: Provable Defense Against Indirect Prompt Injection Attacks in AI Agents,"Robustness, Defense & Systemic Control",Adversarial Robustness,7.0
+Of Mice and Machines: A Comparison of Learning Between Real World Mice and RL Agents,Capability Control & Unlearning,Alignment Training,6.0
+The Jailbreak Tax: How Useful are Your Jailbreak Outputs?,"Robustness, Defense & Systemic Control",Red-Teaming,7.0
+RATE: Causal Explainability of Reward Models with Imperfect Counterfactuals,Interpretability & Understanding,Interpretability,4.0
+How to Evaluate and Mitigate IP Infringement in Visual Generative AI?,Threat Modeling & Evaluations,Safeguards,6.0
+A Checks-and-Balances Framework for Context-Aware Ethical AI Alignment,Threat Modeling & Evaluations,Safeguards,6.0
+TuCo: Measuring the Contribution of Fine-Tuning to Individual Responses of LLMs,Interpretability & Understanding,Interpretability,4.0
+AdvI2I: Adversarial Image Attack on Image-to-Image Diffusion Models,"Robustness, Defense & Systemic Control",Red-Teaming,7.0
+Validating Mechanistic Interpretations: An Axiomatic Approach,Interpretability & Understanding,Interpretability,4.0
+Learning Multi-Level Features with Matryoshka Sparse Autoencoders,Interpretability & Understanding,Interpretability,6.0
+"Is Best-of-N the Best of Them? Coverage, Scaling, and Optimality in Inference-Time Alignment",Scalable Oversight & Value Learning,Scalable Oversight,6.0
+Invariance Makes LLM Unlearning Resilient Even to Unanticipated Downstream Fine-Tuning,Capability Control & Unlearning,Alignment Training,7.0
+"Right Now, Wrong Then: Non-Stationary Direct Preference Optimization under Preference Drift",Capability Control & Unlearning,Alignment Training,5.0
+Scaling Sparse Feature Circuits For Studying In-Context Learning,Interpretability & Understanding,Interpretability,4.0
+Gandalf the Red: Adaptive Security for LLMs,"Robustness, Defense & Systemic Control",Adversarial Robustness,7.0
+Controlling Underestimation Bias in Constrained Reinforcement Learning for Safe Exploration,Capability Control & Unlearning,Alignment Training,7.0
+Raising the Bar: Investigating the Values of Large Language Models via Generative Evolving Testing,Threat Modeling & Evaluations,Safeguards,6.0
+De-mark: Watermark Removal in Large Language Models,"Robustness, Defense & Systemic Control",Red-Teaming,5.0
+Automatically Interpreting Millions of Features in Large Language Models,Interpretability & Understanding,Interpretability,4.0
+InfAlign: Inference-aware language model alignment,Capability Control & Unlearning,Alignment Training,5.0
+No Soundness in the Real World: On the Challenges of the Verification of Deployed Neural Networks,"Robustness, Defense & Systemic Control",Adversarial Robustness,7.0
+AutoAdvExBench: Benchmarking Autonomous Exploitation of Adversarial Example Defenses,Threat Modeling & Evaluations,Dangerous Capability Evals,6.0
+Discovering Spoofing Attempts on Language Model Watermarks,Threat Modeling & Evaluations,Safeguards,7.0
+AssistanceZero: Scalably Solving Assistance Games,Scalable Oversight & Value Learning,Scalable Oversight,4.0
+Great Models Think Alike and this Undermines AI Oversight,Scalable Oversight & Value Learning,Scalable Oversight,7.0
+Optimizing Adaptive Attacks against Watermarks for Language Models,"Robustness, Defense & Systemic Control",Red-Teaming,7.0
+Weak-to-Strong Jailbreaking on Large Language Models,"Robustness, Defense & Systemic Control",Red-Teaming,7.0
+FlipAttack: Jailbreak LLMs via Flipping,"Robustness, Defense & Systemic Control",Red-Teaming,7.0
+Emergence and Effectiveness of Task Vectors in In-Context Learning: An Encoder Decoder Perspective,Interpretability & Understanding,Interpretability,3.0
+Adversarial Inception Backdoor Attacks against Reinforcement Learning,"Robustness, Defense & Systemic Control",Red-Teaming,4.0
+General agents need world models,Agent Foundations & Alignment Theory,Agent Foundations,3.0
+Speak Easy: Eliciting Harmful Jailbreaks from LLMs with Simple Interactions,"Robustness, Defense & Systemic Control",Red-Teaming,7.0
+LlavaGuard: An Open VLM-based Framework for Safeguarding Vision Datasets and Models,Threat Modeling & Evaluations,Safeguards,7.0
+Black-Box Adversarial Attacks on LLM-Based Code Completion,"Robustness, Defense & Systemic Control",Red-Teaming,7.0
+Interpreting CLIP with Hierarchical Sparse Autoencoders,Interpretability & Understanding,Interpretability,5.0
+A Causal World Model Underlying Next Token Prediction: Exploring GPT in a Controlled Environment,Interpretability & Understanding,Interpretability,3.0
+A Lens into Interpretable Transformer Mistakes via Semantic Dependency,Interpretability & Understanding,Interpretability,3.0
+Adversaries Can Misuse Combinations of Safe Models,"Robustness, Defense & Systemic Control",Red-Teaming,7.0
+Strategy Coopetition Explains the Emergence and Transience of In-Context Learning,Interpretability & Understanding,Interpretability,3.0
+RuleAdapter: Dynamic Rules for training Safety Reward Models in RLHF,Capability Control & Unlearning,Alignment Training,6.0
+Self-Consuming Generative Models with Adversarially Curated Data,"Robustness, Defense & Systemic Control",Adversarial Robustness,6.0
+Compute Optimal Inference and Provable Amortisation Gap in Sparse Autoencoders,Interpretability & Understanding,Interpretability,3.0
+ICLShield: Exploring and Mitigating In-Context Learning Backdoor Attacks,"Robustness, Defense & Systemic Control",Adversarial Robustness,7.0
+Are Sparse Autoencoders Useful? A Case Study in Sparse Probing,Interpretability & Understanding,Interpretability,3.0
+Learning Safety Constraints for Large Language Models,Threat Modeling & Evaluations,Safeguards,7.0
+Extractive Structures Learned in Pretraining Enable Generalization on Finetuned Facts,Interpretability & Understanding,Interpretability,3.0
+Archetypal SAE: Adaptive and Stable Dictionary Learning for Concept Extraction in Large Vision Models,Interpretability & Understanding,Interpretability,3.0
+Interpreting the Repeated Token Phenomenon in Large Language Models,Interpretability & Understanding,Interpretability,7.0
+"Focus On This, Not That! Steering LLMs with Adaptive Feature Specification",Capability Control & Unlearning,Alignment Training,5.0
+Online Learning with Unknown Constraints,Agent Foundations & Alignment Theory,Agent Foundations,4.0
+Emergent Misalignment: Narrow finetuning can produce broadly misaligned LLMs,Threat Modeling & Evaluations,Model Organisms,6.0
+Wolfpack Adversarial Attack for Robust Multi-Agent Reinforcement Learning,Scalable Oversight & Value Learning,Multi-Agent Safety,4.0
+CVE-Bench: A Benchmark for AI Agents’ Ability to Exploit Real-World Web Application Vulnerabilities,Threat Modeling & Evaluations,Dangerous Capability Evals,5.0
+Analyze Feature Flow to Enhance Interpretation and Steering in Language Models,Interpretability & Understanding,Interpretability,7.0
+Towards Understanding Fine-Tuning Mechanisms of LLMs via Circuit Analysis,Interpretability & Understanding,Interpretability,3.0
+To Steer or Not to Steer? Mechanistic Error Reduction with Abstention for Language Models,Interpretability & Understanding,Interpretability,7.0
+Safe Delta: Consistently Preserving Safety when Fine-Tuning LLMs on Diverse Datasets,Capability Control & Unlearning,Alignment Training,7.0
+Discrepancies are Virtue: Weak-to-Strong Generalization through Lens of Intrinsic Dimension,Scalable Oversight & Value Learning,Scalable Oversight,3.0
+ELITE: Enhanced Language-Image Toxicity Evaluation for Safety,Threat Modeling & Evaluations,Dangerous Capability Evals,6.0
+LLM Alignment as Retriever Optimization: An Information Retrieval Perspective,Capability Control & Unlearning,Alignment Training,5.0
+Low-Rank Adapting Models for Sparse Autoencoders,Interpretability & Understanding,Interpretability,3.0
+Evaluating Neuron Explanations: A Unified Framework with Sanity Checks,Interpretability & Understanding,Interpretability,7.0
+Detecting Strategic Deception with Linear Probes,Interpretability & Understanding,Monitoring,6.0
+SAeUron: Interpretable Concept Unlearning in Diffusion Models with Sparse Autoencoders,Capability Control & Unlearning,Alignment Training,7.0
+Beyond Bradley-Terry Models: A General Preference Model for Language Model Alignment,Scalable Oversight & Value Learning,Scalable Oversight,4.0
+"Inducing, Detecting and Characterising Neural Modules: A Pipeline for Functional Interpretability in Reinforcement Learning",Interpretability & Understanding,Interpretability,5.0
+LLMScan: Causal Scan for LLM Misbehavior Detection,Interpretability & Understanding,Monitoring,7.0
+PoisonedEye: Knowledge Poisoning Attack on Retrieval-Augmented Generation based Large Vision-Language Models,"Robustness, Defense & Systemic Control",Red-Teaming,7.0
+Cannot See the Forest for the Trees: Invoking Heuristics and Biases to Elicit Irrational Choices of LLMs,"Robustness, Defense & Systemic Control",Red-Teaming,7.0
+An Interpretable N-gram Perplexity Threat Model for Large Language Model Jailbreaks,"Robustness, Defense & Systemic Control",Red-Teaming,5.0
+Sum-of-Parts: Self-Attributing Neural Networks with End-to-End Learning of Feature Groups,Interpretability & Understanding,Interpretability,3.0
+Revealing Weaknesses in Text Watermarking Through Self-Information Rewrite Attacks,"Robustness, Defense & Systemic Control",Red-Teaming,4.0
+SEMU: Singular Value Decomposition for Efficient Machine Unlearning,Capability Control & Unlearning,Alignment Training,5.0
+IBCircuit: Towards Holistic Circuit Discovery with Information Bottleneck,Interpretability & Understanding,Interpretability,5.0
+MP-Nav: Enhancing Data Poisoning Attacks against Multimodal Learning,"Robustness, Defense & Systemic Control",Red-Teaming,5.0
+TRUST-VLM: Thorough Red-Teaming for Uncovering Safety Threats in Vision-Language Models,"Robustness, Defense & Systemic Control",Red-Teaming,6.0
+The Hidden Dimensions of LLM Alignment: A Multi-Dimensional Analysis of Orthogonal Safety Directions,Interpretability & Understanding,Interpretability,7.0
+Probably Approximately Global Robustness Certification,"Robustness, Defense & Systemic Control",Adversarial Robustness,3.0
+The Complexity of Learning Sparse Superposed Features with Feedback,Interpretability & Understanding,Interpretability,3.0
+Fragments to Facts: Partial-Information Fragment Inference from LLMs,"Robustness, Defense & Systemic Control",Red-Teaming,5.0
+Rejecting Hallucinated State Targets during Planning,Threat Modeling & Evaluations,Safeguards,3.0
+Constrained Belief Updates Explain Geometric Structures in Transformer Representations,Interpretability & Understanding,Interpretability,6.0
+The Limits of Predicting Agents from Behaviour,Agent Foundations & Alignment Theory,Agent Foundations,3.0
+Model Immunization from a Condition Number Perspective,Capability Control & Unlearning,Alignment Training,6.0
+Heads up! Large Language Models Can Perform Tasks Without Your Instruction via Selective Attention Head Masking,Interpretability & Understanding,Interpretability,4.0
+ProSec: Fortifying Code LLMs with Proactive Security Alignment,Capability Control & Unlearning,Alignment Training,7.0
+Latent Preference Coding: Aligning Large Language Models via Discrete Latent Codes,Capability Control & Unlearning,Alignment Training,7.0
+Inference-Time Decomposition of Activations (ITDA): A Scalable Approach to Interpreting Large Language Models,Interpretability & Understanding,Interpretability,3.0
+Off-Policy Actor-Critic for Adversarial Observation Robustness: Virtual Alternative Training via Symmetric Policy Evaluation,"Robustness, Defense & Systemic Control",Adversarial Robustness,3.0
+Test-Time Preference Optimization: On-the-Fly Alignment via Iterative Textual Feedback,Threat Modeling & Evaluations,Safeguards,7.0
+PILAF: Optimal Human Preference Sampling for Reward Modeling,Capability Control & Unlearning,Alignment Training,6.0
+Minimalist Concept Erasure in Generative Models,Capability Control & Unlearning,Alignment Training,6.0
+The Energy Loss Phenomenon in RLHF: A New Perspective on Mitigating Reward Hacking,Capability Control & Unlearning,Alignment Training,7.0
+Backdoor Attacks in Token Selection of Attention Mechanism,"Robustness, Defense & Systemic Control",Adversarial Robustness,4.0
+Improving Zero-Shot Adversarial Robustness in Vision-Language Models by Closed-form Alignment of Adversarial Path Simplices,"Robustness, Defense & Systemic Control",Adversarial Robustness,7.0
+Blink of an eye: a simple theory for feature localization in generative models,Interpretability & Understanding,Interpretability,3.0
+Adaptive Localization of Knowledge Negation for Continual LLM Unlearning,Capability Control & Unlearning,Alignment Training,5.0
+Representation Shattering in Transformers: A Synthetic Study with Knowledge Editing,Interpretability & Understanding,Interpretability,7.0
+Mixture of Experts Made Intrinsically Interpretable,Interpretability & Understanding,Interpretability,7.0
+Safety Reasoning with Guidelines,Capability Control & Unlearning,Alignment Training,7.0
+HPS: Hard Preference Sampling for Human Preference Alignment,Capability Control & Unlearning,Alignment Training,6.0
+Layer-wise Alignment: Examining Safety Alignment Across Image Encoder Layers in Vision Language Models,Capability Control & Unlearning,Alignment Training,6.0
+Universal Sparse Autoencoders: Interpretable Cross-Model Concept Alignment,Interpretability & Understanding,Interpretability,3.0
+X-Transfer Attacks: Towards Super Transferable Adversarial Attacks on CLIP,"Robustness, Defense & Systemic Control",Red-Teaming,4.0
+Avoiding Catastrophe in Online Learning by Asking for Help,Agent Foundations & Alignment Theory,Agent Foundations,4.0
+Exploring Criteria of Loss Reweighting to Enhance LLM Unlearning,Capability Control & Unlearning,Alignment Training,5.0
+Safety Alignment Can Be Not Superficial With Explicit Safety Signals,Threat Modeling & Evaluations,Safeguards,7.0
+Antidote: Post-fine-tuning Safety Alignment for Large Language Models against Harmful Fine-tuning Attack,Capability Control & Unlearning,Alignment Training,6.0
+STAIR: Improving Safety Alignment with Introspective Reasoning,Capability Control & Unlearning,Alignment Training,6.0
+EraseAnything: Enabling Concept Erasure in Rectified Flow Transformers,Capability Control & Unlearning,Alignment Training,6.0
+Clone-Robust AI Alignment,Capability Control & Unlearning,Alignment Training,3.0
+Variance as a Catalyst: Efficient and Transferable Semantic Erasure Adversarial Attack for Customized Diffusion Models,"Robustness, Defense & Systemic Control",Adversarial Robustness,4.0
+GRU: Mitigating the Trade-off between Unlearning and Retention for LLMs,Capability Control & Unlearning,Alignment Training,7.0

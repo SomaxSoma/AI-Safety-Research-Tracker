@@ -1,0 +1,66 @@
+Paper Title
+FIFA: Making Fairness More Generalizable in Classifiers Trained on Imbalanced Data
+Fairness-aware Contrastive Learning with Partially Annotated Sensitive Attributes
+FaiREE: fair classification with finite-sample and distribution-free guarantee
+Expressive Monotonic Neural Networks
+Easy Differentially Private Linear Regression
+FairGBM: Gradient Boosting with Fairness Constraints
+Probabilistically Robust Recourse: Navigating the Trade-offs between Costs and Robustness in Algorithmic Recourse
+Disparate Impact in Differential Privacy from Gradient Misalignment
+Everybody Needs Good Neighbours: An Unsupervised Locality-based Method for Bias Mitigation
+Share Your Representation Only: Guaranteed Improvement of the Privacy-Utility Tradeoff in Federated Learning
+Exploring the Limits of Differentially Private Deep Learning with Group-wise Clipping
+A View From Somewhere: Human-Centric Face Representations
+One-Pixel Shortcut: On the Learning Preference of Deep Neural Networks
+Fairness and Accuracy under Domain Generalization
+Confidential-PROFITT: Confidential PROof of FaIr Training of Trees
+Statistical Theory of Differentially Private Marginal-based Data Synthesis Algorithms
+Regression with Label Differential Privacy
+Learning without Prejudices: Continual Unbiased Learning via Benign and Malignant Forgetting
+Modeling content creator incentives on algorithm-curated platforms
+Measure the Predictive Heterogeneity
+Efficient Model Updates for Approximate Unlearning of Graph-Structured Data
+Efficient Conditionally Invariant Representation Learning
+Distributed Differential Privacy in Multi-Armed Bandits
+Canary in a Coalmine: Better Membership Inference with Ensembled Adversarial Queries
+Malign Overfitting: Interpolation and Invariance are Fundamentally at Odds
+Equal Improvability: A New Fairness Notion Considering the Long-term Impact
+"Contextual bandits with concave rewards, and an application to fair ranking"
+Bias Propagation in Federated Learning
+GNNDelete: A General Strategy for Unlearning in Graph Neural Networks
+Tier Balancing: Towards Dynamic Fairness over Underlying Causal Factors
+Private Federated Learning Without a Trusted Server: Optimal Algorithms for Convex Losses
+Quantifying and Mitigating the Impact of Label Errors on Model Disparity Metrics
+Efficient Discrete Multi Marginal Optimal Transport Regularization
+Interpretable Debiasing of Vectorized Language Representations with Iterative Orthogonalization
+Synthetic Data Generation of Many-to-Many Datasets via Random Graph Generation
+Quantifying Memorization Across Neural Language Models
+Federated Nearest Neighbor Machine Translation
+Effective passive membership inference attacks in federated learning against overparameterized models
+Human-Guided Fair Classification for Natural Language Processing
+Unbiased Supervised Contrastive Learning
+Re-weighting Based Group Fairness Regularization via Classwise Robust Optimization
+Pushing the Accuracy-Group Robustness Frontier with Introspective Self-play
+CANIFE: Crafting Canaries for Empirical Privacy Measurement in Federated Learning
+Machine Unlearning of Federated Clusters
+Individual Privacy Accounting with Gaussian Differential Privacy
+Statistical Inference for Fisher Market Equilibrium
+Fooling SHAP with Stealthily Biased Sampling
+On the Trade-Off between Actionable Explanations and the Right to be Forgotten
+Improved Convergence of Differential Private SGD with Gradient Clipping
+TDR-CL: Targeted Doubly Robust Collaborative Learning for Debiased Recommendations
+"MPCFORMER: FAST, PERFORMANT AND PRIVATE TRANSFORMER INFERENCE WITH MPC"
+Instance-wise Batch Label Restoration via Gradients in Federated Learning
+Unified Detoxifying and Debiasing in Language Generation via Inference-time Adaptive Optimization
+Fair Attribute Completion on Graph with Missing Attributes
+Mitigating Dataset Bias by Using Per-Sample Gradient
+Measuring Forgetting of Memorized Training Examples
+MEDFAIR: Benchmarking Fairness for Medical Imaging
+Avoiding spurious correlations via logit correction
+Robust Fair Clustering: A Novel Fairness Attack and Defense Framework
+StableDR: Stabilized Doubly Robust Learning for Recommendation on Data Missing Not at Random
+Learning Fair Graph Representations via Automated Data Augmentations
+Differentially Private $L_2$-Heavy Hitters in the Sliding Window Model
+Transferable Unlearnable Examples
+Stochastic Differentially Private and Fair Learning
+Panning for Gold in Federated Learning: Targeted Text Extraction under Arbitrarily Large-Scale Aggregation

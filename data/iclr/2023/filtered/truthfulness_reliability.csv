@@ -1,0 +1,181 @@
+Paper Title
+Is Adversarial Training Really a Silver Bullet for Mitigating Data Poisoning?
+Energy-based Out-of-Distribution Detection for Graph Neural Networks
+Red PANDA: Disambiguating Image Anomaly Detection by Removing Nuisance Factors
+Denoising Masked Autoencoders Help Robust Classification
+Data augmentation alone can improve adversarial training
+ROSCOE: A Suite of Metrics for Scoring Step-by-Step Reasoning
+TextShield: Beyond Successfully Detecting Adversarial Sentences in text classification
+Guiding Safe Exploration with Weakest Preconditions
+A Closer Look at Model Adaptation using Feature Distortion and Simplicity Bias
+Calibration Matters: Tackling Maximization Bias in Large-scale Advertising Recommendation Systems
+On the Perils of Cascading Robust Classifiers
+Pushing the Limits of Fewshot Anomaly Detection in Industry Vision: Graphcore
+Holistic Adversarially Robust Pruning
+A Learning Based Hypothesis Test for Harmful Covariate Shift
+Clean-image Backdoor: Attacking Multi-label Models with Poisoned Labels Only
+Confidence Estimation Using Unlabeled Data
+Learning Human-Compatible Representations for Case-Based Decision Support
+GNNInterpreter: A Probabilistic Generative Model-Level Explanation for Graph Neural Networks
+"Variance Reduction is an Antidote to Byzantines: Better Rates, Weaker Assumptions and Communication Compression as a Cherry on the Top"
+Neural Architecture Design and Robustness: A Dataset
+Taking a Step Back with KCal: Multi-Class Kernel-Based Calibration for Deep Neural Networks
+Summarization Programs: Interpretable Abstractive Summarization with Neural Modular Trees
+Quantile Risk Control: A Flexible Framework for Bounding the Probability of High-Loss Predictions
+Extremely Simple Activation Shaping for Out-of-Distribution Detection
+What Can we Learn From The Selective Prediction And Uncertainty Estimation Performance Of 523 Imagenet Classifiers?
+Incompatibility Clustering as a Defense Against Backdoor Poisoning Attacks
+A CMDP-within-online framework for Meta-Safe Reinforcement Learning
+On Explaining Neural Network Robustness with Activation Path
+Turning the Curse of Heterogeneity in Federated Learning into a Blessing for Out-of-Distribution Detection
+Valid P-Value for Deep Learning-driven Salient Region
+Measuring axiomatic soundness of counterfactual image models
+A Differential Geometric View and Explainability of GNN on Evolving Graphs
+DensePure: Understanding Diffusion Models for Adversarial Robustness
+This Looks Like It Rather Than That: ProtoKNN For Similarity-Based Classifiers
+Binding Language Models in Symbolic Languages
+SCALE-UP: An Efficient Black-box Input-level Backdoor Detection via Analyzing Scaled Prediction Consistency
+Post-hoc Concept Bottleneck Models
+ODAM: Gradient-based Instance-Specific Visual Explanations for Object Detection
+A probabilistic framework for task-aligned intra- and inter-area neural manifold estimation
+Calibrating Transformers via Sparse Gaussian Processes
+On Compositional Uncertainty Quantification for Seq2seq Graph Parsing
+Visual Classification via Description from Large Language Models
+On the Robustness of Safe Reinforcement Learning under Observational Perturbations
+Concept-level Debugging of Part-Prototype Networks
+Robustness to corruption in pre-trained Bayesian neural networks
+Out-of-distribution Detection with Implicit Outlier Transformation
+CLIP-Dissect: Automatic Description of Neuron Representations in Deep Vision Networks
+MultiViz: Towards Visualizing and Understanding Multimodal Models
+Out-of-Distribution Detection and Selective Generation for Conditional Language Models
+A Unified Algebraic Perspective on Lipschitz Neural Networks
+Combating Exacerbated Heterogeneity for Robust Models in Federated Learning
+Learning where and when to reason in neuro-symbolic inference
+Towards Interpretable Deep Reinforcement Learning with Human-Friendly Prototypes
+DAG Matters! GFlowNets Enhanced Explainer for Graph Neural Networks
+Pseudo-label Training and Model Inertia in Neural Machine Translation
+Revisiting Graph Adversarial Attack and Defense From a Data Distribution Perspective
+Fundamental limits on the robustness of image classifiers
+Revisiting Robustness in Graph Machine Learning
+On Achieving Optimal Adversarial Test Error
+Robust Multivariate Time-Series Forecasting: Adversarial Attacks and Defense Mechanisms
+Extracting Robust Models with Uncertain Examples
+Efficiently Controlling Multiple Risks with Pareto Testing
+Making Substitute Models More Bayesian Can Enhance Transferability of Adversarial Examples
+ESD: Expected Squared Difference as a Tuning-Free Trainable Calibration Measure
+Average Sensitivity of Decision Tree Learning
+Adversarial Attacks on Adversarial Bandits
+Harnessing Out-Of-Distribution Examples via Augmenting Content and Style
+A Holistic View of Label Noise Transition Matrix in Deep Learning and Beyond
+Part-Based Models Improve Adversarial Robustness
+Exploring and Exploiting Decision Boundary Dynamics for Adversarial Robustness
+Revisiting the Assumption of Latent Separability for Backdoor Defenses
+How to Exploit Hyperspherical Embeddings for Out-of-Distribution Detection?
+Certified Defences Against Adversarial Patch Attacks on Semantic Segmentation
+Few-shot Backdoor Attacks via Neural Tangent Kernels
+User-Interactive Offline Reinforcement Learning
+Bayes-MIL: A New Probabilistic Perspective on Attention-based Multiple Instance Learning for Whole Slide Images
+BSTT: A Bayesian Spatial-Temporal Transformer for Sleep Staging
+A Call to Reflect on Evaluation Practices for Failure Detection in Image Classification
+The Tilted Variational Autoencoder: Improving Out-of-Distribution Detection
+The Dark Side of AutoML: Towards Architectural Backdoor Search
+Can We Faithfully Represent Absence States to Compute Shapley Values on a DNN?
+Dr.Spider: A Diagnostic Evaluation Benchmark towards Text-to-SQL Robustness
+Re-calibrating Feature Attributions for Model Interpretation
+GEASS: Neural causal feature selection for high-dimensional biological data
+Neural Networks and the Chomsky Hierarchy
+Fundamental Limits in Formal Verification of Message-Passing Neural Networks
+PINTO: Faithful Language Reasoning Using Prompt-Generated Rationales
+Semantic Uncertainty: Linguistic Invariances for Uncertainty Estimation in Natural Language Generation
+Squeeze Training for Adversarial Robustness
+Concept Gradient: Concept-based Interpretation Without Linear Assumption
+Can BERT Refrain from Forgetting on Sequential Tasks? A Probing Study
+Weighted Clock Logic Point Process
+Understanding Influence Functions and Datamodels via Harmonic Analysis
+Boosting Adversarial Transferability using Dynamic Cues
+Can CNNs Be More Robust Than Transformers?
+Dual Student Networks for Data-Free Model Stealing
+Packed Ensembles for efficient uncertainty estimation
+Aligning Model and Macaque Inferior Temporal Cortex Representations Improves Model-to-Human Behavioral Alignment and Adversarial Robustness
+Schema Inference for Interpretable Image Classification
+Robust Explanation Constraints for Neural Networks
+Diversify and Disambiguate: Out-of-Distribution Robustness via Disagreement
+Human alignment of neural network representations
+Fake It Until You Make It : Towards Accurate Near-Distribution Novelty Detection
+Indiscriminate Poisoning Attacks on Unsupervised Contrastive Learning
+Provable Defense Against Geometric Transformations
+Strategic Classification with Graph Neural Networks
+Interpretability with full complexity by constraining feature information
+Distilling Cognitive Backdoor Patterns within an Image
+Leveraging Unlabeled Data to Track Memorization
+ILA-DA: Improving Transferability of Intermediate Level Attack with Data Augmentation
+Preserving Pre-trained Features Helps Calibrate Fine-tuned Language Models
+Bort: Towards Explainable Neural Networks with Bounded Orthogonal Constraint
+How robust is unsupervised representation learning to distribution shift?
+Efficient Certified Training and Robustness Verification of Neural ODEs
+SMART: Sentences as Basic Units for Text Evaluation
+UNICORN: A Unified Backdoor Trigger Inversion Framework
+Calibrating the Rigged Lottery: Making All Tickets Reliable
+(Certified!!) Adversarial Robustness for Free!
+A framework for benchmarking Class-out-of-distribution detection and its application to ImageNet
+Modeling Multimodal Aleatoric Uncertainty in Segmentation with Mixture of Stochastic Experts
+A Multi-Grained Self-Interpretable Symbolic-Neural Model For Single/Multi-Labeled Text Classification
+Training language models to summarize narratives improves brain alignment
+Sound Randomized Smoothing in Floating-Point Arithmetic
+Finding Actual Descent Directions for Adversarial Training
+CoRTX: Contrastive Framework for Real-time Explanation
+Non-parametric Outlier Synthesis
+Out-of-Distribution Detection based on In-Distribution Data Patterns Memorization with Modern Hopfield Energy
+ImageNet-X: Understanding Model Mistakes with Factor of Variation Annotations
+Provable Robustness against Wasserstein Distribution Shifts via Input Randomization
+Revisiting adapters with adversarial training
+Provably Auditing Ordinary Least Squares in Low Dimensions
+Visual Recognition with Deep Nearest Centroids
+AGRO: Adversarial discovery of error-prone Groups for Robust Optimization
+Batch Multivalid Conformal Prediction
+Diagnosing and Rectifying Vision Models using Language
+Adversarial Training of Self-supervised Monocular Depth Estimation against Physical-World Attacks
+Quasi-optimal Reinforcement Learning with Continuous Actions
+Distributionally Robust Recourse Action
+Explaining Temporal Graph Models through an Explorer-Navigator Framework
+Self-Ensemble Protection: Training Checkpoints Are Good Data Protectors
+AE-FLOW: Autoencoders with Normalizing Flows  for  Medical Images Anomaly Detection 
+Temporal Dependencies in Feature Importance for Time Series Prediction
+Reliability of CKA as a Similarity Measure in Deep Learning
+Weakly Supervised Explainable Phrasal Reasoning with Neural Fuzzy Logic
+Towards Robustness Certification Against Universal Perturbations
+"Chasing All-Round Graph Representation Robustness: Model, Training, and Optimization"
+Prompting GPT-3 To Be Reliable
+Variational Information Pursuit for Interpretable Predictions
+Beyond calibration: estimating the grouping loss of modern neural networks
+TextGrad: Advancing Robustness Evaluation in NLP by Gradient-Driven Optimization
+Learning to Estimate Shapley Values with Vision Transformers
+Certified Training: Small Boxes are All You Need
+Neural-based classification rule learning for sequential data
+First Steps Toward Understanding the Extrapolation of Nonlinear Models to Unseen Domains
+Deconstructing Distributions: A Pointwise Framework of Learning
+Interpretable Geometric Deep Learning via Learnable Randomness Injection
+Explaining RL Decisions with Trajectories
+"Inequality phenomenon in $l_{\infty}$-adversarial training, and its unrealized threats"
+The Role of ImageNet Classes in Fréchet Inception Distance
+Distilling Model Failures as Directions in Latent Space
+FLIP: A Provable Defense Framework for Backdoor Mitigation in Federated Learning
+An Additive Instance-Wise Approach to Multi-class Model Interpretation
+Exploring perceptual straightness in learned visual representations
+Defending against Adversarial Audio  via Diffusion Model
+Characterizing the Influence of Graph Elements
+Constraining Representations Yields Models That Know What They Don't Know
+Predictive Inference with Feature Conformal Prediction
+Adaptive Robust Evidential Optimization For Open Set Detection from Imbalanced Data
+Breaking Correlation Shift via Conditional Invariant Regularizer
+Gradient Boosting Performs Gaussian Process Inference
+Localized Randomized Smoothing for Collective Robustness Certification
+Why adversarial training can hurt robust accuracy
+ROCO: A General Framework for Evaluating Robustness of Combinatorial Optimization Solvers on Graphs
+Transformer-Patcher: One Mistake Worth One Neuron
+Rethinking the Effect of Data Augmentation in Adversarial Contrastive Learning
+Don’t forget the nullspace! Nullspace occupancy as a mechanism for out of distribution failure
+Deep Reinforcement Learning for Cost-Effective Medical Diagnosis
+"A law of adversarial risk, interpolation, and label noise"
+Temporal Coherent Test Time Optimization for Robust Video Classification
+Bitrate-Constrained DRO: Beyond Worst Case Robustness To Unknown Group Shifts
