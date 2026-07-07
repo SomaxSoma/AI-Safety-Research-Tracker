@@ -103,37 +103,102 @@ def main():
     plt.close(fig); print(f"Saved: {OUT/'org_backed_by_type.png'}")
 
     plot_top_orgs(df)
+    plot_prevalence_split()
 
 
-def plot_top_orgs(df, topn=20):
+def plot_top_orgs(df):
+    """All confirmed orgs (44), coloured by structural type."""
     from collections import Counter
+    from matplotlib.patches import Patch
     c = Counter()
     for orgs in df["orgs"]:
         for o in orgs:
             c[o] += 1
-    data = c.most_common(topn)
+    data = c.most_common()  # all of them
     names = [n for n, _ in data][::-1]
     vals = [v for _, v in data][::-1]
-    # colour each bar by its structural type (use latest year for OpenAI)
     cols = [COLOR[org_type(n, 2026)] for n in names]
 
-    fig, ax = plt.subplots(figsize=(9, 8))
+    fig, ax = plt.subplots(figsize=(9, max(6, len(names) * 0.28)))
     ax.barh(names, vals, color=cols, edgecolor="white", linewidth=0.6)
     for i, v in enumerate(vals):
-        ax.text(v + max(vals) * 0.01, i, str(v), va="center", fontsize=9, fontweight="bold", color=INK)
+        ax.text(v + max(vals) * 0.01, i, str(v), va="center", fontsize=8.5, fontweight="bold", color=INK)
     ax.set_xlabel("Safety papers (LLM-verified association)", fontsize=10, color=INK2)
-    ax.set_title("Top orgs behind AI-safety papers (verified)", fontsize=14,
+    ax.set_title(f"Orgs behind AI-safety papers — all {len(names)} (verified)", fontsize=14,
                  fontweight="bold", color=INK, pad=10)
     ax.set_xlim(0, max(vals) * 1.12)
+    ax.tick_params(axis="y", labelsize=8.5)
     for s in ("top", "right"): ax.spines[s].set_visible(False)
     ax.grid(axis="x", color=GRID, lw=0.8); ax.set_axisbelow(True)
-    # legend for the type colours
-    from matplotlib.patches import Patch
     ax.legend(handles=[Patch(color=COLOR[t], label=LABEL[t].split(" (")[0]) for t in TYPES],
               loc="lower right", fontsize=9, frameon=False)
     fig.tight_layout()
     fig.savefig(OUT / "top_orgs_verified.png", dpi=150, bbox_inches="tight", facecolor="white")
     plt.close(fig); print(f"Saved: {OUT/'top_orgs_verified.png'}")
+
+
+def yearly_totals():
+    """Per year: (total papers, safety papers). Excludes ICML 2026 (no PDFs), to
+    match org coverage."""
+    tot, saf = {}, {}
+    for conf in ["iclr", "icml", "neurips"]:
+        cdir = ROOT / "data" / conf
+        if not cdir.exists():
+            continue
+        for yd in sorted(cdir.iterdir()):
+            if conf == "icml" and yd.name == "2026":
+                continue
+            r = yd / "results.csv"
+            if not r.exists():
+                continue
+            d = pd.read_csv(r, dtype=str)
+            y = int(yd.name)
+            tot[y] = tot.get(y, 0) + len(d)
+            saf[y] = saf.get(y, 0) + int(d["is_safety"].astype(str).str.lower()
+                                         .isin(["true", "1"]).sum())
+    return tot, saf
+
+
+def plot_prevalence_split():
+    """Safety share of ALL papers per year, split into org-affiliated (bottom)
+    vs no detected affiliation (top)."""
+    tot, saf = yearly_totals()
+    v = pd.read_csv(ROOT / "data" / "org_verified.csv", dtype=str)
+    v["year"] = v["year"].astype(int)
+    v["has"] = v["confirmed"].fillna("").str.len() > 0
+    affil = v[v["has"]].groupby("year").size().to_dict()
+
+    years = sorted(tot)
+    aff_pct = [affil.get(y, 0) / tot[y] * 100 for y in years]
+    saf_pct = [saf[y] / tot[y] * 100 for y in years]
+    unaff_pct = [s - a for s, a in zip(saf_pct, aff_pct)]
+
+    fig, ax = plt.subplots(figsize=(11, 6.2))
+    x = range(len(years))
+    ax.bar(x, aff_pct, color="#2a78d6", width=0.68, label="Safety, org-affiliated")
+    ax.bar(x, unaff_pct, bottom=aff_pct, color="#c9c8c3", width=0.68,
+           label="Safety, no detected affiliation")
+    for i in x:
+        if aff_pct[i] > 0.4:
+            ax.text(i, aff_pct[i] / 2, f"{aff_pct[i]:.1f}%", ha="center", va="center",
+                    fontsize=8.5, fontweight="bold", color="white")
+        ax.text(i, saf_pct[i] + saf_pct[i] * 0.02 + 0.05, f"{saf_pct[i]:.1f}%", ha="center",
+                va="bottom", fontsize=9.5, fontweight="bold", color=INK)
+    ax.set_xticks(list(x)); ax.set_xticklabels(years)
+    ax.set_ylabel("Share of ALL papers that year (%)", fontsize=11, color=INK2)
+    ax.set_title("AI-safety share of papers, split by org affiliation",
+                 fontsize=14, fontweight="bold", color=INK, pad=30)
+    ax.text(0.0, 1.015,
+            "Column = safety share of all papers; blue = with an LLM-verified safety-org affiliation. "
+            "ICML 2026 excluded (no PDFs); affiliation is a lower bound.",
+            transform=ax.transAxes, fontsize=8.5, color=INK2, va="bottom")
+    ax.set_ylim(0, max(saf_pct) * 1.18)
+    ax.grid(axis="y", color=GRID, lw=0.8); ax.set_axisbelow(True)
+    ax.legend(loc="upper left", fontsize=9, frameon=False)
+    for s in ("top", "right"): ax.spines[s].set_visible(False)
+    fig.tight_layout()
+    fig.savefig(OUT / "safety_prevalence_split.png", dpi=150, bbox_inches="tight", facecolor="white")
+    plt.close(fig); print(f"Saved: {OUT/'safety_prevalence_split.png'}")
 
 
 if __name__ == "__main__":
