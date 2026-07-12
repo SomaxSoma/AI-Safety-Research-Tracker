@@ -514,12 +514,6 @@
     pxUpdate();
   }
 
-  function mkModel(v) {
-    return `<div class="metrics">${v.metrics.map((m) =>
-      `<div class="metric"><div class="metric-k">${m.k}</div><div class="metric-v">${m.v}</div></div>`).join('')}</div>
-    <div class="metrics-note">What these numbers are — and are not: they measure how faithfully a cheap distilled model (TF-IDF + logistic regression) reproduces the LLM classifier's labels on held-out papers. The reference labels are the LLM's, not human annotation, and ROC AUC is ranking quality, not accuracy — at the operating threshold, agreement with the LLM is ~72% precision / 74% recall. Two splits: random 80/20, and temporal (train ≤2024, test 2025–26; ROC AUC 0.968), which shows it generalizes to unseen years. This distilled model is used only for the arXiv-wide trend; every conference number on this site comes from the LLM classifier directly — independently replicated for ICLR 2026 by Arthur Conmy (402 vs 412, <a href="https://x.com/ArthurConmy/status/2058909854723383439" target="_blank" rel="noopener">his results</a>), and auditable per paper in the PAPERS tab. The full rubric, including what the 1–7 score and its three axes mean, is public: <a href="${GH_URL}/blob/main/src/prompt.txt" target="_blank" rel="noopener">src/prompt.txt</a>.</div>`;
-  }
-
   function mkMethod() {
     return `<div>
       <div class="pipeline">${PIPELINE.map((p) =>
@@ -527,7 +521,7 @@
       <div class="classes-title">FOUR MAJOR CLASSES</div>
       <div class="classes">${CLASS_DEFS.map((c) =>
         `<div class="class-row"><div class="class-n">${c.n}</div><div class="class-name">${esc(c.name)}</div><div class="class-desc">${c.desc}</div></div>`).join('')}</div>
-      <div class="method-cite">INDEPENDENT CHECK — Arthur Conmy (Google DeepMind) reran the ICLR 2026 classification with a different model (Gemini) and got 402 safety papers against our 412, a 2.4% gap on 5,352 papers (<a href="https://x.com/ArthurConmy/status/2058909854723383439" target="_blank" rel="noopener">his results</a>). The first public version overcounted (595, using an 8B classifier); it was corrected publicly by Ryan Kidd and Arthur Conmy, and this pipeline is the rebuild. Full rubric: <a href="${GH_URL}/blob/main/src/prompt.txt" target="_blank" rel="noopener">src/prompt.txt</a>.</div>
+      <div class="method-cite">Full classification rubric — the four classes, 17 safety subdomains, and the 1–7 relevance score with its three axes — is open source: <a href="${GH_URL}/blob/main/src/prompt.txt" target="_blank" rel="noopener">src/prompt.txt</a>.</div>
     </div>`;
   }
 
@@ -535,7 +529,7 @@
   const FACES = {
     conferences: [['pooled', 'POOLED'], ['venues', 'BY VENUE']],
     subdomains: [['all', 'ICLR 2026'], ['year', 'BY YEAR'], ['trends', 'TRENDS']],
-    orgs: [['orgs', 'TOP ORGS'], ['types', 'BY TYPE'], ['byyear', 'BY YEAR']],
+    orgs: [['orgs', 'ALL ORGS'], ['types', 'BY TYPE'], ['byyear', 'BY YEAR']],
   };
   const FACE_KEY = { conferences: 'confFace', subdomains: 'sdFace', orgs: 'orgFace' };
   const FACE_META = {
@@ -581,7 +575,6 @@
     else if (v.type === 'vbar') body = mkVbars(v.entries, v.suf || '', v.note);
     else if (v.type === 'line') body = mkLine();
     else if (v.type === 'papers') body = mkExplorer();
-    else if (v.type === 'model') body = mkModel(v);
     else if (v.type === 'method') body = mkMethod();
 
     $('panel-right').innerHTML = `

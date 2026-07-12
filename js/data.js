@@ -117,7 +117,7 @@ const GLOSSARY = {
 };
 
 /* Verified safety-org affiliations — data/org_verified.csv (full-text scan + LLM verification).
-   Orgs with ≥3 papers shown; [name, papers, legal type]. 17 more orgs have 1–2 papers (24 total). */
+   All 34 orgs with a confirmed primary affiliation; [name, papers, legal type]. */
 const ORGS_TOP = [
   ['Open Philanthropy', 76, 'funder'],
   ['Google DeepMind', 70, 'corporate'],
@@ -136,6 +136,23 @@ const ORGS_TOP = [
   ['Apollo Research', 3, 'nonprofit'],
   ['Center for Applied Rationality', 3, 'nonprofit'],
   ['Redwood Research', 3, 'nonprofit'],
+  ['Future of Life Institute', 2, 'funder'],
+  ['US CAISI', 2, 'government'],
+  ['Future of Humanity Institute', 2, 'academic centre'],
+  ['Long-Term Future Fund', 2, 'funder'],
+  ['Timaeus', 2, 'nonprofit'],
+  ['Foresight Institute', 2, 'funder'],
+  ['Cooperative AI Foundation', 2, 'nonprofit'],
+  ['METR', 1, 'nonprofit'],
+  ['Transluce', 1, 'nonprofit'],
+  ['SPAR', 1, 'nonprofit'],
+  ['PIBBSS', 1, 'nonprofit'],
+  ['Stanford Center for AI Safety', 1, 'academic centre'],
+  ['LawZero', 1, 'nonprofit'],
+  ['LISA', 1, 'nonprofit'],
+  ['AI Safety Camp', 1, 'nonprofit'],
+  ['Center on Long-Term Risk', 1, 'nonprofit'],
+  ['Haize Labs', 1, 'corporate'],
 ];
 const ORG_TYPES_DIST = [
   ['Corporate — DeepMind, OpenAI <2026, startups', 110],
@@ -173,11 +190,6 @@ const CLASS_DEFS = [
 const ARXIV = {"months":["2019-01","2019-02","2019-03","2019-04","2019-05","2019-06","2019-07","2019-08","2019-09","2019-10","2019-11","2019-12","2020-01","2020-02","2020-03","2020-04","2020-05","2020-06","2020-07","2020-08","2020-09","2020-10","2020-11","2020-12","2021-01","2021-02","2021-03","2021-04","2021-05","2021-06","2021-07","2021-08","2021-09","2021-10","2021-11","2021-12","2022-01","2022-02","2022-03","2022-04","2022-05","2022-06","2022-07","2022-08","2022-09","2022-10","2022-11","2022-12","2023-01","2023-02","2023-03","2023-04","2023-05","2023-06","2023-07","2023-08","2023-09","2023-10","2023-11","2023-12","2024-01","2024-02","2024-03","2024-04","2024-05","2024-06","2024-07","2024-08","2024-09","2024-10","2024-11","2024-12","2025-01","2025-02","2025-03","2025-04","2025-05","2025-06","2025-07","2025-08","2025-09","2025-10","2025-11","2025-12","2026-01","2026-02","2026-03","2026-04","2026-05","2026-06"],"frac":[0.213,0.651,0.469,0.374,0.392,0.512,0.502,0.333,0.241,0.398,0.38,0.873,0.223,0.555,0.348,0.856,0.432,0.75,0.48,0.473,0.606,0.52,0.466,0.594,0.884,0.722,0.624,0.755,0.689,0.65,0.733,0.487,0.577,0.707,0.729,0.914,1.189,0.885,0.761,0.765,1.035,0.892,0.572,0.633,0.846,0.912,1.105,1.223,1.449,1.473,1.212,1.525,1.81,1.433,1.928,2.084,2.222,3.409,3.007,2.786,2.99,4.438,2.953,3.498,4.083,4.663,4.054,3.705,3.553,5.769,4.087,4.41,4.527,6.381,5.089,6.064,7.368,6.459,5.841,5.88,6.324,7.454,6.12,6.876,7.746,8.376,7.713,9.432,9.251,9.362],"roll":[0.432,0.444,0.498,0.412,0.426,0.468,0.449,0.359,0.324,0.339,0.55,0.492,0.55,0.375,0.586,0.545,0.679,0.554,0.568,0.52,0.533,0.531,0.526,0.648,0.733,0.743,0.7,0.69,0.698,0.691,0.623,0.599,0.59,0.671,0.784,0.944,0.996,0.945,0.803,0.854,0.897,0.833,0.699,0.683,0.797,0.954,1.08,1.259,1.382,1.378,1.403,1.516,1.589,1.723,1.815,2.078,2.572,2.879,3.067,2.928,3.405,3.46,3.63,3.511,4.081,4.266,4.14,3.77,4.342,4.47,4.755,4.341,5.106,5.332,5.845,6.174,6.631,6.556,6.06,6.015,6.553,6.633,6.817,6.914,7.666,7.945,8.507,8.799,9.349,9.307],"vol":[1408,1536,1492,1872,2552,2541,1993,1800,2488,2767,2633,2062,1791,2702,2302,2804,2780,3866,2915,2328,2641,4230,3006,3032,2376,3046,3043,3180,3046,4152,2866,2463,3469,4100,3016,3063,2607,3276,3681,3139,3960,3812,2974,2686,3193,4933,3893,3108,2761,3733,3962,3344,6077,4816,3839,3838,4185,6014,4789,4415,4114,6241,5453,4888,6001,6713,5304,4616,5292,8077,5334,5987,5037,7475,6701,5689,9324,7524,6437,6752,7938,9029,7108,6108,7617,8262,8726,8651,12398,9464]};
 
 /* Distilled TF-IDF classifier metrics (src/arxiv_trend, random 80/20 split, n=11,159). */
-const MODEL_METRICS = [
-  { k: 'ROC AUC', v: '0.980' }, { k: 'PR AUC', v: '0.787' }, { k: 'F1 score', v: '0.729' },
-  { k: 'Precision', v: '0.717' }, { k: 'Recall', v: '0.740' }, { k: 'Test papers', v: '11,159' },
-];
-
 /* View definitions for the tab panel. */
 const VIEWS = {
   overview: {
@@ -186,7 +198,7 @@ const VIEWS = {
   conferences: {
     key: 'conferences', label: 'CONFERENCES', chartTitle: 'AI-safety share of accepted papers, by year', chartUnit: 'ICLR + ICML + NeurIPS, pooled',
     kicker: 'ACROSS ALL VENUES', big: { num: 8.3, dec: 1, suf: '%' }, bigUnit: 'in 2026', bigLabel: 'of accepted papers are safety (0.3% in 2019)',
-    brief: 'Pooled across three venues and eight years. The share inflects sharply in 2024 — the first full year after frontier-LLM deployment. Highest single conference: ICML 2026 at 8.9%.',
+    brief: 'Pooled across three venues and eight years, the safety share rose roughly 28× — from 0.3% in 2019 to 8.3% in 2026. Highest single conference: ICML 2026 at 8.9%.',
     stats: [{ k: 'Conference-years', v: '23' }, { k: 'Total papers', v: '55,794' }, { k: 'Safety papers', v: '2,328' }],
     type: 'vbar', entries: BY_YEAR, suf: '%',
     note: 'Pooled across ICLR, ICML and NeurIPS. 2026 = ICLR + ICML only — NeurIPS 2026 not yet held.',
@@ -194,8 +206,8 @@ const VIEWS = {
   arxiv: {
     key: 'arxiv', label: 'ARXIV TREND', chartTitle: 'AI-safety share of arXiv, monthly', chartUnit: '2019–2026 · 7-mo rolling avg',
     kicker: 'ARXIV-WIDE TREND', big: { num: 9.3, dec: 1, suf: '%' }, bigUnit: 'mid-2026', bigLabel: 'of monthly arXiv AI papers are safety-related',
-    brief: 'Beyond the conferences, the classifier scores all of arXiv. Safety work has grown from 0.4% of AI papers in 2019 to over 9% in 2026 — a roughly 23× rise, with an inflection at end-2022.',
-    stats: [{ k: '2019 baseline', v: '0.4%' }, { k: 'Papers · Jun 2026', v: '9,464' }, { k: 'Safety · Jun 2026', v: '886' }],
+    brief: 'A separate, lightweight keyword-based classifier (TF-IDF, traditional ML — not the LLM used for the conferences) scores all of arXiv, calibrated so its overall safety rate matches the LLM\'s on a labeled subsample. At ~72% precision / 74% recall it\'s a rough experimental trend, not a per-paper verdict. On it, safety rose from 0.4% of AI papers in 2019 to over 9% in 2026.',
+    stats: [{ k: '2019 → 2026', v: '0.4% → 9.3%' }, { k: 'Classifier', v: 'TF-IDF (calibrated)' }, { k: 'Precision / recall', v: '72% / 74%' }],
     type: 'line',
   },
   subareas: {
@@ -229,12 +241,12 @@ const VIEWS = {
     type: 'hbar', entries: MAJOR.slice().sort((a, b) => b[1] - a[1]), notable: NOTABLE_SUBAREAS, countLabel: 'the safety set',
   },
   orgs: {
-    key: 'orgs', label: 'WHO PUBLISHES', chartTitle: 'Verified primary safety-org, by paper count', chartUnit: 'orgs with ≥3 papers · LLM-verified',
+    key: 'orgs', label: 'WHO PUBLISHES', chartTitle: 'Verified primary safety-org, by paper count', chartUnit: 'all 34 verified orgs · LLM-verified',
     kicker: 'ORG AFFILIATIONS', big: { num: 325 }, bigUnit: 'papers', bigLabel: 'with a confirmed primary safety-org',
     brief: 'Full-text scan of the safety corpus: author affiliations and funding acknowledgments matched against dedicated safety orgs, then LLM-verified so citations ("we evaluate GPT-4") don\'t count. Funders appear here — co-authorship analyses structurally can\'t see them.',
     stats: [{ k: 'Orgs confirmed', v: '34' }, { k: 'Papers scanned', v: '1,646' }, { k: 'Top funder', v: 'Open Phil · 76' }],
     type: 'orgs',
-    note: 'Dedicated safety orgs only — university papers without a safety-lab affiliation are not counted. Full-text coverage is thin before 2023, so read this as a 2023–2026 snapshot. 17 more orgs have 1–2 papers each (24 papers) — full list in data/org_verified.csv. Primary org = highest author weight; funders count via acknowledgments.',
+    note: 'Dedicated safety orgs only — university papers without a safety-lab affiliation are not counted. Full-text coverage is thin before 2023, so read this as a 2023–2026 snapshot. Primary org = highest author weight; funders count via acknowledgments.',
   },
   papers: {
     key: 'papers', label: 'PAPERS', chartTitle: 'All safety papers', chartUnit: 'search · filter · sorted by score, then year',
@@ -242,13 +254,6 @@ const VIEWS = {
     brief: 'The full classified corpus. Search titles, filter by venue, year or subdomain — every row links to the paper page, and clicking a row reveals the classifier\'s verbatim reasoning and per-axis scores, so any label can be audited.',
     stats: [{ k: 'Venues', v: 'ICLR · ICML · NeurIPS' }, { k: 'Years', v: '2019–2026' }, { k: 'Subdomains', v: '17' }],
     type: 'papers',
-  },
-  model: {
-    key: 'model', label: 'CLASSIFIER', chartTitle: 'Distilled classifier performance', chartUnit: 'held-out test vs. LLM labels',
-    kicker: 'THE CLASSIFIER', big: { num: 0.98, dec: 2 }, bigUnit: 'ROC AUC', bigLabel: 'random 80/20 split (n=11,159)',
-    brief: 'A lightweight model distilled from the LLM labels scores every paper cheaply. It stays strong out-of-time: ROC AUC 0.97 when trained on ≤2024 and tested on 2025–26.',
-    stats: [{ k: 'PR AUC', v: '0.79' }, { k: 'Precision', v: '0.72' }, { k: 'Recall', v: '0.74' }],
-    type: 'model', metrics: MODEL_METRICS,
   },
   method: {
     key: 'method', label: 'METHOD', chartTitle: 'Classification pipeline', chartUnit: 'open source · reproducible',
@@ -259,4 +264,4 @@ const VIEWS = {
   },
 };
 
-const VIEW_ORDER = ['overview', 'method', 'conferences', 'arxiv', 'subareas', 'subdomains', 'scores', 'major', 'orgs', 'papers', 'model'];
+const VIEW_ORDER = ['overview', 'method', 'conferences', 'arxiv', 'subareas', 'subdomains', 'scores', 'major', 'orgs', 'papers'];
