@@ -39,3 +39,22 @@ data/papers.json # all 2,328 safety papers [title, venue, year, subdomain, score
 - **GitHub badge** — live star count in the masthead (GitHub API), linking to the repo.
 - **Responsive** — single-column layout, scrollable tabs, and scaled type below 980px/760px/480px; no horizontal scroll on phones.
 - **A11y & meta** — keyboard-navigable tabs (arrow keys, Enter/Space, focus rings), favicon, Open Graph/Twitter card tags, data-freshness stamp in the footer.
+
+## Aggregate plots (research pipeline)
+
+Cross-conference summaries of the classifier output, regenerated from
+`data/{conf}/{year}/results.csv`. Written to `data/aggregate_plots/`:
+
+- `safety_share_by_year.png` / `safety_share_by_conf.png` — AI-safety share of
+  accepted papers per year, pooled and split by venue.
+- `safety_areas_composition.png` — fine-subdomain composition over time (lines
+  sum to 100% per year).
+- `safety_subdomains_all_years.png` / `safety_subdomains_per_year.png` —
+  subdomain breakdown, pooled and as per-year small multiples.
+- `org_only/` — the same five views restricted to the 325 safety papers with an
+  LLM-verified safety-org affiliation (`data/org_verified.csv`).
+
+```bash
+python src/aggregate_plots.py        # all-safety views
+python src/aggregate_plots_orgs.py   # org-affiliated views
+```

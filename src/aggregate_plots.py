@@ -153,6 +153,87 @@ def plot_areas_composition(df):
     print(f"Saved: {OUT/'safety_areas_composition.png'}")
 
 
+def _subdomain_order_colors(s):
+    """Global subdomain order (most common first) and a stable colour per
+    subdomain, shared across the aggregate and every per-year panel."""
+    import matplotlib.cm as cm
+    order = s["subdomain"].value_counts().index.tolist()
+    colors = {name: cm.tab20(i % 20) for i, name in enumerate(order)}
+    return order, colors
+
+
+def plot_subdomains_all_years(df):
+    s = df[df["is_safety"]].copy()
+    s["subdomain"] = s["subdomain"].fillna("(unspecified)")
+    order, colors = _subdomain_order_colors(s)
+    counts = s["subdomain"].value_counts().reindex(order)
+
+    fig, ax = plt.subplots(figsize=(9, 7))
+    names = counts.index[::-1]
+    vals = counts.values[::-1]
+    ax.barh(names, vals, color=[colors[n] for n in names],
+            edgecolor="white", linewidth=0.7)
+    for i, v in enumerate(vals):
+        ax.text(v + max(vals) * 0.008, i, str(v), va="center",
+                fontsize=9.5, fontweight="bold", color=INK)
+    ax.set_xlim(0, max(vals) * 1.10)
+    ax.set_xlabel("Safety papers, 2019–2026 (all venues)", fontsize=11, color=INK2)
+    ax.set_title("AI-safety papers by subdomain — all years pooled",
+                 fontsize=15, fontweight="bold", color=INK, pad=12)
+    ax.tick_params(axis="y", labelsize=10)
+    for sp in ("top", "right"):
+        ax.spines[sp].set_visible(False)
+    ax.grid(axis="x", color=GRID, lw=0.8)
+    ax.set_axisbelow(True)
+    fig.tight_layout()
+    fig.savefig(OUT / "safety_subdomains_all_years.png", dpi=150,
+                bbox_inches="tight", facecolor="white")
+    plt.close(fig)
+    print(f"Saved: {OUT/'safety_subdomains_all_years.png'}")
+
+
+def plot_subdomains_per_year(df):
+    s = df[df["is_safety"]].copy()
+    s["subdomain"] = s["subdomain"].fillna("(unspecified)")
+    order, colors = _subdomain_order_colors(s)
+    order = order[::-1]  # smallest at bottom for barh
+    years = sorted(s["year"].unique())
+
+    ncol = 4
+    nrow = -(-len(years) // ncol)
+    fig, axes = plt.subplots(nrow, ncol, figsize=(4.2 * ncol, 3.4 * nrow),
+                             sharey=True)
+    axes = axes.ravel()
+    for ax, y in zip(axes, years):
+        sy = s[s["year"] == y]
+        counts = sy["subdomain"].value_counts().reindex(order, fill_value=0)
+        ax.barh(order, counts.values, color=[colors[n] for n in order],
+                edgecolor="white", linewidth=0.5)
+        mx = max(counts.values) if counts.values.max() else 1
+        for i, v in enumerate(counts.values):
+            if v:
+                ax.text(v + mx * 0.02, i, str(v), va="center", fontsize=7.5,
+                        color=INK)
+        ax.set_xlim(0, mx * 1.16)
+        ax.set_title(f"{y}   (n={len(sy)})", fontsize=11, fontweight="bold",
+                     color=INK)
+        ax.tick_params(axis="y", labelsize=7.5)
+        ax.tick_params(axis="x", labelsize=8)
+        for sp in ("top", "right"):
+            ax.spines[sp].set_visible(False)
+        ax.grid(axis="x", color=GRID, lw=0.7)
+        ax.set_axisbelow(True)
+    for ax in axes[len(years):]:
+        ax.set_visible(False)
+    fig.suptitle("AI-safety papers by subdomain, per year (all venues pooled)",
+                 fontsize=15, fontweight="bold", color=INK, y=1.005)
+    fig.tight_layout()
+    fig.savefig(OUT / "safety_subdomains_per_year.png", dpi=150,
+                bbox_inches="tight", facecolor="white")
+    plt.close(fig)
+    print(f"Saved: {OUT/'safety_subdomains_per_year.png'}")
+
+
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
     df = load()
@@ -161,6 +242,8 @@ def main():
     plot_by_year(df)
     plot_by_conf(df)
     plot_areas_composition(df)
+    plot_subdomains_all_years(df)
+    plot_subdomains_per_year(df)
 
 
 if __name__ == "__main__":
