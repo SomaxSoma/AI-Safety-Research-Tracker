@@ -1,1 +1,24 @@
 .vercel
+
+pdfs/
+
+# Extracted paper full-text (large, regenerable via src/org_analysis/fetch_plaintext.py)
+data/plaintext/
+
+# Huge arXiv corpora (regenerable via src/arxiv_trend/3_fetch_arxiv.py)
+data/arxiv/papers.csv
+data/arxiv/raw/
+
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+.venv/
+*.egg-info/
+
+.vscode/
+.idea/
+.DS_Store

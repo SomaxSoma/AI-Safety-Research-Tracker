@@ -1,0 +1,11 @@
+Paper Title,Subarea,Detailed Class,Score
+Policy Smoothing for Provably Robust Reinforcement Learning,"Robustness, Defense & Systemic Control",Adversarial Robustness,4.0
+Poisoning and Backdooring Contrastive Learning,"Robustness, Defense & Systemic Control",Adversarial Robustness,3.0
+Adversarial Robustness Through the Lens of Causality,"Robustness, Defense & Systemic Control",Adversarial Robustness,5.0
+BadPre: Task-agnostic Backdoor Attacks to Pre-trained NLP Foundation Models,"Robustness, Defense & Systemic Control",Red-Teaming,7.0
+Sound Adversarial Audio-Visual Navigation,"Robustness, Defense & Systemic Control",Adversarial Robustness,4.0
+Constrained Policy Optimization via Bayesian World Models,Capability Control & Unlearning,Alignment Training,7.0
+The Effects of Reward Misspecification: Mapping and Mitigating Misaligned Models,Scalable Oversight & Value Learning,Scalable Oversight,6.0
+Increasing the Cost of Model Extraction with Calibrated Proof of Work,"Robustness, Defense & Systemic Control",Adversarial Robustness,4.0
+On the Pitfalls of Analyzing Individual Neurons in Language Models,Interpretability & Understanding,Interpretability,3.0
+Adversarially Robust Conformal Prediction,"Robustness, Defense & Systemic Control",Adversarial Robustness,3.0

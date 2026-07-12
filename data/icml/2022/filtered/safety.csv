@@ -1,0 +1,13 @@
+Paper Title,Subarea,Detailed Class,Score
+Adaptive Model Design for Markov Decision Process,Capability Control & Unlearning,Alignment Training,6.0
+Self-conditioning Pre-Trained Language Models,Interpretability & Understanding,Interpretability,3.0
+Neuron Dependency Graphs: A Causal Abstraction of Neural Networks,Interpretability & Understanding,Interpretability,6.0
+The Dual Form of Neural Networks Revisited: Connecting Test Time Predictions to Training Patterns via Spotlights of Attention,Interpretability & Understanding,Interpretability,3.0
+Inducing Causal Structure for Interpretable Neural Networks,Interpretability & Understanding,Interpretability,4.0
+Goal Misgeneralization in Deep Reinforcement Learning,Agent Foundations & Alignment Theory,Agent Foundations,6.0
+Constrained Optimization with Dynamic Bound-scaling for Effective NLP Backdoor Defense,"Robustness, Defense & Systemic Control",Adversarial Robustness,7.0
+Saute RL: Almost Surely Safe Reinforcement Learning Using State Augmentation,Capability Control & Unlearning,Alignment Training,7.0
+Robust Deep Reinforcement Learning through Bootstrapped Opportunistic Curriculum,"Robustness, Defense & Systemic Control",Adversarial Robustness,4.0
+COLA: Consistent Learning with Opponent-Learning Awareness,Scalable Oversight & Value Learning,Multi-Agent Safety,3.0
+Reachability Constrained Reinforcement Learning,Capability Control & Unlearning,Alignment Training,6.0
+Neurotoxin: Durable Backdoors in Federated Learning,"Robustness, Defense & Systemic Control",Red-Teaming,3.0

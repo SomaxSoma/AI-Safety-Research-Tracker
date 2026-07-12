@@ -1,0 +1,6 @@
+{
+  "threshold_arxiv": 0.669,
+  "target_prevalence": 0.0377,
+  "n_labeled": 3000,
+  "n_positive": 113
+}

@@ -1,0 +1,156 @@
+Paper Title
+Fairness on Principal Stratum: A New Perspective on Counterfactual Fairness
+Certification for Differentially Private Prediction in Gradient-Based Training
+KGMark: A Diffusion Watermark for Knowledge Graphs
+STAMP Your Content: Proving Dataset Membership via Watermarked Rephrasings
+Private Federated Learning using Preference-Optimized Synthetic Data
+Local Pan-privacy for Federated Analytics
+Subgroups Matter for Robust Bias Mitigation
+The Disparate Benefits of Deep Ensembles
+An End-to-End Model for Logits-Based Large Language Models Watermarking
+Scaling Laws for Differentially Private Language Models
+Optimal Fair Learning Robust to Adversarial Distribution Shift
+It's My Data Too: Private ML for Datasets with Multi-User Training Examples
+Confounder-Free Continual Learning via Recursive Feature Normalization
+Privacy-Shielded Image Compression: Defending Against Exploitation from Vision-Language Pretrained Models
+BiMark: Unbiased Multilayer Watermarking for Large Language Models
+Leveraging Per-Instance Privacy for Machine Unlearning
+Fair Clustering via Alignment
+Synthesizing Privacy-Preserving Text Data via Finetuning *without* Finetuning Billion-Scale LLMs
+Settling the Maximin Share Fairness for Scheduling among Groups of Machines
+High-Dimensional Prediction for Sequential Decision Making
+DMM: Distributed Matrix Mechanism for Differentially-Private Federated Learning Based on Constant-Overhead Linear Secret Resharing
+SCISSOR: Mitigating Semantic Bias through Cluster-Aware Siamese Networks for Robust Classification
+FACTER: Fairness-Aware Conformal Thresholding and Prompt Engineering for Enabling Fair LLM-Based Recommender Systems
+PASS: Private Attributes Protection with Stochastic Data Substitution
+Auditing $f$-differential privacy in one run
+EncryptedLLM: Privacy-Preserving Large Language Model Inference via GPU-Accelerated Fully Homomorphic Encryption
+Not All Wrong is Bad: Using Adversarial Examples for Unlearning
+Selective Preference Aggregation
+DIS-CO: Discovering Copyrighted Content in VLMs Training Data
+Underestimated Privacy Risks for Minority Populations in Large Language Model Unlearning
+The Lock-in Hypothesis: Stagnation by Algorithm
+Hidden No More: Attacking and Defending Private Third-Party LLM Inference
+On Mitigating Affinity Bias through Bandits with Evolving Biased Feedback
+Differential Privacy Guarantees of Markov Chain Monte Carlo Algorithms
+Understanding Fixed Predictions via Confined Regions
+Advancing Constrained Monotonic Neural Networks: Achieving Universal Approximation Beyond Bounded Activations
+Accelerating Spectral Clustering under Fairness Constraints
+Connecting Thompson Sampling and UCB: Towards More Efficient Trade-offs Between Privacy and Regret
+Multiaccuracy and Multicalibration via Proxy Groups
+Privacy Amplification by Structured Subsampling for Deep Differentially Private Time Series Forecasting
+Improved and Oracle-Efficient Online $\ell_1$-Multicalibration
+Causal Logistic Bandits with Counterfactual Fairness Constraints
+Clients Collaborate: Flexible Differentially Private Federated Learning with Guaranteed Improvement of Utility-Privacy Trade-off
+Fairness Overfitting in Machine Learning: An Information-Theoretic Perspective
+Private Model Personalization Revisited
+"System-Aware Unlearning Algorithms: Use Lesser, Forget Faster"
+Privacy-Preserving Federated Convex Optimization: Balancing Partial-Participation and Efficiency via Noise Cancellation
+Privacy Amplification Through Synthetic Data: Insights from Linear Regression
+Kona: An Efficient Privacy-Preservation Framework for KNN Classification by Communication Optimization
+Breaking the $n^{1.5}$ Additive Error Barrier for Private and Efficient Graph Sparsification via Private Expander Decomposition
+Private Lossless Multiple Release
+Counterfactual Voting Adjustment for Quality Assessment and Fairer Voting in Online Platforms with Helpfulness Evaluation
+The Value of Prediction in Identifying the Worst-Off
+FairICP: Encouraging Equalized Odds via Inverse Conditional Permutation
+Synthetic Face Datasets Generation via Latent Space Exploration from Brownian Identity Diffusion
+Noisy SIGNSGD Is More Differentially Private Than You (Might) Think
+Distributed Differentially Private Data Analytics via Secure Sketching
+Lightweight Protocols for Distributed Private Quantile Estimation
+Finding Wasserstein Ball Center: Efficient Algorithm and The Applications in Fairness
+The Canary’s Echo: Auditing Privacy Risks of LLM-Generated Synthetic Text
+PCEvolve: Private Contrastive Evolution for Synthetic Dataset Generation via Few-Shot Private Data and Generative APIs
+FDGen: A Fairness-Aware Graph Generation Model
+DRAG: Data Reconstruction Attack using Guided Diffusion
+Latent Score-Based Reweighting for Robust Classification on Imbalanced Tabular Data
+StealthInk: A Multi-bit and Stealthy Watermark for Large Language Models
+Do Not Mimic My Voice : Speaker Identity Unlearning for Zero-Shot Text-to-Speech
+On the Private Estimation of Smooth Transport Maps
+Janus: Dual-Server Multi-Round Secure Aggregation with Verifiability for Federated Learning
+Relative Error Fair Clustering in the Weak-Strong Oracle Model
+Independence Tests for Language Models
+Revisiting Differentially Private Algorithms for Decentralized Online Learning
+Understanding and Mitigating Memorization in Diffusion Models for Tabular Data
+You Get What You Give: Reciprocally Fair Federated Learning
+Optimal Survey Design for Private Mean Estimation
+Lightweight-Mark: Rethinking Deep Learning-Based Watermarking
+Towards Black-Box Membership Inference Attack for Diffusion Models
+An Asymptotically Optimal Approximation Algorithm for Multiobjective Submodular Maximization at Scale
+Improving the Variance of Differentially Private Randomized Experiments through Clustering
+Origin Identification for Text-Guided Image-to-Image Diffusion Models
+Intersectional Fairness in Reinforcement Learning with Large State and Constraint Spaces
+EgoPrivacy: What Your First-Person Camera Says About You?
+Fast Exact Unlearning for In-Context Learning Data for LLMs
+Tracking The Best Expert Privately
+From Individual Experience to Collective Evidence: A Reporting-Based Framework for Identifying Systemic Harms
+Learning With Multi-Group Guarantees For Clusterable Subpopulations
+Adapting to Linear Separable Subsets with Large-Margin in Differentially Private Learning
+Representative Language Generation
+Watch Out Your Album! On the Inadvertent Privacy Memorization in Multi-Modal Large Language Models
+Differentially Private Space-Efficient Algorithms for Counting Distinct Elements in the Turnstile Model
+Theoretically Unmasking Inference Attacks Against LDP-Protected Clients in Federated Vision Models
+A Certified Unlearning Approach without Access to Source Data
+Optimizing Noise Distributions for Differential Privacy
+Improved Sample Complexity for Private Nonsmooth Nonconvex Optimization
+On the Alignment between Fairness and Accuracy: from the Perspective of Adversarial Robustness
+Two Tickets are Better than One: Fair and Accurate Hiring Under Strategic LLM Manipulations
+Robust ML Auditing using Prior Knowledge
+Faster Rates for Private Adversarial Bandits
+Differentially Private Boxplots
+SecEmb: Sparsity-Aware Secure Federated Learning of On-Device Recommender System with Large Embedding
+Gradient Inversion of Multimodal Models
+Scalable Private Partition Selection via Adaptive Weighting
+Alberta Wells Dataset: Pinpointing Oil and Gas Wells from Satellite Imagery
+Differential Privacy Under Class Imbalance: Methods and Empirical Insights
+Online Differentially Private Conformal Prediction for Uncertainty Quantification
+Navigating the Social Welfare Frontier: Portfolios for Multi-objective Reinforcement Learning
+MTL-UE: Learning to Learn Nothing for Multi-Task Learning
+Shielded Diffusion: Generating Novel and Diverse Images using Sparse Repellency
+Optimal Algorithm for Max-Min Fair Bandit
+GaussMarker: Robust Dual-Domain Watermark for Diffusion Models
+Kandinsky Conformal Prediction: Beyond Class- and Covariate-Conditional Coverage
+Understanding the Unfairness in Network Quantization
+Meta Optimality for Demographic Parity Constrained Regression via Post-Processing
+Efficient Source-free Unlearning via Energy-Guided Data Synthesis and Discrimination-Aware Multitask Optimization
+Leveraging Randomness in Model and Data Partitioning for Privacy Amplification
+"Differentially Private Analysis for Binary Response Models: Optimality, Estimation, and Inference"
+Bridging Fairness and Efficiency in Conformal Inference: A Surrogate-Assisted Group-Clustered Approach
+Distribution-aware Fairness Learning in Medical Image Segmentation From A Control-Theoretic Perspective
+Empirical Privacy Variance
+Robust Multi-bit Text Watermark with LLM-based Paraphrasers
+Disparate Conditional Prediction in Multiclass Classifiers
+Trustworthy Machine Learning through Data-Specific Indistinguishability
+Differentially Private Federated $k$-Means Clustering with Server-Side Data
+FicGCN: Unveiling the Homomorphic Encryption Efficiency from Irregular Graph Convolutional Networks
+Maintaining Proportional Committees with Dynamic Candidate Sets
+Dissecting Submission Limit in Desk-Rejections: A Mathematical Analysis of Fairness in AI Conference Policies
+Should Decision-Makers Reveal Classifiers in Online Strategic Classification?
+Approximate Differential Privacy of the $\ell_2$ Mechanism
+Going Deeper into Locally Differentially Private Graph Neural Networks
+Optimizing Social Network Interventions via Hypergradient-Based Recommender System Design
+Preserving AUC Fairness in Learning with Noisy Protected Groups
+DANCE: Dual Unbiased Expansion with Group-acquired Alignment for Out-of-distribution Graph Fairness Learning
+Robust Secure Swap: Responsible Face Swap With Persons of Interest Redaction and Provenance Traceability
+An Effective and Secure Federated Multi-View Clustering Method with Information-Theoretic Perspective
+Stochastic Forward–Backward Deconvolution: Training Diffusion Models with Finite Noisy Datasets
+Is Your Model Fairly Certain? Uncertainty-Aware Fairness Evaluation for LLMs
+Language Models May Verbatim Complete Text They Were Not Explicitly Trained On
+Privacy Attacks on Image AutoRegressive Models
+Unlocking Post-hoc Dataset Inference with Synthetic Data
+Representative Ranking for Deliberation in the Public Sphere
+GaussMark: A Practical Approach for Structural Watermarking of Language Models
+Algorithmic Recourse for Long-Term Improvement
+WMAdapter: Adding WaterMark Control to Latent Diffusion Models
+Aequa: Fair Model Rewards in Collaborative Learning via Slimmable Networks
+Confidential Guardian: Cryptographically Prohibiting the Abuse of Model Abstention
+An Efficient Private GPT Never Autoregressively Decodes
+Plausible Token Amplification for Improving Accuracy of Differentially Private In-Context Learning Based on Implicit Bayesian Inference
+Learning with Selectively Labeled Data from Multiple Decision-makers
+ENSUR: Equitable and Statistically Unbiased Recommendation
+Towards Trustworthy Federated Learning with Untrusted Participants
+Cape: Context-Aware Prompt Perturbation Mechanism with Differential Privacy
+FairPFN: A Tabular Foundation Model for Causal Fairness
+Contrastive Private Data Synthesis via Weighted Multi-PLM Fusion
+Stable Fair Graph Representation Learning with Lipschitz Constraint
+Certified Unlearning for Neural Networks
+XAttnMark: Learning Robust Audio Watermarking with Cross-Attention

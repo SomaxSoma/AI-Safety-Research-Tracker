@@ -1,0 +1,12 @@
+Paper Title,Subarea,Detailed Class,Score
+Automatic Perturbation Analysis for Scalable Certified Robustness and Beyond,"Robustness, Defense & Systemic Control",Adversarial Robustness,7.0
+Neurosymbolic Reinforcement Learning with Formally Verified Exploration,Capability Control & Unlearning,Alignment Training,7.0
+Reward-rational (implicit) choice: A unifying formalism for reward learning,Scalable Oversight & Value Learning,Scalable Oversight,3.0
+Safe Reinforcement Learning via Curriculum Induction,Capability Control & Unlearning,Alignment Training,6.0
+Investigating Gender Bias in Language Models Using Causal Mediation Analysis,Interpretability & Understanding,Interpretability,3.0
+Consequences of Misaligned AI,Agent Foundations & Alignment Theory,Agent Foundations,4.0
+"Attack of the Tails: Yes, You Really Can Backdoor Federated Learning","Robustness, Defense & Systemic Control",Red-Teaming,5.0
+Compositional Explanations of Neurons,Interpretability & Understanding,Interpretability,5.0
+Towards Neural Programming Interfaces,Interpretability & Understanding,Interpretability,4.0
+Avoiding Side Effects By Considering Future Tasks,Capability Control & Unlearning,Alignment Training,6.0
+Avoiding Side Effects in Complex Environments,Capability Control & Unlearning,Alignment Training,7.0

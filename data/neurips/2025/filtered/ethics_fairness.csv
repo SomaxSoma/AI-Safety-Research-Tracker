@@ -1,0 +1,204 @@
+Paper Title
+PubSub-VFL: Towards Efficient Two-Party Split Learning in Heterogeneous Environments via Publisher/Subscriber Architecture
+FedFACT: A Provable Framework for Controllable Group-Fairness Calibration in Federated Learning
+Diffusing DeBias: Synthetic Bias Amplification for Model Debiasing
+Monoculture or Multiplicity: Which Is It?
+"Perturb a Model, Not an Image: Towards Robust Privacy Protection via Anti-Personalized Diffusion Models"
+FairDICE: Fairness-Driven Offline Multi-Objective Reinforcement Learning
+ConceptScope: Characterizing Dataset Bias via Disentangled Visual Concepts
+Unveiling the Uncertainty in Embodied and Operational Carbon of Large AI Models through a Probabilistic Carbon Accounting Model
+ErrorTrace: A Black-Box Traceability Mechanism Based on Model Family Error Space
+Discretization-free Multicalibration through Loss Minimization over Tree Ensembles
+FracFace: Breaking the Visual Clues—Fractal-Based Privacy-Preserving Face Recognition
+On the Edge of Memorization in Diffusion Models
+Differentially Private High-dimensional Variable Selection via Integer Programming
+Versatile Transferable Unlearnable Example Generator
+Private Evolution Converges
+Look-Ahead Reasoning on Learning Platforms
+Blameless Users in a Clean Room: Defining Copyright Protection for Generative Models
+Path-specific effects for pulse-oximetry guided decisions in critical care
+Probabilistic Reasoning with LLMs for Privacy Risk Estimation
+Improved Balanced Classification with Theoretically Grounded Loss Functions
+Fairshare Data Pricing via Data Valuation for Large Language Models
+Selective Omniprediction and Fair Abstention
+Private Continual Counting of Unbounded Streams
+The Gaussian Mixing Mechanism: Renyi Differential Privacy via Gaussian Sketches
+A Principled Approach to Randomized Selection under Uncertainty: Applications to Peer Review and Grant Funding
+Sketched Gaussian Mechanism for Private Federated Learning
+Controlling The Spread of Epidemics on Networks with Differential Privacy
+⁠When Data Can't Meet: Estimating Correlation Across Privacy Barriers
+Simple and Effective Specialized Representations for Fair Classifiers
+Fair Matroid Selection
+Replicable Online pricing
+On the Sample Complexity of Differentially Private Policy Optimization
+Preserving Task-Relevant Information Under Linear Concept Removal
+HeavyWater and SimplexWater: Distortion-free LLM Watermarks for Low-Entropy Distributions
+More of the Same: Persistent Representational Harms Under Increased Representation
+CALM: Culturally Self-Aware Language Models
+Secure and Confidential Certificates of Online Fairness
+Blackbox Model Provenance via Palimpsestic Membership Inference
+Subgraph Federated Learning via Spectral Methods
+Fair Continuous Resource Allocation with Equality of Impact
+How Well Can Differential Privacy Be Audited in One Run?
+Online Multi-Class Selection with Group Fairness Guarantee
+Efficient Fairness-Performance Pareto Front Computation
+What is Your Data Worth to GPT? LLM-Scale Data Valuation with Influence Functions
+Purifying Approximate Differential Privacy with Randomized Post-processing
+RespoDiff: Dual-Module Bottleneck Transformation for Responsible & Faithful T2I Generation
+Explaining and Mitigating Crosslingual Tokenizer Inequities
+DictPFL: Efficient and Private Federated Learning on Encrypted Gradients
+Sequentially Auditing Differential Privacy
+Ascent Fails to Forget
+A Private Approximation of the 2nd-Moment Matrix of Any Subsamplable Input
+Collaborative and Confidential Junction Trees for Hybrid Bayesian Networks
+Kernel-based Equalized Odds: A Quantification of Accuracy-Fairness Trade-off in Fair Representation Learning
+Size-adaptive Hypothesis Testing for Fairness
+Time-uniform and Asymptotic Confidence Sequence of Quantile under Local Differential Privacy
+Unifying Proportional Fairness in Centroid and Non-Centroid Clustering
+OmniFC: Rethinking Federated Clustering via Lossless and Secure Distance Reconstruction
+On Optimal Steering to Achieve Exact Fairness
+Distributive Fairness in Large Language Models: Evaluating Alignment with Human Values
+Auto-Search and Refinement: An Automated Framework for Gender Bias Mitigation in Large Language Models
+Rewind-to-Delete: Certified Machine Unlearning for Nonconvex Functions
+Fair Minimum Labeling: Efficient Temporal Network Activations for Reachability and Equity
+Practical Bayes-Optimal Membership Inference Attacks
+Vector Database Watermarking
+Differentially Private Quantiles with Smaller Error
+Rethinking the Role of Verbatim Memorization in LLM Privacy
+InvisibleInk: High-Utility and Low-Cost Text Generation with Differential Privacy
+From Replication to Redesign: Exploring Pairwise Comparisons for LLM-Based Peer Review
+Model Provenance Testing for Large Language Models
+Unveiling Extraneous Sampling Bias with Data Missing-Not-At-Random
+Improved Bounds for Swap Multicalibration and Swap Omniprediction
+Adaptive Sigmoid Clipping for Balancing the Direction–Magnitude Mismatch Trade-off in Differentially Private Learning
+Beyond Prediction: Managing the Repercussions of Machine Learning Applications
+Machine Unlearning in 3D Generation: A Perspective-Coherent Acceleration Framework
+Individual Fairness In Strategic Classification
+Private Zeroth-Order Optimization with Public Data
+A Unified Framework for Fair Graph Generation: Theoretical Guarantees and Empirical Advances
+"Unifying Re-Identification, Attribute Inference, and Data Reconstruction Risks in Differential Privacy"
+Mitigating the Privacy–Utility Trade-off in Decentralized Federated Learning via f-Differential Privacy
+DPA: A one-stop metric to measure bias amplification in classification datasets
+On Traceability in $\ell_p$ Stochastic Convex Optimization
+Shapley-Based Data Valuation for Weighted $k$-Nearest Neighbors
+On Fairness of Unified Multimodal Large Language Model for Image Generation
+Optimal Adjustment Sets for Nonparametric Estimation of Weighted Controlled Direct Effect
+Understanding Fairness and Prediction Error through Subspace Decomposition and Influence Analysis
+Nearly-Linear Time Private Hypothesis Selection with the Optimal Approximation Factor
+Private Set Union with Multiple Contributions
+Robust Distortion-Free Watermark for Autoregressive Audio Generation Models
+Can We Infer Confidential Properties of Training Data from LLMs?
+PREAMBLE: Private and Efficient Aggregation via Block Sparse Vectors
+The Boundaries of Fair AI in Medical Image Prognosis: A Causal Perspective
+Private Hyperparameter Tuning with Ex-Post Guarantee
+Theoretically Grounded Framework for LLM Watermarking: A Distribution-Adaptive Approach
+Improved Algorithms for Fair Matroid Submodular Maximization
+Reconstruction and Secrecy under Approximate Distance Queries
+Homogeneous Algorithms Can Reduce Competition in Personalized Pricing
+Incentivizing Time-Aware Fairness in Data Sharing
+Statistical Parity with Exponential Weights
+FairNet: Dynamic Fairness Correction without Performance Loss via Contrastive Conditional LoRA
+Enhancing Privacy in Multimodal Federated Learning with Information Theory
+Spectral Perturbation Bounds for Low-Rank Approximation with Applications to Privacy
+RoMa: A Robust Model Watermarking Scheme for Protecting IP in Diffusion Models
+Online Locally Differentially Private Conformal Prediction via Binary Inquiries
+Online robust locally differentially private learning for nonparametric regression
+Privacy amplification by random allocation
+Synthesize Privacy-Preserving High-Resolution Images via Private Textual Intermediaries
+Impartial Selection with Predictions
+Fairness-Regularized Online Optimization with Switching Costs
+Differentially Private Federated Low Rank Adaptation Beyond Fixed-Matrix
+Self-Refining Language Model Anonymizers via Adversarial Distillation
+FairDD: Fair Dataset Distillation
+Instance-Optimality for Private KL Distribution Estimation
+A Reliable Cryptographic Framework for Empirical Machine Unlearning Evaluation
+Safe-Sora: Safe Text-to-Video Generation via Graphical Watermarking
+Obliviator Reveals the Cost of Nonlinear Guardedness in Concept Erasure
+Rethinking Fair Federated Learning from Parameter and Client View
+Differentially Private Relational Learning with Entity-level Privacy Guarantees
+On the Coexistence and Ensembling of Watermarks
+TimeWak: Temporal Chained-Hashing Watermark for Time Series Data
+Learning to Watermark: A Selective Watermarking Framework for Large Language Models via Multi-Objective Optimization
+Practical and Effective Code Watermarking for Large Language Models
+Thumb on the Scale: Optimal Loss Weighting in Last Layer Retraining
+Privacy Reasoning in Ambiguous Contexts
+GeoClip: Geometry-Aware Clipping for Differentially Private SGD
+Private Training Large-scale Models with Efficient DP-SGD
+Does Representation Guarantee Welfare?
+Fair Representation Learning with Controllable High Confidence Guarantees via Adversarial Inference
+Differentially Private Gomory-Hu Trees
+"When majority rules, minority loses: bias amplification of gradient descent"
+Black-Box Membership Inference Attack for LVLMs via Prior Knowledge-Calibrated Memory Probing
+Some Optimizers are More Equal: Understanding the Role of Optimizers in Group Fairness
+Strategic Hypothesis Testing
+Optimal Regret of Bandits under Differential Privacy
+Transferable Black-Box One-Shot Forging of Watermarks via Image Preference Models
+Exploring the limits of strong membership inference attacks on large language models
+The Unseen Threat: Residual Knowledge in Machine Unlearning under Perturbed Samples
+Guiding LLM Decision-Making with Fairness Reward Models
+Impact of Dataset Properties on Membership Inference Vulnerability of Deep Transfer Learning
+CORE: Reducing UI Exposure in Mobile Agents via Collaboration Between Cloud and Local LLMs
+Fairness-aware Anomaly Detection via Fair Projection
+Fairness-aware Bayes Optimal Functional Classification
+Continual Release Moment Estimation with Differential Privacy
+Adjusting Initial Noise to Mitigate Memorization in Text-to-Image Diffusion Models
+Toward Efficient Inference Attacks: Shadow Model Sharing via Mixture-of-Experts
+Learning Gradient Boosted Decision Trees with Algorithmic Recourse
+Nearly-Linear Time and Massively Parallel Algorithms for $k$-anonymity
+On the Empirical Power of Goodness-of-Fit Tests in Watermark Detection
+An Investigation of Memorization Risk in Healthcare Foundation Models
+FairImagen: Post-Processing for Bias Mitigation in Text-to-Image Models
+Private Geometric Median in Nearly-Linear Time
+Performative Validity of Recourse Explanations
+Individually Fair Diversity Maximization
+Multi-Class Support Vector Machine with Differential Privacy
+RUAGO: Effective and Practical Retain-Free Unlearning via Adversarial Attack and OOD Generator
+"Enabling Differentially Private Federated Learning for Speech Recognition: Benchmarks, Adaptive Optimizers, and Gradient Clipping"
+Optimal Best Arm Identification under Differential Privacy
+Private Statistical Estimation via Truncation
+Understanding challenges to the interpretation of disaggregated evaluations of algorithmic fairness
+On Hierarchies of Fairness Notions in Cake Cutting: From Proportionality to Super Envy-Freeness
+Disentangling misreporting from genuine adaptation in strategic settings: a causal approach
+"Audits Under Resource, Data, and Access Constraints: Scaling Laws For Less Discriminatory Alternatives"
+Vicinity-Guided Discriminative Latent Diffusion for Privacy-Preserving Domain Adaptation
+A Fair Federated Learning Method for Handling Client Participation Probability Inconsistencies in Heterogeneous Environments
+ImageSentinel: Protecting Visual Datasets from Unauthorized Retrieval-Augmented Image Generation
+Learning with Statistical Equality Constraints
+Sum Estimation under Personalized Local Differential Privacy
+Differential Privacy on Fully Dynamic Streams
+Convex Approximation of Two-Layer ReLU Networks for Hidden State Differential Privacy
+Matchings Under Biased and Correlated Evaluations
+Deep Learning with Plausible Deniability
+Train to Defend: First Defense Against Cryptanalytic Neural Network Parameter Extraction Attacks
+AegisGuard: RL-Guided Adapter Tuning for TEE-Based Efficient & Secure On-Device Inference
+Modeling the Economic Impacts of AI Openness Regulation
+Provable Watermarking for Data Poisoning Attacks
+An Iterative Algorithm for Differentially Private $k$-PCA with Adaptive Noise
+Watermarking Autoregressive Image Generation
+Fairness under Competition
+Differentially Private Bilevel Optimization: Efficient Algorithms with Near-Optimal Rates
+Private Online Learning against an Adaptive Adversary: Realizable and Agnostic Settings
+Strategic Costs of Perceived Bias in Fair Selection
+T2SMark: Balancing Robustness and Diversity in Noise-as-Watermark for Diffusion Models
+Towards the Resistance of Neural Network Fingerprinting to Fine-tuning
+On Group Sufficiency Under Label Bias
+Efficient Verified Unlearning For Distillation
+Differential Privacy for Euclidean Jordan Algebra with Applications to Private Symmetric Cone Programming
+Second-Order Convergence in Private Stochastic Non-Convex Optimization
+Shallow Diffuse: Robust and Invisible Watermarking through Low-Dim Subspaces in Diffusion Models
+LightFair: Towards an Efficient Alternative for Fair T2I Diffusion via Debiasing Pre-trained Text Encoders
+StableGuard: Towards Unified Copyright Protection and Tamper Localization in Latent Diffusion Models
+Assignments for Congestion-Averse Agents: Seeking Competitive and Envy-Free Solutions
+A Generalized Binary Tree Mechanism for Private Approximation of All-Pair Shortest Distances
+CryptoMoE: Privacy-Preserving and Scalable Mixture of Experts Inference via Balanced Expert Routing
+BitMark: Watermarking Bitwise Autoregressive Image Generative Models
+Knowledge Distillation Detection for Open-weights Models
+LOMIA: Label-Only Membership Inference Attacks against Pre-trained Large Vision-Language Models
+Vid-SME: Membership Inference Attacks against Large Video Understanding Models
+Fourier Clouds: Fast Bias Correction for Imbalanced Semi-Supervised Learning
+The Price of Opportunity Fairness in Matroid Allocation Problems
+ObCLIP: Oblivious CLoud-Device Hybrid Image Generation with Privacy Preservation
+Enhancing LLM Watermark Resilience Against Both Scrubbing and  Spoofing Attacks
+Evolutionary Prediction Games
+Machine Unlearning via Task Simplex Arithmetic
+How Does Topology Bias Distort Message Passing in Graph Recommender? A Dirichlet Energy Perspective

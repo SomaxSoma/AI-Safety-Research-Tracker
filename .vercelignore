@@ -1,0 +1,22 @@
+# Keep Vercel deploys website-only. The research pipeline lives in the repo
+# (main) but is not served by the site. The website needs only index.html,
+# css/, js/, and data/papers.json + data/details.json.
+
+src/
+scripts/
+runs/
+old_versions/
+ai_safety_orgs.py
+keyword_classifier.py
+__pycache__/
+
+# Research data — keep only the two JSON files the site actually loads.
+data/iclr/
+data/icml/
+data/neurips/
+data/arxiv/
+data/aggregate_plots/
+data/org_plots/
+data/model/
+data/org_verified.csv
+data/org_review.csv

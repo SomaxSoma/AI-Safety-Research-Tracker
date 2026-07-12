@@ -1,0 +1,268 @@
+Paper Title
+On Computing Probabilistic Explanations for Decision Trees
+Are AlphaZero-like Agents Robust to Adversarial Perturbations?
+Are Defenses for Graph Neural Networks Robust?
+SNN-RAT: Robustness-enhanced Spiking Neural Network through Regularized Adversarial Training
+PhysGNN: A Physics--Driven Graph Neural Network Based Model for Predicting Soft Tissue Deformation in Image--Guided Neurosurgery
+Regret Bounds for Risk-Sensitive Reinforcement Learning
+Learning Concept Credible Models for Mitigating Shortcuts
+DISCO: Adversarial Defense with Local Implicit Functions
+Root Cause Analysis of Failures in Microservices through Causal Discovery
+Pre-activation Distributions Expose Backdoor Neurons
+First is Better Than Last for Language Data Influence
+Towards Reasonable Budget Allocation in Untargeted Graph Structure Attacks via Gradient Debias
+Optimizing Relevance Maps of Vision Transformers Improves Robustness
+Rethinking Lipschitz Neural Networks and Certified Robustness: A Boolean Function Perspective
+Synergy-of-Experts: Collaborate to Improve Adversarial Robustness
+On Feature Learning in the Presence of Spurious Correlations
+Out-of-Distribution Detection with An Adaptive Likelihood Ratio on Informative Hierarchical VAE
+Training with More Confidence: Mitigating Injected and Natural Backdoors During Training
+PAC Prediction Sets for Meta-Learning
+Adversarial Training with Complementary Labels: On the Benefit of Gradually Informative Attacks
+Nonparametric Uncertainty Quantification for Single Deterministic Neural Network
+Boosting Barely Robust Learners: A New Perspective on Adversarial Robustness
+Addressing Leakage in Concept Bottleneck Models
+When Does Group Invariant Learning Survive Spurious Correlations?
+Out-of-Distribution Detection via Conditional Kernel Independence Model
+Randomized Message-Interception Smoothing: Gray-box Certificates for Graph Neural Networks
+Symbolic Distillation for Learned TCP Congestion Control
+CoPur: Certifiably Robust Collaborative Inference via Feature Purification
+Certifying Robust Graph Classification under Orthogonal Gromov-Wasserstein Threats
+Data-IQ: Characterizing subgroups with heterogeneous outcomes in tabular data
+"New Definitions and Evaluations for Saliency Methods: Staying Intrinsic, Complete and Sound"
+Which Explanation Should I Choose? A Function Approximation Perspective to Characterizing Post Hoc Explanations
+Delving into Sequential Patches for Deepfake Detection
+Structuring Uncertainty for Fine-Grained Sampling in Stochastic Segmentation Networks
+ProtoX: Explaining a Reinforcement Learning Agent via Prototyping
+On the Robustness of Deep Clustering Models: Adversarial Attacks and Defenses
+Debugging and Explaining Metric Learning Approaches: An Influence Function Based Perspective
+Introspective Learning : A Two-Stage approach for Inference in Neural Networks
+Rethinking and Improving Robustness of Convolutional Neural Networks: a Shapley Value-based Approach in Frequency Domain
+When does dough become a bagel? Analyzing the remaining mistakes on ImageNet
+Smoothed Embeddings for Certified Few-Shot Learning
+GraphDE: A Generative Framework for Debiased Learning and Out-of-Distribution Detection on Graphs
+Learning Recourse on Instance Environment to Enhance Prediction Accuracy
+MExMI: Pool-based Active Model Extraction Crossover Membership Inference
+Deconfounded Representation Similarity for Comparison of Neural Networks
+Practical Adversarial Attacks on Spatiotemporal Traffic Forecasting Models
+Blackbox Attacks via Surrogate Ensemble Search
+Robust Feature-Level Adversaries are Interpretability Tools
+Is this the Right Neighborhood? Accurate and Query Efficient Model Agnostic Explanations
+Robust Bayesian Regression via Hard Thresholding
+Censored Quantile Regression Neural Networks for Distribution-Free Survival Analysis
+AdaFocal: Calibration-aware Adaptive Focal Loss
+Risk-Driven Design of Perception Systems
+Consistent Sufficient Explanations and Minimal Local Rules for explaining the decision of any classifier or regressor
+Boosting the Transferability of Adversarial Attacks with Reverse Adversarial Perturbation
+STNDT: Modeling Neural Population Activity with Spatiotemporal Transformers
+A Robust Phased Elimination Algorithm for Corruption-Tolerant Gaussian Process Bandits
+Amplifying Membership Exposure via Data Poisoning
+Single Model Uncertainty Estimation via Stochastic Data Centering
+Rethinking the Reverse-engineering of Trojan Triggers
+Marksman Backdoor: Backdoor Attacks with Arbitrary Target Class
+MaskTune: Mitigating Spurious Correlations by Forcing to Explore
+RKHS-SHAP: Shapley Values for Kernel Methods
+"Robustness in deep learning: The good (width), the bad (depth), and the ugly (initialization)"
+Phase Transition from Clean Training to Adversarial Training
+Trap and Replace: Defending Backdoor Attacks by Trapping Them into an Easy-to-Replace Subnetwork
+Sound and Complete Verification of Polynomial Networks
+Improved techniques for deterministic l2 robustness
+Neural Basis Models for Interpretability
+Neural Abstractions
+Improving Certified Robustness via Statistical Learning with Logical Reasoning
+Active Learning with Safety Constraints
+MultiGuard: Provably Robust Multi-label Classification against Adversarial Examples
+Pitfalls of Epistemic Uncertainty Quantification through Loss Minimisation
+On the Interpretability of Regularisation for Neural Networks Through Model Gradient Similarity
+Revisiting Injective Attacks on Recommender Systems
+Dual-Curriculum Contrastive Multi-Instance Learning for Cancer Prognosis Analysis with Whole Slide Images
+3DB: A Framework for Debugging Computer Vision Models
+Disentangling the Predictive Variance of Deep Ensembles through the Neural Tangent Kernel
+UQGAN: A Unified Model for Uncertainty Quantification of Deep Classifiers trained via Conditional GANs
+MORA: Improving Ensemble Robustness Evaluation with Model Reweighing Attack
+What You See is What You Get: Principled Deep Learning via Distributional Generalization
+"Retrieve, Reason, and Refine: Generating Accurate and Faithful Patient Instructions"
+Towards a Unified Framework for Uncertainty-aware Nonlinear Variable Selection with Theoretical Guarantees
+Adv-Attribute: Inconspicuous and Transferable Adversarial Attack on Face Recognition
+Adversarial Robustness is at Odds with Lazy Training
+ Class-Aware Adversarial Transformers for Medical Image Segmentation 
+Explainability Via Causal Self-Talk
+Density-driven Regularization for Out-of-distribution Detection
+AttCAT: Explaining Transformers via Attentive Class Activation Tokens
+A Closer Look at the Adversarial Robustness of Deep Equilibrium Models
+Understanding the Evolution of Linear Regions in Deep Reinforcement Learning
+Towards Improving Calibration in Object Detection Under Domain Shift
+FR: Folded Rationalization with a Unified Encoder
+Pre-trained Adversarial Perturbations
+Anytime-Valid Inference For Multinomial Count Data
+VisFIS: Visual Feature Importance Supervision with Right-for-the-Right-Reason Objectives
+Byzantine Spectral Ranking
+Task-Agnostic Graph Explanations
+LOT: Layer-wise Orthogonal Training on Improving l2 Certified Robustness
+When Adversarial Training Meets Vision Transformers: Recipes from Training to Architecture
+Your Out-of-Distribution Detection Method is Not Robust!
+A Quantitative Geometric Approach to Neural-Network Smoothness
+Indicators of Attack Failure: Debugging and Improving Optimization of Adversarial Examples
+Why Robust Generalization in Deep Learning is Difficult: Perspective of Expressive Power
+Towards Trustworthy Automatic Diagnosis Systems by Emulating Doctors' Reasoning  with Deep Reinforcement Learning
+Tsetlin Machine for Solving Contextual Bandit Problems
+MEMO: Test Time Robustness via Adaptation and Augmentation
+One-shot Neural Backdoor Erasing via Adversarial Weight Masking
+Gradient Methods Provably Converge to Non-Robust Networks
+Toward a realistic model of speech processing in the brain with self-supervised learning
+“Why Not Other Classes?”: Towards Class-Contrastive Back-Propagation Explanations
+Revisiting Non-Parametric Matching Cost Volumes for  Robust and Generalizable Stereo Matching
+CLEAR: Generative Counterfactual Explanations on Graphs
+ViewFool: Evaluating the Robustness of Visual Recognition to Adversarial Viewpoints
+What Makes Graph Neural Networks Miscalibrated?
+On the Safety of Interpretable Machine Learning: A Maximum Deviation Approach
+Repairing Neural Networks by Leaving the Right Past Behind
+Chroma-VAE: Mitigating Shortcut Learning with Generative Classifiers
+Why Do Artificially Generated Data Help Adversarial Robustness
+OST: Improving Generalization of DeepFake Detection via One-Shot Test-Time Training
+Robust Learning against Relational Adversaries
+Visual correspondence-based explanations improve AI robustness and human-AI team accuracy
+Making Sense of Dependence: Efficient Black-box Explanations Using Dependence Measure
+"Double Bubble, Toil and Trouble: Enhancing Certified Robustness through Transitivity"
+Learning to Scaffold: Optimizing Model Explanations for Teaching
+"Deep Ensembles Work, But Are They Necessary?"
+Trimmed Maximum Likelihood Estimation for Robust Generalized Linear Model
+Scalable Interpretability via Polynomials
+Understanding and Improving Robustness of Vision Transformers through Patch-based Negative Augmentation
+Can Adversarial Training Be Manipulated By Non-Robust Features?
+A Win-win Deal: Towards Sparse and Robust Pre-trained Language Models
+Robust Calibration with Multi-domain Temperature Scaling
+Randomized Channel Shuffling: Minimal-Overhead Backdoor Attack Detection without Clean Datasets
+JAWS: Auditing Predictive Uncertainty Under Covariate Shift
+Towards Practical Control of Singular Values of Convolutional Layers
+Exploring the Whole Rashomon Set of Sparse Decision Trees
+Understanding Robust Learning through the Lens of Representation Similarities
+Formulating Robustness Against Unforeseen Attacks
+When are Local Queries Useful for Robust Learning?
+Beyond Rewards: a Hierarchical Perspective on Offline Multiagent Behavioral Analysis
+EvenNet: Ignoring Odd-Hop Neighbors Improves Robustness of Graph Neural Networks
+A2: Efficient Automated Attacker for Boosting Adversarial Training
+"If Influence Functions are the Answer, Then What is the Question?"
+Beyond Mahalanobis Distance for Textual OOD Detection
+Practical Adversarial Multivalid Conformal Prediction
+Exploiting the Relationship Between Kendall's Rank Correlation and Cosine Similarity for Attribution Protection
+Accelerating Certified Robustness Training via Knowledge Transfer
+WeightedSHAP: analyzing and improving Shapley based feature attributions
+On the Limitations of Stochastic Pre-processing Defenses
+Lethal Dose Conjecture on Data Poisoning
+GStarX: Explaining Graph Neural Networks with Structure-Aware Cooperative Games
+Better Uncertainty Calibration via Proper Scores for Classification and Beyond
+Linear tree shap
+Zonotope Domains for Lagrangian Neural Network Verification
+Efficient and Effective Augmentation Strategy for Adversarial Training
+Distilled Gradient Aggregation: Purify Features for Input Attribution in the Deep Neural Network
+Towards Disentangling Information Paths with Coded ResNeXt
+Tractable Function-Space Variational Inference in Bayesian Neural Networks
+Increasing Confidence in Adversarial Robustness Evaluations
+Toward Robust Spiking Neural Network Against Adversarial Perturbation
+Byzantine-tolerant federated Gaussian process regression for streaming data
+Efficiently Computing Local Lipschitz Constants of Neural Networks via Bound Propagation
+Where do Models go Wrong? Parameter-Space Saliency Maps for Explainability
+Evaluating Robustness to Dataset Shift via Parametric Robustness Sets
+Explicit Tradeoffs between Adversarial and Natural Distributional Robustness
+Make Some Noise: Reliable and Efficient Single-Step Adversarial Training
+Decision Trees with Short Explainable Rules
+Factuality Enhanced Language Models for Open-Ended Text Generation
+Training Uncertainty-Aware Classifiers with Conformalized Deep Learning
+Evaluating Latent Space Robustness and Uncertainty of EEG-ML Models under Realistic Distribution Shifts
+Delving into Out-of-Distribution Detection with Vision-Language Representations
+ProtoVAE: A Trustworthy Self-Explainable Prototypical Variational Model
+Implications of Model Indeterminacy for Explanations of Automated Decisions
+Evolution of Neural Tangent Kernels under Benign and Adversarial Training
+Online Neural Sequence Detection with Hierarchical Dirichlet Point Process
+ESCADA: Efficient Safety and Context Aware Dose Allocation for Precision Medicine
+Improving Out-of-Distribution Generalization by Adversarial Training with Structured Priors
+Random Normalization Aggregation for Adversarial Defense
+(De-)Randomized Smoothing for Decision Stump Ensembles
+Conformal Off-Policy Prediction in Contextual Bandits
+Concept Embedding Models: Beyond the Accuracy-Explainability Trade-Off
+Isometric 3D Adversarial Examples in the Physical World
+AutoMS: Automatic Model Selection for Novelty Detection with Error Rate Control
+A Consistent and Differentiable Lp Canonical Calibration Error Estimator
+The Neural Testbed: Evaluating Joint Predictions
+What You See is What You Classify: Black Box Attributions
+Towards Lightweight Black-Box Attack Against Deep Neural Networks
+"GlanceNets: Interpretable, Leak-proof Concept-based Models"
+Listen to Interpret: Post-hoc Interpretability for Audio Networks with NMF
+On the Adversarial Robustness of Mixture of Experts
+Quantifying Statistical Significance of Neural Network-based Image Segmentation by Selective Inference
+Enhancing Safe Exploration Using Safety State Augmentation
+Adversarial Reprogramming Revisited
+Friendly Noise against Adversarial Noise: A Powerful Defense against Data Poisoning Attack
+Inherently Explainable Reinforcement Learning in Natural Language
+GAMA: Generative Adversarial Multi-Object Scene Attacks
+Agreement-on-the-line: Predicting the Performance of Neural Networks under Distribution Shift
+Generalizing Consistent Multi-Class Classification with Rejection to be Compatible with Arbitrary Losses
+Structure-Aware Image Segmentation with Homotopy Warping
+Neural Payoff Machines: Predicting Fair and Stable Payoff Allocations Among Team Members
+Estimating and Explaining Model Performance When Both Covariates and Labels Shift
+A Characterization of Semi-Supervised Adversarially Robust PAC Learnability
+Finding Differences Between Transformers and ConvNets Using Counterfactual Simulation Testing
+Measures of Information Reflect Memorization Patterns
+Decision-based Black-box Attack Against Vision Transformers via Patch-wise Adversarial Removal
+The Unreliability of Explanations in Few-shot Prompting for Textual Reasoning
+Towards Improving Faithfulness in Abstractive Summarization
+Safety Guarantees for Neural Network Dynamic Systems via Stochastic Barrier Functions
+Provably Adversarially Robust Detection of Out-of-Distribution Data (Almost) for Free
+Pay attention to your loss : understanding misconceptions about Lipschitz neural networks
+Defending Against Adversarial Attacks via Neural Dynamic System
+Modeling the Machine Learning Multiverse
+Trading off Image Quality for Robustness is not Necessary with Regularized Deterministic Autoencoders
+Robust Anytime Learning of Markov Decision Processes
+FiLM-Ensemble: Probabilistic Deep Learning via Feature-wise Linear Modulation
+Confidence-based Reliable Learning under Dual Noises
+Overparameterization from Computational Constraints
+CalFAT: Calibrated Federated Adversarial Training with Label Skewness
+Toward Efficient Robust Training against Union of $\ell_p$ Threat Models
+DARE: Disentanglement-Augmented Rationale Extraction
+Understanding Programmatic Weak Supervision via Source-aware Influence Function
+On the Symmetries of Deep Learning Models and their Internal Representations
+Uncertainty Estimation for Multi-view Data: The Power of Seeing the Whole Picture
+Concept Activation Regions: A Generalized Framework For Concept-Based Explanations
+Label Noise in Adversarial Training: A Novel Perspective to Study Robust Overfitting
+Watermarking for Out-of-distribution Detection
+On Optimal Learning Under Targeted Data Poisoning
+Self-explaining deep models with logic rule reasoning
+Using Mixup as a Regularizer Can Surprisingly Improve Accuracy & Out-of-Distribution Robustness
+Additive MIL: Intrinsically Interpretable Multiple Instance Learning for Pathology
+Stability Analysis and Generalization Bounds of Adversarial Training
+Robust Models are less Over-Confident
+Robust Binary Models by Pruning Randomly-initialized Networks
+General Cutting Planes for Bound-Propagation-Based Neural Network Verification
+Adversarial Attack on Attackers: Post-Process to Mitigate Black-Box Score-Based Query Attacks
+VoiceBlock: Privacy through Real-Time Adversarial Attacks with Audio-to-Audio Models
+Revisiting Sparse Convolutional Model for Visual Recognition
+Resolving the data ambiguity for periodic crystals
+Assaying Out-Of-Distribution Generalization in Transfer Learning
+Use-Case-Grounded Simulations for Explanation Evaluation
+Boosting Out-of-distribution Detection with Typical Features
+Alleviating Adversarial Attacks on Variational Autoencoders with MCMC
+Learning to Attack Federated Learning: A Model-based Reinforcement Learning Attack Framework
+Diffusion Visual Counterfactual Explanations
+"What I Cannot Predict, I Do Not Understand: A Human-Centered Evaluation Framework for Explainability Methods"
+Explainable Reinforcement Learning via Model Transforms
+SIREN: Shaping Representations for Detecting Out-of-Distribution Objects
+Measuring and Reducing Model Update Regression in Structured Prediction for NLP
+Perceptual Attacks of No-Reference Image Quality Models with Human-in-the-Loop
+Constrained Update Projection Approach to Safe Policy Optimization
+Towards Consistency in Adversarial Classification
+CEBaB: Estimating the Causal Effects of Real-World Concepts on NLP Model Behavior
+Online Decision Mediation
+Functional Ensemble Distillation
+Efficient Training of Low-Curvature Neural Networks
+Efficiently Factorizing Boolean Matrices using Proximal Gradient Descent
+Explaining Preferences with Shapley Values
+How Sampling Impacts the Robustness of Stochastic Neural Networks
+RankFeat: Rank-1 Feature Removal for Out-of-distribution Detection
+Eliciting Thinking Hierarchy without a Prior
+Natural Color Fool: Towards Boosting Black-box Unrestricted Attacks
+On the Robustness of Graph Neural Diffusion to Topology Perturbations
+Autoregressive Perturbations for Data Poisoning
+Instance-based Learning for Knowledge Base Completion
+Adversarially Robust Learning: A Generic Minimax Optimal Learner and Characterization
+Active Learning Helps Pretrained Models Learn the Intended Task

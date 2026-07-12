@@ -1,0 +1,77 @@
+Paper Title
+Fairness without Demographics through Adversarially Reweighted Learning
+Permute-and-Flip: A new mechanism for differentially private selection
+Achieving Equalized Odds by Resampling Sensitive Attributes
+Explainable Voting
+Intra-Processing Methods for Debiasing Neural Networks
+The Hateful Memes Challenge: Detecting Hate Speech in Multimodal Memes
+Learning from Mixtures of Private and Public Populations
+Co-exposure Maximization in Online Social Networks
+Optimal Private Median Estimation under Minimal Distributional Assumptions
+Differentially Private Clustering: Tight Approximation Ratios
+Locally private non-asymptotic testing of discrete distributions is faster using interactive mechanisms
+Fairness with Overlapping Groups; a Probabilistic Perspective
+Privacy Amplification via Random Check-Ins
+Stability of Stochastic Gradient Descent on Nonsmooth Convex Losses
+Robust Optimization for Fairness with Noisy Protected Groups
+From Predictions to Decisions: Using Lookahead Regularization
+Towards practical differentially private causal graph discovery
+Differentially-Private Federated Linear Bandits
+Federated Principal Component Analysis
+Neutralizing Self-Selection Bias in Sampling for Sortition
+Synthetic Data Generators -- Sequential and Private
+Fair regression with Wasserstein barycenters
+Learning Certified Individually Fair Representations
+Faster Differentially Private Samplers via Rényi Divergence Analysis of Discretized Langevin MCMC
+AutoPrivacy: Automated Layer-wise Parameter Selection for Secure Neural Network Inference
+A Scalable Approach for Privacy-Preserving Collaborative Machine Learning
+Trade-offs and Guarantees of Adversarial Representation Learning for Information Obfuscation
+Glyph: Fast and Accurately Training Deep Neural Networks on Encrypted Data
+Optimal Query Complexity of Secure Stochastic Convex Optimization
+Approximate Heavily-Constrained Learning with Lagrange Multiplier Models
+Private Identity Testing for High-Dimensional Distributions
+Sense and Sensitivity Analysis: Simple Post-Hoc Analysis of Bias Due to Unobserved Confounding
+Metric-Free Individual Fairness in Online Learning
+Fair Performance Metric Elicitation
+Fairness constraints can help exact inference in structured prediction
+Locally Differentially Private (Contextual) Bandits Learning
+Probabilistic Fair Clustering
+Mitigating Manipulation in Peer Review via Randomized Reviewer Assignments
+Incorporating Interpretable Output Constraints in Bayesian Neural Networks
+Beyond Individualized Recourse: Interpretable and Interactive Summaries of Actionable Recourses
+Sample Complexity of Uniform Convergence for Multicalibration
+GS-WGAN: A Gradient-Sanitized Approach for Learning Differentially Private Generators
+Group-Fair Online Allocation in Continuous Time
+Understanding Gradient Clipping in Private SGD: A Geometric Perspective
+Private Learning of Halfspaces: Simplifying the Construction and Reducing the Sample Complexity
+Smoothly Bounding User Contributions in Differential Privacy
+Instance-optimality in differential privacy via approximate inverse sensitivity mechanisms
+CoinPress: Practical Private Mean and Covariance Estimation
+KFC: A Scalable Approximation Algorithm for $k$−center Fair Clustering
+Fairness in Streaming Submodular Maximization: Algorithms and Hardness
+A Fair Classifier Using Kernel Density Estimation
+Exploiting MMD and Sinkhorn Divergences for Fair and Transferable Representation Learning
+Certified Monotonic Neural Networks
+The Discrete Gaussian for Differential Privacy
+Variational Bayesian Unlearning
+Probably Approximately Correct Constrained Learning
+"Decisions, Counterfactual Explanations and Strategic Behavior"
+CryptoNAS: Private Inference on a ReLU Budget
+Fair Multiple Decision Making Through Soft Interventions
+AViD Dataset: Anonymized Videos from Diverse Countries
+How do fair decisions fare in long-term qualification?
+Ensuring Fairness Beyond the Training Data
+PAC-Bayesian Bound for the Conditional Value at Risk
+Fair regression via plug-in estimator and recalibration with statistical guarantees
+Can I Trust My Fairness Metric? Assessing Fairness with Unlabeled Data and Bayesian Inference
+Improving Sparse Vector Technique with Renyi Differential Privacy
+Consistent Plug-in Classifiers for Complex Objectives and Constraints
+Learning from Failure: De-biasing Classifier from Biased Classifier
+The Flajolet-Martin Sketch Itself Preserves Differential Privacy: Private Counting with Minimal Space
+Fair Hierarchical Clustering
+A Computational Separation between Private Learning and Online Learning
+Learning discrete distributions: user vs item-level privacy
+Auditing Differentially Private Machine Learning: How Private is Private SGD?
+Model Class Reliance for Random Forests
+De-Anonymizing Text by Fingerprinting Language Generation
+Passport-aware Normalization for Deep Model Protection

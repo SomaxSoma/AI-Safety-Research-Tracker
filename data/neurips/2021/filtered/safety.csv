@@ -1,0 +1,17 @@
+Paper Title,Subarea,Detailed Class,Score
+A PAC-Bayes Analysis of Adversarial Robustness,"Robustness, Defense & Systemic Control",Adversarial Robustness,3.0
+Uncertain Decisions Facilitate Better Preference Learning,Scalable Oversight & Value Learning,Scalable Oversight,3.0
+Optimal Policies Tend To Seek Power,Agent Foundations & Alignment Theory,Agent Foundations,5.0
+Reverse engineering recurrent neural networks with Jacobian switching linear dynamical systems,Interpretability & Understanding,Interpretability,3.0
+Process for Adapting Language Models to Society (PALMS) with Values-Targeted Datasets,Capability Control & Unlearning,Alignment Training,7.0
+Towards a Unified Game-Theoretic View of Adversarial Perturbations and Robustness,"Robustness, Defense & Systemic Control",Adversarial Robustness,4.0
+Reinforcement Learning in Newcomblike Environments,Agent Foundations & Alignment Theory,Agent Foundations,3.0
+Beta-CROWN: Efficient Bound Propagation with Per-neuron Split Constraints for Neural Network Robustness Verification,"Robustness, Defense & Systemic Control",Adversarial Robustness,7.0
+Manipulating SGD with Data Ordering Attacks,"Robustness, Defense & Systemic Control",Adversarial Robustness,7.0
+On Blame Attribution for Accountable Multi-Agent Sequential Decision Making,Scalable Oversight & Value Learning,Multi-Agent Safety,4.0
+Causal Abstractions of Neural Networks,Interpretability & Understanding,Interpretability,5.0
+Influence Patterns for Explaining Information Flow in BERT,Interpretability & Understanding,Interpretability,3.0
+There Is No Turning Back: A Self-Supervised Approach for Reversibility-Aware Reinforcement Learning,Capability Control & Unlearning,Alignment Training,5.0
+Topological Detection of Trojaned Neural Networks,"Robustness, Defense & Systemic Control",Adversarial Robustness,6.0
+Qu-ANTI-zation: Exploiting Quantization Artifacts for Achieving Adversarial Outcomes,"Robustness, Defense & Systemic Control",Adversarial Robustness,6.0
+Excess Capacity and Backdoor Poisoning,"Robustness, Defense & Systemic Control",Adversarial Robustness,5.0

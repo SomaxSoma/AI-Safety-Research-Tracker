@@ -1,0 +1,22 @@
+Paper Title,Subarea,Detailed Class,Score
+Adversarial Diversity in Hanabi,Scalable Oversight & Value Learning,Multi-Agent Safety,4.0
+Decepticons: Corrupted Transformers Breach Privacy in Federated Learning for Language Models,"Robustness, Defense & Systemic Control",Red-Teaming,7.0
+Characterizing intrinsic compositionality in transformers with Tree Projections,Interpretability & Understanding,Interpretability,3.0
+Systematic Rectification of Language Models via Dead-end Analysis,Threat Modeling & Evaluations,Safeguards,5.0
+On the Sensitivity of Reward Inference to Misspecified Human Models,Scalable Oversight & Value Learning,Scalable Oversight,6.0
+TrojText: Test-time Invisible Textual Trojan Insertion,"Robustness, Defense & Systemic Control",Red-Teaming,5.0
+Certifiably Robust Policy Learning against Adversarial Multi-Agent Communication,"Robustness, Defense & Systemic Control",Adversarial Robustness,7.0
+Safe Reinforcement Learning From Pixels Using a Stochastic Latent Representation,Capability Control & Unlearning,Alignment Training,5.0
+Causal Confusion and Reward Misidentification in Preference-Based Reward Learning,Scalable Oversight & Value Learning,Scalable Oversight,4.0
+Does Deep Learning Learn to Abstract? A Systematic Probing Framework,Interpretability & Understanding,Interpretability,3.0
+Task Ambiguity in Humans and Language Models,Capability Control & Unlearning,Alignment Training,4.0
+Interpretability in the Wild: a Circuit for Indirect Object Identification in GPT-2 Small,Interpretability & Understanding,Interpretability,6.0
+Understanding Zero-shot Adversarial Robustness for Large-Scale Models,"Robustness, Defense & Systemic Control",Adversarial Robustness,4.0
+Global Explainability of GNNs via Logic Combination of Learned Concepts,Interpretability & Understanding,Interpretability,5.0
+Wasserstein Auto-encoded MDPs: Formal Verification of Efficiently Distilled RL Policies with Many-sided Guarantees,Agent Foundations & Alignment Theory,Agent Foundations,7.0
+Discovering Latent Knowledge in Language Models Without Supervision,Interpretability & Understanding,Interpretability,6.0
+Stay Moral and Explore: Learn to Behave Morally in Text-based Games,Capability Control & Unlearning,Alignment Training,5.0
+Label-free Concept Bottleneck Models,Interpretability & Understanding,Interpretability,4.0
+Emergent World Representations: Exploring a Sequence Model Trained on a Synthetic Task,Interpretability & Understanding,Interpretability,6.0
+Progress measures for grokking via mechanistic interpretability,Interpretability & Understanding,Interpretability,3.0
+​​What learning algorithm is in-context learning? Investigations with linear models,Interpretability & Understanding,Interpretability,4.0

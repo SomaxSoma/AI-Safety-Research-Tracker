@@ -1,0 +1,129 @@
+Paper Title
+Language Models are Advanced Anonymizers
+Stealthy Shield Defense: A Conditional Mutual Information-Based Approach against Black-Box Model Inversion Attacks
+Ward: Provable RAG Dataset Inference via LLM Watermarks
+Group-robust Sample Reweighting for Subpopulation Shifts via Influence Functions
+An Efficient Framework for Crediting Data Contributors of Diffusion Models
+Relax and Merge: A Simple Yet Effective Framework for Solving Fair $k$-Means and $k$-sparse Wasserstein Barycenter Problems
+Tracking the Copyright of Large Vision-Language Models through Parameter Learning Adversarial Images
+Attributing Culture-Conditioned Generations to Pretraining Corpora
+From Search to Sampling: Generative Models for Robust Algorithmic Recourse
+Image Watermarks are Removable using Controllable Regeneration from Clean Noise
+Can Watermarks be Used to Detect LLM IP Infringement For Free?
+Prompting Fairness: Integrating Causality to Debias Large Language Models
+Privacy-Preserving Personalized Federated Prompt Learning for Multimodal Large Language Models
+Feature Responsiveness Scores: Model-Agnostic Explanations for Recourse
+See It from My Perspective: How Language Affects Cultural Bias in Image Understanding
+Mitigating Memorization in Language Models
+No Location Left Behind: Measuring and Improving the Fairness of Implicit Representations for Earth Data
+Benchmarking Vision Language Model Unlearning via Fictitious Facial Identity Dataset
+Empowering Users in Digital Privacy Management through Interactive LLM-Based Agents
+Data Shapley in One Training Run
+An Undetectable Watermark for Generative Image Models
+CEB: Compositional Evaluation Benchmark for Fairness in Large Language Models
+The Last Iterate Advantage: Empirical Auditing and Principled Heuristic Analysis of Differentially Private SGD
+"Bridging the Data Provenance Gap Across Text, Speech, and Video"
+Gaussian Differentially Private Human Faces Under a Face Radial Curve Representation
+Balancing Bias in Two-sided Markets for Fair Stable Matchings
+Holistically Evaluating the Environmental Impact of Creating Language Models
+Data Taggants: Dataset Ownership Verification Via Harmless Targeted Data Poisoning
+Conformal Prediction Sets Can Cause Disparate Impact
+TabWak: A Watermark for Tabular Diffusion Models
+PFGuard: A Generative Framework with Privacy and Fairness Safeguards
+Adaptive Batch Size for Privately Finding Second-Order Stationary Points
+CipherPrune:  Efficient and Scalable Private Transformer Inference
+SEBRA : Debiasing through Self-Guided Bias Ranking
+InstantSplamp: Fast and Generalizable Stenography Framework for Generative Gaussian Splatting
+"Temporal Heterogeneous Graph Generation with Privacy, Utility, and Efficiency"
+Data Unlearning in Diffusion Models
+Privacy-Aware Lifelong Learning
+RAPID: Retrieval Augmented Training of Differentially Private Diffusion Models
+An Effective Theory of Bias Amplification
+DynFrs: An Efficient Framework for Machine Unlearning in Random Forest
+Rethinking Artistic Copyright Infringements In the Era Of Text-to-Image Generative Models
+Fair Clustering in the Sliding Window Model
+Pacmann: Efficient Private Approximate Nearest Neighbor Search
+Data-adaptive Differentially Private Prompt Synthesis for In-Context Learning
+First-Person Fairness in Chatbots
+Provable unlearning in topic modeling and downstream tasks
+Enhancing Learning with Label Differential Privacy by Vector Approximation
+Balanced Ranking with Relative Centrality: A multi-core periphery perspective
+Near-Exact Privacy Amplification for Matrix Mechanisms
+On the Price of Differential Privacy for Hierarchical Clustering
+Towards counterfactual fairness through auxiliary variables
+Towards hyperparameter-free optimization with differential privacy
+Differentially Private Federated Learning with Time-Adaptive Privacy Spending
+Fair Submodular Cover
+Copyright-Protected Language Generation via Adaptive Model Fusion
+Certifying Counterfactual Bias in LLMs
+A Generic Framework for Conformal Fairness
+MUSE: Machine Unlearning Six-Way Evaluation for Language Models
+ALBAR: Adversarial Learning approach to mitigate Biases in Action Recognition
+Comparing Targeting Strategies for Maximizing Social Welfare with Limited Resources
+Learning from End User Data with Shuffled Differential Privacy over Kernel Densities
+FairMT-Bench: Benchmarking Fairness for Multi-turn Dialogue in Conversational LLMs
+AIMS.au: A Dataset for the Analysis of Modern Slavery Countermeasures in Corporate Statements
+Debiasing Federated Learning with Correlated Client Participation
+Fantastic Copyrighted Beasts and How (Not) to Generate Them
+Optimality of Matrix Mechanism on $\ell_p^p$-metric
+Adversarial Mixup Unlearning
+Tighter Privacy Auditing of DP-SGD in the Hidden State Threat Model
+Dataset Ownership Verification in Contrastive Pre-trained Models
+Inverse Constitutional AI: Compressing Preferences into Principles
+Bridging Jensen Gap for Max-Min Group Fairness Optimization in Recommendation
+Diffusion Attribution Score: Evaluating Training Data Influence in Diffusion Models
+Towards Unbiased Learning in Semi-Supervised Semantic Segmentation
+How much of my dataset did you use? Quantitative Data Usage Inference in Machine Learning
+DiSK: Differentially Private Optimizer with Simplified Kalman Filter for Noise Reduction
+Adversarial Latent Feature Augmentation for Fairness
+Adversarial Machine Unlearning
+A Causal Lens for Learning Long-term Fair Policies
+Permute-and-Flip: An optimally stable and watermarkable decoder for LLMs
+MixMax: Distributional Robustness in Function Space via Optimal Data Mixtures
+Mitigating Spurious Correlations in Zero-Shot Multimodal Models
+The Hidden Cost of Waiting for Accurate Predictions
+Encryption-Friendly LLM Architecture
+DRoP: Distributionally Robust Data Pruning
+FairDen: Fair Density-Based Clustering
+DocMIA: Document-Level Membership Inference Attacks against DocVQA Models
+How Far Are We from True Unlearnability?
+Privacy Auditing of Large Language Models
+Rethinking Fair Representation Learning for Performance-Sensitive Tasks
+SelectFormer in Data Markets: Privacy-Preserving and Efficient Data Selection for Transformers with Multi-Party Computation
+Proactive Privacy Amnesia for Large Language Models: Safeguarding PII with Negligible Impact on Model Utility
+DebGCD: Debiased Learning with Distribution Guidance for Generalized Category Discovery
+CPSample: Classifier Protected Sampling for Guarding Training Data During Diffusion
+Privately Counting Partially Ordered Data
+Convergent Privacy Loss of Noisy-SGD without Convexity and Smoothness
+Scaling up the Banded Matrix Factorization Mechanism for Large Scale Differentially Private ML
+Differentially private learners for heterogeneous treatment effects
+A Watermark for Order-Agnostic Language Models
+DCT-CryptoNets: Scaling Private Inference in the Frequency Domain
+Differentially private optimization for non-decomposable objective functions
+Hidden in the Noise: Two-Stage Robust Watermarking for Images
+Exploiting Hidden Symmetry to Improve Objective Perturbation for DP Linear Learners with a Nonsmooth L1-Norm
+REEF: Representation Encoding Fingerprints for Large Language Models
+Unsupervised Model Tree Heritage Recovery
+Towards Scalable Exact Machine Unlearning Using Parameter-Efficient Fine-Tuning
+Revealing and Reducing Gender Biases in Vision and Language Assistants (VLAs)
+Controllable Unlearning for Image-to-Image Generative Models via $\epsilon$-Constrained Optimization
+Private Mechanism Design via Quantile Estimation
+Min-K%++: Improved Baseline for Pre-Training Data Detection from Large Language Models
+A Geometric Framework for Understanding Memorization in Generative Models
+Fine-tuning can Help Detect Pretraining Data from Large Language Models
+TDDBench: A Benchmark for Training data detection
+SANER: Annotation-free Societal Attribute Neutralizer for Debiasing CLIP
+Language Model Alignment in Multilingual Trolley Problems
+Enhancing Robust Fairness via Confusional Spectral Regularization
+The Utility and Complexity of In- and Out-of-Distribution Machine Unlearning
+Perplexity Trap: PLM-Based Retrievers Overrate Low Perplexity Documents
+Hessian-Free Online Certified Unlearning
+VideoShield: Regulating Diffusion-based Video Generation Models via Watermarking
+Scalable and Certifiable Graph Unlearning: Overcoming the Approximation Error Barrier
+A Decade's Battle on Dataset Bias: Are We There Yet?
+Robust Watermarking Using Generative Priors Against Image Editing: From Benchmarking to Advances
+Collapsed Language Models Promote Fairness
+"OASIS Uncovers: High-Quality T2I Models, Same Old Stereotypes"
+SecureGS: Boosting the Security and Fidelity of 3D Gaussian Splatting Steganography
+Does Training with Synthetic Data Truly Protect Privacy?
+Image-level Memorization Detection via Inversion-based Inference Perturbation

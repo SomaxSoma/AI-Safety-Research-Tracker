@@ -1,0 +1,10 @@
+Paper Title,Subarea,Detailed Class,Score
+Robust Reinforcement Learning on State Observations with Learned Optimal Adversary,"Robustness, Defense & Systemic Control",Adversarial Robustness,5.0
+How Benign is Benign Overfitting ?,"Robustness, Defense & Systemic Control",Adversarial Robustness,3.0
+Aligning AI With Shared Human Values,Threat Modeling & Evaluations,Dangerous Capability Evals,5.0
+InfoBERT: Improving Robustness of Language Models from An Information Theoretic Perspective,"Robustness, Defense & Systemic Control",Adversarial Robustness,4.0
+Quantifying Differences in Reward Functions,Scalable Oversight & Value Learning,Scalable Oversight,6.0
+TropEx: An Algorithm for Extracting Linear Terms in Deep Neural Networks,Interpretability & Understanding,Interpretability,3.0
+Multi-timescale Representation Learning in LSTM Language Models,Interpretability & Understanding,Interpretability,3.0
+Are Neural Nets Modular? Inspecting Functional Modularity Through Differentiable Weight Masks,Interpretability & Understanding,Interpretability,3.0
+Fooling a Complete Neural Network Verifier,"Robustness, Defense & Systemic Control",Red-Teaming,7.0

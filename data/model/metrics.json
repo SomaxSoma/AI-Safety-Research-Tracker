@@ -1,0 +1,30 @@
+[
+  {
+    "split": "random_80_20",
+    "n_test": 11159,
+    "n_pos": 466,
+    "roc_auc": 0.9800910627425026,
+    "pr_auc": 0.7865638414354277,
+    "f1_opt_threshold": 0.5480596592151064,
+    "precision": 0.7172557172557172,
+    "recall": 0.740343347639485,
+    "f1": 0.7286166842661035,
+    "true_prevalence_pct": 4.176001433820234,
+    "predcount_prevalence_pct": 4.310422080831615,
+    "probmass_prevalence_pct": 6.260101132074629
+  },
+  {
+    "split": "temporal_train<=2024_test2025-26",
+    "n_test": 24228,
+    "n_pos": 1743,
+    "roc_auc": 0.9679490795865566,
+    "pr_auc": 0.7836561535887471,
+    "f1_opt_threshold": 0.44581591555788486,
+    "precision": 0.7237076648841355,
+    "recall": 0.6987951807228916,
+    "f1": 0.7110332749562172,
+    "true_prevalence_pct": 7.194155522535908,
+    "predcount_prevalence_pct": 6.946508172362556,
+    "probmass_prevalence_pct": 8.51725032127276
+  }
+]

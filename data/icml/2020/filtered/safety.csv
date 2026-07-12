@@ -1,0 +1,10 @@
+Paper Title,Subarea,Detailed Class,Score
+Safe Imitation Learning via Fast Bayesian Reward Inference from Preferences,Scalable Oversight & Value Learning,Scalable Oversight,5.0
+“Other-Play” for Zero-Shot Coordination,Scalable Oversight & Value Learning,Multi-Agent Safety,3.0
+Reverse-engineering deep ReLU networks,Interpretability & Understanding,Interpretability,3.0
+Policy Teaching via Environment Poisoning: Training-time Adversarial Attacks against Reinforcement Learning,"Robustness, Defense & Systemic Control",Adversarial Robustness,4.0
+Emergence of Separable Manifolds in Deep Language Representations,Interpretability & Understanding,Interpretability,3.0
+Constrained Markov Decision Processes via Backward Value Functions,Capability Control & Unlearning,Alignment Training,7.0
+Responsive Safety in Reinforcement Learning by PID Lagrangian Methods,Capability Control & Unlearning,Alignment Training,6.0
+Learning Human Objectives by Evaluating Hypothetical Behavior,Scalable Oversight & Value Learning,Scalable Oversight,4.0
+Adaptive Reward-Poisoning Attacks against Reinforcement Learning,"Robustness, Defense & Systemic Control",Adversarial Robustness,5.0

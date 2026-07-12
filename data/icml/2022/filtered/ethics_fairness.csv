@@ -1,0 +1,68 @@
+Paper Title
+Public Data-Assisted Mirror Descent for Private Model Training
+Active Sampling for Min-Max Fairness
+On the Convergence of the Shapley Value in Parametric Bayesian Learning Games
+Fair and Fast k-Center Clustering for Data Summarization
+Private optimization in the interpolation regime: faster rates and hardness results
+How Faithful is your Synthetic Data? Sample-level Metrics for Evaluating and Auditing Generative Models
+Certified Neural Network Watermarks with Randomized Smoothing
+Skin Deep Unlearning: Artefact and Instrument Debiasing in the Context of Melanoma Classification
+Personalization Improves Privacy-Accuracy Tradeoffs in Federated Learning
+Individual Preference Stability for Clustering
+Optimal Algorithms for Mean Estimation under Local Differential Privacy
+Learning Stable Classifiers by Transferring Unstable Features
+The Poisson Binomial Mechanism for Unbiased Federated Learning with Secure Aggregation
+Task-aware Privacy Preservation for Multi-dimensional Data
+Shuffle Private Linear Contextual Bandits
+Estimating and Penalizing Induced Preference Shifts in Recommender Systems
+Mitigating Gender Bias in Face Recognition using the von Mises-Fisher Mixture Model
+Information Discrepancy in Strategic Learning
+Fair Generalized Linear Models with a Convex Penalty
+On the Adversarial Robustness of Causal Algorithmic Recourse
+Fairness with Adaptive Weights
+Privacy for Free: How does Dataset Condensation Help Privacy?
+The Fundamental Price of Secure Aggregation in Differentially Private Federated Learning
+Robin Hood and Matthew Effects: Differential Privacy Has Disparate Impact on Synthetic Data
+Private frequency estimation via projective geometry
+A Joint Exponential Mechanism For Differentially Private Top-$k$
+Faster Privacy Accounting via Evolving Discretization
+Private Streaming SCO in $\ell_p$ geometry with Applications in High Dimensional Online Decision Making
+Unsupervised Detection of Contextualized Embedding Bias with Application to Ideology
+Strategic Instrumental Variable Regression: Recovering Causal Relationships From Strategic Responses
+"Contrastive Mixture of Posteriors for Counterfactual Inference, Data Integration and Fairness"
+Translatotron 2: High-quality direct speech-to-speech translation with voice preservation
+Input-agnostic Certified Group Fairness via Gaussian Parameter Smoothing
+Differentially Private Approximate Quantiles
+Learning fair representation with a parametric integral probability metric
+Bounding Training Data Reconstruction in Private (Deep) Learning
+Transfer Learning In Differential Privacy’s Hybrid-Model
+Differentially Private Maximal Information Coefficients
+Generalized Strategic Classification and the Case of Aligned Incentives
+Achieving Fairness at No Utility Cost via Data Reweighing with Influence
+Improved Rates for Differentially Private Stochastic Convex Optimization with Heavy-Tailed Data
+Secure Quantized Training for Deep Learning
+Deduplicating Training Data Mitigates Privacy Risks in Language Models
+Private Adaptive Optimization with Side information
+Differentially Private Community Detection for Stochastic Block Models
+Improved Regret for Differentially Private Exploration in Linear MDP
+Causal Conceptions of Fairness and their Consequences
+Tight and Robust Private Mean Estimation with Few Users
+Linear Adversarial Concept Erasure
+Selective Regression under Fairness Criteria
+Fair Representation Learning through Implicit Path Alignment
+Plug & Play Attacks: Towards Robust and Flexible Model Inversion Attacks
+Metric-Fair Active Learning
+Hermite Polynomial Features for Private Data Generation
+Prototype Based Classification from Hierarchy to Fairness
+Simple and near-optimal algorithms for hidden stratification and multi-group learning
+Improving Screening Processes via Calibrated Subset Selection
+Understanding Instance-Level Impact of Fairness Constraints
+FriendlyCore: Practical Differentially Private Aggregation
+Metric-Fair Classifier Derandomization
+Active fairness auditing
+A Study of Face Obfuscation in ImageNet
+Correct-N-Contrast: a Contrastive Approach for Improving Robustness to Spurious Correlations
+Fairness Interventions as (Dis)Incentives for Strategic Manipulation
+Understanding Clipping for Federated Learning: Convergence and Client-Level Differential Privacy
+Differentially Private Coordinate Descent for Composite Empirical Risk Minimization
+Fishing for User Data in Large-Batch Federated Learning via Gradient Magnification

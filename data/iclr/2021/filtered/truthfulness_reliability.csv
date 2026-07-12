@@ -1,0 +1,116 @@
+Paper Title
+Influence Functions in Deep Learning Are Fragile
+Does enhanced shape bias improve neural network robustness to common corruptions?
+Improving Adversarial Robustness via Channel-wise Activation Suppressing
+Multiscale Score Matching for Out-of-Distribution Detection
+Fast Geometric Projections for Local Robustness Certification
+Isotropy in the Contextual Embedding Space: Clusters and Manifolds
+Explaining by Imitating: Understanding Decisions by Interpretable Policy Learning
+SSD: A Unified Framework for Self-Supervised Outlier Detection
+RNNLogic: Learning Logic Rules for Reasoning on Knowledge Graphs
+Explainable Subgraph Reasoning for Forecasting on Temporal Knowledge Graphs
+Shapley Explanation Networks
+Fast and Complete: Enabling Complete Neural Network Verification with Rapid and Massively Parallel Incomplete Verifiers
+Provably robust classification of adversarial examples with detection
+BREEDS: Benchmarks for Subpopulation Shift
+NBDT: Neural-Backed Decision Tree
+Predicting Infectiousness for Proactive Contact Tracing
+Mind the Pad -- CNNs Can Develop Blind Spots
+Scaling the Convex Barrier with Active Sets
+Towards Robustness Against Natural Language Word Substitutions
+DialoGraph: Incorporating Interpretable Strategy-Graph Networks into Negotiation Dialogues
+Robust Overfitting may be mitigated by properly learned smoothening
+Geometry-aware Instance-reweighted Adversarial Training
+Policy-Driven Attack: Learning to Query for Hard-label Black-box Adversarial Examples
+Estimating informativeness of samples with Smooth Unique Information
+Targeted Attack against Deep Neural Networks via Flipping Limited Weight Bits
+Molecule Optimization by Explainable Evolution
+LowKey: Leveraging Adversarial Attacks to Protect Social Media Users from Facial Recognition
+Stochastic Security: Adversarial Defense Using Long-Run Dynamics of Energy-Based Models
+Learning explanations that are hard to vary
+CoCo: Controllable Counterfactuals for Evaluating Dialogue State Trackers
+Combining Ensembles and Data Augmentation Can Harm Your Calibration
+Uncertainty Sets for Image Classifiers using Conformal Prediction
+Uncertainty Estimation in Autoregressive Structured Prediction
+Understanding the failure modes of out-of-distribution generalization
+Removing Undesirable Feature Contributions Using Out-of-Distribution Data
+Interpreting Knowledge Graph Relation Representation from Word Embeddings
+Predicting Inductive Biases of Pre-Trained Models
+WaNet - Imperceptible Warping-based Backdoor Attack
+Perceptual Adversarial Robustness: Defense Against Unseen Threat Models
+Saliency is a Possible Red Herring When Diagnosing Poor Generalization
+Calibration of Neural Networks using Splines
+Efficient Certified Defenses Against Patch Attacks on Image Classifiers
+On Fast Adversarial Robustness Adaptation in Model-Agnostic Meta-Learning
+Systematic generalisation with group invariant predictions
+Rethinking the Role of Gradient-based Attribution Methods for Model Interpretability
+Online Adversarial Purification based on Self-supervised Learning
+"Learning ""What-if"" Explanations for Sequential Decision-Making"
+Graph Information Bottleneck for Subgraph Recognition
+Deep Partition Aggregation: Provable Defenses against General Poisoning Attacks
+BERTology Meets Biology: Interpreting Attention in Protein Language Models
+Getting a CLUE: A  Method for Explaining Uncertainty Estimates
+Non-asymptotic Confidence Intervals of Off-policy Evaluation:  Primal and Dual Bounds 
+Learning to Deceive Knowledge Graph Augmented Models via Targeted Perturbation
+Estimating and Evaluating Regression Predictive Uncertainty in Deep Object Detectors
+Interpreting Graph Neural Networks for NLP With Differentiable Edge Masking
+Scaling Symbolic Methods using Gradients for Neural Model Explanation
+Conservative Safety Critics for Exploration
+Estimating Lipschitz constants of monotone deep equilibrium models
+Bag of Tricks for Adversarial Training
+Certify or Predict: Boosting Certified Robustness with Compositional Architectures
+Representation learning for improved interpretability and classification accuracy of clinical factors from EEG
+Collective Robustness Certificates: Exploiting Interdependence in Graph Neural Networks
+When Optimizing  $f$-Divergence is Robust with Label Noise
+Contrastive Explanations for Reinforcement Learning via Embedded Self Predictions
+"Self-supervised Adversarial Robustness for the Low-label, High-data Regime"
+PAC Confidence Predictions for Deep Neural Network Classifiers
+Convex Regularization behind Neural Reconstruction
+Noise or Signal: The Role of Image Backgrounds in Object Recognition
+Exemplary Natural Images Explain CNN Activations Better than State-of-the-Art Feature Visualization
+Training independent subnetworks for robust prediction
+Orthogonalizing Convolutional Layers with the Cayley Transform
+Trusted Multi-View Classification
+Generating Adversarial Computer Programs using Optimized Obfuscations
+Shape or Texture: Understanding Discriminative Features in CNNs
+Exploring the Uncertainty Properties of Neural Networks’ Implicit Priors in the Infinite-Width Limit
+A Unified Approach to Interpreting and Boosting Adversarial Transferability
+Shapley explainability on the data manifold
+Fantastic Four: Differentiable and Efficient Bounds on Singular Values of Convolution Layers
+Stabilized Medical Image Attacks
+Multi-resolution modeling of a discrete stochastic process identifies causes of cancer
+Learning and Evaluating Representations for Deep One-Class Classification
+ARMOURED: Adversarially Robust MOdels using Unlabeled data by REgularizing Diversity
+Explaining the Efficacy of Counterfactually Augmented Data
+Learning from Demonstration with Weakly Supervised Disentanglement
+A Geometric Analysis of Deep Generative Image Models and Its Applications
+Topology-Aware Segmentation Using Discrete Morse Theory
+"Heating up decision boundaries: isocapacitory saturation, adversarial scenarios and generalization bounds"
+Protecting DNNs from Theft using an Ensemble of Diverse Models
+Multi-Class Uncertainty Calibration via Mutual Information Maximization-based Binning
+Explainable Deep One-Class Classification
+Learning perturbation sets for robust machine learning
+Interpretable Models for Granger Causality Using Self-explaining Neural Networks
+"A Panda? No, It's a Sloth: Slowdown Attacks on Adaptive Multi-Exit Neural Network Inference"
+How Does Mixup Help With Robustness and Generalization?
+A Learning Theoretic Perspective on Local Explainability
+Evaluation of Similarity-based Explanations
+Learning from others' mistakes: Avoiding dataset biases without modeling them
+Vulnerability-Aware Poisoning Mechanism for Online RL with Unknown Dynamics
+Debiasing Concept-based Explanations with Causal Analysis
+Uncertainty Estimation and Calibration with Finite-State Probabilistic RNNs
+Learning with Instance-Dependent Label Noise: A Sample Sieve Approach
+Effective and Efficient Vote Attack on Capsule Networks
+Counterfactual Generative Networks
+Improved Estimation of Concentration Under $\ell_p$-Norm Distance Metrics Using Half Spaces
+Probing BERT in Hyperbolic Spaces
+Improving VAEs' Robustness to Adversarial Attack
+Sparse encoding for more-interpretable feature-selecting representations in probabilistic matrix factorization
+Witches' Brew: Industrial Scale Data Poisoning via Gradient Matching
+Evaluations and Methods for Explanation through Robustness Analysis
+Uncertainty in Gradient Boosting via Ensembles
+Calibration tests beyond classification
+Neural Attention Distillation: Erasing Backdoor Triggers from Deep Neural Networks
+How Neural Networks Extrapolate: From Feedforward to Graph Neural Networks
+Towards Robust Neural Networks via Close-loop Control
+Distributed Momentum for Byzantine-resilient Stochastic Gradient Descent

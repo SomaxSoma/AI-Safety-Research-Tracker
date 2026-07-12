@@ -1,0 +1,99 @@
+Paper Title,Subarea,Detailed Class
+JailNewsBench: Multi-Lingual and Regional Benchmark for Fake News Generation under Jailbreak Attacks,"Robustness, Defense & Systemic Control",Red-Teaming
+Truthfulness Despite Weak Supervision: Evaluating and Training LLMs Using Peer Prediction,Scalable Oversight & Value Learning,Scalable Oversight
+Auto-RT: Automatic Jailbreak Strategy Exploration for Red-Teaming Large Language Models,"Robustness, Defense & Systemic Control",Red-Teaming
+AEGIS: Adversarial Target-Guided Retention-Data-Free Robust Concept Erasure from Diffusion Models,Capability Control & Unlearning,Alignment Training
+VEAttack: Downstream-agnostic Vision Encoder Attack against Large Vision Language Models,"Robustness, Defense & Systemic Control",Adversarial Robustness
+NatADiff: Adversarial Boundary Guidance for Natural Adversarial Diffusion,"Robustness, Defense & Systemic Control",Adversarial Robustness
+SoSBench: Benchmarking Safety Alignment on Six Scientific Domains,Threat Modeling & Evaluations,Dangerous Capability Evals
+Learning-Time Encoding Shapes Unlearning in LLMs,Capability Control & Unlearning,Alignment Training
+ST-WebAgentBench: A Benchmark for Evaluating Safety and Trustworthiness in Web Agents,Threat Modeling & Evaluations,Safeguards
+Improving Black-Box Generative Attacks via Generator Semantic Consistency,"Robustness, Defense & Systemic Control",Adversarial Robustness
+The Geometry of Reasoning: Flowing Logics in Representation Space,Interpretability & Understanding,Interpretability
+Signal in the Noise: Polysemantic Interference Transfers and Predicts Cross-Model Influence,Interpretability & Understanding,Interpretability
+"No, of Course I Can! Deeper Fine-Tuning Attacks That Bypass Token-Level Safety Mechanisms","Robustness, Defense & Systemic Control",Red-Teaming
+Your Agent May Misevolve: Emergent Risks in Self-evolving LLM Agents,Threat Modeling & Evaluations,Scheming and Deception
+Persona Features Control Emergent Misalignment,Interpretability & Understanding,Interpretability
+Dual Randomized Smoothing: Beyond Global Noise Variance,"Robustness, Defense & Systemic Control",Adversarial Robustness
+SeRI: Gradient-Free Sensitive Region Identification in Decision-Based Black-Box Attacks,"Robustness, Defense & Systemic Control",Adversarial Robustness
+Propaganda AI: An Analysis of Semantic Divergence in Large Language Models,Interpretability & Understanding,Monitoring
+Function Induction and Task Generalization: An Interpretability Study with Off-by-One Addition,Interpretability & Understanding,Interpretability
+Feature compression is the root cause of adversarial fragility in neural networks,"Robustness, Defense & Systemic Control",Adversarial Robustness
+GraphShield: Graph-Theoretic Modeling of Network-Level Dynamics for Robust Jailbreak Detection,Threat Modeling & Evaluations,Safeguards
+On the Limits of Sparse Autoencoders: A Theoretical Framework and Reweighted Remedy,Interpretability & Understanding,Interpretability
+The Devil behind the mask: An emergent safety vulnerability of Diffusion LLMs,"Robustness, Defense & Systemic Control",Red-Teaming
+LatentQA: Teaching LLMs to Decode Activations Into Natural Language,Interpretability & Understanding,Interpretability
+CyberGym: Evaluating AI Agents' Real-World Cybersecurity Capabilities at Scale,Threat Modeling & Evaluations,Dangerous Capability Evals
+Strategic Dishonesty Can Undermine AI Safety Evaluations of Frontier LLMs,Threat Modeling & Evaluations,Scheming and Deception
+Optimizing Agent Planning for Security and Autonomy,"Robustness, Defense & Systemic Control",Adversarial Robustness
+Towards Understanding the Nature of Attention with Low-Rank Sparse Decomposition,Interpretability & Understanding,Interpretability
+Weak-to-Strong Generalization with Failure Trajectories,Scalable Oversight & Value Learning,Scalable Oversight
+Path Channels and Plan Extension Kernels: a Mechanistic Description of Planning in a Sokoban RNN,Interpretability & Understanding,Interpretability
+Markovian Transformers for Informative Language Modeling,Interpretability & Understanding,Monitoring
+LLMs Process Lists With General Filter Heads,Interpretability & Understanding,Interpretability
+Exposing and Defending the Achilles' Heel of Video Mixture-of-Experts,"Robustness, Defense & Systemic Control",Adversarial Robustness
+GeneBreaker: Jailbreak Attacks against DNA Language Models with Pathogenicity Guidance,Threat Modeling & Evaluations,Biorisk
+Does Weak-to-strong Generalization Happen under Spurious Correlations?,Scalable Oversight & Value Learning,Scalable Oversight
+Safety at One Shot: Patching Fine-Tuned LLMs with A Single Instance,Capability Control & Unlearning,Alignment Training
+"Robustness in Text-Attributed Graph Learning: Insights, Trade-offs, and New Defenses","Robustness, Defense & Systemic Control",Adversarial Robustness
+Continual Unlearning for Text-to-Image Diffusion Models: A Regularization Perspective,Capability Control & Unlearning,Alignment Training
+Beware Untrusted Simulators -- Reward-Free Backdoor Attacks in Reinforcement Learning,"Robustness, Defense & Systemic Control",Adversarial Robustness
+Breaking and Fixing Defenses Against Control Flow Hijacking in Multi-Agent Systems,Scalable Oversight & Value Learning,Multi-Agent Safety
+Hedonic Neurons: A Mechanistic Mapping of Latent Coalitions in Transformer MLPs,Interpretability & Understanding,Interpretability
+Image Can Bring Your Memory Back: A Novel Multi-Modal Guided Attack against Image Generation Model Unlearning,"Robustness, Defense & Systemic Control",Red-Teaming
+MICLIP: Learning to Interpret Representation in Vision Models,Interpretability & Understanding,Interpretability
+TriQDef: Disrupting Semantic and Gradient Alignment to Prevent Adversarial Patch Transferability in Quantized Neural Networks,"Robustness, Defense & Systemic Control",Adversarial Robustness
+Machine Unlearning under Retain–Forget Entanglement,Capability Control & Unlearning,Alignment Training
+Sampling-aware Adversarial Attacks Against Large Language Models,"Robustness, Defense & Systemic Control",Red-Teaming
+ExpGuard: LLM Content Moderation in Specialized Domains,Threat Modeling & Evaluations,Safeguards
+Auditing Black-Box LLM APIs with a Rank-Based Uniformity Test,Threat Modeling & Evaluations,Safeguards
+Reasoning or Retrieval? A Study of Answer Attribution on Large Reasoning Models,Capability Control & Unlearning,Alignment Training
+Safety Instincts: LLMs Learn to Trust Their Internal Compass for Self-Defense,Capability Control & Unlearning,Alignment Training
+Sysformer: Safeguarding Frozen Large Language Models with Adaptive System Prompts,Threat Modeling & Evaluations,Safeguards
+LipNeXt: Scaling up Lipschitz-based Certified Robustness to Billion-parameter Models,"Robustness, Defense & Systemic Control",Adversarial Robustness
+Downgrade to Upgrade: Optimizer Simplification Enhances Robustness in LLM Unlearning,Capability Control & Unlearning,Alignment Training
+Into the Rabbit Hull: From Task-Relevant Concepts in DINO to Minkowski Geometry,Interpretability & Understanding,Interpretability
+Neologism Learning for Controllability and Self-Verbalization,Interpretability & Understanding,Interpretability
+From Concepts to Components: Concept-Agnostic Attention Module Discovery in Transformers,Interpretability & Understanding,Interpretability
+Steering Language Models with Weight Arithmetic,Capability Control & Unlearning,Alignment Training
+What's In My Human Feedback? Learning Interpretable Descriptions of Preference Data,Interpretability & Understanding,Interpretability
+Thought Branches: Interpreting LLM Reasoning Requires Resampling,Interpretability & Understanding,Interpretability
+Addressing divergent representations from causal interventions on neural networks,Interpretability & Understanding,Interpretability
+Jailbreak Transferability Emerges from Shared Representations,"Robustness, Defense & Systemic Control",Adversarial Robustness
+Understanding Cross-layer Contributions to Mixture-of-Experts Routing in LLMs,Interpretability & Understanding,Interpretability
+Learning multimodal dictionary decompositions with group-sparse autoencoders,Interpretability & Understanding,Interpretability
+What's the plan? Metrics for implicit planning in LLMs and their application to rhyme generation and question answering,Interpretability & Understanding,Interpretability
+Constitutional Classifiers++: Efficient Production-Grade Defenses against Universal Jailbreaks,Threat Modeling & Evaluations,Safeguards
+Learning to Interpret Weight Differences in Language Models,Interpretability & Understanding,Interpretability
+Randomized Antipodal Search Done Right for Data Pareto Improvement of LLM Unlearning,Capability Control & Unlearning,Alignment Training
+MCP-SafetyBench: A Benchmark for Safety Evaluation of Large Language Models with Real-World MCP Servers,"Robustness, Defense & Systemic Control",Red-Teaming
+Learning to Lie: Adversarial Attacks on Human-AI Teams and LLMs,Threat Modeling & Evaluations,Scheming and Deception
+A Guardrail for Safety Preservation: When Safety-Sensitive Subspace Meets Harmful-Resistant Null-Space,Threat Modeling & Evaluations,Safeguards
+ContextBench: Modifying Contexts for Targeted Latent Activation and Behaviour Elicitation,Interpretability & Understanding,Interpretability
+Beyond Prompt-Induced Lies: Investigating LLM Deception on Benign Prompts,Threat Modeling & Evaluations,Scheming and Deception
+DualEdit: Mitigating Safety Fallback in LLM Backdoor Editing via Affirmation-Refusal Regulation,"Robustness, Defense & Systemic Control",Red-Teaming
+GuardAlign: Test-time Safety Alignment in Multimodal Large Language Models,Threat Modeling & Evaluations,Safeguards
+Is it Thinking or Cheating?  Detecting Implicit Reward Hacking by Measuring Reasoning Effort,Interpretability & Understanding,Monitoring
+COMAL: A Convergent Meta-Algorithm for Aligning LLMs with General Preferences,Capability Control & Unlearning,Alignment Training
+On Robustness of Vision-Language-Action Model against Multi-Modal Perturbations,"Robustness, Defense & Systemic Control",Adversarial Robustness
+Optimal Robust Subsidy Policies for Irrational Agent in Principal-Agent MDPs,Agent Foundations & Alignment Theory,Agent Foundations
+Output Supervision Can Obfuscate the Chain of Thought,Interpretability & Understanding,Monitoring
+Deep Ignorance: Filtering Pretraining Data Builds Tamper-Resistant Safeguards into Open-Weight LLMs,Capability Control & Unlearning,Alignment Training
+From Evaluation to Defense: Advancing Safety in Video Large Language Models,Capability Control & Unlearning,Alignment Training
+Automatic Dialectic Jailbreak: A Framework for Generating Effective Jailbreak Strategies,"Robustness, Defense & Systemic Control",Red-Teaming
+MCP Security Bench (MSB): Benchmarking Attacks Against Model Context Protocol in LLM Agents,"Robustness, Defense & Systemic Control",Adversarial Robustness
+Rethinking Bottlenecks in Safety Fine-Tuning of Vision Language Models,Capability Control & Unlearning,Alignment Training
+Spilling the Beans: Teaching LLMs to Self-Report Their Hidden Objectives,Threat Modeling & Evaluations,Scheming and Deception
+Reliable Weak-to-Strong Monitoring of LLM Agents,Interpretability & Understanding,Monitoring
+Language Models are Injective and Hence Invertible,Interpretability & Understanding,Interpretability
+Be Careful When Fine-tuning On Open-Source LLMs: Your Fine-tuning Data Could Be Secretly Stolen!,"Robustness, Defense & Systemic Control",Adversarial Robustness
+Video Unlearning via Low-Rank Refusal Vector,Capability Control & Unlearning,Alignment Training
+Transferable and Stealthy Adversarial Attacks on Large Vision-Language Models,"Robustness, Defense & Systemic Control",Adversarial Robustness
+OFMU: OPTIMIZATION-DRIVEN FRAMEWORK FOR MACHINE UNLEARNING,Capability Control & Unlearning,Alignment Training
+Jailbreaking the Matrix: Nullspace Steering for Controlled Model Subversion,"Robustness, Defense & Systemic Control",Red-Teaming
+ELEPHANT: Measuring and understanding social sycophancy in LLMs,Threat Modeling & Evaluations,Scheming and Deception
+ASIDE: Architectural Separation of Instructions and Data in Language Models,"Robustness, Defense & Systemic Control",Adversarial Robustness
+DUET: Distilled LLM Unlearning from an Efficiently Contextualized Teacher,Capability Control & Unlearning,Alignment Training
+Get RICH or Die Scaling: Profitably Trading Inference Compute for Robustness,"Robustness, Defense & Systemic Control",Adversarial Robustness
+LH-DECEPTION: Simulating and Understanding LLM Deceptive Behaviors in Long-Horizon Interactions,Threat Modeling & Evaluations,Scheming and Deception
+Adversarial Attacks Already Tell the Answer: Directional Bias-Guided Test-time Defense for Vision-Language Models,"Robustness, Defense & Systemic Control",Adversarial Robustness

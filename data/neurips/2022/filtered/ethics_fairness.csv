@@ -1,0 +1,142 @@
+Paper Title
+Transferring Fairness under Distribution Shifts via Fair Consistency Regularization
+"Debiased, Longitudinal and Coordinated Drug Recommendation through Multi-Visit Clinic Records"
+Composition Theorems for Interactive Differential Privacy
+Fair Rank Aggregation
+Momentum Aggregation for Private Non-convex ERM
+On Learning and Refutation in Noninteractive Local Differential Privacy
+Prompt Certified Machine Unlearning with Randomized Gradient Smoothing and Quantization
+Near-Optimal Correlation Clustering with Privacy
+When to Make Exceptions: Exploring Language Models as Accounts of Human Moral Judgment
+Data Augmentation MCMC for Bayesian Inference from Privatized Data
+Contrastive Adapters for Foundation Model Group Robustness
+Conformalized Fairness via Quantile Regression
+Fair Bayes-Optimal Classifiers Under Predictive Parity
+SoteriaFL: A Unified Framework for Private Federated Learning with Communication Compression
+Bridging Central and Local Differential Privacy in Data Acquisition Mechanisms
+DP-PCA: Statistically Optimal and Differentially Private PCA
+Fair Wrapping for Black-box Predictions
+Log-Concave and Multivariate Canonical Noise Distributions for Differential Privacy
+Privacy of Noisy Stochastic Gradient Descent: More Iterations without More Privacy Loss
+A Reduction to Binary Approach for Debiasing Multiclass Datasets
+Calibrated Data-Dependent Constraints with Exact Satisfaction Guarantees
+Learning Debiased Classifier with Biased Committee
+Private Set Generation with Discriminative Information
+Optimal Efficiency-Envy Trade-Off via Optimal Transport
+Probing Classifiers are Unreliable for Concept Removal and Detection
+A Causal Analysis of Harm
+On the Discrimination Risk of Mean Aggregation Feature Imputation in Graphs
+Fair Ranking with Noisy Protected Attributes
+Trade-off between Payoff and Model Rewards in Shapley-Fair Collaborative Machine Learning
+Fairness in Federated Learning via Core-Stability
+DeepMed: Semiparametric Causal Mediation Analysis with Debiased Deep Learning
+Envy-free Policy Teaching to Multiple Agents
+Is Sortition Both Representative and Fair?
+Group Meritocratic Fairness in Linear Contextual Bandits
+Learning to Generate Inversion-Resistant Model Explanations
+Differentially Private Learning Needs Hidden State (Or Much Faster Convergence)
+Private Isotonic Regression
+Improved Differential Privacy for SGD via Optimal Private Linear Operators on Adaptive Streams
+DReS-FL: Dropout-Resilient Secure Federated Learning for Non-IID Clients via Secret Data Sharing
+Privacy Induces Robustness: Information-Computation Gaps and Sparse Mean Estimation
+Untargeted Backdoor Watermark: Towards Harmless and Stealthy Dataset Copyright Protection
+Bring Your Own Algorithm for Optimal Differentially Private Stochastic Minimax Optimization
+Random Rank: The One and Only Strategyproof and Proportionally Fair Randomized Facility Location Mechanism
+Differentially Private Online-to-batch for Smooth Losses
+Debiasing Graph Neural Networks via Learning Disentangled Causal Substructure
+Mean Estimation with User-level Privacy under Data Heterogeneity
+Iron: Private Inference on Transformers
+Are Two Heads the Same as One? Identifying Disparate Treatment in Fair Neural Networks
+Anonymized Histograms in Intermediate Privacy Models
+Pushing the limits of fairness impossibility: Who's the fairest of them all?
+Recovering Private Text in Federated Learning of Language Models
+Robust Rent Division
+SelecMix: Debiased Learning by Contradicting-pair Sampling
+Incorporating Bias-aware Margins into Contrastive Loss for Collaborative Filtering
+Counterfactual Neural Temporal Point Process for Estimating Causal Influence of Misinformation on Social Media
+House of Cans: Covert Transmission of Internal Datasets via Capacity-Aware Neuron Steganography
+New Lower Bounds for Private Estimation and a Generalized Fingerprinting Lemma
+"In Differential Privacy, There is Truth: on Vote-Histogram Leakage in Ensemble Private Learning"
+Network change point localisation under local differential privacy
+Renyi Differential Privacy of Propose-Test-Release and Applications to Private and Robust Machine Learning
+Differentially Private Covariance Revisited
+Differentially Private Generalized Linear Models Revisited
+SeqPATE: Differentially Private Text Generation via Knowledge Distillation
+Differentially Private Learning with Margin Guarantees
+Dynamic Fair Division with Partial Information
+Domain Adaptation meets Individual Fairness. And they get along.
+On Learning Fairness and Accuracy on Multiple Subgroups
+Bayesian Persuasion for Algorithmic Recourse
+Improved Utility Analysis of Private CountSketch
+All Politics is Local: Redistricting via Local Fairness
+Hypothesis Testing for Differentially Private Linear Regression
+CryptoGCN: Fast and Scalable Homomorphically Encrypted Graph Convolutional Network Inference
+ConfounderGAN: Protecting Image Data Privacy with Causal Confounder
+"Identification, Amplification and Measurement: A bridge to Gaussian Differential Privacy"
+Fairness Transferability Subject to Bounded Distribution Shift
+Measuring Data Reconstruction Defenses in Collaborative Inference Systems
+Scalable and Efficient Training of Large Convolutional Neural Networks with Differential Privacy
+Reconstructing Training Data From Trained Neural Networks
+On the Epistemic Limits of Personalized Prediction
+Uncovering the Structural Fairness in Graph Contrastive Learning
+Muffliato: Peer-to-Peer Privacy Amplification for Decentralized Optimization and Averaging
+Private Graph All-Pairwise-Shortest-Path Distance Release with Improved Error Rate
+When Privacy Meets Partial Information: A Refined Analysis of Differentially Private Bandits
+The price of unfairness in linear bandits with biased feedback
+On Privacy and Personalization in Cross-Silo Federated Learning
+Fairness Reprogramming
+Private and Communication-Efficient Algorithms for Entropy Estimation
+Performative Power
+Online Algorithms for the Santa Claus Problem
+Scalable Infomin Learning
+Bounding and Approximating Intersectional Fairness through Marginal Fairness
+Fair and Optimal Decision Trees: A Dynamic Programming Approach
+On the Tradeoff Between Robustness and Fairness
+LBD: Decouple Relevance and Observation for Individual-Level Unbiased Learning to Rank
+CATER: Intellectual Property Protection on Text Generation APIs via Conditional Watermarks
+The Effects of Regularization and Data Augmentation are Class Dependent
+Diagnosing failures of fairness transfer across distribution shift in real-world medical settings
+CS-Shapley: Class-wise Shapley Values for Data Valuation in Classification
+Brownian Noise Reduction: Maximizing Privacy Subject to Accuracy Constraints
+Private Multiparty Perception for Navigation
+A Differentially Private Linear-Time fPTAS for the Minimum Enclosing Ball Problem
+Adaptive Data Debiasing through Bounded Exploration
+Algorithms that Approximate Data Removal: New Results and Limitations
+Differentially Private Graph Learning via Sensitivity-Bounded Personalized PageRank
+Consistency of Constrained Spectral Clustering under Graph Induced Fair Planted Partitions
+When Does Differentially Private Learning Not Suffer in High Dimensions?
+Task-level Differentially Private Meta Learning
+Re-Analyze Gauss: Bounds for Private Matrix Approximation via Dyson Brownian Motion
+The Privacy Onion Effect: Memorization is Relative
+Order-Invariant Cardinality Estimators Are Differentially Private
+Generative Visual Prompt: Unifying Distributional Control of Pre-Trained Generative Models
+Dataset Inference for Self-Supervised Models
+Archimedes Meets Privacy: On Privately Estimating Quantiles in High Dimensions Under Minimal Assumptions
+Near-Optimal Private and Scalable $k$-Clustering
+Counterfactual Fairness with Partially Known Causal Graph
+Rashomon Capacity: A Metric for Predictive Multiplicity in Classification
+A General Framework for Auditing Differentially Private Machine Learning
+Homomorphic Matrix Completion
+Fairness without Demographics through Knowledge Distillation
+Anticipating Performativity by Predicting from Predictions
+Nonstationary Dual Averaging and Online Fair Allocation
+Fair Infinitesimal Jackknife: Mitigating the Influence of Biased Training Data Points Without Refitting
+Self-Supervised Fair Representation Learning without Demographics
+Parameters or Privacy: A Provable Tradeoff Between Overparameterization and Membership Inference
+Shape And Structure Preserving Differential Privacy
+Certifying Some Distributional Fairness with Subpopulation Decomposition
+Subgroup Robustness Grows On Trees: An Empirical Baseline Investigation
+FairVFL: A Fair Vertical Federated Learning Framework with Contrastive Adversarial Learning
+Recall Distortion in Neural Network Pruning and the Undecayed Pruning Algorithm
+Differentially Private Linear Sketches: Efficient Implementations and Applications
+Private Synthetic Data for Multitask Learning and Marginal Queries
+LAMP: Extracting Text from Gradients with Language Model Priors
+Washing The Unwashable : On The (Im)possibility of Fairwashing Detection
+Differentially Private Model Compression
+M$^4$I: Multi-modal Models Membership Inference
+Policy Optimization with Advantage Regularization for Long-Term Fairness in Decision Systems
+SecureFedYJ: a safe feature Gaussianization protocol for Federated Learning
+Pruning has a disparate impact on model accuracy
+Optimal Transport of Classifiers to Fairness
+Picking on the Same Person: Does Algorithmic Monoculture lead to Outcome Homogenization?
+Beyond Adult and COMPAS: Fair Multi-Class Prediction via Information Projection
