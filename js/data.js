@@ -175,7 +175,7 @@ const GH_URL = 'https://github.com/' + GH_REPO;
 
 const PIPELINE = [
   { step: 'STEP 01', name: 'fetch.py', desc: 'Pull accepted papers from OpenReview, PMLR, icml.cc and papers.nips.cc — 55,794 papers across 23 conference-years, with title, abstract, keywords.' },
-  { step: 'STEP 02', name: 'classify.py', desc: 'Classify each paper with DeepSeek V4 Flash reasoning, 50 async workers, into class + subdomain + a 1–7 safety score.' },
+  { step: 'STEP 02', name: 'classify.py', desc: 'DeepSeek V4 Flash (a reasoning LLM) reads each paper\'s title + abstract — 50 async workers — and assigns a class, subdomain and 1–7 safety score.' },
   { step: 'STEP 03', name: 'visualize.py', desc: 'Aggregate into major classes, 7 subareas, 17 subdomains and score distribution; emit filtered CSVs and plots.' },
 ];
 const CLASS_DEFS = [
@@ -255,13 +255,13 @@ const VIEWS = {
     stats: [{ k: 'Venues', v: 'ICLR · ICML · NeurIPS' }, { k: 'Years', v: '2019–2026' }, { k: 'Subdomains', v: '17' }],
     type: 'papers',
   },
-  method: {
-    key: 'method', label: 'METHOD', chartTitle: 'Classification pipeline', chartUnit: 'open source · reproducible',
+  implementation: {
+    key: 'implementation', label: 'IMPLEMENTATION', chartTitle: 'Classification pipeline', chartUnit: 'open source · reproducible',
     kicker: 'HOW IT WORKS', big: { num: 4 }, bigUnit: 'major classes', bigLabel: 'assigned to every accepted paper',
-    brief: 'An LLM reads each title and abstract and returns a JSON verdict: class, subdomain, three score axes, confidence and reasoning. Boundary rules disambiguate the hard cases.',
-    stats: [{ k: 'Sources', v: 'OpenReview + 3 scrapers' }, { k: 'Classifier', v: 'DeepSeek V4 Flash' }, { k: 'Concurrency', v: '50 workers' }],
+    brief: 'Every accepted paper is classified by DeepSeek V4 Flash — a reasoning LLM — reading only its title and abstract, not the full paper. For each one it returns a JSON verdict: major class, safety subdomain, three score axes, a confidence and its reasoning. Explicit boundary rules disambiguate the hard cases.',
+    stats: [{ k: 'Model', v: 'DeepSeek V4 Flash' }, { k: 'Reads', v: 'title + abstract' }, { k: 'Sources', v: 'OpenReview + 3 scrapers' }],
     type: 'method',
   },
 };
 
-const VIEW_ORDER = ['overview', 'method', 'conferences', 'arxiv', 'subareas', 'subdomains', 'scores', 'major', 'orgs', 'papers'];
+const VIEW_ORDER = ['overview', 'conferences', 'subareas', 'subdomains', 'scores', 'major', 'orgs', 'papers', 'arxiv', 'implementation'];
