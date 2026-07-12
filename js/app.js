@@ -758,6 +758,20 @@
       .catch(() => { /* badge keeps its fallback label */ });
   }
 
+  /* ---------- glass nav scroll states ---------- */
+  const nav = document.querySelector('.tabs-wrap');
+  let navState = -1;
+  const onNavScroll = () => {
+    const y = window.scrollY;
+    const s = y >= 150 ? 2 : y >= 20 ? 1 : 0;
+    if (s === navState) return;
+    navState = s;
+    nav.classList.toggle('nav-glass', s >= 1);
+    nav.classList.toggle('nav-solid', s === 2);
+  };
+  window.addEventListener('scroll', onNavScroll, { passive: true });
+  onNavScroll();
+
   /* ---------- init ---------- */
   $('masthead-home').addEventListener('click', () => { window.scrollTo({ top: 0 }); });
   $('fab').addEventListener('click', fbOpen);

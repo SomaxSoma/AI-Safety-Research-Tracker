@@ -27,7 +27,7 @@ data/papers.json # all 2,328 safety papers [title, venue, year, subdomain, score
 
 ## Features
 
-- **Sticky top navigation** — tabs sit directly under the masthead and stay pinned while scrolling; OVERVIEW (the hero: animated 4.2% share, per-year bars) is the default view and METHOD is the second tab.
+- **Sticky glass navigation** — tabs sit directly under the masthead and stay pinned while scrolling, with a subtle frosted-glass effect that deepens with scroll (near-transparent at rest → glass past 20px → higher opacity past 150px). OVERVIEW (the hero: animated 4.2% share, per-year bars) is the default view, METHOD is the second tab, and the masthead title links home.
 - **11 views** — Overview, Method (incl. the independent-replication citation), Conferences (POOLED / BY VENUE faces), arXiv Trend (real 90-month series with hover crosshair), Subareas, Detailed Classes (ICLR 2026 / BY YEAR drilldown with ↑/↓ keys / TRENDS composition-over-time lines), Scores, Major Classes, Who Publishes (TOP ORGS / BY TYPE / BY YEAR org-backed share), Papers explorer (click a row for the classifier's verbatim reasoning and per-axis scores), Classifier metrics.
 - **Deep links** — every view has a URL hash (`#arxiv`, `#method`, …); browser back/forward works.
 - **Custom tooltips** — styled hover tooltips on all bars; the arXiv chart shows a crosshair with rolling %, monthly %, and volume.

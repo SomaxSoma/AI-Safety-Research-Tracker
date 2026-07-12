@@ -64,8 +64,15 @@ a.masthead-views:hover{color:#fff;border-color:rgba(255,255,255,.4)}
 .hero-bar-labels div{flex:1;text-align:center;font:400 10.5px 'IBM Plex Mono';color:#6f6f6f}
 .hero-caption{margin-top:16px;font:400 11px 'IBM Plex Mono';color:#6f6f6f}
 
-/* tabs — sticky so navigation is always reachable */
-.tabs-wrap{padding:0 46px;border-top:1px solid rgba(255,255,255,.08);border-bottom:1px solid rgba(255,255,255,.08);position:sticky;top:0;z-index:50;background:rgba(6,6,6,.93);backdrop-filter:blur(8px)}
+/* tabs — sticky glass navigation. Progressive states driven by scroll position:
+   resting (near-transparent) -> glass at 20px -> higher opacity at 150px for readability. */
+.tabs-wrap{padding:0 46px;border-top:1px solid rgba(255,255,255,.08);border-bottom:1px solid rgba(255,255,255,.05);position:sticky;top:0;z-index:50;
+  background:rgba(10,10,10,.35);
+  -webkit-backdrop-filter:blur(16px) saturate(140%);
+  backdrop-filter:blur(16px) saturate(140%);
+  transition:background .25s ease,box-shadow .25s ease}
+.tabs-wrap.nav-glass{background:rgba(10,10,10,.55);box-shadow:0 8px 30px rgba(0,0,0,.35)}
+.tabs-wrap.nav-solid{background:rgba(10,10,10,.70)}
 .tabs{display:flex;gap:2px;flex-wrap:wrap}
 .tab{cursor:pointer;padding:20px 24px 18px;font:500 12px 'IBM Plex Mono';letter-spacing:.16em;color:#5f5f5f;border-bottom:1px solid transparent;transition:color .25s}
 .tab.active{color:#f6f6f6;border-bottom-color:#f0f0f0}
