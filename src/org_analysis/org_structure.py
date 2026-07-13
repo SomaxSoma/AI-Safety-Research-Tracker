@@ -8,10 +8,10 @@ Types: corporate / PBC / nonprofit / academic / government / funder.
   <else>     mapped from ai_safety_orgs category: funder / government / academic,
              everything else (research / fellowship / governance / community) -> nonprofit
 
-The retained safety-org set is every ai_safety_orgs entry that is NOT tagged
-"safety-adjacent", plus OpenAI / Anthropic / Google DeepMind (the general labs
-Meta, Hugging Face, Microsoft, Scale, Mila, Vector, AI2, Cohere, Shanghai, xAI,
-EleutherAI are dropped).
+The retained set is EVERY ai_safety_orgs entry — the general/"safety-adjacent"
+labs (Meta, Hugging Face, Microsoft, Scale, Mila, Vector, AI2, Cohere, Shanghai,
+xAI, EleutherAI) are now included too; the primary rule keeps a lone company
+author from over-crediting its lab.
 """
 
 import sys
@@ -22,11 +22,18 @@ sys.path.insert(0, str(ROOT))
 from ai_safety_orgs import ORGS  # noqa: E402
 
 PROMOTE = {"OpenAI", "Anthropic", "Google DeepMind"}
-SAFETY_ORGS = {n for n, i in ORGS.items() if i.get("focus") != "safety-adjacent"} | PROMOTE
+# Every org in ai_safety_orgs, adjacent labs included. The two-tier split used to
+# drop general labs (Meta, Hugging Face, …) to avoid over-crediting a paper to a
+# lab that just had one author there — that is now handled by the primary rule
+# (a lone company author among academics -> University/Independent/other).
+SAFETY_ORGS = set(ORGS) | PROMOTE
 
 PBC_ALWAYS = {"Anthropic"}
 CORPORATE = {"Google DeepMind", "Goodfire", "Haize Labs", "Tilde Research",
-             "Gray Swan AI", "Andon Labs", "Simplex", "Conjecture", "Aligned AI"}
+             "Gray Swan AI", "Andon Labs", "Simplex", "Conjecture", "Aligned AI",
+             # general-purpose for-profit labs (previously "safety-adjacent")
+             "Meta AI", "Microsoft Research", "Hugging Face", "Scale AI SEAL",
+             "Cohere Labs", "xAI", "AE Studio"}
 
 TYPES = ["PBC", "corporate", "nonprofit", "academic", "government", "funder"]
 COLOR = {"PBC": "#2a78d6", "corporate": "#eb6834", "nonprofit": "#1baf7a",
