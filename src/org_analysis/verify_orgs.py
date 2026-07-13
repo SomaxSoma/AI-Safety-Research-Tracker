@@ -23,6 +23,8 @@ import json
 import os
 import re
 import sys
+import threading
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 import pandas as pd
@@ -64,11 +66,11 @@ STEP 1 — classify each organization's relationship to THIS paper:
 - "mention": only cited, compared against, or used as a tool/platform/dataset host (e.g. "available on Hugging Face", "models like GPT-4")
 - "absent": not really about this organization
 
-STEP 2 — pick the single PRIMARY organization the research is *from*, from the orgs you marked "affiliation" or "acknowledgment":
-- If a MAJORITY (or clear plurality) of the authors are affiliated with organizations, the paper is FROM an organization — determine the single primary one: the org the most authors belong to, or that evidently led the work.
-- A paper that is HOSTED or ORGANIZED by a program — a cohort / fellowship / scholar / mentorship project (e.g. "SPAR Spring 2025 cohort research", "a MATS project", a mentor-led program paper) — is primarily that program, even if the authors otherwise list only universities.
-- Otherwise — the paper is not hosted or organized by any org or program, and most authors are at universities / independent / not in the list (e.g. a lone company author among academics) — set primary to "University/Independent/other".
-- For genuine edge cases, use your best judgment.
+STEP 2 — pick the single PRIMARY organization the research is *from*, from the orgs you marked "affiliation" or "acknowledgment". Be GENEROUS crediting safety orgs, STRICT with companies:
+1. SAFETY ORGS / PROGRAMS first. If any author is AFFILIATED with a safety org (a safety nonprofit, academic safety centre, or government safety institute — e.g. Alignment Research Center, Center for AI Safety, Redwood, CLR, UK AISI), OR the work was HOSTED / FACILITATED / MENTORED by a program ("as part of", "facilitated by", "made possible by", a cohort / fellow / scholar / mentee project — MATS, SPAR, ARENA, Apart, LASR…), the paper is FROM the safety ecosystem: set primary to the safety org with the most authors, or the one that hosted/led the work. Do this EVEN IF those people are a minority among university co-authors — mapping safety-org involvement is the whole goal. (A safety org merely thanked for feedback/discussion, with no author there and no hosting role, does NOT count as primary.)
+2. Otherwise, a COMPANY (Google DeepMind, OpenAI, Anthropic, Meta, Microsoft, startups) is primary only if it clearly LEADS — a majority/plurality of the authors are there, or it is evidently a company project. A lone company author among university authors does NOT make the company primary.
+3. Otherwise — no safety org is involved and no company leads (authors are at universities / independent / not in the list, perhaps with a stray company author or only a funder) — set primary to "University/Independent/other".
+Use your best judgment on genuine edge cases.
 
 STEP 3 — pick the single PRIMARY funder among the [funder] orgs you marked "acknowledgment" (the main grant/philanthropic backer), or null. A [funder] is NEVER the primary organization.
 
@@ -188,31 +190,37 @@ def process_paper(rid, conf, year, llm, TEXT_DIR):
             "verdicts": json.dumps(verdicts)}, made
 
 
-def reverify(llm, TEXT_DIR, meta):
+def reverify(llm, TEXT_DIR, meta, workers):
     """Re-run the LLM only on papers that already have a confirmed org (to apply
     the new primary rules) and migrate the rest to the new schema. Rewrites
-    org_verified.csv (backing up the old one first)."""
+    org_verified.csv (backing up the old one first). Concurrent."""
     prev = pd.read_csv(OUT, dtype=str).fillna("")
     bak = OUT.with_suffix(".csv.bak")
     prev.to_csv(bak, index=False)
-    todo = prev[prev["confirmed"].str.len() > 0]
+    by_id = {r["id"]: r for _, r in prev.iterrows()}
+    todo = [rid for rid, r in by_id.items()
+            if r["confirmed"].strip() and (TEXT_DIR / f"{rid}.txt").exists()]
     print(f"{len(prev)} rows, re-running {len(todo)} with a confirmed org "
           f"(backup: {bak})")
-    rows, n_llm = [], 0
-    for _, r in prev.iterrows():
-        rid = r["id"]
-        if r["confirmed"].strip() and (TEXT_DIR / f"{rid}.txt").exists():
-            row, _ = process_paper(rid, r["conference"], r["year"], llm, TEXT_DIR)
-            n_llm += 1
-            if n_llm % 25 == 0:
-                print(f"  reverified {n_llm}/{len(todo)}")
-        else:  # no confirmed org -> just migrate columns, no LLM
-            row = {"id": rid, "conference": r["conference"], "year": r["year"],
-                   "candidates": r.get("candidates", ""), "confirmed": r["confirmed"],
-                   "primary_org": "", "primary_funder": "", "verdicts": r.get("verdicts", "")}
-        rows.append(row)
+
+    done = {}
+    def work(rid):
+        r = by_id[rid]
+        return rid, process_paper(rid, r["conference"], r["year"], llm, TEXT_DIR)[0]
+    with ThreadPoolExecutor(max_workers=workers) as ex:
+        for i, (rid, row) in enumerate(ex.map(work, todo), 1):
+            done[rid] = row
+            if i % 50 == 0:
+                print(f"  reverified {i}/{len(todo)}")
+
+    rows = []
+    for rid, r in by_id.items():
+        rows.append(done.get(rid) or {
+            "id": rid, "conference": r["conference"], "year": r["year"],
+            "candidates": r.get("candidates", ""), "confirmed": r["confirmed"],
+            "primary_org": "", "primary_funder": "", "verdicts": r.get("verdicts", "")})
     pd.DataFrame(rows)[FIELDS].to_csv(OUT, index=False)
-    print(f"\nDone. Reverified {n_llm} papers. Output: {OUT}")
+    print(f"\nDone. Reverified {len(done)} papers. Output: {OUT}")
 
 
 def main():
@@ -220,6 +228,8 @@ def main():
     ap.add_argument("--reverify", action="store_true",
                     help="re-run the LLM on papers that already have a confirmed "
                          "org (new primary rules), migrate the rest, rewrite the CSV")
+    ap.add_argument("--workers", type=int, default=32,
+                    help="concurrent LLM requests (default 32)")
     args = ap.parse_args()
 
     key = os.environ.get("OPENROUTER_API_KEY")
@@ -234,7 +244,7 @@ def main():
     if args.reverify:
         if not OUT.exists():
             sys.exit(f"No {OUT} to reverify.")
-        reverify(llm, TEXT_DIR, meta)
+        reverify(llm, TEXT_DIR, meta, args.workers)
         return
 
     ids = sorted(p.stem for p in TEXT_DIR.glob("*.txt") if p.stem in meta)
@@ -257,20 +267,25 @@ def main():
     if write_header:
         w.writeheader()
 
-    n = n_conf = n_llm = 0
-    for rid in todo:
+    lock = threading.Lock()
+    c = {"n": 0, "llm": 0, "conf": 0}
+
+    def handle(rid):
         conf, year = meta[rid]
         row, made = process_paper(rid, conf, year, llm, TEXT_DIR)
-        w.writerow(row)
-        f.flush()
-        n += 1
-        n_llm += made
-        if row["confirmed"]:
-            n_conf += 1
-        if n % 50 == 0:
-            print(f"  {n}/{len(todo)}  (LLM calls: {n_llm}, confirmed: {n_conf})")
+        with lock:  # serialize writes + progress; LLM calls run concurrently
+            w.writerow(row)
+            f.flush()
+            c["n"] += 1
+            c["llm"] += made
+            c["conf"] += bool(row["confirmed"])
+            if c["n"] % 50 == 0:
+                print(f"  {c['n']}/{len(todo)}  (LLM calls: {c['llm']}, confirmed: {c['conf']})")
+
+    with ThreadPoolExecutor(max_workers=args.workers) as ex:
+        list(ex.map(handle, todo))
     f.close()
-    print(f"\nDone. {n} papers ({n_llm} LLM calls), {n_conf} with a confirmed org.")
+    print(f"\nDone. {c['n']} papers ({c['llm']} LLM calls), {c['conf']} with a confirmed org.")
     print(f"Output: {OUT}")
 
 
