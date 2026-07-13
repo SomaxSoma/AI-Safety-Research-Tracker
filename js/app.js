@@ -157,13 +157,13 @@
     }).join('') + `</div>`;
   }
 
-  /* WHO PUBLISHES: verified safety-org bars, by-legal-type face, and by-year trend face */
+  /* WHO PUBLISHES: research-org bars, funders face, and by-year trend face */
   function mkOrgs() {
     const v = VIEWS.orgs;
     if (state.orgFace === 'byyear') return mkOrgYears();
-    const body = state.orgFace === 'types' ? mkHbars(ORG_TYPES_DIST) : mkHbars(ORGS_TOP);
-    const note = state.orgFace === 'types'
-      ? 'Papers per legal structure of the primary org (OpenAI counts as corporate before its 2026 PBC conversion, PBC after). Same 325-paper base and caveats as the org list.'
+    const body = state.orgFace === 'funders' ? mkHbars(FUNDERS_LIST) : mkHbars(ORGS_TOP);
+    const note = state.orgFace === 'funders'
+      ? 'Funders acknowledged in safety papers — funding credits in the text, not author affiliations. Open Philanthropy is credited far more than any other.'
       : v.note;
     return `<div>${body}<div class="chart-note">${note}</div></div>`;
   }
@@ -176,14 +176,14 @@
       const share = shares[i];
       const h = Math.max(3, (share / max) * 196).toFixed(0);
       const fill = share === max ? '#f2f2f2' : `rgba(255,255,255,${(0.35 + (share / max) * 0.4).toFixed(3)})`;
-      return `<div class="hrow vbar" data-tip="<span class='tt-em'>${year}</span> — ${share.toFixed(1)}% org-backed <span class='tt-dim'>(${b} of ${fmt(n)} checked)</span>">
+      return `<div class="hrow vbar" data-tip="<span class='tt-em'>${year}</span> — ${share.toFixed(1)}% led by a named org <span class='tt-dim'>(${b} of ${fmt(n)} checked)</span>">
         <div class="vbar-value" style="animation-delay:${i * 55}ms">${share.toFixed(0)}%</div>
         <div class="vbar-fill" style="height:${h}px;background:${fill};animation-delay:${i * 55}ms"></div>
       </div>`;
     }).join('');
     const labels = ORG_BY_YEAR.map(([year]) => `<div>${year}</div>`).join('');
     return `<div><div class="hgrp vbars">${bars}</div><div class="vbar-labels">${labels}</div>
-      <div class="chart-note">Share of each year's safety papers with a confirmed primary safety-org. Early bars are small samples (2019: n=9). From 2023 on, the org-associated share declines while total safety volume keeps rising.</div></div>`;
+      <div class="chart-note">Share of each year's safety papers led by a named research org (its primary affiliation). Early bars are small samples (2019: n=9). The share declines as the field grows and more papers come from labs and universities outside the tracked set.</div></div>`;
   }
 
   /* subdomain composition over time: each line = share of that year's safety papers */
@@ -525,15 +525,15 @@
   const FACES = {
     conferences: [['pooled', 'POOLED'], ['venues', 'BY VENUE']],
     subdomains: [['all', 'ICLR 2026'], ['year', 'BY YEAR'], ['trends', 'TRENDS']],
-    orgs: [['orgs', 'ALL ORGS'], ['types', 'BY TYPE'], ['byyear', 'BY YEAR']],
+    orgs: [['orgs', 'ORGS'], ['funders', 'FUNDERS'], ['byyear', 'BY YEAR']],
   };
   const FACE_KEY = { conferences: 'confFace', subdomains: 'sdFace', orgs: 'orgFace' };
   const FACE_META = {
     'subdomains:year': ['Subdomains per year', 'all venues pooled · 2019–2026'],
     'subdomains:trends': ['Subdomain composition over time', "share of each year's safety papers · pooled"],
     'conferences:venues': ['AI-safety share by venue, by year', 'ICLR · ICML · NeurIPS, separate'],
-    'orgs:types': ['Org-backed papers by legal structure', 'n=325 · same verified base'],
-    'orgs:byyear': ['Org-backed share of safety papers, by year', 'primary org confirmed · of papers checked'],
+    'orgs:funders': ['Funders behind safety papers', 'funding acknowledgments · not affiliations'],
+    'orgs:byyear': ['Papers led by a named research org, by year', 'primary affiliation · of papers checked'],
   };
 
   function renderPanel() {
