@@ -183,7 +183,7 @@
     }).join('');
     const labels = ORG_BY_YEAR.map(([year]) => `<div>${year}</div>`).join('');
     return `<div><div class="hgrp vbars">${bars}</div><div class="vbar-labels">${labels}</div>
-      <div class="chart-note">Share of each year's checked safety papers with a confirmed primary safety-org. Early bars are small samples (2019: n=9). From 2023 on, dedicated orgs' relative footprint shrinks as safety research mainstreams. Papers checked = full text retrievable (all venues incl. ICML 2026, backfilled).</div></div>`;
+      <div class="chart-note">Share of each year's safety papers with a confirmed primary safety-org. Early bars are small samples (2019: n=9). From 2023 on, the org-associated share declines while total safety volume keeps rising.</div></div>`;
   }
 
   /* subdomain composition over time: each line = share of that year's safety papers */

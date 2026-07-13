@@ -225,10 +225,10 @@ const VIEWS = {
   orgs: {
     key: 'orgs', label: 'WHO PUBLISHES', chartTitle: 'Verified primary safety-org, by paper count', chartUnit: 'all 38 verified orgs · LLM-verified',
     kicker: 'ORG AFFILIATIONS', big: { num: 404 }, bigUnit: 'papers', bigLabel: 'with a confirmed primary safety-org',
-    brief: 'Full-text scan of the safety corpus: author affiliations and funding acknowledgments matched against dedicated safety orgs, then LLM-verified so citations ("we evaluate GPT-4") don\'t count. Funders appear here — co-authorship analyses structurally can\'t see them.',
+    brief: 'Which organizations are behind the safety papers, by author affiliation and funding acknowledgment, matched against dedicated safety orgs. Funders are included alongside labs and nonprofits.',
     stats: [{ k: 'Orgs confirmed', v: '38' }, { k: 'Papers scanned', v: '2,283' }, { k: 'Top funder', v: 'Open Phil · 93' }],
     type: 'orgs',
-    note: 'Dedicated safety orgs only — university papers without a safety-lab affiliation are not counted. Primary org = highest author weight; funders count via acknowledgments. Early years are small samples (2019: n=9).',
+    note: 'Dedicated safety orgs only — university papers without a safety-lab affiliation are not counted. Early years are small samples (2019: n=9).',
   },
   papers: {
     key: 'papers', label: 'PAPERS', chartTitle: 'All safety papers', chartUnit: 'search · filter · sorted by score, then year',
