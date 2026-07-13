@@ -1,40 +1,56 @@
-organization,type,papers
-University / Independent / not in list,independent,264
-Google DeepMind,corporate,40
-MATS,nonprofit,31
-Mila,academic,22
-Shanghai AI Laboratory,nonprofit,14
-Meta AI,corporate,12
-OpenAI,PBC,11
-Vector Institute,academic,9
-Anthropic,PBC,7
-Microsoft Research,corporate,7
-FAR.AI,nonprofit,6
-Allen Institute for AI,nonprofit,5
-UK AI Security Institute,government,5
-Center for Human-Compatible AI,academic,5
-EleutherAI,nonprofit,4
-LASR Labs,nonprofit,4
-Apart Research,nonprofit,4
-Redwood Research,nonprofit,4
-Apollo Research,nonprofit,3
-Timaeus,nonprofit,3
-SPAR,nonprofit,3
-Anthropic Fellows Program,nonprofit,3
-Alignment Research Center,nonprofit,2
-PIBBSS,nonprofit,2
-AI Safety Camp,nonprofit,2
-METR,nonprofit,1
-Center for AI Safety,nonprofit,1
-Transluce,nonprofit,1
-Scale AI SEAL,corporate,1
-Stanford Existential Risks Initiative,academic,1
-LawZero,nonprofit,1
-Hugging Face,corporate,1
-Gray Swan AI,corporate,1
-CBAI,nonprofit,1
-Concordia AI,nonprofit,1
-LISA,nonprofit,1
-Center on Long-Term Risk,nonprofit,1
-Constellation,nonprofit,1
-Haize Labs,corporate,1
+organization,type,primary_papers,association_papers
+University / Independent / not in list,independent,348,
+Google DeepMind,corporate,45,106
+OpenAI,PBC,10,71
+MATS,nonprofit,32,60
+Anthropic,PBC,10,50
+Mila,academic,22,50
+Microsoft Research,corporate,15,41
+Center for AI Safety,nonprofit,4,33
+Shanghai AI Laboratory,nonprofit,14,27
+FAR.AI,nonprofit,4,23
+Meta AI,corporate,14,23
+Vector Institute,academic,7,23
+UK AI Security Institute,government,3,20
+Allen Institute for AI,nonprofit,5,15
+Center for Human-Compatible AI,academic,2,13
+Constellation,nonprofit,1,11
+Anthropic Fellows Program,nonprofit,8,10
+EleutherAI,nonprofit,7,9
+Redwood Research,nonprofit,6,9
+Goodfire,corporate,0,8
+Cooperative AI Foundation,nonprofit,0,8
+Apollo Research,nonprofit,2,7
+Center on Long-Term Risk,nonprofit,2,6
+Scale AI SEAL,corporate,1,6
+Timaeus,nonprofit,4,6
+SPAR,nonprofit,2,5
+Gray Swan AI,corporate,3,5
+Apart Research,nonprofit,3,5
+LawZero,nonprofit,0,4
+LASR Labs,nonprofit,4,4
+Frontier Model Forum,nonprofit,0,4
+AI Safety Camp,nonprofit,0,3
+PIBBSS,nonprofit,1,3
+Alignment Research Center,nonprofit,1,3
+Stanford Existential Risks Initiative,academic,0,3
+Truthful AI,nonprofit,2,3
+Haize Labs,corporate,1,2
+Astra Fellowship,nonprofit,1,2
+AE Studio,corporate,2,2
+Hugging Face,corporate,1,2
+METR,nonprofit,1,2
+LISA,nonprofit,0,2
+AI Safety Institute (generic),government,0,2
+Transluce,nonprofit,1,2
+FOCAL,academic,0,2
+Future of Humanity Institute,academic,0,2
+CBAI,nonprofit,0,2
+NYU Alignment Research Group,academic,1,1
+Conjecture,corporate,0,1
+Concordia AI,nonprofit,0,1
+ERA Fellowship,nonprofit,0,1
+Arcadia Impact,nonprofit,0,1
+Stanford Center for AI Safety,academic,0,1
+Center for Applied Rationality,nonprofit,0,1
+Cavendish Labs,nonprofit,0,1
