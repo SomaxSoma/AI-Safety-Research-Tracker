@@ -229,14 +229,6 @@ const VIEWS = {
     type: 'hbar', entries: SUBDOMAINS, notable: NOTABLE_SUBDOMAINS, countLabel: '13 subdomains',
     hasDrill: true,
   },
-  scores: {
-    key: 'scores', label: 'SCORES', chartTitle: 'Safety-relevance score distribution', chartUnit: 'ICLR 2026 · 3 score axes · n=412',
-    kicker: 'SAFETY-RELEVANCE SCORE', big: { num: 166 }, bigUnit: 'papers', bigLabel: 'score the maximum 7 / 7',
-    brief: 'The distribution skews high — 40% of safety papers score a perfect 7, and the median is 6. The classifier only keeps papers scoring 3 or above.',
-    stats: [{ k: 'Perfect score (7)', v: '166 · 40%' }, { k: 'Median score', v: '6' }, { k: 'Mean score', v: '5.6' }],
-    type: 'vbar', entries: SCORES, suf: '', notable: NOTABLE_SCORE, countLabel: '166 top-scored papers',
-    note: 'Total score = Motivation (1–3) + Methodology (0–2) + Evaluation (0–2). Papers below 3 are reclassified out of safety. The full rubric defining each axis is public: <a href="https://github.com/SomaxSoma/AI-Safety-Research-Tracker/blob/main/src/prompt.txt" target="_blank" rel="noopener">src/prompt.txt</a>.',
-  },
   major: {
     key: 'major', label: 'MAJOR CLASSES', chartTitle: 'All 5,352 accepted papers by class', chartUnit: 'ICLR 2026 · full conference',
     kicker: 'MAJOR CLASSIFICATION', big: { num: 7.7, dec: 1, suf: '%' }, bigUnit: 'of ICLR 2026', bigLabel: 'is frontier AI-safety research',
@@ -268,4 +260,4 @@ const VIEWS = {
   },
 };
 
-const VIEW_ORDER = ['overview', 'conferences', 'subareas', 'subdomains', 'scores', 'major', 'orgs', 'papers', 'arxiv', 'implementation'];
+const VIEW_ORDER = ['overview', 'conferences', 'subareas', 'subdomains', 'major', 'orgs', 'papers', 'arxiv', 'implementation'];

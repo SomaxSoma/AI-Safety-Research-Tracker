@@ -521,7 +521,9 @@
       <div class="classes-title">FOUR MAJOR CLASSES</div>
       <div class="classes">${CLASS_DEFS.map((c) =>
         `<div class="class-row"><div class="class-n">${c.n}</div><div class="class-name">${esc(c.name)}</div><div class="class-desc">${c.desc}</div></div>`).join('')}</div>
-      <div class="method-cite">Full classification rubric — the four classes, 17 safety subdomains, and the 1–7 relevance score with its three axes — is open source: <a href="${GH_URL}/blob/main/src/prompt.txt" target="_blank" rel="noopener">src/prompt.txt</a>.</div>
+      <div class="classes-title" style="margin-top:32px">SAFETY-RELEVANCE SCORE · 1–7 <span class="method-sub">(ICLR 2026, n=412)</span></div>
+      ${mkVbars(SCORES, '')}
+      <div class="method-cite">Each safety paper scores Motivation (1–3) + Methodology (0–2) + Evaluation (0–2) = a 1–7 total; papers below 3 drop out of safety. The distribution skews high — 40% score the maximum 7 / 7, median 6. Full rubric (four classes, 17 subdomains, the three score axes): <a href="${GH_URL}/blob/main/src/prompt.txt" target="_blank" rel="noopener">src/prompt.txt</a>.</div>
     </div>`;
   }
 

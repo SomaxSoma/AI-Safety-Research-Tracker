@@ -167,6 +167,7 @@ a.masthead-views:hover{color:#fff;border-color:rgba(255,255,255,.4)}
 .pipe-step-name{margin-top:12px;font:500 15px 'IBM Plex Mono';color:#f2f2f2}
 .pipe-step-desc{margin-top:10px;font:400 12.5px/1.65 'IBM Plex Mono';color:#9a9a9a}
 .classes-title{margin-top:26px;font:500 12px 'IBM Plex Mono';letter-spacing:.06em;color:#ededed;margin-bottom:14px}
+.method-sub{font:400 10.5px 'IBM Plex Mono';letter-spacing:.04em;color:#6f6f6f}
 .method-cite{margin-top:26px;padding:14px 16px;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.02);font:400 12.5px/1.75 'IBM Plex Mono';letter-spacing:.02em;color:#9a9a9a}
 .method-cite a{color:#c8c8c8}
 .classes{display:flex;flex-direction:column;gap:10px}
