@@ -138,8 +138,8 @@ def plot_areas_composition(df):
     ax.set_title("Composition of AI-safety research by subdomain, over time",
                  fontsize=15, fontweight="bold", color=INK, pad=28)
     ns = s.groupby("year").size()
-    ax.text(0.0, 1.005, "Fine classification; lines sum to 100% within each year. "
-            "Pooled across all three venues.  " +
+    ax.text(0.0, 1.005, "Each line is a subdomain's share of that year's safety papers "
+            "(they sum to 100%). Pooled across all three venues.  " +
             "  ".join(f"{y}: n={ns[y]}" for y in years),
             transform=ax.transAxes, fontsize=7.5, color=INK2, va="bottom")
     style(ax)

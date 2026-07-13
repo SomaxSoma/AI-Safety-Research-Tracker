@@ -71,8 +71,8 @@ def main():
         ax.text(i, v + 0.6, f"{v:.0f}%", ha="center", va="bottom", fontsize=10, fontweight="bold", color=INK)
         ax.text(i, -2.6, f"n={n}", ha="center", va="top", fontsize=8, color=INK2)
     ax.set_xticks(range(len(years))); ax.set_xticklabels(years)
-    ax.set_ylabel("Safety papers with a safety-org association (%)", fontsize=11, color=INK2)
-    ax.set_title("Share of AI-safety papers backed by a tracked safety org, by year",
+    ax.set_ylabel("AI-safety papers backed by a safety org (%)", fontsize=11, color=INK2)
+    ax.set_title("Share of AI-safety papers backed by a safety org, by year",
                  fontsize=14, fontweight="bold", color=INK, pad=10)
     ax.set_ylim(0, max(any_pct) * 1.18); ax.grid(axis="y", color=GRID, lw=0.8); ax.set_axisbelow(True)
     for s in ("top", "right"): ax.spines[s].set_visible(False)
@@ -123,8 +123,8 @@ def plot_top_orgs(df):
     ax.barh(names, vals, color=cols, edgecolor="white", linewidth=0.6)
     for i, v in enumerate(vals):
         ax.text(v + max(vals) * 0.01, i, str(v), va="center", fontsize=8.5, fontweight="bold", color=INK)
-    ax.set_xlabel("Safety papers (LLM-verified association)", fontsize=10, color=INK2)
-    ax.set_title(f"Orgs behind AI-safety papers — all {len(names)} (verified)", fontsize=14,
+    ax.set_xlabel("Number of safety papers", fontsize=10, color=INK2)
+    ax.set_title("Organizations behind AI-safety papers", fontsize=14,
                  fontweight="bold", color=INK, pad=10)
     ax.set_xlim(0, max(vals) * 1.12)
     ax.tick_params(axis="y", labelsize=8.5)
@@ -177,7 +177,7 @@ def plot_prevalence_split():
     x = range(len(years))
     ax.bar(x, aff_pct, color="#2a78d6", width=0.68, label="Safety, org-affiliated")
     ax.bar(x, unaff_pct, bottom=aff_pct, color="#c9c8c3", width=0.68,
-           label="Safety, no detected affiliation")
+           label="Safety, no safety-org affiliation")
     for i in x:
         if aff_pct[i] > 0.4:
             ax.text(i, aff_pct[i] / 2, f"{aff_pct[i]:.1f}%", ha="center", va="center",
@@ -189,8 +189,8 @@ def plot_prevalence_split():
     ax.set_title("AI-safety share of papers, split by org affiliation",
                  fontsize=14, fontweight="bold", color=INK, pad=30)
     ax.text(0.0, 1.015,
-            "Column = safety share of all papers; blue = with an LLM-verified safety-org affiliation. "
-            "ICML 2026 excluded (no PDFs); affiliation is a lower bound.",
+            "Each column is that year's AI-safety share of all papers; blue is the part affiliated "
+            "with a safety org. ICML 2026 excluded (no PDFs).",
             transform=ax.transAxes, fontsize=8.5, color=INK2, va="bottom")
     ax.set_ylim(0, max(saf_pct) * 1.18)
     ax.grid(axis="y", color=GRID, lw=0.8); ax.set_axisbelow(True)
