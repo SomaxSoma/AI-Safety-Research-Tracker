@@ -117,57 +117,61 @@ const GLOSSARY = {
 };
 
 /* Verified safety-org affiliations — data/org_verified.csv (full-text scan + LLM verification).
-   All 34 orgs with a confirmed primary affiliation; [name, papers, legal type]. */
+   All 38 orgs with a confirmed primary affiliation; [name, papers, legal type]. */
 const ORGS_TOP = [
-  ['Open Philanthropy', 76, 'funder'],
-  ['Google DeepMind', 70, 'corporate'],
-  ['OpenAI', 41, 'corporate → PBC (2026)'],
-  ['MATS', 24, 'nonprofit fellowship'],
-  ['Anthropic', 21, 'public-benefit corporation'],
+  ['Open Philanthropy', 93, 'funder'],
+  ['Google DeepMind', 90, 'corporate'],
+  ['OpenAI', 50, 'corporate → PBC (2026)'],
+  ['MATS', 32, 'nonprofit fellowship'],
+  ['Anthropic', 26, 'public-benefit corporation'],
   ['Center for AI Safety', 17, 'nonprofit'],
-  ['UK AI Security Institute', 9, 'government'],
+  ['UK AI Security Institute', 15, 'government'],
   ['Center for Human-Compatible AI', 8, 'academic centre'],
   ['FAR.AI', 8, 'nonprofit'],
-  ['Stanford Existential Risks Initiative', 5, 'academic centre'],
+  ['Stanford Existential Risks Initiative', 6, 'academic centre'],
+  ['Redwood Research', 5, 'nonprofit'],
   ['Apart Research', 4, 'nonprofit'],
+  ['Timaeus', 4, 'nonprofit'],
+  ['Cooperative AI Foundation', 4, 'nonprofit'],
   ['Alignment Research Center', 3, 'nonprofit'],
   ['Goodfire', 3, 'corporate'],
   ['LASR Labs', 3, 'nonprofit'],
   ['Apollo Research', 3, 'nonprofit'],
   ['Center for Applied Rationality', 3, 'nonprofit'],
-  ['Redwood Research', 3, 'nonprofit'],
+  ['Long-Term Future Fund', 3, 'funder'],
   ['Future of Life Institute', 2, 'funder'],
   ['US CAISI', 2, 'government'],
   ['Future of Humanity Institute', 2, 'academic centre'],
-  ['Long-Term Future Fund', 2, 'funder'],
-  ['Timaeus', 2, 'nonprofit'],
+  ['SPAR', 2, 'nonprofit'],
   ['Foresight Institute', 2, 'funder'],
-  ['Cooperative AI Foundation', 2, 'nonprofit'],
+  ['Center on Long-Term Risk', 2, 'nonprofit'],
   ['METR', 1, 'nonprofit'],
   ['Transluce', 1, 'nonprofit'],
-  ['SPAR', 1, 'nonprofit'],
   ['PIBBSS', 1, 'nonprofit'],
   ['Stanford Center for AI Safety', 1, 'academic centre'],
   ['LawZero', 1, 'nonprofit'],
   ['LISA', 1, 'nonprofit'],
   ['AI Safety Camp', 1, 'nonprofit'],
-  ['Center on Long-Term Risk', 1, 'nonprofit'],
   ['Haize Labs', 1, 'corporate'],
+  ['Survival and Flourishing Fund', 1, 'funder'],
+  ['Gray Swan AI', 1, 'corporate'],
+  ['CBAI', 1, 'nonprofit'],
+  ['AI Safety Institute (generic)', 1, 'government'],
 ];
 const ORG_TYPES_DIST = [
-  ['Corporate — DeepMind, OpenAI <2026, startups', 110],
-  ['Funder — Open Phil, LTFF, FLI…', 82],
-  ['Nonprofit — independent research orgs', 80],
-  ['PBC — Anthropic, OpenAI ≥2026', 26],
-  ['Academic safety centre — CHAI, SERI…', 16],
-  ['Government — UK AISI, US CAISI', 11],
+  ['Corporate — DeepMind, OpenAI <2026, startups', 133],
+  ['Funder — Open Phil, LTFF, FLI…', 101],
+  ['Nonprofit — independent research orgs', 97],
+  ['PBC — Anthropic, OpenAI ≥2026', 38],
+  ['Government — UK AISI, US CAISI', 18],
+  ['Academic safety centre — CHAI, SERI…', 17],
 ];
 
 /* Org-backed safety papers per year — [year, backed, checked] from data/org_verified.csv.
    "checked" = safety papers with retrievable full text scanned for affiliations. */
 const ORG_BY_YEAR = [
-  ['2019', 1, 3], ['2020', 4, 20], ['2021', 0, 6], ['2022', 1, 12],
-  ['2023', 23, 80], ['2024', 88, 370], ['2025', 148, 743], ['2026', 60, 412],
+  ['2019', 4, 9], ['2020', 6, 26], ['2021', 5, 31], ['2022', 5, 48],
+  ['2023', 27, 101], ['2024', 88, 370], ['2025', 148, 744], ['2026', 121, 954],
 ];
 
 const GH_REPO = 'SomaxSoma/AI-Safety-Research-Tracker';
@@ -241,12 +245,12 @@ const VIEWS = {
     type: 'hbar', entries: MAJOR.slice().sort((a, b) => b[1] - a[1]), notable: NOTABLE_SUBAREAS, countLabel: 'the safety set',
   },
   orgs: {
-    key: 'orgs', label: 'WHO PUBLISHES', chartTitle: 'Verified primary safety-org, by paper count', chartUnit: 'all 34 verified orgs · LLM-verified',
-    kicker: 'ORG AFFILIATIONS', big: { num: 325 }, bigUnit: 'papers', bigLabel: 'with a confirmed primary safety-org',
+    key: 'orgs', label: 'WHO PUBLISHES', chartTitle: 'Verified primary safety-org, by paper count', chartUnit: 'all 38 verified orgs · LLM-verified',
+    kicker: 'ORG AFFILIATIONS', big: { num: 404 }, bigUnit: 'papers', bigLabel: 'with a confirmed primary safety-org',
     brief: 'Full-text scan of the safety corpus: author affiliations and funding acknowledgments matched against dedicated safety orgs, then LLM-verified so citations ("we evaluate GPT-4") don\'t count. Funders appear here — co-authorship analyses structurally can\'t see them.',
-    stats: [{ k: 'Orgs confirmed', v: '34' }, { k: 'Papers scanned', v: '1,646' }, { k: 'Top funder', v: 'Open Phil · 76' }],
+    stats: [{ k: 'Orgs confirmed', v: '38' }, { k: 'Papers scanned', v: '2,283' }, { k: 'Top funder', v: 'Open Phil · 93' }],
     type: 'orgs',
-    note: 'Dedicated safety orgs only — university papers without a safety-lab affiliation are not counted. Full-text coverage is thin before 2023, so read this as a 2023–2026 snapshot. Primary org = highest author weight; funders count via acknowledgments.',
+    note: 'Dedicated safety orgs only — university papers without a safety-lab affiliation are not counted. Primary org = highest author weight; funders count via acknowledgments. Early years are small samples (2019: n=9).',
   },
   papers: {
     key: 'papers', label: 'PAPERS', chartTitle: 'All safety papers', chartUnit: 'search · filter · sorted by score, then year',
