@@ -8,10 +8,10 @@ Subdomain colours/order are inherited from the FULL safety set, so these panels
 line up with the all-safety versions for side-by-side reading.
 
 Coverage caveat: org affiliation was only detected where paper plaintext was
-fetched. Covered conference-years: ICLR 2024-26, ICML 2019-25, NeurIPS
-2020/2023-25 (ICML 2026 has no PDFs; some early ICLR/NeurIPS years unfetched).
-The two share-of-total plots therefore only show covered conference-years, and
-every count is a LOWER BOUND on real org affiliation.
+fetched (see data/plaintext/ via fetch_plaintext.py; ICML 2026 has no PDFs).
+The exact covered conference-years are computed from the data at plot time and
+printed in each share plot's caption, so the two share-of-total plots only show
+covered conference-years and every count is a LOWER BOUND on real affiliation.
 
 Written to data/aggregate_plots/org_only/.
 """
@@ -30,6 +30,31 @@ CONFS = ["iclr", "icml", "neurips"]
 CONF_LABEL = {"iclr": "ICLR", "icml": "ICML", "neurips": "NeurIPS"}
 CONF_COLOR = {"iclr": "#2a78d6", "icml": "#eb6834", "neurips": "#1baf7a"}
 INK, INK2, GRID = "#0b0b0b", "#52514e", "#e6e6e3"
+
+
+def _compact_years(years):
+    """[2024,2025,2026] -> '2024-26'; [2020,2023,2024,2025] -> '2020, 2023-25'."""
+    ys = sorted(set(int(y) for y in years))
+    if not ys:
+        return ""
+    runs, start, prev = [], ys[0], ys[0]
+    for y in ys[1:] + [None]:
+        if y == prev + 1:
+            prev = y
+            continue
+        runs.append((start, prev))
+        start = prev = y
+    return ", ".join(str(a) if a == b else f"{a}-{str(b)[-2:]}" for a, b in runs)
+
+
+def covered_str(covered):
+    """Human-readable covered conf-years, computed from the data (not hardcoded),
+    so the caption stays correct as coverage changes."""
+    by = {}
+    for conf, year in covered:
+        by.setdefault(conf, []).append(year)
+    parts = [f"{CONF_LABEL[c]} {_compact_years(by[c])}" for c in CONFS if c in by]
+    return "; ".join(parts)
 
 
 def load_results() -> pd.DataFrame:
@@ -78,7 +103,7 @@ def org_frame(res):
     return org, tot, covered
 
 
-def plot_share_by_year(org, tot):
+def plot_share_by_year(org, tot, cov):
     aff = org.groupby("year").size().rename("aff")
     tt = tot.groupby("year")["total"].sum()
     years = sorted(tt.index)
@@ -98,7 +123,7 @@ def plot_share_by_year(org, tot):
     ax.set_title("Org-affiliated AI-safety share of papers, by year",
                  fontsize=15, fontweight="bold", color=INK, pad=28)
     ax.text(0.0, 1.005, "Verified safety-org affiliation; lower bound. Covered "
-            "conf-years only (ICLR 2024-26, ICML 2019-25, NeurIPS 2020/2023-25).",
+            f"conf-years only ({cov}).",
             transform=ax.transAxes, fontsize=8, color=INK2, va="bottom")
     ax.set_ylim(0, max(pct) * 1.16)
     style(ax)
@@ -109,7 +134,7 @@ def plot_share_by_year(org, tot):
     print(f"Saved: {OUT/'org_share_by_year.png'}")
 
 
-def plot_share_by_conf(org, tot):
+def plot_share_by_conf(org, tot, cov):
     aff = org.groupby(["conf", "year"]).size().rename("aff").reset_index()
     g = tot.merge(aff, on=["conf", "year"], how="left")
     g["aff"] = g["aff"].fillna(0)
@@ -136,7 +161,7 @@ def plot_share_by_conf(org, tot):
     ax.set_title("Org-affiliated AI-safety share by conference, by year",
                  fontsize=15, fontweight="bold", color=INK, pad=28)
     ax.text(0.0, 1.005, "Only covered conf-years shown (missing bar = plaintext "
-            "not fetched, e.g. ICLR pre-2024, ICML 2026). Lower bound.",
+            f"not fetched / no PDFs). Covered: {cov}. Lower bound.",
             transform=ax.transAxes, fontsize=8, color=INK2, va="bottom")
     style(ax)
     ax.legend(loc="upper left", fontsize=10, frameon=False)
@@ -252,10 +277,11 @@ def main():
     res = load_results()
     order, colors = subdomain_palette(res)
     org, tot, covered = org_frame(res)
+    cov = covered_str(covered)
     print(f"{len(org)} org-affiliated safety papers over "
-          f"{len(covered)} covered conf-years")
-    plot_share_by_year(org, tot)
-    plot_share_by_conf(org, tot)
+          f"{len(covered)} covered conf-years: {cov}")
+    plot_share_by_year(org, tot, cov)
+    plot_share_by_conf(org, tot, cov)
     plot_composition(org, order, colors)
     plot_all_years(org, order, colors)
     plot_per_year(org, order, colors)
