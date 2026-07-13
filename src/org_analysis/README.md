@@ -27,9 +27,16 @@ Only step 1 needs OpenReview; after it, everything is offline and reproducible
 from the saved plaintext. `data/plaintext/` is git-ignored (large + paper full
 text) — regenerate it with step 1.
 
-Shared modules: `pdf_fetch.py` (PDF byte fetch: OpenReview auth / PMLR / nips),
-`org_structure.py` (the retained safety-org set + structural typing). The org
-keyword list itself is `ai_safety_orgs.py` at the repo root.
+Shared modules: `pdf_fetch.py` (PDF byte fetch: OpenReview v2+v1 auth / PMLR /
+nips), `org_structure.py` (the retained safety-org set + structural typing). The
+org keyword list itself is `ai_safety_orgs.py` at the repo root.
+
+`fetch_plaintext.py` fetches OpenReview via **both** APIs — the v2 client
+(ICLR 2024+, NeurIPS 2023+, ICML 2024+) with a **v1 fallback** (ICLR ≤2023,
+NeurIPS 2021–2022, whose legacy `Blind_Submission` ids the v2 client cannot
+resolve). It is resumable (skips ids already saved), so re-running only fetches
+what is still missing, and prints a per conference-year **coverage report** at
+the end so any remaining gap is explicit rather than silently dropped.
 
 ## Notes
 
@@ -38,5 +45,8 @@ keyword list itself is `ai_safety_orgs.py` at the repo root.
   — a secondary mentorship credit in a deep acknowledgment on a paper authored
   elsewhere may not be captured (the region scanned is page 1 + the first
   acknowledgments window).
-- ICML 2026 (no PDFs) and any OpenReview NotFound papers are excluded, so
-  denominators are the fetchable safety papers.
+- **ICML 2026 has no PDFs** (papers are pre-conference abstracts) and is
+  genuinely unfetchable — it stays in the coverage report as MISSING. Any other
+  paper that fails to download is likewise excluded, so denominators are the
+  fetchable safety papers. The covered conference-years shown in the share plots
+  are computed from the data, so they update automatically as coverage grows.
