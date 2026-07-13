@@ -28,6 +28,11 @@ PROMOTE = {"OpenAI", "Anthropic", "Google DeepMind"}
 # (a lone company author among academics -> University/Independent/other).
 SAFETY_ORGS = set(ORGS) | PROMOTE
 
+# Mentorship / fellowship / cohort programs that HOST researchers (the org list's
+# "fellowship" category). These win the primary org when they organized the work,
+# even over a co-author's other affiliation — see verify_orgs primary rules.
+PROGRAMS = {n for n, i in ORGS.items() if i.get("category") == "fellowship"}
+
 PBC_ALWAYS = {"Anthropic"}
 CORPORATE = {"Google DeepMind", "Goodfire", "Haize Labs", "Tilde Research",
              "Gray Swan AI", "Andon Labs", "Simplex", "Conjecture", "Aligned AI",

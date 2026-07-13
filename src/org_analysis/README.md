@@ -41,12 +41,14 @@ Only step 1 needs OpenReview; after it, everything is offline and reproducible
 from the saved plaintext. `data/plaintext/` is git-ignored (large + paper full
 text) — regenerate it with step 1.
 
-**Reproducing step 2:** `verify_orgs.py` is deterministic (temperature 0) and
-resumable — it processes every safety paper with plaintext and only calls the
-LLM for the ~770 with a keyword hit. To regenerate `org_verified.csv` from
-scratch, delete it and re-run; the output is fully determined by the plaintext,
-the prompt, and `ai_safety_orgs.py`. (`--reverify` is a cheaper convenience that
-re-runs only the papers already having a confirmed org, e.g. after a prompt
+**Reproducing step 2:** `verify_orgs.py` reprocesses every safety paper with
+plaintext (calling the LLM only for the ~1,100 with a keyword hit) — to
+regenerate `org_verified.csv` from scratch, delete it and re-run. The method is
+reproducible (output determined by the plaintext, the prompt, and
+`ai_safety_orgs.py`), though exact counts wobble by a few papers between runs
+since the LLM runs at temperature 1 (matching the classifier). It is concurrent
+(`--workers`, default 32) and resumable. (`--reverify` is a cheaper convenience
+that re-runs only the papers already having a confirmed org, e.g. after a prompt
 tweak, and migrates the rest.)
 
 Shared modules: `pdf_fetch.py` (PDF byte fetch: OpenReview v2+v1 auth / PMLR /

@@ -34,20 +34,23 @@ ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(Path(__file__).resolve().parent))  # for org_structure
 sys.path.insert(0, str(ROOT))
 from ai_safety_orgs import ORGS, _pattern, find_orgs  # noqa: E402
-from org_structure import SAFETY_ORGS, org_type  # noqa: E402
+from org_structure import SAFETY_ORGS, PROGRAMS, org_type  # noqa: E402
 
 INDEP = "University/Independent/other"
 
 
 def category_tag(org):
-    """company / funder / safety org-program — tells the LLM which primary rule
-    applies. Year-invariant for this purpose (OpenAI is a company either way)."""
+    """program / company / funder / safety org — tells the LLM which primary rule
+    applies. A hosting program (fellowship/cohort) is tagged before anything else
+    so it can win the primary. Year-invariant here."""
+    if org in PROGRAMS:
+        return "program"
     t = org_type(org, 2026)
     if t == "funder":
         return "funder"
     if t in ("PBC", "corporate"):
         return "company"
-    return "safety org/program"
+    return "safety org"
 
 OUT = ROOT / "data" / "org_verified.csv"
 MODEL = "deepseek/deepseek-v4-flash"
@@ -58,7 +61,11 @@ ACK_RE = re.compile(r"acknowledg", re.IGNORECASE)
 
 PROMPT = """You are determining which organizations are genuinely BEHIND a research paper (versus merely mentioned/cited), and which single organization the paper is PRIMARILY from.
 
-The candidate organizations and the paper's front matter (title/authors/affiliations/abstract) plus acknowledgments are given below. Every organization is tagged [company], [safety org/program], or [funder].
+The candidate organizations and the paper's front matter (title/authors/affiliations/abstract) plus acknowledgments are given below. Every organization is tagged:
+- [program] — a mentorship / fellowship / cohort program that HOSTS researchers (e.g. MATS, SPAR, ARENA, Apart, LASR, Anthropic Fellows, Astra Fellowship, PIBBSS, AI Safety Camp). A program run by another org (e.g. an AISI or Anthropic fellowship) is still a [program].
+- [safety org] — a safety-focused nonprofit, academic safety centre, or government safety institute (e.g. ARC, CAIS, Redwood, CLR, Apollo, UK AISI, Mila, Vector)
+- [company] — a for-profit lab (Google DeepMind, OpenAI, Anthropic, Meta, Microsoft, startups)
+- [funder] — a grantmaker / philanthropy (Open Phil, LTFF, …)
 
 STEP 1 — classify each organization's relationship to THIS paper:
 - "affiliation": an author's listed institution or employer
@@ -66,11 +73,12 @@ STEP 1 — classify each organization's relationship to THIS paper:
 - "mention": only cited, compared against, or used as a tool/platform/dataset host (e.g. "available on Hugging Face", "models like GPT-4")
 - "absent": not really about this organization
 
-STEP 2 — pick the single PRIMARY organization the research is *from*, from the orgs you marked "affiliation" or "acknowledgment". Be GENEROUS crediting safety orgs, STRICT with companies:
-1. SAFETY ORGS / PROGRAMS first. If any author is AFFILIATED with a safety org (a safety nonprofit, academic safety centre, or government safety institute — e.g. Alignment Research Center, Center for AI Safety, Redwood, CLR, UK AISI), OR the work was HOSTED / FACILITATED / MENTORED by a program ("as part of", "facilitated by", "made possible by", a cohort / fellow / scholar / mentee project — MATS, SPAR, ARENA, Apart, LASR…), the paper is FROM the safety ecosystem: set primary to the safety org with the most authors, or the one that hosted/led the work. Do this EVEN IF those people are a minority among university co-authors — mapping safety-org involvement is the whole goal. (A safety org merely thanked for feedback/discussion, with no author there and no hosting role, does NOT count as primary.)
-2. Otherwise, a COMPANY (Google DeepMind, OpenAI, Anthropic, Meta, Microsoft, startups) is primary only if it clearly LEADS — a majority/plurality of the authors are there, or it is evidently a company project. A lone company author among university authors does NOT make the company primary.
-3. Otherwise — no safety org is involved and no company leads (authors are at universities / independent / not in the list, perhaps with a stray company author or only a funder) — set primary to "University/Independent/other".
-Use your best judgment on genuine edge cases.
+STEP 2 — pick the single PRIMARY organization the research is *from*, from the orgs you marked "affiliation" or "acknowledgment". Be GENEROUS crediting safety orgs/programs, STRICT with companies. In PRIORITY ORDER:
+1. HOSTING PROGRAM: if a [program] hosted / facilitated / mentored the work (it was done through / as part of / a cohort / fellow / scholar / mentee project of the program), that [program] is primary, EVEN IF the authors are also affiliated with a university or with another org (e.g. Apollo, UK AISI). The program organized the work, so it wins the tie.
+2. SAFETY ORG: otherwise, if any author is AFFILIATED with a [safety org], the primary is the [safety org] with the most authors — credit it EVEN IF those people are a minority among university co-authors.
+3. COMPANY: otherwise, a [company] is primary only if it clearly LEADS — a majority/plurality of the authors are there, or it is evidently a company project. A lone company author among university authors does NOT count.
+4. Otherwise — no program, no safety org, and no leading company (authors at universities / independent / not in the list, perhaps a stray company author or only a funder) — set primary to "University/Independent/other".
+(A safety org/program merely thanked for feedback, with no author and no hosting role, does NOT count. Use judgment on genuine edge cases.)
 
 STEP 3 — pick the single PRIMARY funder among the [funder] orgs you marked "acknowledgment" (the main grant/philanthropic backer), or null. A [funder] is NEVER the primary organization.
 
@@ -97,7 +105,7 @@ def verify_paper(client, region_text, orgs):
     for attempt in range(3):
         try:
             r = client.chat.completions.create(
-                model=MODEL, temperature=0.0,
+                model=MODEL, temperature=1.0,  # match the classifier (src/classify.py)
                 messages=[{"role": "user", "content": user}])
             txt = r.choices[0].message.content.strip()
             if txt.startswith("```"):
