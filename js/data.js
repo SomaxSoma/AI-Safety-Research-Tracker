@@ -214,13 +214,6 @@ const VIEWS = {
     stats: [{ k: '2019 → 2026', v: '0.4% → 9.3%' }, { k: 'Classifier', v: 'TF-IDF (calibrated)' }, { k: 'Precision / recall', v: '72% / 74%' }],
     type: 'line',
   },
-  subareas: {
-    key: 'subareas', label: 'SUBAREAS', chartTitle: 'Safety papers by subarea', chartUnit: 'ICLR 2026 · 6 of 7 subareas · n=412',
-    kicker: 'SAFETY SUBAREAS', big: { num: 136 }, bigUnit: 'papers', bigLabel: 'in the largest subarea (Interpretability)',
-    brief: 'Interpretability & understanding dominates, at a third of all safety work. Agent Foundations & Alignment Theory drew zero accepted papers.',
-    stats: [{ k: 'Subareas populated', v: '6 / 7' }, { k: 'Largest share', v: '33%' }, { k: 'Safety papers', v: '412' }],
-    type: 'hbar', entries: SUBAREAS, notable: NOTABLE_SUBAREAS, countLabel: '6 subareas',
-  },
   subdomains: {
     key: 'subdomains', label: 'DETAILED CLASSES', chartTitle: 'Safety papers by subdomain', chartUnit: 'ICLR 2026 · 13 of 17 · n=412',
     kicker: 'DETAILED CLASSES', big: { num: 122 }, bigUnit: 'papers', bigLabel: 'in Interpretability, the top subdomain',
@@ -228,13 +221,6 @@ const VIEWS = {
     stats: [{ k: 'Distinct subdomains', v: '13 / 17' }, { k: 'Top-3 share', v: '63%' }, { k: 'Rarest (Biorisk, Policy)', v: '1 each' }],
     type: 'hbar', entries: SUBDOMAINS, notable: NOTABLE_SUBDOMAINS, countLabel: '13 subdomains',
     hasDrill: true,
-  },
-  major: {
-    key: 'major', label: 'MAJOR CLASSES', chartTitle: 'All 5,352 accepted papers by class', chartUnit: 'ICLR 2026 · full conference',
-    kicker: 'MAJOR CLASSIFICATION', big: { num: 7.7, dec: 1, suf: '%' }, bigUnit: 'of ICLR 2026', bigLabel: 'is frontier AI-safety research',
-    brief: 'General capabilities work is the overwhelming majority. Safety, at 412 papers, is a small but distinct slice — larger than ethics & fairness, smaller than truthfulness work.',
-    stats: [{ k: 'AI Safety', v: '412' }, { k: 'Ethics & Fairness', v: '156' }, { k: 'Total accepted', v: '5,352' }],
-    type: 'hbar', entries: MAJOR.slice().sort((a, b) => b[1] - a[1]), notable: NOTABLE_SUBAREAS, countLabel: 'the safety set',
   },
   orgs: {
     key: 'orgs', label: 'WHO PUBLISHES', chartTitle: 'Verified primary safety-org, by paper count', chartUnit: 'all 38 verified orgs · LLM-verified',
@@ -260,4 +246,4 @@ const VIEWS = {
   },
 };
 
-const VIEW_ORDER = ['overview', 'conferences', 'subareas', 'subdomains', 'major', 'orgs', 'papers', 'arxiv', 'implementation'];
+const VIEW_ORDER = ['overview', 'conferences', 'subdomains', 'orgs', 'papers', 'arxiv', 'implementation'];

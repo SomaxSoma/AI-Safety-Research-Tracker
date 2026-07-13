@@ -291,19 +291,15 @@
       const y = pt + f * (H - pt - pb);
       return { y: y.toFixed(1), ty: (y - 4).toFixed(1), label: (max - f * max).toFixed(1) + '%' };
     });
-    const vmax = Math.max(...vol);
-    const volArea = vol.map((v, i) => (i ? 'L' : 'M') + X(i).toFixed(1) + ' ' + (H - pb - (v / vmax) * 44).toFixed(1)).join(' ') + ` L ${W} ${H - pb} L 0 ${H - pb} Z`;
     const xlabels = months.map((ym, i) => ({ ym, i })).filter(({ ym }) => ym.endsWith('-01'))
       .map(({ ym, i }) => `<text x="${X(i).toFixed(1)}" y="248" text-anchor="middle" fill="#5a5a5a" font-family="IBM Plex Mono" font-size="9">${ym.slice(0, 4)}</text>`).join('');
     const scatter = frac.map((v, i) =>
       `<circle cx="${X(i).toFixed(1)}" cy="${Y(v).toFixed(1)}" r="1.8" fill="rgba(255,255,255,.32)"></circle>`).join('');
-    const peakI = vol.indexOf(vmax);
 
     return `<svg class="line-svg" id="line-svg" viewBox="0 0 640 250">
       ${grid.map((g) => `<line x1="0" x2="640" y1="${g.y}" y2="${g.y}" stroke="rgba(255,255,255,.07)" stroke-width="1"></line>
         <text x="640" y="${g.ty}" text-anchor="end" fill="#5a5a5a" font-family="IBM Plex Mono" font-size="9">${g.label}</text>`).join('')}
       <text transform="rotate(-90)" x="-208" y="-14" fill="#5a5a5a" font-family="IBM Plex Mono" font-size="9" letter-spacing="1.5">SHARE OF PAPERS (%)</text>
-      <path d="${volArea}" fill="rgba(255,255,255,.06)"></path>
       ${scatter}
       <path d="${lineArea}" fill="rgba(255,255,255,.05)"></path>
       <path d="${linePath}" fill="none" stroke="#f0f0f0" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"></path>
@@ -315,7 +311,7 @@
       ${xlabels}
       <text x="320" y="262" text-anchor="middle" fill="#5a5a5a" font-family="IBM Plex Mono" font-size="9" letter-spacing="1.5">SUBMISSION MONTH</text>
     </svg>
-    <div class="line-caption">Dots: monthly share · line: rolling mean · shaded base: papers/month volume (peak ${fmt(vmax)}, ${dlbl(peakI)}). Hover the chart for exact values. arXiv AI papers: cs.LG · cs.AI · cs.CL · stat.ML, Jan 2019 – Jun 2026.</div>`;
+    <div class="line-caption">Dots: each month's safety share · line: 7-month rolling mean. Hover the chart for exact values. arXiv AI papers: cs.LG · cs.AI · cs.CL · stat.ML, Jan 2019 – Jun 2026.</div>`;
   }
 
   /* crosshair readout over the arXiv chart: nearest month → rolling / monthly / volume */
@@ -345,7 +341,7 @@
       const [yy, mm] = months[i].split('-');
       tt.innerHTML = `<span class="tt-em">${mn[parseInt(mm, 10) - 1]} ${yy}</span><br>` +
         `${roll[i].toFixed(1)}% rolling · ${frac[i].toFixed(1)}% monthly<br>` +
-        `<span class="tt-dim">${fmt(vol[i])} papers/mo</span>`;
+        `<span class="tt-dim">safety share of arXiv AI papers</span>`;
       tt.classList.add('show');
       const pad = 14;
       let tx = e.clientX + pad, ty = e.clientY + pad + 2;
@@ -521,9 +517,7 @@
       <div class="classes-title">FOUR MAJOR CLASSES</div>
       <div class="classes">${CLASS_DEFS.map((c) =>
         `<div class="class-row"><div class="class-n">${c.n}</div><div class="class-name">${esc(c.name)}</div><div class="class-desc">${c.desc}</div></div>`).join('')}</div>
-      <div class="classes-title" style="margin-top:32px">SAFETY-RELEVANCE SCORE · 1–7 <span class="method-sub">(ICLR 2026, n=412)</span></div>
-      ${mkVbars(SCORES, '')}
-      <div class="method-cite">Each safety paper scores Motivation (1–3) + Methodology (0–2) + Evaluation (0–2) = a 1–7 total; papers below 3 drop out of safety. The distribution skews high — 40% score the maximum 7 / 7, median 6. Full rubric (four classes, 17 subdomains, the three score axes): <a href="${GH_URL}/blob/main/src/prompt.txt" target="_blank" rel="noopener">src/prompt.txt</a>.</div>
+      <div class="method-cite">Each safety paper also gets a 1–7 relevance score = Motivation (1–3) + Methodology (0–2) + Evaluation (0–2); papers below 3 drop out of safety. Full rubric (four classes, 17 subdomains, the three score axes): <a href="${GH_URL}/blob/main/src/prompt.txt" target="_blank" rel="noopener">src/prompt.txt</a>.</div>
     </div>`;
   }
 
