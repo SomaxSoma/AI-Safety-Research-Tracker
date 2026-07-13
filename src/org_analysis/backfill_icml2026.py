@@ -26,7 +26,9 @@ from pathlib import Path
 import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[2]
-VENUE = "ICML.cc/2026/Conference"
+# ICML 2026 splits accepted papers across separate OpenReview venue groups; the
+# main Conference plus the Position Paper Track both hold papers in our set.
+VENUES = ["ICML.cc/2026/Conference", "ICML.cc/2026/Position_Paper_Track"]
 PAPERS = ROOT / "data" / "icml" / "2026" / "papers.csv"
 RESULTS = ROOT / "data" / "icml" / "2026" / "results.csv"
 NOTE_CACHE = ROOT / "data" / "icml" / "2026" / "openreview_notes.csv"
@@ -46,17 +48,18 @@ def cval(content: dict, key: str):
 
 
 def fetch_notes(client):
-    """Every ICML 2026 note this account can read: the venueid-accepted set
-    UNIONed with whatever the Submission invitation returns (picks up position /
-    oral / other accept tracks that carry a different venueid). Deduped by id."""
+    """Every ICML 2026 note this account can read across all accept tracks in
+    VENUES (main Conference + Position Paper Track). For each venue, the
+    venueid query is UNIONed with the Submission invitation. Deduped by id."""
     by_id = {}
-    for kwargs in ({"content": {"venueid": VENUE}},
-                   {"invitation": f"{VENUE}/-/Submission"}):
-        try:
-            for n in client.get_all_notes(**kwargs):
-                by_id[n.id] = n
-        except Exception as e:
-            print(f"  query {kwargs} failed: {str(e)[:60]}")
+    for venue in VENUES:
+        for kwargs in ({"content": {"venueid": venue}},
+                       {"invitation": f"{venue}/-/Submission"}):
+            try:
+                for n in client.get_all_notes(**kwargs):
+                    by_id[n.id] = n
+            except Exception as e:
+                print(f"  query {kwargs} failed: {str(e)[:60]}")
     return list(by_id.values())
 
 
@@ -84,12 +87,13 @@ def main():
     } for n in notes])
     cache.to_csv(NOTE_CACHE, index=False)
     print(f"cached notes -> {NOTE_CACHE}")
-    print("venue labels:", dict(Counter(cache["venue"].fillna("(none)"))))
+    print("venueid distribution:")
+    print(cache["venueid"].fillna("(none)").value_counts().to_string())
 
-    # accepted = has a venue label that is not a rejection/withdrawal
-    accepted = cache[cache["venue"].notna()
-                     & ~cache["venue"].str.contains(REJECT_RE, na=False)]
-    print(f"{len(accepted)} accepted notes (venue label, not reject/withdraw)")
+    # accepted = venueid present and not a rejection/withdrawal track
+    accepted = cache[cache["venueid"].notna()
+                     & ~cache["venueid"].str.contains(REJECT_RE, na=False)]
+    print(f"{len(accepted)} accepted notes (venueid, excluding reject/withdraw)")
 
     title2id = {}
     for _, r in accepted.iterrows():
