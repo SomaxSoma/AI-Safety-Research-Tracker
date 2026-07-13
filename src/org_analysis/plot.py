@@ -38,20 +38,18 @@ INDEP_LABEL = "University / Independent / not in list"
 
 # by-type buckets: research-org types + Independent (funders get their own plot)
 BUCKET_TYPES = ["PBC", "corporate", "nonprofit", "academic", "government", "independent"]
-RESEARCH_PRIORITY = ["PBC", "corporate", "academic", "government", "nonprofit"]
+INDEP_SENTINEL = "University/Independent/other"  # the value verify_orgs stores
 
 
-def type_bucket(orgs, year, primary=None):
-    """A paper's home type: its research-org type, or 'independent' if the only
-    confirmed orgs are funders. None if no confirmed org. Consistent with the
-    research_orgs / funders split (funders are never a paper's home type)."""
-    research = [o for o in orgs if org_type(o, year) != "funder"]
-    if not research:
-        return "independent" if orgs else None
-    if primary and primary in research:
-        return org_type(primary, year)
-    types = {org_type(o, year) for o in research}
-    return next((t for t in RESEARCH_PRIORITY if t in types), "nonprofit")
+def primary_bucket(primary_org, year):
+    """A paper's home type, from the LLM's primary_org: its research-org type,
+    'independent' for University/Independent/other (a lone company author among
+    academics, or a funder-only paper), or None if there is no confirmed org."""
+    if not primary_org:
+        return None
+    if primary_org == INDEP_SENTINEL:
+        return "independent"
+    return org_type(primary_org, year)
 
 
 def bucket_color(t):
@@ -68,11 +66,11 @@ def load() -> pd.DataFrame:
     base = v[["id", "conference", "year"]].copy()
     base["orgs"] = [[o for o in str(c).split("; ") if o] if pd.notna(c) else []
                     for c in v["confirmed"]]
-    base["primary"] = v["primary"].fillna("")
+    base["primary_org"] = v["primary_org"].fillna("")
     base["year"] = base["year"].astype(int)
-    base["bucket"] = [type_bucket(o, y, p) for o, y, p in
-                      zip(base["orgs"], base["year"], base["primary"])]
-    print(f"LLM-verified associations ({len(base)} papers)")
+    base["bucket"] = [primary_bucket(p, y) for p, y in
+                      zip(base["primary_org"], base["year"])]
+    print(f"{len(base)} papers, {(base['bucket'].notna()).sum()} with a confirmed org")
     return base
 
 
@@ -138,21 +136,21 @@ def main():
 
 
 def split_orgs(df):
-    """Tally confirmed orgs, separating research orgs from funders. A paper whose
-    only confirmed orgs are funders contributes to a synthetic 'Independent'
-    bucket — funded, but not affiliated with any tracked research org."""
+    """Research orgs counted by PRIMARY org — each paper once, under the org that
+    led it; a lone-company-author or funder-only paper is Independent. Funders
+    counted by association (a paper can acknowledge several)."""
     from collections import Counter
     orgc, fundc = Counter(), Counter()
     independent = 0
-    for orgs in df["orgs"]:
-        research = [o for o in orgs if org_type(o, 2026) != "funder"]
-        funders = [o for o in orgs if org_type(o, 2026) == "funder"]
-        for o in research:
-            orgc[o] += 1
-        for o in funders:
-            fundc[o] += 1
-        if funders and not research:
+    for _, r in df.iterrows():
+        p = r["primary_org"]
+        if p == INDEP_SENTINEL:
             independent += 1
+        elif p:
+            orgc[p] += 1
+        for o in r["orgs"]:
+            if org_type(o, 2026) == "funder":
+                fundc[o] += 1
     return orgc, fundc, independent
 
 
@@ -191,7 +189,7 @@ def plot_orgs(orgc, independent):
               for t in TYPES if t != "funder"]
     legend.append(Patch(color=INDEP_COLOR, label=INDEP_LABEL))
     _barh(names, vals, cols, "Research orgs behind AI-safety papers",
-          "Number of safety papers", "research_orgs.png", legend)
+          "Safety papers primarily from this org", "research_orgs.png", legend)
 
 
 def plot_funders(fundc):

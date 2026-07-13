@@ -3,8 +3,9 @@
 Build a human-reviewable CSV of papers with their LLM-confirmed safety-org
 associations, so the tagging can be spot-checked by hand.
 
-Columns: title, conference, year, primary_org, primary_type, confirmed_orgs,
+Columns: title, conference, year, primary_org, primary_funder, orgs, funders,
 verdicts (per-candidate affiliation/acknowledgment/mention), url.
+orgs and funders are the confirmed associations, split by structural type.
 
 Writes data/org_review.csv. Pass --all to include papers with no confirmed org
 too (candidates that were all mentions), for false-positive auditing.
@@ -58,16 +59,18 @@ def main():
 
     rows = []
     for _, r in v.iterrows():
-        conf_orgs = [o for o in str(r.get("confirmed") or "").split("; ") if o]
-        primary = r.get("primary") or ""
         year = int(r["year"])
+        conf_all = [o for o in str(r.get("confirmed") or "").split("; ") if o]
+        orgs = [o for o in conf_all if org_type(o, year) != "funder"]
+        funders = [o for o in conf_all if org_type(o, year) == "funder"]
         rows.append({
             "title": titles.get(r["id"], ""),
             "conference": r["conference"].upper(),
             "year": year,
-            "primary_org": primary,
-            "primary_type": org_type(primary, year) if primary else "",
-            "confirmed_orgs": "; ".join(conf_orgs),
+            "primary_org": r.get("primary_org") or "",
+            "primary_funder": r.get("primary_funder") or "",
+            "orgs": "; ".join(orgs),
+            "funders": "; ".join(funders),
             "candidates": r.get("candidates", ""),
             "verdicts": fmt_verdicts(r.get("verdicts", "")),
             "url": urls.get(r["id"], f"https://openreview.net/forum?id={r['id']}"),
@@ -76,9 +79,10 @@ def main():
     path = ROOT / "data" / "org_review.csv"
     out.to_csv(path, index=False)
     print(f"Wrote {len(out)} papers to {path}")
-    print(f"  (with confirmed org: {(out['confirmed_orgs'].str.len()>0).sum()})")
-    print("\nBy primary type:")
-    print(out[out['primary_type'] != '']['primary_type'].value_counts().to_string())
+    print(f"  (with a confirmed org: {(out['orgs'].str.len() > 0).sum()}, "
+          f"with a funder: {(out['funders'].str.len() > 0).sum()})")
+    print("\nBy primary org:")
+    print(out[out['primary_org'] != '']['primary_org'].value_counts().head(15).to_string())
 
 
 if __name__ == "__main__":

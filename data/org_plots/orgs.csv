@@ -1,41 +1,40 @@
 organization,type,papers
-Google DeepMind,corporate,96
-University / Independent / not in list,independent,84
-OpenAI,PBC,72
-MATS,nonprofit,45
-Anthropic,PBC,35
-Center for AI Safety,nonprofit,24
-UK AI Security Institute,government,20
-FAR.AI,nonprofit,15
-Center for Human-Compatible AI,academic,11
-Redwood Research,nonprofit,7
-Stanford Existential Risks Initiative,academic,7
-Constellation,nonprofit,7
-Cooperative AI Foundation,nonprofit,7
-SPAR,nonprofit,6
-Timaeus,nonprofit,5
-Apart Research,nonprofit,5
-Alignment Research Center,nonprofit,4
-Goodfire,corporate,4
+University / Independent / not in list,independent,264
+Google DeepMind,corporate,40
+MATS,nonprofit,31
+Mila,academic,22
+Shanghai AI Laboratory,nonprofit,14
+Meta AI,corporate,12
+OpenAI,PBC,11
+Vector Institute,academic,9
+Anthropic,PBC,7
+Microsoft Research,corporate,7
+FAR.AI,nonprofit,6
+Allen Institute for AI,nonprofit,5
+UK AI Security Institute,government,5
+Center for Human-Compatible AI,academic,5
+EleutherAI,nonprofit,4
 LASR Labs,nonprofit,4
-Apollo Research,nonprofit,4
-Frontier Model Forum,nonprofit,4
-Astra Fellowship,nonprofit,3
-Center for Applied Rationality,nonprofit,3
-PIBBSS,nonprofit,3
-AI Safety Camp,nonprofit,3
-Center on Long-Term Risk,nonprofit,3
-US CAISI,government,2
-AI Safety Institute (generic),government,2
-METR,nonprofit,2
-Future of Humanity Institute,academic,2
-Haize Labs,corporate,2
-LISA,nonprofit,2
-Conjecture,corporate,1
+Apart Research,nonprofit,4
+Redwood Research,nonprofit,4
+Apollo Research,nonprofit,3
+Timaeus,nonprofit,3
+SPAR,nonprofit,3
+Anthropic Fellows Program,nonprofit,3
+Alignment Research Center,nonprofit,2
+PIBBSS,nonprofit,2
+AI Safety Camp,nonprofit,2
+METR,nonprofit,1
+Center for AI Safety,nonprofit,1
 Transluce,nonprofit,1
-Stanford Center for AI Safety,academic,1
+Scale AI SEAL,corporate,1
+Stanford Existential Risks Initiative,academic,1
 LawZero,nonprofit,1
-Arcadia Impact,nonprofit,1
-ERA Fellowship,nonprofit,1
+Hugging Face,corporate,1
 Gray Swan AI,corporate,1
 CBAI,nonprofit,1
+Concordia AI,nonprofit,1
+LISA,nonprofit,1
+Center on Long-Term Risk,nonprofit,1
+Constellation,nonprofit,1
+Haize Labs,corporate,1
