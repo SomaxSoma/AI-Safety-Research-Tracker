@@ -17,7 +17,7 @@ Anthropic).
 |------|--------|---------|--------------|--------|
 | 1 | `fetch_plaintext.py` | yes (OpenReview login) | download every safety paper's PDF, extract plaintext, discard the PDF | `data/plaintext/*.txt` |
 | 2 | `verify_orgs.py` | LLM only (OpenRouter) | keyword-match orgs on the saved text, LLM-verify each, pick primary | `data/org_verified.csv` |
-| 3 | `plot.py` | no | combined + 6-type-by-year plots + verified top-orgs | `data/org_plots/*.png` |
+| 3 | `plot.py` | no | org-backing + by-type plots, plus a **research-orgs vs funders** split (a funder-only paper counts as *Independent*), with both tallies saved as CSV | `data/org_plots/*.png`, `orgs.csv`, `funders.csv` |
 | — | `review_csv.py` | no | human-reviewable CSV (title, orgs, per-org verdicts, url) | `data/org_review.csv` |
 
 Wrappers (prompt for creds, hidden): `scripts/run_fetch_plaintext.sh`,
