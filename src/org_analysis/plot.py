@@ -30,9 +30,36 @@ OUT = ROOT / "data" / "org_plots"
 
 import sys
 sys.path.insert(0, str(Path(__file__).resolve().parent))  # for org_structure
-from org_structure import TYPES, COLOR, LABEL, org_type, paper_bucket  # noqa: E402
+from org_structure import TYPES, COLOR, LABEL, org_type  # noqa: E402
 
 INK, INK2, GRID = "#0b0b0b", "#52514e", "#e6e6e3"
+INDEP_COLOR = "#9a9a95"  # funded, but no tracked research-org affiliation
+INDEP_LABEL = "University / Independent / not in list"
+
+# by-type buckets: research-org types + Independent (funders get their own plot)
+BUCKET_TYPES = ["PBC", "corporate", "nonprofit", "academic", "government", "independent"]
+RESEARCH_PRIORITY = ["PBC", "corporate", "academic", "government", "nonprofit"]
+
+
+def type_bucket(orgs, year, primary=None):
+    """A paper's home type: its research-org type, or 'independent' if the only
+    confirmed orgs are funders. None if no confirmed org. Consistent with the
+    research_orgs / funders split (funders are never a paper's home type)."""
+    research = [o for o in orgs if org_type(o, year) != "funder"]
+    if not research:
+        return "independent" if orgs else None
+    if primary and primary in research:
+        return org_type(primary, year)
+    types = {org_type(o, year) for o in research}
+    return next((t for t in RESEARCH_PRIORITY if t in types), "nonprofit")
+
+
+def bucket_color(t):
+    return INDEP_COLOR if t == "independent" else COLOR[t]
+
+
+def bucket_label(t):
+    return INDEP_LABEL if t == "independent" else LABEL[t]
 
 
 def load() -> pd.DataFrame:
@@ -43,7 +70,7 @@ def load() -> pd.DataFrame:
                     for c in v["confirmed"]]
     base["primary"] = v["primary"].fillna("")
     base["year"] = base["year"].astype(int)
-    base["bucket"] = [paper_bucket(o, y, p) for o, y, p in
+    base["bucket"] = [type_bucket(o, y, p) for o, y, p in
                       zip(base["orgs"], base["year"], base["primary"])]
     print(f"LLM-verified associations ({len(base)} papers)")
     return base
@@ -56,12 +83,12 @@ def main():
 
     years = sorted(df["year"].unique())
     ns, any_pct = [], []
-    seg = {t: [] for t in TYPES}
+    seg = {t: [] for t in BUCKET_TYPES}
     for y in years:
         s = df[df["year"] == y]
         n = len(s); ns.append(n)
         any_pct.append((s["bucket"].notna()).mean() * 100)
-        for t in TYPES:
+        for t in BUCKET_TYPES:
             seg[t].append((s["bucket"] == t).mean() * 100)
 
     # ---------- (A) combined ----------
@@ -84,8 +111,9 @@ def main():
     fig, ax = plt.subplots(figsize=(11.5, 6.8))
     x = range(len(years))
     bottom = [0.0] * len(years)
-    for t in TYPES:
-        ax.bar(x, seg[t], bottom=bottom, color=COLOR[t], width=0.68, label=LABEL[t])
+    for t in BUCKET_TYPES:
+        ax.bar(x, seg[t], bottom=bottom, color=bucket_color(t), width=0.68,
+               label=bucket_label(t))
         bottom = [b + s for b, s in zip(bottom, seg[t])]
     for i in x:
         tot = any_pct[i]
@@ -107,9 +135,6 @@ def main():
     plot_funders(fundc)
     write_org_csvs(orgc, fundc, independent)
     plot_prevalence_split()
-
-
-INDEP_COLOR = "#9a9a95"  # "Independent" (funded, no research-org affiliation)
 
 
 def split_orgs(df):
@@ -156,15 +181,15 @@ def _barh(names, vals, cols, title, xlabel, fname, legend=None):
 def plot_orgs(orgc, independent):
     """Research orgs behind safety papers; funder-only papers -> Independent."""
     from matplotlib.patches import Patch
-    items = sorted(list(orgc.items()) + [("Independent", independent)],
+    items = sorted(list(orgc.items()) + [(INDEP_LABEL, independent)],
                    key=lambda kv: kv[1])  # ascending for barh
     names = [n for n, _ in items]
     vals = [v for _, v in items]
-    cols = [INDEP_COLOR if n == "Independent" else COLOR[org_type(n, 2026)]
+    cols = [INDEP_COLOR if n == INDEP_LABEL else COLOR[org_type(n, 2026)]
             for n in names]
     legend = [Patch(color=COLOR[t], label=LABEL[t].split(" (")[0])
               for t in TYPES if t != "funder"]
-    legend.append(Patch(color=INDEP_COLOR, label="Independent (funded only)"))
+    legend.append(Patch(color=INDEP_COLOR, label=INDEP_LABEL))
     _barh(names, vals, cols, "Research orgs behind AI-safety papers",
           "Number of safety papers", "research_orgs.png", legend)
 
@@ -183,7 +208,7 @@ def write_org_csvs(orgc, fundc, independent):
     """Persist the two tallies next to the plots."""
     import csv
     org_rows = [(n, org_type(n, 2026), c) for n, c in orgc.items()]
-    org_rows.append(("Independent", "independent", independent))
+    org_rows.append((INDEP_LABEL, "independent", independent))
     org_rows.sort(key=lambda r: -r[2])
     with open(OUT / "orgs.csv", "w", newline="", encoding="utf-8") as f:
         w = csv.writer(f)
