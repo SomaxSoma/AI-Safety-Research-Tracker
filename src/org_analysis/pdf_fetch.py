@@ -11,9 +11,19 @@ So we try the v2 client first and fall back to the v1 client. PMLR (ICML
 HTTP.
 """
 
+import urllib.parse
 import urllib.request
 
 UA = "Mozilla/5.0 (X11; Linux x86_64) Chrome/120.0 Safari/537.36"
+
+
+def _openreview_id(row, url):
+    """The OpenReview note id to fetch. Normally row['id'] IS the note id (the
+    pdf_url is openreview.net/pdf?id=<row id>). But ICML 2026 keeps its
+    icml-virtual-* id (results.csv keys on it) and carries the real note id only
+    in the pdf_url, so prefer the ?id= in the url when present."""
+    qid = urllib.parse.parse_qs(urllib.parse.urlparse(url).query).get("id", [None])[0]
+    return qid or row["id"]
 
 
 def get_pdf_bytes(row, orclient=None, orclient_v1=None) -> tuple[bytes | None, str]:
@@ -27,15 +37,16 @@ def get_pdf_bytes(row, orclient=None, orclient_v1=None) -> tuple[bytes | None, s
     if "openreview.net" in url:
         if orclient is None and orclient_v1 is None:
             return None, "no_auth"
+        oid = _openreview_id(row, url)
         err = ""
         if orclient is not None:  # v2 first (current conferences)
             try:
-                return orclient.get_attachment("pdf", id=row["id"]), "openreview_v2"
+                return orclient.get_attachment("pdf", id=oid), "openreview_v2"
             except Exception as e:
                 err = f"v2:{str(e)[:30]}"
         if orclient_v1 is not None:  # v1 fallback (Blind_Submission era)
             try:
-                return orclient_v1.get_pdf(row["id"]), "openreview_v1"
+                return orclient_v1.get_pdf(oid), "openreview_v1"
             except Exception as e:
                 err += f" v1:{str(e)[:30]}"
         return None, f"openreview_err:{err.strip()}"
