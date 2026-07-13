@@ -122,8 +122,8 @@ def plot_share_by_year(org, tot, cov):
                   fontsize=11, color=INK2)
     ax.set_title("Org-affiliated AI-safety share of papers, by year",
                  fontsize=15, fontweight="bold", color=INK, pad=28)
-    ax.text(0.0, 1.005, "Verified safety-org affiliation; lower bound. Covered "
-            f"conf-years only ({cov}).",
+    ax.text(0.0, 1.005, "Share of all accepted papers affiliated with a safety org. "
+            f"Conference-years shown: {cov}.",
             transform=ax.transAxes, fontsize=8, color=INK2, va="bottom")
     ax.set_ylim(0, max(pct) * 1.16)
     style(ax)
@@ -160,8 +160,8 @@ def plot_share_by_conf(org, tot, cov):
                   fontsize=11, color=INK2)
     ax.set_title("Org-affiliated AI-safety share by conference, by year",
                  fontsize=15, fontweight="bold", color=INK, pad=28)
-    ax.text(0.0, 1.005, "Only covered conf-years shown (missing bar = plaintext "
-            f"not fetched / no PDFs). Covered: {cov}. Lower bound.",
+    ax.text(0.0, 1.005, "A missing bar means that conference-year isn't covered. "
+            f"Shown: {cov}.",
             transform=ax.transAxes, fontsize=8, color=INK2, va="bottom")
     style(ax)
     ax.legend(loc="upper left", fontsize=10, frameon=False)
@@ -190,8 +190,8 @@ def plot_composition(org, order, colors):
                   fontsize=11, color=INK2)
     ax.set_title("Composition of org-affiliated AI-safety research, over time",
                  fontsize=15, fontweight="bold", color=INK, pad=28)
-    ax.text(0.0, 1.005, "Fine classification; lines sum to 100% within each year. "
-            "Org-affiliated papers only; years with n<10 omitted.  " +
+    ax.text(0.0, 1.005, "Each line is a subdomain's share of that year's org-affiliated "
+            "papers (they sum to 100%). Years with fewer than 10 papers omitted.  " +
             "  ".join(f"{y}: n={ns[y]}" for y in years),
             transform=ax.transAxes, fontsize=7.5, color=INK2, va="bottom")
     style(ax)
