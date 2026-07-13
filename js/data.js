@@ -210,7 +210,7 @@ const VIEWS = {
   arxiv: {
     key: 'arxiv', label: 'ARXIV TREND', chartTitle: 'AI-safety share of arXiv, monthly', chartUnit: '2019–2026 · 7-mo rolling avg',
     kicker: 'ARXIV-WIDE TREND', big: { num: 9.3, dec: 1, suf: '%' }, bigUnit: 'mid-2026', bigLabel: 'of monthly arXiv AI papers are safety-related',
-    brief: 'A separate, lightweight keyword-based classifier (TF-IDF, traditional ML — not the LLM used for the conferences) scores all of arXiv, calibrated so its overall safety rate matches the LLM\'s on a labeled subsample. At ~72% precision / 74% recall it\'s a rough experimental trend, not a per-paper verdict. On it, safety rose from 0.4% of AI papers in 2019 to over 9% in 2026.',
+    brief: 'For arXiv-scale coverage, a lightweight keyword-based classifier (TF-IDF, traditional ML) scores every paper, calibrated so its overall safety rate matches the LLM\'s on a labeled subsample. At ~72% precision / 74% recall, read it as a rough trend estimate. Safety rose from 0.4% of AI papers in 2019 to over 9% in 2026.',
     stats: [{ k: '2019 → 2026', v: '0.4% → 9.3%' }, { k: 'Classifier', v: 'TF-IDF (calibrated)' }, { k: 'Precision / recall', v: '72% / 74%' }],
     type: 'line',
   },
@@ -240,7 +240,7 @@ const VIEWS = {
   implementation: {
     key: 'implementation', label: 'IMPLEMENTATION', chartTitle: 'Classification pipeline', chartUnit: 'open source · reproducible',
     kicker: 'HOW IT WORKS', big: { num: 4 }, bigUnit: 'major classes', bigLabel: 'assigned to every accepted paper',
-    brief: 'Every accepted paper is classified by DeepSeek V4 Flash — a reasoning LLM — reading only its title and abstract, not the full paper. For each one it returns a JSON verdict: major class, safety subdomain, three score axes, a confidence and its reasoning. Explicit boundary rules disambiguate the hard cases.',
+    brief: 'Every accepted paper is classified by DeepSeek V4 Flash — a reasoning LLM — from its title and abstract alone. For each one it returns a JSON verdict: major class, safety subdomain, three score axes, a confidence and its reasoning. Boundary rules disambiguate the hard cases.',
     stats: [{ k: 'Model', v: 'DeepSeek V4 Flash' }, { k: 'Reads', v: 'title + abstract' }, { k: 'Sources', v: 'OpenReview + 3 scrapers' }],
     type: 'method',
   },
