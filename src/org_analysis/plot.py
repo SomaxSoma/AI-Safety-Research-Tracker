@@ -102,39 +102,100 @@ def main():
     fig.savefig(OUT / "org_backed_by_type.png", dpi=150, bbox_inches="tight", facecolor="white")
     plt.close(fig); print(f"Saved: {OUT/'org_backed_by_type.png'}")
 
-    plot_top_orgs(df)
+    orgc, fundc, independent = split_orgs(df)
+    plot_orgs(orgc, independent)
+    plot_funders(fundc)
+    write_org_csvs(orgc, fundc, independent)
     plot_prevalence_split()
 
 
-def plot_top_orgs(df):
-    """All confirmed orgs (44), coloured by structural type."""
-    from collections import Counter
-    from matplotlib.patches import Patch
-    c = Counter()
-    for orgs in df["orgs"]:
-        for o in orgs:
-            c[o] += 1
-    data = c.most_common()  # all of them
-    names = [n for n, _ in data][::-1]
-    vals = [v for _, v in data][::-1]
-    cols = [COLOR[org_type(n, 2026)] for n in names]
+INDEP_COLOR = "#9a9a95"  # "Independent" (funded, no research-org affiliation)
 
-    fig, ax = plt.subplots(figsize=(9, max(6, len(names) * 0.28)))
+
+def split_orgs(df):
+    """Tally confirmed orgs, separating research orgs from funders. A paper whose
+    only confirmed orgs are funders contributes to a synthetic 'Independent'
+    bucket — funded, but not affiliated with any tracked research org."""
+    from collections import Counter
+    orgc, fundc = Counter(), Counter()
+    independent = 0
+    for orgs in df["orgs"]:
+        research = [o for o in orgs if org_type(o, 2026) != "funder"]
+        funders = [o for o in orgs if org_type(o, 2026) == "funder"]
+        for o in research:
+            orgc[o] += 1
+        for o in funders:
+            fundc[o] += 1
+        if funders and not research:
+            independent += 1
+    return orgc, fundc, independent
+
+
+def _barh(names, vals, cols, title, xlabel, fname, legend=None):
+    fig, ax = plt.subplots(figsize=(9, max(4, len(names) * 0.30)))
     ax.barh(names, vals, color=cols, edgecolor="white", linewidth=0.6)
     for i, v in enumerate(vals):
-        ax.text(v + max(vals) * 0.01, i, str(v), va="center", fontsize=8.5, fontweight="bold", color=INK)
-    ax.set_xlabel("Number of safety papers", fontsize=10, color=INK2)
-    ax.set_title("Organizations behind AI-safety papers", fontsize=14,
-                 fontweight="bold", color=INK, pad=10)
+        ax.text(v + max(vals) * 0.01, i, str(v), va="center", fontsize=8.5,
+                fontweight="bold", color=INK)
+    ax.set_xlabel(xlabel, fontsize=10, color=INK2)
+    ax.set_title(title, fontsize=14, fontweight="bold", color=INK, pad=10)
     ax.set_xlim(0, max(vals) * 1.12)
     ax.tick_params(axis="y", labelsize=8.5)
-    for s in ("top", "right"): ax.spines[s].set_visible(False)
-    ax.grid(axis="x", color=GRID, lw=0.8); ax.set_axisbelow(True)
-    ax.legend(handles=[Patch(color=COLOR[t], label=LABEL[t].split(" (")[0]) for t in TYPES],
-              loc="lower right", fontsize=9, frameon=False)
+    for s in ("top", "right"):
+        ax.spines[s].set_visible(False)
+    ax.grid(axis="x", color=GRID, lw=0.8)
+    ax.set_axisbelow(True)
+    if legend:
+        ax.legend(handles=legend, loc="lower right", fontsize=9, frameon=False)
     fig.tight_layout()
-    fig.savefig(OUT / "top_orgs_verified.png", dpi=150, bbox_inches="tight", facecolor="white")
-    plt.close(fig); print(f"Saved: {OUT/'top_orgs_verified.png'}")
+    fig.savefig(OUT / fname, dpi=150, bbox_inches="tight", facecolor="white")
+    plt.close(fig)
+    print(f"Saved: {OUT/fname}")
+
+
+def plot_orgs(orgc, independent):
+    """Research orgs behind safety papers; funder-only papers -> Independent."""
+    from matplotlib.patches import Patch
+    items = sorted(list(orgc.items()) + [("Independent", independent)],
+                   key=lambda kv: kv[1])  # ascending for barh
+    names = [n for n, _ in items]
+    vals = [v for _, v in items]
+    cols = [INDEP_COLOR if n == "Independent" else COLOR[org_type(n, 2026)]
+            for n in names]
+    legend = [Patch(color=COLOR[t], label=LABEL[t].split(" (")[0])
+              for t in TYPES if t != "funder"]
+    legend.append(Patch(color=INDEP_COLOR, label="Independent (funded only)"))
+    _barh(names, vals, cols, "Research orgs behind AI-safety papers",
+          "Number of safety papers", "research_orgs.png", legend)
+
+
+def plot_funders(fundc):
+    """Funders acknowledged by safety papers (funding credits, not affiliations)."""
+    items = sorted(fundc.items(), key=lambda kv: kv[1])
+    names = [n for n, _ in items]
+    vals = [v for _, v in items]
+    _barh(names, vals, [COLOR["funder"]] * len(names),
+          "Funders behind AI-safety papers",
+          "Safety papers acknowledging the funder", "funders.png")
+
+
+def write_org_csvs(orgc, fundc, independent):
+    """Persist the two tallies next to the plots."""
+    import csv
+    org_rows = [(n, org_type(n, 2026), c) for n, c in orgc.items()]
+    org_rows.append(("Independent", "independent", independent))
+    org_rows.sort(key=lambda r: -r[2])
+    with open(OUT / "orgs.csv", "w", newline="", encoding="utf-8") as f:
+        w = csv.writer(f)
+        w.writerow(["organization", "type", "papers"])
+        w.writerows(org_rows)
+    fund_rows = sorted(fundc.items(), key=lambda r: -r[1])
+    with open(OUT / "funders.csv", "w", newline="", encoding="utf-8") as f:
+        w = csv.writer(f)
+        w.writerow(["funder", "papers"])
+        w.writerows(fund_rows)
+    print(f"Saved: {OUT/'orgs.csv'} ({len(org_rows)} rows), "
+          f"{OUT/'funders.csv'} ({len(fund_rows)} rows)")
 
 
 def yearly_totals():
