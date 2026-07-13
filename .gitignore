@@ -9,6 +9,10 @@ data/plaintext/
 data/arxiv/papers.csv
 data/arxiv/raw/
 
+# ICML 2026 OpenReview note cache (regenerable via backfill_icml2026.py; the
+# durable title->note-id mapping is committed in data/icml/2026/papers.csv)
+data/icml/2026/openreview_notes.csv
+
 __pycache__/
 *.py[cod]
 *$py.class
