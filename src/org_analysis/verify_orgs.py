@@ -49,24 +49,26 @@ def category_tag(org):
 
 OUT = ROOT / "data" / "org_verified.csv"
 MODEL = "deepseek/deepseek-v4-flash"
-HEADER = 3000      # chars of front matter (title/authors/affiliations/abstract)
-ACK = 1800         # chars of the acknowledgments window
+HEADER = 4500      # chars of front matter (title/authors/affiliations/abstract);
+                   # generous so long author lists' affiliations aren't truncated
+ACK = 2500         # chars of the acknowledgments window
 ACK_RE = re.compile(r"acknowledg", re.IGNORECASE)
 
 PROMPT = """You are determining which organizations are genuinely BEHIND a research paper (versus merely mentioned/cited), and which single organization the paper is PRIMARILY from.
 
-Each snippet below is from a paper's first page (title/authors/affiliations/abstract/intro) and its acknowledgments. Every organization is tagged [company], [safety org/program], or [funder].
+The candidate organizations and the paper's front matter (title/authors/affiliations/abstract) plus acknowledgments are given below. Every organization is tagged [company], [safety org/program], or [funder].
 
 STEP 1 — classify each organization's relationship to THIS paper:
 - "affiliation": an author's listed institution or employer
-- "acknowledgment": a funder, grant, program, fellowship, or mentorship thanked (compute, funding, advising)
+- "acknowledgment": a funder, grant, program, fellowship, or mentorship behind the work — INCLUDING the paper being a program's cohort / scholar / fellow / mentee project (e.g. "SPAR Spring 2025 cohort research", "a MATS project", "an ARENA project"), or compute/funding/advising that is thanked. Being a program's cohort/fellow project is NEVER a "mention".
 - "mention": only cited, compared against, or used as a tool/platform/dataset host (e.g. "available on Hugging Face", "models like GPT-4")
 - "absent": not really about this organization
 
-STEP 2 — pick the single PRIMARY organization the research is *from* (who organized/led it). Consider only orgs you marked "affiliation" or "acknowledgment", and apply:
-- [safety org/program] (e.g. MATS, SPAR, Apart, Redwood, safety centres, government safety institutes): these HOST/ORGANIZE the research even when the authors are based at various universities and the org appears only in acknowledgments/mentorship. Prefer them as primary. Example: a paper by PhD students at universities, done through the MATS program with a mentor at Anthropic, is primarily MATS — not Anthropic, not the universities.
-- [company] (e.g. Google DeepMind, OpenAI, Anthropic, Google, Meta, startups): choose a company as primary ONLY if the work is actually led by it — most or a clear plurality of the authors are affiliated with that company, or it is evidently a company project. If only one or a couple of company authors appear among many university authors, the company is NOT primary; that author merely happens to work there.
-- Otherwise — no [safety org/program] organizes it and no [company] clearly leads it (a lone company author among academics, or authors only at universities / independent / not listed) — set primary to "University/Independent/other".
+STEP 2 — pick the single PRIMARY organization the research is *from*, from the orgs you marked "affiliation" or "acknowledgment":
+- If a MAJORITY (or clear plurality) of the authors are affiliated with organizations, the paper is FROM an organization — determine the single primary one: the org the most authors belong to, or that evidently led the work.
+- A paper that is HOSTED or ORGANIZED by a program — a cohort / fellowship / scholar / mentorship project (e.g. "SPAR Spring 2025 cohort research", "a MATS project", a mentor-led program paper) — is primarily that program, even if the authors otherwise list only universities.
+- Otherwise — the paper is not hosted or organized by any org or program, and most authors are at universities / independent / not in the list (e.g. a lone company author among academics) — set primary to "University/Independent/other".
+- For genuine edge cases, use your best judgment.
 
 STEP 3 — pick the single PRIMARY funder among the [funder] orgs you marked "acknowledgment" (the main grant/philanthropic backer), or null. A [funder] is NEVER the primary organization.
 
@@ -160,12 +162,15 @@ FIELDS = ["id", "conference", "year", "candidates", "confirmed",
 def region_of(full):
     """Front matter (all authors + affiliations + abstract) plus the
     acknowledgments window — enough for the LLM to see the whole author list and
-    judge which org actually leads the work."""
+    judge which org actually leads the work. Superscript affiliation markers fuse
+    org names to the preceding number in PDF text ("Panickssery1MATS"), which
+    hides them from the keyword matcher — split digit->UppercaseLetter so
+    "1MATS" -> "1 MATS" (leaves "1st", "GPT4o" alone)."""
     region = full[:HEADER]
     am = ACK_RE.search(full)
     if am:
         region += "\n\n[Acknowledgments]\n" + full[am.start():am.start() + ACK]
-    return region
+    return re.sub(r"(\d)([A-Z])", r"\1 \2", region)
 
 
 def process_paper(rid, conf, year, llm, TEXT_DIR):

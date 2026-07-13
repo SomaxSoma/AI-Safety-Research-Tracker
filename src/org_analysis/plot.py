@@ -128,30 +128,34 @@ def main():
     fig.savefig(OUT / "org_backed_by_type.png", dpi=150, bbox_inches="tight", facecolor="white")
     plt.close(fig); print(f"Saved: {OUT/'org_backed_by_type.png'}")
 
-    orgc, fundc, independent = split_orgs(df)
-    plot_orgs(orgc, independent)
+    primc, assocc, fundc, independent = split_orgs(df)
+    plot_orgs(primc, independent)
+    plot_orgs_assoc(assocc)
     plot_funders(fundc)
-    write_org_csvs(orgc, fundc, independent)
+    write_org_csvs(primc, assocc, fundc, independent)
     plot_prevalence_split()
 
 
 def split_orgs(df):
-    """Research orgs counted by PRIMARY org — each paper once, under the org that
-    led it; a lone-company-author or funder-only paper is Independent. Funders
-    counted by association (a paper can acknowledge several)."""
+    """Research orgs counted two ways: by PRIMARY org (each paper once, under the
+    org that led it — funder-only / lone-company-author papers are Independent),
+    and by ASSOCIATION (every confirmed research affiliation, so one paper adds to
+    several orgs). Funders are counted by association."""
     from collections import Counter
-    orgc, fundc = Counter(), Counter()
+    primc, assocc, fundc = Counter(), Counter(), Counter()
     independent = 0
     for _, r in df.iterrows():
         p = r["primary_org"]
         if p == INDEP_SENTINEL:
             independent += 1
         elif p:
-            orgc[p] += 1
+            primc[p] += 1
         for o in r["orgs"]:
             if org_type(o, 2026) == "funder":
                 fundc[o] += 1
-    return orgc, fundc, independent
+            else:
+                assocc[o] += 1
+    return primc, assocc, fundc, independent
 
 
 def _barh(names, vals, cols, title, xlabel, fname, legend=None):
@@ -188,8 +192,24 @@ def plot_orgs(orgc, independent):
     legend = [Patch(color=COLOR[t], label=LABEL[t].split(" (")[0])
               for t in TYPES if t != "funder"]
     legend.append(Patch(color=INDEP_COLOR, label=INDEP_LABEL))
-    _barh(names, vals, cols, "Research orgs behind AI-safety papers",
+    _barh(names, vals, cols, "Research orgs behind AI-safety papers (primary)",
           "Safety papers primarily from this org", "research_orgs.png", legend)
+
+
+def plot_orgs_assoc(assocc):
+    """Research orgs by ANY confirmed affiliation — one paper counts for every org
+    it has an author from, so totals exceed the paper count (e.g. Anthropic rises
+    well above its primary count)."""
+    from matplotlib.patches import Patch
+    items = sorted(assocc.items(), key=lambda kv: kv[1])  # ascending for barh
+    names = [n for n, _ in items]
+    vals = [v for _, v in items]
+    cols = [COLOR[org_type(n, 2026)] for n in names]
+    legend = [Patch(color=COLOR[t], label=LABEL[t].split(" (")[0])
+              for t in TYPES if t != "funder"]
+    _barh(names, vals, cols, "Research orgs behind AI-safety papers (any affiliation)",
+          "Safety papers with an author from this org",
+          "research_orgs_associations.png", legend)
 
 
 def plot_funders(fundc):
@@ -202,22 +222,24 @@ def plot_funders(fundc):
           "Safety papers acknowledging the funder", "funders.png")
 
 
-def write_org_csvs(orgc, fundc, independent):
-    """Persist the two tallies next to the plots."""
+def write_org_csvs(primc, assocc, fundc, independent):
+    """Persist the tallies next to the plots: orgs.csv carries both the primary
+    and the association count per org; funders.csv the funder associations."""
     import csv
-    org_rows = [(n, org_type(n, 2026), c) for n, c in orgc.items()]
-    org_rows.append((INDEP_LABEL, "independent", independent))
-    org_rows.sort(key=lambda r: -r[2])
+    names = set(primc) | set(assocc)
+    rows = [[n, org_type(n, 2026), primc.get(n, 0), assocc.get(n, 0)] for n in names]
+    rows.append([INDEP_LABEL, "independent", independent, ""])
+    rows.sort(key=lambda r: -max(r[2], r[3] if isinstance(r[3], int) else 0))
     with open(OUT / "orgs.csv", "w", newline="", encoding="utf-8") as f:
         w = csv.writer(f)
-        w.writerow(["organization", "type", "papers"])
-        w.writerows(org_rows)
+        w.writerow(["organization", "type", "primary_papers", "association_papers"])
+        w.writerows(rows)
     fund_rows = sorted(fundc.items(), key=lambda r: -r[1])
     with open(OUT / "funders.csv", "w", newline="", encoding="utf-8") as f:
         w = csv.writer(f)
         w.writerow(["funder", "papers"])
         w.writerows(fund_rows)
-    print(f"Saved: {OUT/'orgs.csv'} ({len(org_rows)} rows), "
+    print(f"Saved: {OUT/'orgs.csv'} ({len(rows)} rows), "
           f"{OUT/'funders.csv'} ({len(fund_rows)} rows)")
 
 
