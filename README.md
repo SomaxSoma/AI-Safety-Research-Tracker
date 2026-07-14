@@ -28,7 +28,7 @@ data/papers.json # all 2,328 safety papers [title, venue, year, subdomain, score
 ## Features
 
 - **Sticky glass navigation** — tabs sit directly under the masthead and stay pinned while scrolling, with a subtle frosted-glass effect that deepens with scroll (near-transparent at rest → glass past 20px → higher opacity past 150px). OVERVIEW (the hero: animated 4.2% share, per-year bars) is the default view, and the masthead title links home.
-- **10 views** — Overview, Conferences (POOLED / BY VENUE faces), Subareas, Detailed Classes (ICLR 2026 / BY YEAR drilldown with ↑/↓ keys / TRENDS composition-over-time lines), Scores, Major Classes, Who Publishes (ALL ORGS / BY TYPE / BY YEAR org-backed share — all 34 verified orgs), Papers explorer (click a row for the classifier's verbatim reasoning and per-axis scores), arXiv Trend (real 90-month series with hover crosshair; a calibrated TF-IDF classifier, ~72% precision / 74% recall — a rough experimental trend), and Implementation (the DeepSeek V4 Flash pipeline that reads each paper's title + abstract).
+- **10 views** — Overview, Conferences (POOLED / BY VENUE faces), Subareas, Detailed Classes (ICLR 2026 / BY YEAR drilldown with ↑/↓ keys / TRENDS composition-over-time lines), Scores, Major Classes, Who Publishes (ALL ORGS / PRIMARY / FUNDERS / BY YEAR — 55 verified research orgs + 7 funders), Papers explorer (click a row for the classifier's verbatim reasoning and per-axis scores), arXiv Trend (real 90-month series with hover crosshair; a calibrated TF-IDF classifier, ~72% precision / 74% recall — a rough experimental trend), and Implementation (the DeepSeek V4 Flash pipeline that reads each paper's title + abstract).
 - **Deep links** — every view has a URL hash (`#arxiv`, `#method`, …); browser back/forward works.
 - **Custom tooltips** — styled hover tooltips on all bars; the arXiv chart shows a crosshair with rolling %, monthly %, and volume.
 - **Who publishes** (`#orgs`) — verified safety-org affiliations from the repo's full-text org analysis (`data/org_verified.csv`): top orgs by paper count plus a by-legal-structure face; includes funders (Open Philanthropy, LTFF) that co-authorship analyses can't see.
@@ -51,8 +51,8 @@ Cross-conference summaries of the classifier output, regenerated from
   sum to 100% per year).
 - `safety_subdomains_all_years.png` / `safety_subdomains_per_year.png` —
   subdomain breakdown, pooled and as per-year small multiples.
-- `org_only/` — the same five views restricted to the 325 safety papers with an
-  LLM-verified safety-org affiliation (`data/org_verified.csv`).
+- `org_only/` — the same five views restricted to the safety papers with an
+  LLM-verified safety-org affiliation (`data/org_verified.csv`, ~600 papers).
 
 ```bash
 python src/aggregate_plots.py        # all-safety views
