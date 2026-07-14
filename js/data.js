@@ -289,12 +289,12 @@ const VIEWS = {
     hasDrill: true,
   },
   orgs: {
-    key: 'orgs', label: 'WHO PUBLISHES', chartTitle: 'Research orgs behind safety papers', chartUnit: 'by any confirmed affiliation · LLM-verified',
-    kicker: 'ORG AFFILIATIONS', big: { num: 55 }, bigUnit: 'orgs', bigLabel: 'appear as an affiliation on safety papers',
-    brief: 'Which organizations are behind the safety papers. AFFILIATIONS counts every confirmed affiliation; PRIMARY counts each paper once under its lead org (with University / Independent for papers led by no tracked org); FUNDERS lists funding acknowledgments separately.',
+    key: 'orgs', label: 'WHO PUBLISHES', chartTitle: 'Research orgs behind safety papers', chartUnit: 'every affiliation counted',
+    kicker: 'ORG AFFILIATIONS', big: { num: 55 }, bigUnit: 'orgs', bigLabel: 'have authors on the safety papers',
+    brief: 'The organizations behind AI-safety research — the labs, academic groups and nonprofits whose people write the papers, and the funders whose money shows up in the acknowledgments.',
     stats: [{ k: 'Research orgs', v: '55' }, { k: 'Funders', v: '7' }, { k: 'Top org', v: 'DeepMind · 107' }],
     type: 'orgs',
-    note: 'AFFILIATIONS: a paper authored across two orgs adds to both. PRIMARY: each paper once, including 251 led by University / Independent (no tracked org). 2,283 safety papers scanned for affiliations.',
+    note: 'Every org an author belongs to counts, so a co-authored paper lands on several bars. Switch to PRIMARY to count each paper once, under the org that led it.',
   },
   papers: {
     key: 'papers', label: 'PAPERS', chartTitle: 'All safety papers', chartUnit: 'search · filter · sorted by score, then year',

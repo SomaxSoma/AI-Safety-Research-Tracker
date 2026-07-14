@@ -164,10 +164,10 @@
     let body, note;
     if (state.orgFace === 'funders') {
       body = mkHbars(FUNDERS_LIST);
-      note = 'Funders acknowledged in safety papers — funding credits in the text, not author affiliations. Open Philanthropy is credited far more than any other.';
+      note = 'Who funded the work, from the acknowledgments rather than author affiliations. Open Philanthropy is far ahead of everyone else.';
     } else if (state.orgFace === 'primary') {
       body = mkHbars(ORGS_PRIMARY);
-      note = 'Each paper counted once, under its primary (lead) affiliation. University / Independent covers the 251 papers led by an org outside the tracked set.';
+      note = 'One count per paper, under the org that led it. Independent / University is everything with no tracked lab behind it — still the largest single group.';
     } else {
       body = mkHbars(ORGS_ASSOC);
       note = v.note;
@@ -190,7 +190,7 @@
     }).join('');
     const labels = ORG_BY_YEAR.map(([year]) => `<div>${year}</div>`).join('');
     return `<div><div class="hgrp vbars">${bars}</div><div class="vbar-labels">${labels}</div>
-      <div class="chart-note">Share of each year's safety papers led by a named research org (its primary affiliation). Early bars are small samples (2019: n=9). The share declines as the field grows and more papers come from labs and universities outside the tracked set.</div></div>`;
+      <div class="chart-note">How often a tracked research org led the year's safety papers. The share slips as the field grows and more work comes from outside the usual labs. 2019 is only 9 papers, so read the early bars loosely.</div></div>`;
   }
 
   /* subdomain composition over time: each line = share of that year's safety papers */
@@ -548,9 +548,9 @@
     'subdomains:year': ['Subdomains per year', 'all venues pooled · 2019–2026'],
     'subdomains:trends': ['Subdomain composition over time', "share of each year's safety papers · pooled"],
     'conferences:venues': ['AI-safety share by venue, by year', 'ICLR · ICML · NeurIPS, separate'],
-    'orgs:primary': ['Research orgs by primary affiliation', 'each paper once · incl. Independent'],
-    'orgs:funders': ['Funders behind safety papers', 'funding acknowledgments · not affiliations'],
-    'orgs:byyear': ['Papers led by a named research org, by year', 'primary affiliation · of papers checked'],
+    'orgs:primary': ['Research orgs by primary affiliation', 'one count per paper'],
+    'orgs:funders': ['Funders behind safety papers', 'from the acknowledgments'],
+    'orgs:byyear': ['Papers led by a tracked org, by year', 'share of each year'],
   };
 
   function renderPanel() {
