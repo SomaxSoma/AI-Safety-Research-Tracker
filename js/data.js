@@ -28,7 +28,8 @@ const MAJOR = [
   ['AI Safety', 412],
 ];
 
-/* ICLR 2026 safety papers (n=412) — subareas, subdomains, score distribution (filtered/safety.csv). */
+/* ICLR 2026 safety papers (n=412) — subareas + score distribution (filtered/safety.csv).
+   SUBDOMAINS below is the all-years, all-venue aggregate (src/gen_web_subdomains.py). */
 const SUBAREAS = [
   ['A · Interpretability & Understanding', 136],
   ['F · Robustness, Defense & Control', 93],
@@ -38,10 +39,12 @@ const SUBAREAS = [
   ['G · Technical Governance & Policy', 1],
 ];
 const SUBDOMAINS = [
-  ['Interpretability', 122], ['Alignment Training', 87], ['Red-Teaming', 50],
-  ['Adversarial Robustness', 43], ['Safeguards', 41], ['Scalable Oversight', 21],
-  ['Dangerous Capability Evals', 15], ['Monitoring', 14], ['Scheming and Deception', 9],
-  ['Multi-Agent Safety', 6], ['Control', 2], ['Policy and Governance', 1], ['Biorisk', 1],
+  ['Interpretability', 657], ['Alignment Training', 457], ['Adversarial Robustness', 298],
+  ['Red-Teaming', 286], ['Safeguards', 199], ['Scalable Oversight', 164],
+  ['Dangerous Capability Evals', 55], ['Monitoring', 53], ['Multi-Agent Safety', 45],
+  ['Scheming and Deception', 34], ['Agent Foundations', 27], ['Policy and Governance', 26],
+  ['Control', 9], ['Strategy and Forecasting', 8], ['Model Organisms', 5],
+  ['Biorisk', 3], ['AI Welfare', 2],
 ];
 const SCORES = [['3', 58], ['4', 51], ['5', 66], ['6', 71], ['7', 166]];
 
@@ -284,11 +287,11 @@ const VIEWS = {
     type: 'line',
   },
   subdomains: {
-    key: 'subdomains', label: 'DETAILED CLASSES', chartTitle: 'Safety papers by subdomain', chartUnit: 'ICLR 2026 · 13 of 17 · n=412',
-    kicker: 'DETAILED CLASSES', big: { num: 122 }, bigUnit: 'papers', bigLabel: 'in Interpretability, the top subdomain',
-    brief: 'Thirteen of the seventeen defined subdomains appear. Interpretability, Alignment Training and Red-Teaming account for nearly two-thirds of all safety papers.',
-    stats: [{ k: 'Distinct subdomains', v: '13 / 17' }, { k: 'Top-3 share', v: '63%' }, { k: 'Rarest (Biorisk, Policy)', v: '1 each' }],
-    type: 'hbar', entries: SUBDOMAINS, notable: NOTABLE_SUBDOMAINS, countLabel: '13 subdomains',
+    key: 'subdomains', label: 'DETAILED CLASSES', chartTitle: 'Safety papers by subdomain', chartUnit: 'all venues · 2019–2026 · 17 of 17 · n=2,328',
+    kicker: 'DETAILED CLASSES', big: { num: 657 }, bigUnit: 'papers', bigLabel: 'in Interpretability, the top subdomain',
+    brief: 'All seventeen defined subdomains appear across the 2,328 safety papers pooled over every venue and year. Interpretability, Alignment Training and Adversarial Robustness account for about three-fifths of them — use BY YEAR to drill into a single year, or TRENDS for composition over time.',
+    stats: [{ k: 'Distinct subdomains', v: '17 / 17' }, { k: 'Top-3 share', v: '61%' }, { k: 'Rarest', v: 'AI Welfare (2)' }],
+    type: 'hbar', entries: SUBDOMAINS, notable: NOTABLE_SUBDOMAINS, countLabel: '17 subdomains',
     hasDrill: true,
   },
   orgs: {

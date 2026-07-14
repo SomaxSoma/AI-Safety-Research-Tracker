@@ -540,7 +540,7 @@
   /* ---------- panel ---------- */
   const FACES = {
     conferences: [['pooled', 'POOLED'], ['venues', 'BY VENUE']],
-    subdomains: [['all', 'ICLR 2026'], ['year', 'BY YEAR'], ['trends', 'TRENDS']],
+    subdomains: [['all', 'ALL YEARS'], ['year', 'BY YEAR'], ['trends', 'TRENDS']],
     orgs: [['assoc', 'AFFILIATIONS'], ['primary', 'PRIMARY'], ['funders', 'FUNDERS'], ['byyear', 'BY YEAR']],
   };
   const FACE_KEY = { conferences: 'confFace', subdomains: 'sdFace', orgs: 'orgFace' };
