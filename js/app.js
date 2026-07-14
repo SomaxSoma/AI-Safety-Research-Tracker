@@ -618,10 +618,10 @@
     if (!v.notable) { root.innerHTML = ''; return; }
     const body = state.expanded ? `
       <div class="disc-body">
-        <div class="disc-kicker">HIGHEST-SCORING PAPERS · 7 / 7 · SELECTED FROM ${(v.countLabel || 'the safety set').toUpperCase()}</div>
+        <div class="disc-kicker">${v.notableKicker || 'HIGHEST-SCORING PAPERS · 7 / 7'} · SELECTED FROM ${(v.countLabel || 'the safety set').toUpperCase()}</div>
         <div class="disc-grid">${v.notable.map((p) =>
           `<div class="disc-paper"><div class="disc-paper-t">${p.u ? `<a href="${p.u}" target="_blank" rel="noopener">${esc(p.t)}</a>` : esc(p.t)}</div><div class="disc-paper-d">${esc(p.d)}</div></div>`).join('')}</div>
-        <div class="disc-foot">Titles, subdomains, and scores are the model's own classification output. The full 412-paper table and all 5,352 raw classifications live in the repository.</div>
+        <div class="disc-foot">Titles, subdomains, and scores are the model's own classification output. The full safety-paper tables and all raw classifications live in the repository.</div>
       </div>` : '';
     root.innerHTML = `
       <div class="disc-toggle" id="disc-toggle">
