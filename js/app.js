@@ -240,7 +240,7 @@
       <text transform="rotate(-90)" x="-208" y="-20" fill="#5a5a5a" font-family="IBM Plex Mono" font-size="9" letter-spacing="1.5">SHARE OF SAFETY PAPERS (%)</text>
       ${lines}${hits}${labelEls}${xlabels}
     </svg>
-    <div class="line-caption">Each line: a subdomain's share of that year's safety papers — lines sum to 100% within a year, all venues pooled. The six largest 2026 subdomains are emphasized and labeled; hover any point for exact counts. Early years are tiny samples (2019: n=9) — read trends from 2023 on. Adversarial Robustness fell from 37% (2022) to 11%; Safeguards and Monitoring rose from zero.</div>`;
+    <div class="line-caption">Each line follows one research area's share of that year's safety papers, so the lines always add up to 100%. The six largest areas in 2026 are highlighted and labelled; hover any point for exact figures. The earliest years rest on very few papers — just nine in 2019 — so the trends only become meaningful around 2023, by which point Adversarial Robustness had fallen from 37% (in 2022) to 11%, while Safeguards and Monitoring had grown from almost nothing.</div>`;
   }
 
   function mkVbars(entries, suf, note) {
@@ -318,7 +318,7 @@
       ${xlabels}
       <text x="320" y="262" text-anchor="middle" fill="#5a5a5a" font-family="IBM Plex Mono" font-size="9" letter-spacing="1.5">SUBMISSION MONTH</text>
     </svg>
-    <div class="line-caption">Dots: each month's safety share · line: 7-month rolling mean. Hover the chart for exact values. arXiv AI papers: cs.LG · cs.AI · cs.CL · stat.ML, Jan 2019 – Jun 2026.</div>`;
+    <div class="line-caption">Each dot is one month's safety share; the line is a seven-month rolling average that smooths out the month-to-month noise. Hover the chart for exact values. Based on every arXiv paper in the main AI categories — cs.LG, cs.AI, cs.CL and stat.ML — from January 2019 to June 2026.</div>`;
   }
 
   /* crosshair readout over the arXiv chart: nearest month → rolling / monthly / volume */
@@ -545,12 +545,12 @@
   };
   const FACE_KEY = { conferences: 'confFace', subdomains: 'sdFace', orgs: 'orgFace' };
   const FACE_META = {
-    'subdomains:year': ['Subdomains per year', 'all venues pooled · 2019–2026'],
-    'subdomains:trends': ['Subdomain composition over time', "share of each year's safety papers · pooled"],
-    'conferences:venues': ['AI-safety share by venue, by year', 'ICLR · ICML · NeurIPS, separate'],
-    'orgs:primary': ['Research orgs by primary affiliation', 'one count per paper'],
-    'orgs:funders': ['Funders behind safety papers', 'from the acknowledgments'],
-    'orgs:byyear': ['Papers from a tracked org or funder, by year', 'primary-org affiliation or a funder · excludes lone-company-author independents'],
+    'subdomains:year': ['Research areas, one year at a time', 'all three venues combined'],
+    'subdomains:trends': ['How the balance of research areas has shifted', "each area's share of that year's safety papers"],
+    'conferences:venues': ['Safety share at each conference', 'ICLR, ICML and NeurIPS shown separately'],
+    'orgs:primary': ['Organizations that led the research', 'each paper counted once, for the org that led it'],
+    'orgs:funders': ['Funders that supported the research', 'philanthropies credited in the acknowledgments'],
+    'orgs:byyear': ['Papers tied to a known organization or funder, each year', 'led by a tracked organization, or backed by a funder'],
   };
 
   function renderPanel() {
