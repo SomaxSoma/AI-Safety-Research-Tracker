@@ -33,6 +33,7 @@ whole front-matter + acknowledgments region, not just keyword windows.
 | 2 | `verify_orgs.py` | LLM only (OpenRouter) | keyword-match orgs on the saved text, LLM-verify each, pick primary org + primary funder | `data/org_verified.csv` |
 | 3 | `plot.py` | no | org-backing + by-type plots (by primary org), plus a **research-orgs vs funders** split (a lone-company-author / funder-only paper is *University/Independent/other*), with both tallies saved as CSV | `data/org_plots/*.png`, `orgs.csv`, `funders.csv` |
 | — | `review_csv.py` | no | human-reviewable CSV (title, orgs, funders, primary org, primary funder, verdicts, url) | `data/org_review.csv` |
+| — | `gen_web_data.py` | no | regenerate the website's org arrays (ORGS_ASSOC / ORGS_PRIMARY / FUNDERS_LIST / ORG_BY_YEAR) + Who-Publishes summary numbers from the CSVs, preserving curated labels — so `js/data.js` never needs hand-editing after a re-run | `js/data.js` |
 
 Wrappers (prompt for creds, hidden): `scripts/run_fetch_plaintext.sh`,
 `scripts/run_org_verify_llm.sh`.

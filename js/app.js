@@ -183,7 +183,7 @@
       const share = shares[i];
       const h = Math.max(3, (share / max) * 196).toFixed(0);
       const fill = share === max ? '#f2f2f2' : `rgba(255,255,255,${(0.35 + (share / max) * 0.4).toFixed(3)})`;
-      return `<div class="hrow vbar" data-tip="<span class='tt-em'>${year}</span> — ${share.toFixed(1)}% led by a named org <span class='tt-dim'>(${b} of ${fmt(n)} checked)</span>">
+      return `<div class="hrow vbar" data-tip="<span class='tt-em'>${year}</span> — ${share.toFixed(1)}% from an org or funder <span class='tt-dim'>(${b} of ${fmt(n)} checked)</span>">
         <div class="vbar-value" style="animation-delay:${i * 55}ms">${share.toFixed(0)}%</div>
         <div class="vbar-fill" style="height:${h}px;background:${fill};animation-delay:${i * 55}ms"></div>
       </div>`;
@@ -550,7 +550,7 @@
     'conferences:venues': ['AI-safety share by venue, by year', 'ICLR · ICML · NeurIPS, separate'],
     'orgs:primary': ['Research orgs by primary affiliation', 'one count per paper'],
     'orgs:funders': ['Funders behind safety papers', 'from the acknowledgments'],
-    'orgs:byyear': ['Papers led by a tracked org, by year', 'share of each year'],
+    'orgs:byyear': ['Papers from a tracked org or funder, by year', 'primary-org affiliation or a funder · excludes lone-company-author independents'],
   };
 
   function renderPanel() {
