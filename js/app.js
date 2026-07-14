@@ -10,7 +10,7 @@
     sdScale: 'fixed',
     sdFace: 'all',
     confFace: 'pooled',
-    orgFace: 'orgs',
+    orgFace: 'assoc',
   };
 
   const $ = (id) => document.getElementById(id);
@@ -124,7 +124,7 @@
     state.expanded = false;
     state.sdFace = 'all';
     state.confFace = 'pooled';
-    state.orgFace = 'orgs';
+    state.orgFace = 'assoc';
     renderTabs();
     renderPanel();
     renderDisclosure();
@@ -161,10 +161,17 @@
   function mkOrgs() {
     const v = VIEWS.orgs;
     if (state.orgFace === 'byyear') return mkOrgYears();
-    const body = state.orgFace === 'funders' ? mkHbars(FUNDERS_LIST) : mkHbars(ORGS_TOP);
-    const note = state.orgFace === 'funders'
-      ? 'Funders acknowledged in safety papers — funding credits in the text, not author affiliations. Open Philanthropy is credited far more than any other.'
-      : v.note;
+    let body, note;
+    if (state.orgFace === 'funders') {
+      body = mkHbars(FUNDERS_LIST);
+      note = 'Funders acknowledged in safety papers — funding credits in the text, not author affiliations. Open Philanthropy is credited far more than any other.';
+    } else if (state.orgFace === 'primary') {
+      body = mkHbars(ORGS_PRIMARY);
+      note = 'Each paper counted once, under its primary (lead) affiliation. University / Independent covers the 251 papers led by an org outside the tracked set.';
+    } else {
+      body = mkHbars(ORGS_ASSOC);
+      note = v.note;
+    }
     return `<div>${body}<div class="chart-note">${note}</div></div>`;
   }
 
@@ -398,7 +405,7 @@
   }
 
   /* ---------- paper explorer ---------- */
-  const px = { q: '', venue: 'all', year: 'all', sd: 'all', shown: 100, open: null };
+  const px = { q: '', venue: 'all', year: 'all', sd: 'all', aff: 'all', porg: 'all', funder: 'all', shown: 100, open: null };
   let papersData = null, papersLoading = false;
   let detailsData = null, detailsLoading = false;
   const VENUE_LABEL = { iclr: 'ICLR', icml: 'ICML', neurips: 'NeurIPS' };
@@ -417,17 +424,23 @@
     }
     const years = [...new Set(papersData.map((p) => p[2]))].sort((a, b) => b - a);
     const sds = [...new Set(papersData.map((p) => p[3]))].sort();
-    const opt = (v, label, cur) => `<option value="${v}"${String(v) === String(cur) ? ' selected' : ''}>${label}</option>`;
+    const affsOpt = [...new Set(papersData.flatMap((p) => p[8] || []))].sort();
+    const porgs = [...new Set(papersData.map((p) => p[6]).filter(Boolean))].sort();
+    const funders = [...new Set(papersData.flatMap((p) => p[7] || []))].sort();
+    const opt = (v, label, cur) => `<option value="${esc(String(v))}"${String(v) === String(cur) ? ' selected' : ''}>${esc(label)}</option>`;
     return `<div>
       <div class="px-controls">
         <input class="px-input" id="px-q" type="search" placeholder="Search titles…" aria-label="Search paper titles" value="${esc(px.q)}">
         <select class="px-select" id="px-venue" aria-label="Filter by venue">${opt('all', 'ALL VENUES', px.venue)}${Object.keys(VENUE_LABEL).map((v) => opt(v, VENUE_LABEL[v].toUpperCase(), px.venue)).join('')}</select>
         <select class="px-select" id="px-year" aria-label="Filter by year">${opt('all', 'ALL YEARS', px.year)}${years.map((y) => opt(y, y, px.year)).join('')}</select>
         <select class="px-select" id="px-sd" aria-label="Filter by subdomain">${opt('all', 'ALL SUBDOMAINS', px.sd)}${sds.map((s) => opt(s, s.toUpperCase(), px.sd)).join('')}</select>
+        <select class="px-select" id="px-aff" aria-label="Filter by affiliation">${opt('all', 'ANY AFFILIATION', px.aff)}${affsOpt.map((s) => opt(s, s, px.aff)).join('')}</select>
+        <select class="px-select" id="px-porg" aria-label="Filter by primary affiliation">${opt('all', 'ANY PRIMARY ORG', px.porg)}${porgs.map((s) => opt(s, s, px.porg)).join('')}</select>
+        <select class="px-select" id="px-funder" aria-label="Filter by funder">${opt('all', 'ANY FUNDER', px.funder)}${funders.map((s) => opt(s, s, px.funder)).join('')}</select>
       </div>
       <div class="px-count" id="px-count"></div>
       <div id="px-results"></div>
-      <div class="px-foot">Score = safety-relevance (1–7) assigned by the classifier. Raw CSVs for every conference-year are in <a href="${GH_URL}/tree/main/data" target="_blank" rel="noopener">the repository</a>.</div>
+      <div class="px-foot">Score = safety-relevance (1–7) assigned by the classifier. Affiliation = any confirmed research-org author; primary = the paper's lead org; funder = acknowledged funding. Raw CSVs are in <a href="${GH_URL}/tree/main/data" target="_blank" rel="noopener">the repository</a>.</div>
     </div>`;
   }
 
@@ -438,6 +451,9 @@
       if ((px.venue === 'all' || p[1] === px.venue) &&
         (px.year === 'all' || String(p[2]) === String(px.year)) &&
         (px.sd === 'all' || p[3] === px.sd) &&
+        (px.aff === 'all' || (p[8] || []).includes(px.aff)) &&
+        (px.porg === 'all' || p[6] === px.porg) &&
+        (px.funder === 'all' || (p[7] || []).includes(px.funder)) &&
         (!q || p[0].toLowerCase().includes(q))) out.push(idx);
     });
     return out;
@@ -504,7 +520,7 @@
   function pxBind() {
     if (!papersData) return;
     $('px-q').addEventListener('input', (e) => { px.q = e.target.value; px.shown = 100; pxUpdate(); });
-    [['px-venue', 'venue'], ['px-year', 'year'], ['px-sd', 'sd']].forEach(([id, key]) => {
+    [['px-venue', 'venue'], ['px-year', 'year'], ['px-sd', 'sd'], ['px-aff', 'aff'], ['px-porg', 'porg'], ['px-funder', 'funder']].forEach(([id, key]) => {
       $(id).addEventListener('change', (e) => { px[key] = e.target.value; px.shown = 100; px.open = null; pxUpdate(); });
     });
     pxUpdate();
@@ -525,13 +541,14 @@
   const FACES = {
     conferences: [['pooled', 'POOLED'], ['venues', 'BY VENUE']],
     subdomains: [['all', 'ICLR 2026'], ['year', 'BY YEAR'], ['trends', 'TRENDS']],
-    orgs: [['orgs', 'ORGS'], ['funders', 'FUNDERS'], ['byyear', 'BY YEAR']],
+    orgs: [['assoc', 'AFFILIATIONS'], ['primary', 'PRIMARY'], ['funders', 'FUNDERS'], ['byyear', 'BY YEAR']],
   };
   const FACE_KEY = { conferences: 'confFace', subdomains: 'sdFace', orgs: 'orgFace' };
   const FACE_META = {
     'subdomains:year': ['Subdomains per year', 'all venues pooled · 2019–2026'],
     'subdomains:trends': ['Subdomain composition over time', "share of each year's safety papers · pooled"],
     'conferences:venues': ['AI-safety share by venue, by year', 'ICLR · ICML · NeurIPS, separate'],
+    'orgs:primary': ['Research orgs by primary affiliation', 'each paper once · incl. Independent'],
     'orgs:funders': ['Funders behind safety papers', 'funding acknowledgments · not affiliations'],
     'orgs:byyear': ['Papers led by a named research org, by year', 'primary affiliation · of papers checked'],
   };
