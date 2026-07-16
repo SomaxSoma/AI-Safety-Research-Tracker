@@ -183,7 +183,7 @@
       const share = shares[i];
       const h = Math.max(3, (share / max) * 196).toFixed(0);
       const fill = share === max ? '#f2f2f2' : `rgba(255,255,255,${(0.35 + (share / max) * 0.4).toFixed(3)})`;
-      return `<div class="hrow vbar" data-tip="<span class='tt-em'>${year}</span> — ${share.toFixed(1)}% from an org or funder <span class='tt-dim'>(${b} of ${fmt(n)} checked)</span>">
+      return `<div class="hrow vbar" data-tip="<span class='tt-em'>${year}</span> — ${share.toFixed(1)}% led by a named org <span class='tt-dim'>(${b} of ${fmt(n)} checked)</span>">
         <div class="vbar-value" style="animation-delay:${i * 55}ms">${share.toFixed(0)}%</div>
         <div class="vbar-fill" style="height:${h}px;background:${fill};animation-delay:${i * 55}ms"></div>
       </div>`;
@@ -240,7 +240,7 @@
       <text transform="rotate(-90)" x="-208" y="-20" fill="#5a5a5a" font-family="IBM Plex Mono" font-size="9" letter-spacing="1.5">SHARE OF SAFETY PAPERS (%)</text>
       ${lines}${hits}${labelEls}${xlabels}
     </svg>
-    <div class="line-caption">Each line follows one research area's share of that year's safety papers, so the lines always add up to 100%. The six largest areas in 2026 are highlighted and labelled; hover any point for exact figures. The earliest years rest on very few papers — just nine in 2019 — so the trends only become meaningful around 2023, by which point Adversarial Robustness had fallen from 37% (in 2022) to 11%, while Safeguards and Monitoring had grown from almost nothing.</div>`;
+    <div class="line-caption">Each line: a subdomain's share of that year's safety papers — lines sum to 100% within a year, all venues pooled. The six largest 2026 subdomains are emphasized and labeled; hover any point for exact counts. Early years are tiny samples (2019: n=9) — read trends from 2023 on. Adversarial Robustness fell from 37% (2022) to 11%; Safeguards and Monitoring rose from zero.</div>`;
   }
 
   function mkVbars(entries, suf, note) {
@@ -318,7 +318,7 @@
       ${xlabels}
       <text x="320" y="262" text-anchor="middle" fill="#5a5a5a" font-family="IBM Plex Mono" font-size="9" letter-spacing="1.5">SUBMISSION MONTH</text>
     </svg>
-    <div class="line-caption">Each dot is one month's safety share; the line is a seven-month rolling average that smooths out the month-to-month noise. Hover the chart for exact values. Based on every arXiv paper in the main AI categories — cs.LG, cs.AI, cs.CL and stat.ML — from January 2019 to June 2026.</div>`;
+    <div class="line-caption">Dots: each month's safety share · line: 7-month rolling mean. Hover the chart for exact values. arXiv AI papers: cs.LG · cs.AI · cs.CL · stat.ML, Jan 2019 – Jun 2026.</div>`;
   }
 
   /* crosshair readout over the arXiv chart: nearest month → rolling / monthly / volume */
@@ -534,23 +534,29 @@
       <div class="classes">${CLASS_DEFS.map((c) =>
         `<div class="class-row"><div class="class-n">${c.n}</div><div class="class-name">${esc(c.name)}</div><div class="class-desc">${c.desc}</div></div>`).join('')}</div>
       <div class="method-cite">Each safety paper also gets a 1–7 relevance score = Motivation (1–3) + Methodology (0–2) + Evaluation (0–2); papers below 3 drop out of safety. Full rubric (four classes, 17 subdomains, the three score axes): <a href="${GH_URL}/blob/main/src/prompt.txt" target="_blank" rel="noopener">src/prompt.txt</a>.</div>
+      <div class="classes-title" style="margin-top:32px">SCOPE AND LIMITS</div>
+      <div class="method-limits">
+        <p>These numbers measure <strong>technical AI safety at ICLR, ICML and NeurIPS</strong>, not AI safety as a whole. Two selection effects stack. The venues publish mostly technical work. The taxonomy then splits technical work finely, while governance, strategy and welfare share three buckets between them.</p>
+        <p>The four-class split also routes fairness, bias, privacy and ethics work into a separate class by design, so it never counts as safety here. Work on governance, sentience and economics mostly appears at other venues. Read the counts as a lower bound on those areas.</p>
+        <p>Other limits: the classifier reads titles and abstracts only, never full text. The org analysis is a lower bound and depends on retrievable PDFs. 2026 is incomplete, since NeurIPS 2026 has not been held. Workshop papers, preprints and technical reports are out of scope.</p>
+      </div>
     </div>`;
   }
 
   /* ---------- panel ---------- */
   const FACES = {
     conferences: [['pooled', 'POOLED'], ['venues', 'BY VENUE']],
-    subdomains: [['all', 'ALL YEARS'], ['year', 'BY YEAR'], ['trends', 'TRENDS']],
+    subdomains: [['all', 'ICLR 2026'], ['year', 'BY YEAR'], ['trends', 'TRENDS']],
     orgs: [['assoc', 'AFFILIATIONS'], ['primary', 'PRIMARY'], ['funders', 'FUNDERS'], ['byyear', 'BY YEAR']],
   };
   const FACE_KEY = { conferences: 'confFace', subdomains: 'sdFace', orgs: 'orgFace' };
   const FACE_META = {
-    'subdomains:year': ['Research areas, one year at a time', 'all three venues combined'],
-    'subdomains:trends': ['How the balance of research areas has shifted', "each area's share of that year's safety papers"],
-    'conferences:venues': ['Safety share at each conference', 'ICLR, ICML and NeurIPS shown separately'],
-    'orgs:primary': ['Organizations that led the research', 'each paper counted once, for the org that led it'],
-    'orgs:funders': ['Funders that supported the research', 'philanthropies credited in the acknowledgments'],
-    'orgs:byyear': ['Papers tied to a known organization or funder, each year', 'led by a tracked organization, or backed by a funder'],
+    'subdomains:year': ['Subdomains per year', 'all venues pooled · 2019–2026'],
+    'subdomains:trends': ['Subdomain composition over time', "share of each year's safety papers · pooled"],
+    'conferences:venues': ['AI-safety share by venue, by year', 'ICLR · ICML · NeurIPS, separate'],
+    'orgs:primary': ['Research orgs by primary affiliation', 'one count per paper'],
+    'orgs:funders': ['Funders behind safety papers', 'from the acknowledgments'],
+    'orgs:byyear': ['Papers led by a tracked org, by year', 'share of each year'],
   };
 
   function renderPanel() {
@@ -618,10 +624,10 @@
     if (!v.notable) { root.innerHTML = ''; return; }
     const body = state.expanded ? `
       <div class="disc-body">
-        <div class="disc-kicker">${v.notableKicker || 'HIGHEST-SCORING PAPERS · 7 / 7'} · SELECTED FROM ${(v.countLabel || 'the safety set').toUpperCase()}</div>
+        <div class="disc-kicker">HIGHEST-SCORING PAPERS · 7 / 7 · SELECTED FROM ${(v.countLabel || 'the safety set').toUpperCase()}</div>
         <div class="disc-grid">${v.notable.map((p) =>
           `<div class="disc-paper"><div class="disc-paper-t">${p.u ? `<a href="${p.u}" target="_blank" rel="noopener">${esc(p.t)}</a>` : esc(p.t)}</div><div class="disc-paper-d">${esc(p.d)}</div></div>`).join('')}</div>
-        <div class="disc-foot">Titles, subdomains, and scores are the model's own classification output. The full safety-paper tables and all raw classifications live in the repository.</div>
+        <div class="disc-foot">Titles, subdomains, and scores are the model's own classification output. The full 412-paper table and all 5,352 raw classifications live in the repository.</div>
       </div>` : '';
     root.innerHTML = `
       <div class="disc-toggle" id="disc-toggle">

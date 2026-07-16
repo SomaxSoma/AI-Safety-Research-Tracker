@@ -55,6 +55,9 @@ a.masthead-views:hover{color:#fff;border-color:rgba(255,255,255,.4)}
 .hero-sub{padding-bottom:12px;max-width:460px;font:400 15px/1.7 'IBM Plex Mono';color:#9a9a9a}
 .hero-em{color:#f2f2f2}
 .hero-lede{margin-top:32px;max-width:820px;font:300 18px/1.75 'IBM Plex Mono';color:#d0d0d0;letter-spacing:.01em}
+.hero-scope{margin-top:18px;max-width:820px;padding-left:14px;border-left:2px solid rgba(255,255,255,.16);font:400 13px/1.7 'IBM Plex Mono';color:#8a8a8a}
+.hero-scope a{color:#c2c2c2;border-bottom-color:rgba(255,255,255,.2)}
+.hero-scope a:hover{color:#fff}
 .hero-chart{margin-top:44px}
 .hero-bars{display:flex;align-items:flex-end;gap:20px;height:78px}
 .hero-bars .hrow{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%}
@@ -168,6 +171,10 @@ a.masthead-views:hover{color:#fff;border-color:rgba(255,255,255,.4)}
 .pipe-step-desc{margin-top:10px;font:400 12.5px/1.65 'IBM Plex Mono';color:#9a9a9a}
 .classes-title{margin-top:26px;font:500 12px 'IBM Plex Mono';letter-spacing:.06em;color:#ededed;margin-bottom:14px}
 .method-sub{font:400 10.5px 'IBM Plex Mono';letter-spacing:.04em;color:#6f6f6f}
+.method-limits{font:400 12.5px/1.75 'IBM Plex Mono';color:#9a9a9a;max-width:720px}
+.method-limits p{margin:0 0 12px}
+.method-limits p:last-child{margin-bottom:0}
+.method-limits strong{font-weight:500;color:#ededed}
 .method-cite{margin-top:26px;padding:14px 16px;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.02);font:400 12.5px/1.75 'IBM Plex Mono';letter-spacing:.02em;color:#9a9a9a}
 .method-cite a{color:#c8c8c8}
 .classes{display:flex;flex-direction:column;gap:10px}
